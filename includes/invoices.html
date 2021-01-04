@@ -1,0 +1,120 @@
+<section class="section-invoices" id="invoices-content">
+
+  <h3 class="section-title">Invoices</h3>
+
+  <div class="invoices-list">
+
+    <table class="custom-responsive invoices-table page-wrapper-table">
+
+      <caption class="sr-only">Invoices list</caption>
+      <thead>
+
+      <tr>
+        <th>
+          <button type="button" class="btn btn-sort" aria-label="Sort invoices by date">
+            Date Issued
+            <span class="date-sort-icon">
+                <i class="fa small fa-chevron-down"></i>
+              </span>
+          </button>
+        </th>
+        <th>Service</th>
+        <th>Status</th>
+        <th>Invoice Amount</th>
+        <th>Actions</th>
+      </tr>
+
+      </thead>
+
+      <tbody>
+
+      <tr>
+        <td>
+          <span class="table-mobile">Date Issued</span>
+          Oct 13, 2020 3:40:23 PM
+        </td>
+        <td>
+          <span class="table-mobile">Service</span>
+          Name of the service
+        </td>
+        <td>
+          <span class="table-mobile">Status</span>
+          Status
+        </td>
+        <td>
+          <span class="table-mobile">Invoice Amount</span>
+          15$
+        </td>
+        <td>
+          <button type="button" class="btn btn-primary btn-sm" onclick="loadInvoiceDetails()" aria-label="View Notification">View</button>
+        </td>
+      </tr>
+
+      <tr class="notification-state-unread">
+
+        <td>
+          <span class="table-mobile">Date Issued</span>
+          Oct 13, 2020 3:40:23 PM
+        </td>
+        <td>
+          <span class="table-mobile">Service</span>
+          File an Anonymous Workplace Harassment and Discrim
+        </td>
+        <td>
+          <span class="table-mobile">Status</span>
+          Unpaid
+        </td>
+        <td>
+          <span class="table-mobile">Invoice Amount</span>
+          $28.89
+        </td>
+        <td>
+          <button type="button" class="btn btn-primary btn-sm" onclick="loadInvoiceDetails()" aria-label="View Notification">View</button>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <span class="table-mobile">Date Issued</span>
+          Oct 13, 2020 3:40:23 PM
+        </td>
+        <td>
+          <span class="table-mobile">Service</span>
+          File an Anonymous Workplace Harassment and Discrim
+        </td>
+        <td>
+          <span class="table-mobile">Status</span>
+          Paid
+        </td>
+        <td>
+          <span class="table-mobile">Invoice Amount</span>
+          $168.98
+        </td>
+        <td>
+          <button type="button" class="btn btn-primary btn-sm" onclick="loadInvoiceDetails()" aria-label="View Notification">View</button>
+        </td>
+      </tr>
+
+      <!--<tr class="default-empty">-->
+      <!--<td colspan="100">You have no new invoices</td>-->
+      <!--</tr>-->
+
+      </tbody>
+
+    </table>
+
+  </div>
+
+</section>
+
+<script>
+
+  $(".btn-sort").click(function() {
+    $(this).toggleClass("sorted");
+  });
+
+  function loadInvoiceDetails() {
+    $('#invoices-content').load("../includes/invoice-details.html");
+  }
+
+</script>

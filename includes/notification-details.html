@@ -1,0 +1,50 @@
+<section class="section-notification-details">
+
+  <div class="page-wrapper-alt">
+
+    <div class="section-title-alt">
+
+      <div class="button-wrapper">
+        <h3>Notifications</h3>
+
+        <a href="/profile.html" class="h3" id="notificationsSettingsLink">
+          <i class="fas fa-cog"></i>
+          <span class="sr-only">Edit Notifications Settings</span>
+        </a>
+
+      </div>
+
+    </div>
+
+    <div class="service-card-back-content">
+
+      <div class="button-container">
+        <button type="button" class="btn btn-link" onclick="backToList()" aria-label="Back to notifications">
+          <i class="fas fa-arrow-left"></i>
+          Back to Notifications
+        </button>
+      </div>
+
+      <div class="notification-details-header">
+        <h4>File an Anonymous Workplace Harassment and Discrimination</h4>
+        <h5>Vivvo Test Template Form Submission Successful</h5>
+        <h6>Oct 16, 2020 12:13:29 PM</h6>
+      </div>
+
+      <div class="notification-details-content">
+        <p>Dear Shoulak Vincent,</p>
+        <p>Your form was successful! We will notify you when your submission has been approved.</p>
+        <p>Thank you!</p>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<script>
+  function backToList() {
+    $('#notifications').load("../includes/notifications.html");
+  }
+</script>

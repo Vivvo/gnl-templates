@@ -1,0 +1,204 @@
+<section class="profile profile-address">
+
+  <div class="page-wrapper">
+
+    <div class="profile-header">
+      <h5>Address</h5>
+
+      <button class="btn btn-primary btn-sm" onclick="addAddress()" aria-label="Add new address">
+        <i class="fas fa-plus"></i>
+        Add
+      </button>
+
+    </div>
+
+    <div class="profile-add-form" id="addAddressForm" style="display: none;"></div>
+
+    <form class="needs-validation form-container" novalidate>
+
+      <fieldset>
+
+        <legend class="sr-only">Select your Addresses</legend>
+
+        <div class="form-primary">
+          <span class="primary special">Primary</span>
+        </div>
+
+        <div class="input-group input-group-labelled">
+
+          <input class="form-control" type="text" id="addressHome" value="2927 23rd Avenue, Regina" readonly>
+
+          <div class="input-group-append">
+            <div class="input-group-text">
+              <label for="addressHome">
+                <span class="sr-only">Home</span>
+                <i class="fas fa-home"></i>
+              </label>
+            </div>
+          </div>
+
+          <div class="input-group-prepend">
+
+            <div class="input-group-text">
+
+              <div class="custom-control custom-radio">
+                <input type="radio" id="addressId1" name="addressType" class="custom-control-input" required>
+                <label class="custom-control-label" for="addressId1">
+                  <span class="sr-only">2927 23rd Avenue, Regina</span>
+                </label>
+              </div>
+
+            </div>
+
+            <button class="btn btn-input-group" aria-label="Remove">
+              <i class="far fa-trash-alt"></i>
+            </button>
+
+          </div>
+
+        </div>
+
+        <div class="input-group input-group-labelled">
+          <input class="form-control" type="text" id="addressMailing" value="3245 Albert Street, Regina" readonly>
+
+          <div class="input-group-append">
+            <div class="input-group-text">
+              <label for="addressMailing">
+                <i class="far fa-envelope"></i>
+                <span class="sr-only">Mailing</span>
+              </label>
+            </div>
+          </div>
+          <div class="input-group-prepend">
+
+            <div class="input-group-text">
+
+              <div class="custom-control custom-radio">
+                <input type="radio" id="addressId2" name="addressType" class="custom-control-input" required>
+                <label class="custom-control-label" for="addressId2">
+                  <span class="sr-only">3245 Albert Street, Regina</span>
+                </label>
+              </div>
+
+            </div>
+
+            <button class="btn btn-input-group" aria-label="Remove">
+              <i class="far fa-trash-alt"></i>
+            </button>
+
+          </div>
+
+        </div>
+
+        <div class="input-group input-group-labelled">
+          <input class="form-control" type="text" id="addressBusiness" value="12 1st Avenue, Regina" readonly>
+
+          <div class="input-group-append">
+            <div class="input-group-text">
+              <label for="addressBusiness">
+                <i class="fas fa-briefcase"></i>
+                <span class="sr-only">Business</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="input-group-prepend">
+
+            <div class="input-group-text">
+
+              <div class="custom-control custom-radio">
+                <input type="radio" id="addressId3" name="addressType" class="custom-control-input" required>
+                <label class="custom-control-label" for="addressId3">
+                  <span class="sr-only">12 1st Avenue, Regina</span>
+                </label>
+              </div>
+
+            </div>
+
+            <button class="btn btn-input-group" aria-label="Remove">
+              <i class="far fa-trash-alt"></i>
+            </button>
+          </div>
+
+        </div>
+
+        <div class="input-group input-group-labelled">
+          <input class="form-control" type="text" id="addressBilling" value="12 1st Avenue, Regina" readonly>
+
+          <div class="input-group-append">
+            <div class="input-group-text">
+              <label for="addressBilling">
+                <i class="far fa-file-alt"></i>
+                <span class="sr-only">Billing</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="input-group-prepend">
+
+            <div class="input-group-text">
+
+              <div class="custom-control custom-radio">
+                <input type="radio" id="addressId4" name="addressType" class="custom-control-input" required>
+                <label class="custom-control-label" for="addressId4">
+                  <span class="sr-only">12 1st Avenue, Regina</span>
+                </label>
+              </div>
+
+            </div>
+
+            <button class="btn btn-input-group" aria-label="Remove">
+              <i class="far fa-trash-alt"></i>
+            </button>
+          </div>
+
+        </div>
+
+
+        <div class="input-group input-group-labelled">
+          <input class="form-control" type="text" id="addressOther" value="12 1st Avenue, Regina" readonly>
+
+          <div class="input-group-append">
+            <div class="input-group-text">
+              <label for="addressOther">
+               <i class="fas fa-ellipsis-v"></i>
+                <span class="sr-only">Other</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="input-group-prepend">
+
+            <div class="input-group-text">
+
+              <div class="custom-control custom-radio">
+                <input type="radio" id="addressId5" name="addressType" class="custom-control-input" required checked>
+                <label class="custom-control-label" for="addressId5">
+                  <span class="sr-only">12 1st Avenue, Regina</span>
+                </label>
+              </div>
+
+            </div>
+
+            <button class="btn btn-input-group" aria-label="Remove">
+              <i class="far fa-trash-alt"></i>
+            </button>
+          </div>
+
+        </div>
+
+      </fieldset>
+
+    </form>
+
+  </div>
+
+</section>
+
+<script>
+  $("#addAddressForm").load("../includes/forms/profile-add-address-form.html");
+
+  function addAddress() {
+    $('#addAddressForm').toggle();
+  }
+</script>

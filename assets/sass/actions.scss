@@ -1,0 +1,22 @@
+.section-actions {
+
+  .actions-service-description {
+    margin-bottom: 3em;
+  }
+
+  .actions-list {
+
+    .list-group-item {
+      font-weight: 500;
+
+      &:last-child {
+        border: 2px solid $theme-red;
+        color: $theme-red;
+
+        &:hover {
+          background: $white;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,138 @@
+.section-two-step-verification {
+
+  .list-group {
+    padding-left: 2em;
+    padding-right: 2em;
+
+    //background: $theme-light-grey;
+  }
+
+  .list-group-item {
+    padding-left: 0;
+    padding-right: 0;
+    background: transparent;
+
+    p {
+      margin-bottom: 0;
+    }
+
+    //&:first-child {
+    //  border-top: 1px solid $theme-medium-grey;
+    //}
+  }
+
+  .two-step-verification-list-wrapper {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+  }
+
+  .two-step-verification-list-content {
+    flex: 0 1 90%;
+    display: flex;
+    align-items: center;
+    margin-right: 1em;
+    font-size: 1em;
+
+    i {
+      font-size: 1.25em;
+      margin-right: 1em;
+    }
+  }
+
+  @media(max-width: 991.98px) {
+    .list-group {
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    .two-step-verification-list-content {
+      align-items: baseline;
+      margin-right: 0;
+
+      i {
+        margin-right: 0.5em;
+      }
+    }
+  }
+
+  @media(max-width: 575.98px) {
+    .two-step-verification-list-wrapper {
+      flex-direction: column-reverse;
+
+      .button-container {
+        align-self: flex-end;
+        margin-bottom: 1em;
+      }
+    }
+  }
+}
+
+.section-two-step-verification-form {
+
+  &.stepper {
+
+    .nav-tabs {
+      justify-content: center;
+      padding-top: 1.5em;
+      padding-bottom: 2.5em;
+      border-bottom: 1px solid $theme-medium-grey;
+    }
+
+    .step-wrapper {
+      margin-bottom: 1em;
+    }
+
+    .step-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 1.5em;
+    }
+
+    .step-content {
+      margin-bottom: 1em;
+    }
+
+    legend {
+      font-weight: normal;
+    }
+    
+    .qr-code-content {
+      display: flex;
+    }
+
+    .qr-code-image-wrapper {
+      display: inline-block;
+      border: 1px solid $theme-medium-grey;
+      padding: 1em;
+      margin-right: 1.5em;
+    }
+
+    .access-code {
+      display: flex;
+      align-items: center;
+
+      .form-group {
+        width: 2.5em !important;
+        margin-right: 0.25em;
+      }
+    }
+
+    .button-wrapper {
+      background: $theme-light-grey;
+      padding: 1em;
+    }
+
+    @media(max-width: 991.98px) {
+      .qr-code-content {
+        display: block;
+      }
+
+      .qr-code-image-wrapper {
+        margin-bottom: 1.5em;
+      }
+    }
+  }
+}

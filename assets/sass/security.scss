@@ -1,0 +1,73 @@
+.section-security {
+
+  .card {
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    border-bottom: 1px solid $theme-medium-grey !important;
+    border-radius: 0 !important;
+  }
+
+  .card-header {
+    padding: 0;
+    border: none;
+  }
+
+  .btn-collapse {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    width: 100%;
+    padding: 1em;
+    background: $white;
+    border-radius: 0;
+    color: $heading-color;
+    text-align: left;
+
+    &[aria-expanded="true"] {
+      .btn-collapse-arrow {
+        transform: rotate(90deg);
+      }
+    }
+  }
+
+  .btn-collapse-content {
+    flex: 0 1 90%;
+    display: flex;
+    align-items: center;
+  }
+
+  .btn-collapse-icon {
+    margin-right: 1em;
+    font-size: 1.25em;
+  }
+
+  .btn-collapse-title {
+    display: flex;
+    width: 100%;
+    color: $heading-color;
+    font-size: 1.25em;
+  }
+
+  .btn-collapse-subtitle {
+    color: $body-color;
+    white-space: normal !important;
+  }
+
+  .btn-collapse-arrow {
+    font-size: 1.25em;
+    transition: $transition-base;
+  }
+
+  .input-group {
+    margin-bottom: 1em;
+  }
+}
+
+// security password
+
+.section-security-password {
+
+
+}

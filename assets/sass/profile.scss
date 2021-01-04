@@ -1,0 +1,51 @@
+.section-profile {
+  display: flex;
+  min-height: calc(100vh - 60px);
+  z-index: 0;
+  width: 100%;
+
+  .page-wrapper {
+    padding: 1.5em;
+    margin-bottom: 2em;
+  }
+
+  .profile {
+
+    .profile-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 1.5em;
+
+      h5 {
+        margin-bottom: 0;
+      }
+
+      .btn i {
+        margin-right: 0.5em;
+      }
+    }
+
+    .profile-add-form {
+      margin-bottom: 1.5em;
+      padding: 1.5em 1em;
+      background: $theme-light-grey;
+      border: 1px solid $theme-medium-grey;
+      border-radius: 4px;
+    }
+  }
+
+  @media (max-width: 767.98px) {
+    flex-direction: column;
+
+    .page-wrapper {
+      padding: 1em;
+    }
+
+    .profile-header {
+      .btn {
+        width: auto !important;
+      }
+    }
+  }
+}

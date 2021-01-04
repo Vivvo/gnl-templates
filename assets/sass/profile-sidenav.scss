@@ -1,0 +1,35 @@
+.profile-sidenav {
+
+  .custom-nav-pills {
+
+    .nav-link {
+      font-weight: 500;
+    }
+  }
+
+  .list-group {
+    border-left: 1px solid $theme-primary-grey !important;
+    margin-left: 1em;
+    margin-top: 0.25em;
+    margin-bottom: 0.25em;
+    border-radius: 0;
+
+    .list-group-item-action {
+      padding: .5em 0 .5em 1.5em;
+      border: none;
+      border-radius: 0;
+      color: $body-color;
+      font-size: 0.875em;
+
+      i {
+        margin-right: 0.5em;
+      }
+    }
+  }
+  
+  @media(max-width: 767.98px) {
+    .list-group {
+      display: none;
+    }
+  }
+}

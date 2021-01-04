@@ -1,0 +1,31 @@
+.section-create-account {
+
+  .create-account {
+
+    fieldset {
+      margin-bottom: 1.5em;
+    }
+
+    legend {
+      margin-bottom: 1em;
+    }
+
+    .form-helper {
+      align-items: center;
+
+      ul {
+        margin-bottom: 0;
+      }
+    }
+
+    .create-account-terms {
+      .focus-block {
+        margin-bottom: 1.5em;
+      }
+
+      .custom-checkbox {
+        margin-bottom: 1.5em;
+      }
+    }
+  }
+}

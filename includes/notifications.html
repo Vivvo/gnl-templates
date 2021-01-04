@@ -1,0 +1,145 @@
+<section class="section-notifications" id="notifications-content">
+
+  <div class="page-wrapper-alt">
+
+    <div class="section-title-alt">
+
+      <div class="button-wrapper">
+        <h3>Notifications</h3>
+
+          <a href="/profile.html" class="h3" id="notificationsSettingsLink">
+            <i class="fas fa-cog"></i>
+            <span class="sr-only">Edit Notifications Settings</span>
+          </a>
+
+      </div>
+
+    </div>
+
+    <div class="service-card-back-content">
+
+      <div class="notifications-header">
+
+        <div class="notifications-actions">
+
+          <button type="button" class="btn btn-link" aria-label="Move to Archive">
+            Move to Archive
+          </button>
+
+          <button type="button" class="btn btn-link" aria-label="View Archive">
+            View Archive
+            <i class="fa fa-caret-right"></i>
+          </button>
+
+        </div>
+
+        <div class="btn-group-toggle" data-toggle="buttons">
+          <label class="btn btn-link">
+            <input type="checkbox" class="checkAll">
+            <span>Select All</span>
+          </label>
+        </div>
+
+      </div>
+
+      <div class="notifications-list">
+
+        <ul class="list-group custom-list-group">
+
+          <li class="list-group-item">
+
+            <div class="custom-control custom-checkbox">
+              <input type="checkbox" class="custom-control-input" id="notificationID-1">
+              <label class="custom-control-label" for="notificationID-1">
+                <span class="sr-only">Select this notification</span>
+              </label>
+            </div>
+
+            <div class="notifications-infos">
+
+              <div class="notifications-details">
+                <small>Oct 13, 2020 3:40:23 PM</small>
+
+                <p class="notification-title">Service Name with a very long title because it happens very often</p>
+
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis culpa, dignissimos distinctio doloremque eum facilis id ipsam iste iusto laborum libero maiores necessitatibus numquam, officiis quibusdam quod repellat velit, vero!
+                </p>
+
+                <small>REF. #PM735462</small>
+
+              </div>
+
+              <div class="button-container">
+                <button onclick="loadDetails()" class="btn btn-primary" aria-label="View notification">
+                  View
+                </button>
+              </div>
+
+            </div>
+
+          </li>
+
+          <li class="list-group-item state-unread">
+
+            <div class="custom-control custom-checkbox">
+              <input type="checkbox" class="custom-control-input" id="notificationID-2">
+              <label class="custom-control-label" for="notificationID-2">
+                <span class="sr-only">Select this notification</span>
+              </label>
+            </div>
+
+            <div class="notifications-infos">
+
+              <div class="notifications-details">
+                <small>Oct 13, 2020 3:40:23 PM</small>
+
+                <p class="notification-title">
+                  Another Service Name with a very long title because it happens even more often and it does happen all the time
+                </p>
+
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis culpa, dignissimos distinctio doloremque eum facilis id ipsam iste iusto laborum libero maiores necessitatibus numquam, officiis quibusdam quod repellat velit, vero!
+                </p>
+
+                <small>REF. #PM735462</small>
+
+              </div>
+
+              <div class="button-container">
+                <button onclick="loadDetails()" class="btn btn-primary" aria-label="View notification">
+                  View
+                </button>
+              </div>
+
+            </div>
+
+          </li>
+
+        </ul>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <div id="pagination" class="pagination-container"></div>
+
+</section>
+
+<script>
+  $('#pagination').load("../includes/pagination.html");
+
+  $('.checkAll').change(function(){
+    var state = this.checked;
+    state ? $(':checkbox').prop('checked',true) : $(':checkbox').prop('checked',false);
+    state ? $(this).next('span').text('Unselect All') : $(this).next('span').text('Select All')
+  });
+
+  function loadDetails() {
+    $('#notifications-content').load("../includes/notification-details.html");
+
+  };
+
+</script>

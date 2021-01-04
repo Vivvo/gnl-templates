@@ -1,0 +1,396 @@
+// LAYOUT
+
+.page-container {
+  padding-top: 2.1875em; //35px
+  padding-bottom: 5em; // 80px
+  width: 100%;
+
+  @media(max-width: 767.98px) {
+    padding-top: 1.5em;
+    padding-bottom: 3em;
+  }
+}
+
+.page-container-alt {
+  padding: 2.1875em 3% 5em; //35px 6% 80px
+  width: 100%;
+
+  @media (max-width: 767.98px) {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.page-wrapper {
+  padding: 2em 3.5em; //32px 56px
+  background: $white;
+  box-shadow: $box-shadow;
+
+  @media (max-width: 767.98px) {
+    padding: 1.5em 1em;
+  }
+
+  @media (max-width: 575.98px) {
+    padding: 1em;
+  }
+}
+
+.page-wrapper-alt {
+  padding: 0 0 2em;
+  background: $white;
+  box-shadow: $box-shadow;
+}
+
+.page-wrapper-table {
+  margin-bottom: 1.5em;
+  padding: 0;
+  background: $white;
+  box-shadow: $box-shadow;
+}
+
+.section-title {
+  margin-bottom: 0.5em;
+}
+
+// BUTTON HELPERS
+
+.button-container {
+
+  .btn {
+    margin-right: 1em;
+
+    &:last-child,
+    &:only-child {
+      margin-right: 0;
+    }
+  }
+
+  @media(max-width: 575.98px) {
+    .btn {
+      margin-right: 0;
+      margin-bottom: 1em;
+
+      &:last-child,
+      &:only-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+.button-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  @media(max-width: 575.98px) {
+    align-items: flex-start;
+    flex-direction: column;
+
+    .btn {
+      margin-bottom: 1em;
+    }
+
+    .button-container {
+      width: 100%;
+    }
+  }
+}
+
+// FORM HELPERS
+
+.form-container {
+
+  .form-group,
+  .input-group,
+  .form-primary,
+  .form-status {
+    width: 100%;
+    max-width: 50%;
+  }
+
+  .input-group, .custom-checkbox {
+    margin-bottom: 1em;
+  }
+
+  @media (max-width: 991.98px) {
+    .form-group,
+    .input-group,
+    .form-primary,
+    .form-status {
+      max-width: 100%;
+    }
+  }
+}
+
+.form-primary {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 100%;
+  margin-bottom: 0.25em;
+
+  &.flex-between {
+    justify-content: space-between;
+  }
+
+  .primary {
+    color: $theme-primary;
+    font-size: 0.875em;
+    font-weight: 600;
+
+    &.special {
+      margin-right: 2.5em;
+    }
+  }
+}
+
+.form-status {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 0.25em;
+
+  .status {
+    font-weight: 500;
+    font-style: italic;
+
+    &.status-unverified {
+      color: $theme-red;
+    }
+  }
+}
+
+.form-helper {
+  display: flex;
+  align-items: flex-end;
+  width: 100%;
+  height: 100%;
+}
+
+.required-field {
+  color: $theme-red;
+  margin-left: 0.25em;
+}
+
+// RESPONSIVE TEXT
+
+.mobile-text {
+  display: none;
+
+  @media(max-width: 991.98px) {
+    display: inline-flex;
+  }
+}
+
+.desktop-text {
+  @media(max-width: 991.98px) {
+    display: none;
+  }
+}
+
+// FOCUS BLOCK
+
+.focus-block {
+  padding: 1em;
+  background: $theme-light-grey;
+  border: 1px solid $theme-medium-grey;
+  border-radius: 4px;
+}
+
+// ICON BLOCK
+
+.icon-block {
+  display: flex;
+  align-items: baseline;
+  margin-bottom: 1.5em;
+
+  h6 {
+    margin-bottom: 0;
+  }
+
+  i {
+    margin-right: 1em;
+  }
+}
+
+// LISTS
+
+.list-lowercase {
+  list-style-type: lower-alpha;
+}
+
+.list-roman {
+  list-style-type: lower-roman;
+}
+
+//SIDENAV
+
+.sidenav {
+  flex: 0 0 25%;
+  height: auto;
+  min-height: calc(100vh - 60px);
+  padding-top: 2em;
+  background-color: $white;
+  box-shadow: 2px 2px 10px -2px rgb(0 0 0 / 10%);
+
+  @media (max-width: 991.98px) {
+    flex: 0 0 30%;
+  }
+
+  @media (max-width: 767.98px) {
+    flex: 0 0 100%;
+    width: 100%;
+    min-height: auto;
+    padding-top: 0;
+  }
+}
+
+
+// STEPPER
+
+.stepper {
+  .nav-tabs {
+    position: relative;
+    margin-bottom: 2em;
+    border: none;
+    width: 100%;
+
+    .nav-item {
+      width: calc(100% / 3);
+      position: relative;
+      border: none;
+      text-align: center;
+
+      .text {
+        display: block;
+        padding: 0 0.5em;
+        font-size: 0.75em;
+        text-align: center;
+      }
+
+      &:nth-last-child(2) {
+        .nav-link:after {
+          display: none;
+        }
+      }
+
+      &:last-child {
+        display: none;
+      }
+    }
+  }
+
+  .nav-link {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+    border: none;
+    font-size: 0.75em;
+    pointer-events: none;
+
+    &:after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      z-index: 1;
+      display: block;
+      width: 100%;
+      height: 5px;
+      background: #7B8F9B;
+      transform: translateY(-50%);
+    }
+
+    &:hover {
+      background: transparent;
+      border: none;
+    }
+
+    &.active {
+      color: $theme-primary;
+      background: transparent;
+
+      .round-tab {
+        background: #fff;
+        border-color: $theme-primary;
+
+        &:after {
+          display: none;
+        }
+      }
+    }
+
+    &.completed {
+      color: $theme-primary;
+
+      &:after {
+        background: $theme-primary;
+      }
+
+      .round-tab {
+        border-color: $white;
+        background: $theme-primary;
+
+        &:after {
+          display: flex;
+        }
+      }
+    }
+
+    &.disabled {
+      .nav-link {
+        color: #7B8F9B;
+      }
+
+      .round-tab {
+        background: #fff;
+        color: #7B8F9B;
+        border-color: #7B8F9B;
+
+        &:after {
+          display: none;
+        }
+      }
+    }
+  }
+
+  .round-tab {
+    position: relative;
+    z-index: 3;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 35px;
+    height: 35px;
+    margin-bottom: 0.25em;
+    border-radius: 100%;
+    background: #fff;
+    border: 1px solid $body-color;
+    color: $body-color;
+    text-align: center;
+    font-size: 14px;
+
+    &:after {
+      content: '✔';
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 100%;
+      color: #fff;
+      margin: 0 auto;
+    }
+  }
+
+  .tab-pane {
+    position: relative;
+  }
+}

@@ -1,0 +1,28 @@
+.section-notifications-settings {
+
+  table {
+    thead tr th:not(:first-child),
+    tbody tr:not(.default-empty) td:not(:first-child) {
+      width: 6.25em;
+      text-align: center;
+    }
+
+    &.notifications-settings-services-table {
+
+      tbody tr td:first-child {
+        font-weight: 500;
+      }
+    }
+  }
+
+
+  @media (max-width: 767.98px) {
+
+    table {
+      thead tr th:not(:first-child),
+      tbody tr:not(.default-empty) td:not(:first-child) {
+        width: 5em;
+      }
+    }
+  }
+}

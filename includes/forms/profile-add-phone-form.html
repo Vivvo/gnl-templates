@@ -1,0 +1,64 @@
+<form action="" class="needs-validation form-container" novalidate>
+
+  <fieldset>
+
+    <legend class="h6">
+      Add phone number
+    </legend>
+
+    <div class="form-group">
+      <label for="phoneType">Phone Type</label>
+
+      <select class="custom-select" id="phoneType" required>
+        <option value="" hidden></option>
+        <option value="1">Home</option>
+        <option value="2">Mobile</option>
+        <option value="3">Business</option>
+        <option value="4">Fax</option>
+        <option value="5">Other</option>
+      </select>
+      <small class="invalid-feedback">Select a Phone Type.</small>
+    </div>
+
+    <label for="phoneNumber">Phone Number</label>
+
+    <div class="input-group input-group-left">
+      <input type="tel" class="form-control" id="phoneNumber" placeholder="+1 (___) ___-____" required>
+
+      <div class="input-group-prepend">
+
+        <button class="btn btn-input-group dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-label="Choose another country from list">
+          <img src="https://www.countryflags.io/ca/flat/24.png" alt="Canada">
+          <span class="sr-only">Choose country</span>
+        </button>
+
+        <div class="dropdown-menu">
+          <a class="dropdown-item" href="#">Canada</a>
+          <a class="dropdown-item" href="#">USA</a>
+        </div>
+
+      </div>
+
+      <small class="invalid-feedback">Select a Country.</small>
+
+    </div>
+
+    <div class="custom-control custom-checkbox">
+      <input type="checkbox" class="custom-control-input" id="isPrimaryPhone">
+      <label class="custom-control-label" for="isPrimaryPhone">Set as Primary</label>
+    </div>
+
+  </fieldset>
+
+  <div class="button-container">
+    <button type="button" class="btn btn-secondary" onclick="addAPhoneNumber()" aria-label="Cancel">Cancel</button>
+    <button type="submit" class="btn btn-primary" aria-label="Continue">Continue</button>
+  </div>
+
+</form>
+
+<script>
+  function addAPhoneNumber() {
+    $('#addPhoneForm').toggle();
+  }
+</script>

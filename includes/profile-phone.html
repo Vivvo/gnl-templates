@@ -1,0 +1,222 @@
+<section class="profile profile-phone">
+
+  <div class="page-wrapper">
+
+    <div class="profile-header">
+      <h5>Phone Number</h5>
+
+      <button class="btn btn-primary btn-sm" onclick="addPhoneNumber()" aria-label="Add phone number">
+        <i class="fas fa-plus"></i>
+        Add
+      </button>
+
+    </div>
+
+    <div class="profile-add-form" id="addPhoneForm" style="display: none;"></div>
+
+    <form action="" class="needs-validation form-container" novalidate>
+
+      <fieldset>
+
+        <legend class="sr-only">Set phone numbers</legend>
+
+        <div class="form-primary right">
+          <span class="primary special">Primary</span>
+        </div>
+
+        <div class="input-group input-group-labelled">
+
+          <input type="tel" class="form-control" id="businessPhone" value="306-123-4567" readonly>
+
+          <div class="input-group-append">
+            <div class="input-group-text">
+              <label for="businessPhone">
+                <i class="fas fa-briefcase"></i>
+                <span class="sr-only">Business</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="input-group-prepend">
+
+            <div class="input-group-text">
+
+              <div class="custom-control custom-radio">
+                <input type="radio" id="phoneNumber1" name="phoneNumber" class="custom-control-input" required checked>
+                <label class="custom-control-label" for="phoneNumber1">
+                  <span class="sr-only">306-123-4567</span>
+                </label>
+              </div>
+
+            </div>
+
+            <button class="btn btn-input-group" aria-label="Remove">
+              <span class="sr-only">Remove</span>
+              <i class="far fa-trash-alt"></i>
+            </button>
+
+          </div>
+
+        </div>
+
+        <div class="form-status">
+          <small class="status status-unverified special">Unverified</small>
+        </div>
+
+        <div class="input-group input-group-labelled">
+
+          <input type="tel" class="form-control" id="mobilePhone" value="306-123-4567" readonly>
+
+          <div class="input-group-append">
+            <div class="input-group-text">
+              <label for="mobilePhone">
+                <i class="fas fa-mobile-alt"></i>
+                <span class="sr-only">Mobile</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="input-group-prepend">
+
+            <div class="input-group-text">
+
+              <div class="custom-control custom-radio">
+                <input type="radio" id="phoneNumber2" name="phoneNumber" class="custom-control-input" required>
+                <label class="custom-control-label" for="phoneNumber2">
+                  <span class="sr-only">306-123-4567</span>
+                </label>
+              </div>
+
+            </div>
+
+            <button class="btn btn-input-group" aria-label="Remove">
+              <span class="sr-only">Remove</span>
+              <i class="far fa-trash-alt"></i>
+            </button>
+
+          </div>
+
+        </div>
+
+        <div class="input-group input-group-labelled">
+
+          <input type="tel" class="form-control" id="homePhone" value="306-123-4567" readonly>
+
+          <div class="input-group-append">
+            <div class="input-group-text">
+              <label for="homePhone">
+                <i class="fas fa-phone"></i>
+                <span class="sr-only">Home</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="input-group-prepend">
+
+            <div class="input-group-text">
+
+              <div class="custom-control custom-radio">
+                <input type="radio" id="phoneNumber3" name="phoneNumber" class="custom-control-input" required>
+                <label class="custom-control-label" for="phoneNumber3">
+                  <span class="sr-only">306-123-4567</span>
+                </label>
+              </div>
+
+            </div>
+
+            <button class="btn btn-input-group" aria-label="Remove">
+              <span class="sr-only">Remove</span>
+              <i class="far fa-trash-alt"></i>
+            </button>
+
+          </div>
+
+        </div>
+
+        <div class="input-group input-group-labelled">
+
+          <input type="tel" class="form-control" id="faxPhone" value="306-123-4567" readonly>
+
+          <div class="input-group-append">
+            <div class="input-group-text">
+              <label for="faxPhone">
+                <i class="fas fa-fax"></i>
+                <span class="sr-only">Fax</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="input-group-prepend">
+
+            <div class="input-group-text">
+
+              <div class="custom-control custom-radio">
+                <input type="radio" id="phoneNumber4" name="phoneNumber" class="custom-control-input" required>
+                <label class="custom-control-label" for="phoneNumber4">
+                  <span class="sr-only">306-123-4567</span>
+                </label>
+              </div>
+
+            </div>
+
+            <button class="btn btn-input-group" aria-label="Remove">
+              <span class="sr-only">Remove</span>
+              <i class="far fa-trash-alt"></i>
+            </button>
+
+          </div>
+
+        </div>
+
+        <div class="input-group input-group-labelled">
+
+          <input type="tel" class="form-control" id="otherPhone" value="306-123-4567" readonly>
+
+          <div class="input-group-append">
+            <div class="input-group-text">
+              <label for="otherPhone">
+                <i class="fas fa-ellipsis-v"></i>
+                <span class="sr-only">Other</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="input-group-prepend">
+
+            <div class="input-group-text">
+
+              <div class="custom-control custom-radio">
+                <input type="radio" id="phoneNumber5" name="phoneNumber" class="custom-control-input" required>
+                <label class="custom-control-label" for="phoneNumber5">
+                  <span class="sr-only">306-123-4567</span>
+                </label>
+              </div>
+
+            </div>
+
+            <button class="btn btn-input-group" aria-label="Remove">
+              <span class="sr-only">Remove</span>
+              <i class="far fa-trash-alt"></i>
+            </button>
+
+          </div>
+
+        </div>
+
+
+
+      </fieldset>
+
+    </form>
+
+  </div>
+
+</section>
+
+<script>
+  $("#addPhoneForm").load("../includes/forms/profile-add-phone-form.html");
+
+  function addPhoneNumber() {
+    $('#addPhoneForm').toggle();
+  }
+</script>

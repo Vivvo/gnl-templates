@@ -1,0 +1,356 @@
+<section class="section-two-step-verification-form stepper" id="mobileStepper">
+
+  <ul class="nav nav-tabs" id="myTab" role="tablist">
+
+    <li class="nav-item" role="presentation">
+      <a class="nav-link active" id="step-1" data-toggle="tab" href="#stepper-step-1" role="tab" aria-controls="stepper-step-1" aria-selected="true" title="Step 1">
+        <span class="round-tab">1</span>
+      </a>
+      <span class="text">Select Mobile Phone</span>
+    </li>
+
+    <li class="nav-item" role="presentation">
+      <a class="nav-link disabled" id="step-2" data-toggle="tab" href="#stepper-step-2" role="tab" aria-controls="stepper-step-2" aria-selected="false" title="Step 2">
+        <span class="round-tab">2</span>
+      </a>
+      <span class="text">Verify Access Code</span>
+    </li>
+
+    <li class="nav-item" role="presentation">
+      <a class="nav-link disabled" id="step-3" data-toggle="tab" href="#stepper-step-3" role="tab" aria-controls="stepper-step-3" aria-selected="false" title="Step 3">
+        <span class="round-tab">3</span>
+      </a>
+      <span class="text">Confirm Activation</span>
+    </li>
+
+    <li class="nav-item d-none" role="presentation">
+      <a class="nav-link disabled" id="step-4" data-toggle="tab" href="#stepper-step-4" role="tab" aria-controls="stepper-step-4" aria-selected="false" title="Step 4">
+        <span class="round-tab">4</span>
+      </a>
+      <span class="text">Confirmation</span>
+    </li>
+
+  </ul>
+
+  <form role="form" action="" class="needs-validation form-container" novalidate>
+
+    <div class="tab-content">
+
+      <!--STEP 1-->
+      <div class="tab-pane fade show active" id="stepper-step-1" role="tabpanel" aria-labelledby="stepper-step-1">
+        <div class="step-wrapper">
+
+          <div class="step-header">
+            <div>
+              <h6>Select Mobile Phone</h6>
+              <p>Text Message (SMS)</p>
+            </div>
+
+            <button type="button" class="btn btn-primary btn-sm addNewPhoneNumber" aria-label="Add new mobile phone">
+              <i class="fas fa-plus" aria-hidden="true"></i>
+              Add
+            </button>
+
+
+          </div>
+
+          <div class="step-content">
+
+            <fieldset>
+
+              <legend class="sr-only">Choose Mobile Number</legend>
+
+              <ul class="list-unstyled mobile-phone-number-list">
+
+                <li>
+
+                  <div class="input-group input-group-radio">
+
+                    <input type="tel" class="form-control" aria-label="Choose this number" placeholder="306-123-4567" readonly>
+
+                    <div class="input-group-prepend">
+
+                      <div class="input-group-text">
+
+                        <div class="custom-control custom-radio">
+                          <input type="radio" id="mobileNumber1" name="mobileNumber" class="custom-control-input" required checked>
+                          <label class="custom-control-label" for="mobileNumber1">
+                            <span class="sr-only">306-123-4567</span>
+                          </label>
+                        </div>
+
+                      </div>
+
+                    </div>
+
+                  </div>
+
+                </li>
+
+                <li>
+
+                  <div class="input-group input-group-radio">
+
+                    <input type="tel" class="form-control" aria-label="Choose this number" placeholder="306-123-4567" readonly>
+
+                    <div class="input-group-prepend">
+
+                      <div class="input-group-text">
+
+                        <div class="custom-control custom-radio">
+                          <input type="radio" id="mobileNumber2" name="mobileNumber" class="custom-control-input" required>
+                          <label class="custom-control-label" for="mobileNumber2">
+                            <span class="sr-only">306-123-4567</span>
+                          </label>
+                        </div>
+
+                      </div>
+
+                    </div>
+
+                  </div>
+
+                </li>
+
+              </ul>
+
+            </fieldset>
+
+          </div>
+
+          <div class="button-wrapper">
+
+            <button type="button" class="btn btn-secondary btn-sm" aria-label="Cancel" onclick="cancelMobile()">Cancel</button>
+
+            <div class="button-container">
+
+              <button type="button" class="btn btn-primary btn-sm next-step" aria-label="Next">Next</button>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <!--STEP 2-->
+      <div class="tab-pane fade" id="stepper-step-2" role="tabpanel" aria-labelledby="stepper-step-2">
+
+        <div class="step-wrapper">
+
+          <div class="step-content">
+
+            <h6>Verify Access Code</h6>
+            <p>Text Message (SMS)</p>
+
+            <fieldset>
+
+              <legend>Enter the 6-digit code we sent to you</legend>
+
+              <div class="access-code">
+
+                <div class="form-group">
+                  <label for="1" class="sr-only">Enter first digit</label>
+                  <input type="text" class="form-control" id="1" maxLength="1" size="1" min="0" max="9" pattern="[0-9]{1}" />
+                </div>
+
+                <div class="form-group">
+                  <label for="2" class="sr-only">Enter second digit</label>
+                  <input type="text" class="form-control" id="2" maxLength="1" size="1" min="0" max="9" pattern="[0-9]{1}" />
+                </div>
+
+                <div class="form-group">
+                  <label for="3" class="sr-only">Enter third digit</label>
+                  <input type="text" class="form-control" id="3" maxLength="1" size="1" min="0" max="9" pattern="[0-9]{1}" />
+                </div>
+
+                <div class="form-group">
+                  <label for="4" class="sr-only">Enter fourth digit</label>
+                  <input type="text" class="form-control" id="4" maxLength="1" size="1" min="0" max="9" pattern="[0-9]{1}" />
+                </div>
+
+                <div class="form-group">
+                  <label for="5" class="sr-only">Enter fifth digit</label>
+                  <input type="text" class="form-control" id="5" maxLength="1" size="1" min="0" max="9" pattern="[0-9]{1}" />
+                </div>
+
+                <div class="form-group">
+                  <label for="6" class="sr-only">Enter sixth digit</label>
+                  <input type="text" class="form-control" id="6" maxLength="1" size="1" min="0" max="9" pattern="[0-9]{1}" />
+                </div>
+
+              </div>
+
+            </fieldset>
+
+          </div>
+
+          <div class="button-wrapper">
+
+            <button type="button" class="btn btn-secondary btn-sm" aria-label="Cancel" onclick="cancelMobile()">Cancel</button>
+
+            <div class="button-container">
+              <button type="button" class="btn btn-secondary btn-sm prev-step" aria-label="Back">Back</button>
+              <button type="button" class="btn btn-primary btn-sm next-step" aria-label="Next">Next</button>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <!--STEP 3-->
+      <div class="tab-pane fade" id="stepper-step-3" role="tabpanel" aria-labelledby="stepper-step-3">
+
+        <div class="step-wrapper">
+
+          <div class="step-content">
+
+            <h6>Confirm on Two-Step verification</h6>
+            <p>You have verified your phone number.  By clicking “Next” you’ll turn on Two-Step verification login.</p>
+
+          </div>
+
+          <div class="button-wrapper">
+            <button type="button" class="btn btn-secondary btn-sm" aria-label="Cancel" onclick="cancelMobile()">Cancel</button>
+
+            <div class="button-container">
+              <button type="button" class="btn btn-secondary btn-sm prev-step" aria-label="Back">Back</button>
+              <button type="button" class="btn btn-primary btn-sm next-step" aria-label="Next">Next</button>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <!--STEP 4-->
+      <div class="tab-pane fade" id="stepper-step-4" role="tabpanel" aria-labelledby="stepper-step-4">
+
+        <div class="step-content">
+          <h6>Success</h6>
+
+          <p>
+            Two-Step verification has been turn on.
+          </p>
+
+          <div class="button-container">
+            <button type="submit" class="btn btn-primary btn-sm" aria-label="Done">Done</button>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </form>
+
+</section>
+
+<script>
+
+  $(document).ready(function () {
+    //Initialize tooltips
+    $('.nav-tabs > li a[title]').tooltip();
+
+    //Wizard
+    $('a[data-toggle="tab"]').on('show.bs.tab', function (e) {
+      var $target = $(e.target);
+      if ($target.parent().hasClass('disabled')) {
+        return false;
+      }
+    });
+
+    $("#mobileStepper .next-step").click(function (e) {
+      var $active = $('.nav-tabs li>.active');
+
+      let has_error = false;
+      $('.tab-pane.active.show [required]').each(function(i, element) {
+        if(($(element).is(':checkbox') && !$(element).is(':checked')) || !$(element).val()) {
+          has_error = true;
+          $(element).addClass('is-invalid');
+        } else if(($(element).is(':checkbox') && $(element).is(':checked')) || $(element).val()) {
+          has_error = false;
+          $(element).removeClass('is-invalid');
+        }
+      });
+
+      if(!has_error) {
+        $active.parent().find('.active').addClass('completed');
+        $active.parent().addClass('completed');
+        $active.parent().next().find('.nav-link').removeClass('disabled');
+        nextTab($active);
+      }
+    });
+
+    $("#mobileStepper .prev-step").click(function (e) {
+      var $active = $('.nav-tabs li>a.active');
+      $active.addClass('disabled');
+      $active.parent().prev().removeClass('completed');
+      $active.parent().prev().find('.nav-link').removeClass('completed');
+      prevTab($active);
+    });
+  });
+
+  function nextTab(elem) {
+    $(elem).parent().next().find('a[data-toggle="tab"]').click();
+  }
+  function prevTab(elem) {
+    $(elem).parent().prev().find('a[data-toggle="tab"]').click();
+  }
+
+
+  var body = $('.access-code');
+
+  function goToNextInput(e) {
+    var key = e.which,
+      t = $(e.target),
+      sib = t.next('input');
+
+    if (key !== 9 && (key < 48 || key > 57)) {
+      e.preventDefault();
+      return false;
+    }
+
+    if (key === 9) {
+      return true;
+    }
+
+    if (!sib || !sib.length) {
+      sib = body.find('input').eq(0);
+    }
+    sib.select().focus();
+  }
+
+  function onKeyDown(e) {
+    var key = e.which;
+
+    if (key === 9 || (key >= 48 && key <= 57)) {
+      return true;
+    }
+
+    e.preventDefault();
+    return false;
+  }
+
+  function onFocus(e) {
+    $(e.target).select();
+  }
+
+  body.on('keyup', 'input', goToNextInput);
+  body.on('keydown', 'input', onKeyDown);
+  body.on('click', 'input', onFocus);
+
+  function cancelMobile() {
+    $('#twoStepVerificationForm').load("../includes/security-two-step-verification.html");
+  }
+
+  $('.addNewPhoneNumber').on('click', function () {
+    $('.mobile-phone-number-list').append('<li><div class="input-group input-group-radio"><input type="tel" class="form-control" aria-label="Choose this number" placeholder="+1 (___) ___-____"><div class="input-group-prepend"><div class="input-group-text"><div class="custom-control custom-radio"><input type="radio" id="mobileNumber" name="mobileNumber" class="custom-control-input" required checked><label class="custom-control-label" for="mobileNumber"><span class="sr-only">306-123-4567</span></label></div></div></div></div></li>')
+  })
+
+</script>

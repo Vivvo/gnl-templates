@@ -1,0 +1,10 @@
+.section-invoices {
+
+  .invoices-table {
+
+    thead tr th:nth-last-child(-n+3),
+    tbody tr td:nth-last-child(-n+3){
+      text-align: center;
+    }
+  }
+}

@@ -1,0 +1,126 @@
+<div class="profile profile-email">
+
+  <div class="page-wrapper">
+
+    <div class="profile-header">
+      <h5>Email Address</h5>
+
+      <button class="btn btn-primary btn-sm" onclick="addEmail()" aria-label="Add a new email">
+        <i class="fas fa-plus"></i>
+        Add
+      </button>
+
+    </div>
+
+    <div class="profile-add-form" id="addEmailForm" style="display: none;"></div>
+
+    <form action="" class="needs-validation form-container" novalidate>
+
+      <fieldset>
+
+        <legend class="sr-only">Set e-mail address</legend>
+
+        <div class="form-primary">
+          <span class="primary special">Primary</span>
+        </div>
+
+        <label for="email1" class="sr-only">sferguson@gmail.com</label>
+
+        <div class="input-group">
+
+          <input type="text" class="form-control" id="email1" value="sferguson@gmail.com" readonly>
+
+          <div class="input-group-prepend">
+
+            <div class="input-group-text">
+
+              <div class="custom-control custom-radio">
+                <input type="radio" id="emailID1" name="emailAddress" class="custom-control-input" required checked>
+                <label class="custom-control-label" for="emailID1">
+                  <span class="sr-only">sferguson@gmail.com</span>
+                </label>
+              </div>
+
+            </div>
+
+            <button class="btn btn-input-group" aria-label="Remove">
+              <i class="far fa-trash-alt"></i>
+            </button>
+
+          </div>
+
+        </div>
+
+        <label for="email2" class="sr-only">sferguson@test.com</label>
+
+        <div class="input-group">
+
+          <input type="text" class="form-control" id="email2" value="sferguson@test.com" readonly>
+
+          <div class="input-group-prepend">
+
+            <div class="input-group-text">
+
+              <div class="custom-control custom-radio">
+                <input type="radio" id="emailID2" name="emailAddress" class="custom-control-input" required>
+                <label class="custom-control-label" for="emailID2">
+                  <span class="sr-only">sferguson@test.com</span>
+                </label>
+              </div>
+
+            </div>
+
+            <button class="btn btn-input-group" aria-label="Remove">
+              <i class="far fa-trash-alt"></i>
+            </button>
+
+          </div>
+
+        </div>
+
+        <div class="form-status">
+          <small class="status status-unverified special">Unverified</small>
+        </div>
+
+        <label for="email3" class="sr-only">sferguson@dev.com</label>
+
+        <div class="input-group">
+
+          <input type="text" class="form-control" id="email3" value="sferguson@dev.com" readonly>
+
+          <div class="input-group-prepend">
+
+            <div class="input-group-text">
+
+              <div class="custom-control custom-radio">
+                <input type="radio" id="emailID3" name="emailAddress" class="custom-control-input" required>
+                <label class="custom-control-label" for="emailID3">
+                  <span class="sr-only">sferguson@dev.com</span>
+                </label>
+              </div>
+
+            </div>
+
+            <button class="btn btn-input-group" aria-label="Remove">
+              <i class="far fa-trash-alt"></i>
+            </button>
+
+          </div>
+
+        </div>
+
+      </fieldset>
+
+    </form>
+
+  </div>
+
+</div>
+
+<script>
+  $("#addEmailForm").load("../includes/forms/profile-add-email-form.html");
+
+  function addEmail() {
+    $('#addEmailForm').toggle();
+  };
+</script>

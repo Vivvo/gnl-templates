@@ -1,0 +1,43 @@
+<form action="" class="needs-validation form-container" novalidate>
+
+  <fieldset>
+
+    <legend class="h6">Edit your profile name</legend>
+
+    <div class="form-group">
+      <label for="editFirstName">First Name</label>
+      <input type="text" class="form-control" id="editFirstName" required>
+      <small class="invalid-feedback">Enter your First Name.</small>
+    </div>
+
+    <div class="form-group">
+      <label for="editMiddleName">Middle Name</label>
+      <input type="text" class="form-control" id="editMiddleName" placeholder="Optional">
+    </div>
+
+    <div class="form-group">
+      <label for="editLastName">Last Name</label>
+      <input type="text" class="form-control" id="editLastName" required>
+      <small class="invalid-feedback">Enter your Last Name.</small>
+    </div>
+
+    <div class="form-group">
+      <label for="editUsername">Username</label>
+      <input type="text" class="form-control" id="editUsername" required>
+      <small class="invalid-feedback">Enter your Username.</small>
+    </div>
+
+  </fieldset>
+
+  <div class="button-container">
+    <button type="button" class="btn btn-secondary" aria-label="Cancel" onclick="editName()">Cancel</button>
+    <button type="submit" class="btn btn-primary" aria-label="Continue">Continue</button>
+  </div>
+
+</form>
+
+<script>
+  function editName() {
+    $('#editNameForm').toggle();
+  };
+</script>

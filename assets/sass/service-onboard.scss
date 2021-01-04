@@ -1,0 +1,44 @@
+.section-service-onboard {
+
+  &.stepper {
+
+    .nav-tabs {
+      .nav-item:first-child {
+        display: none;
+      }
+    }
+
+    .step-wrapper {
+      padding-bottom: 3em;
+    }
+
+    .step-header {
+      margin-bottom: 2em;
+      padding-bottom: 0.5em;
+      border-bottom: 1px solid $theme-grey;
+    }
+
+    .step-content {
+      margin-bottom: 2em;
+
+      &.step-content-terms {
+        height: auto;
+        max-height: 500px;
+        padding: 1em;
+        border: 1px solid $theme-medium-grey;
+        overflow: scroll;
+      }
+    }
+
+    .step-access {
+      .step-access-content {
+        display: flex;
+        align-items: baseline;
+
+        i {
+          margin-right: 1em;
+        }
+      }
+    }
+  }
+}

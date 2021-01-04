@@ -1,0 +1,30 @@
+.section-service-card-back {
+  display: flex;
+
+  .tab-pane {
+    .service-card-back-content {
+      padding: 0.5em 1.875em;
+    }
+
+    .section-title-alt {
+      margin-bottom: 0.5em;
+      padding: 1em 1.875em;
+      border-bottom: 1px solid $theme-medium-grey;
+
+      h3 {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  @media (max-width: 767.98px) {
+    flex-direction: column;
+
+    .tab-pane {
+      .service-card-back-content,
+      .section-title-alt {
+        padding: 0.5em 1em;
+      }
+    }
+  }
+}

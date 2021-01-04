@@ -1,0 +1,33 @@
+.section-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: auto;
+  min-height: 128px;
+  background: #212326;
+  img {
+    max-width: 250px;
+  }
+}
+.section-breadcrumbs {
+  background: $theme-primary;
+
+  .breadcrumb {
+    margin-bottom: 0;
+    background: transparent;
+    .breadcrumb-item {
+      a {
+      color: $white;
+      }
+      &.active {
+        color:$white;
+
+        a {
+          color: $white;
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
+

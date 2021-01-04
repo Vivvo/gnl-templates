@@ -1,0 +1,87 @@
+<section class="section-invoice-details">
+
+  <button type="button" class="btn btn-link" onclick="backToInvoices()" aria-label="Back to invoices">
+    <i class="fas fa-arrow-left"></i>
+    <span>Back to Invoices</span>
+  </button>
+
+  <div class="page-wrapper">
+
+    <section class="invoice-details">
+
+      <div class="row">
+
+        <div class="col-lg-4">
+
+          <div class="invoice-details-header">
+
+            <div class="desktop-text">
+              <span>Amount Due (CAD)</span>
+              <h2>$16.30</h2>
+            </div>
+
+            <h5 class="mobile-text">Invoice from Library Service</h5>
+
+          </div>
+
+          <div class="invoice-details-infos">
+
+            <p><span>Date Issued&nbsp;</span>Jul 8, 2020</p>
+
+            <p><span>Due Date&nbsp;</span>Oct 8, 2020</p>
+
+            <p><span>Status&nbsp;</span>Unpaid</p>
+
+          </div>
+
+        </div>
+
+        <div class="col-lg-8">
+
+          <div class="invoice-details-content">
+
+            <h5 class="desktop-text">Invoice from Library Service</h5>
+
+            <ul class="list-group">
+              <li class="list-group-item">
+                Description
+                <span>Total</span>
+              </li>
+
+              <li class="list-group-item">
+                Used Books
+                <span>$10.00</span>
+              </li>
+
+              <li class="list-group-item">
+                Fines
+                <span>$6.30</span>
+              </li>
+
+              <li class="list-group-item invoice-details-total">
+                <div class="total-amount">
+                  Amount Due
+                  <span class="mobile-text">&nbsp;(CAD)</span>
+                </div>
+                <span class="total">$16.30</span>
+              </li>
+
+            </ul>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </div>
+
+</section>
+
+<script>
+  function backToInvoices() {
+    $('#invoices').load("../includes/invoices.html");
+  }
+</script>

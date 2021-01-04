@@ -1,0 +1,30 @@
+<form action="" class="needs-validation form-container" novalidate>
+
+  <fieldset>
+
+    <legend class="sr-only">Add a new email</legend>
+
+    <div class="form-group">
+      <label for="newEmail">Add Email Address</label>
+      <input type="email" class="form-control" id="newEmail" required>
+      <small class="invalid-feedback">Enter a valid email.</small>
+    </div>
+
+    <div class="custom-control custom-checkbox">
+      <input type="checkbox" class="custom-control-input" id="customCheck1">
+      <label class="custom-control-label" for="customCheck1">Set as primary</label>
+    </div>
+
+  </fieldset>
+
+  <div class="button-container">
+    <button type="button" class="btn btn-secondary" onclick="addEmail()" aria-label="Cancel">Cancel</button>
+    <button type="submit" class="btn btn-primary" aria-label="Continue">Continue</button>
+  </div>
+
+</form>
+<script>
+    function addEmail() {
+    $('#addEmailForm').toggle();
+  }
+</script>

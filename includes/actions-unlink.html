@@ -1,0 +1,89 @@
+<section class="section-actions-unlink">
+
+  <div class="page-wrapper-alt">
+
+    <div class="section-title-alt">
+      <h3>Disconnect Service</h3>
+    </div>
+
+    <div class="service-card-back-content">
+
+      <div class="section-actions-unlink-header">
+
+        <h6>
+          Will remove access to the service through My Services<br>
+          Will remove access to and erase any messages in your Notifications
+        </h6>
+
+        <p>
+          Ensure you have read, printed or saved any messages in your Notifications before unlinking.
+        </p>
+
+      </div>
+
+      <div class="section-actions-unlink-content">
+
+        <h6>
+          Will remove the following Consents:
+        </h6>
+
+        <div class="icon-block">
+          <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+
+          <div class="icon-block-content">
+            <p>Home</p>
+            3223 13th Avenue, Regina SK, S1R 2L1, Canada
+          </div>
+
+        </div>
+
+        <div class="icon-block">
+          <i class="far fa-envelope"></i>
+
+          <div class="icon-block-content">
+            <p>Email</p>
+            s.ferguson@gmail.com
+          </div>
+
+        </div>
+
+        <div class="icon-block">
+          <i class="far fa-user-circle"></i>
+
+          <div class="icon-block-content">
+            <p>Name</p>
+            Sarah Ferguson
+          </div>
+
+        </div>
+
+      </div>
+
+      <p class="section-actions-unlink-footer">
+        You can link the service again at any time.<br>
+        You'll find it at <a href="/service-add.html" class="underlined">Add Service</a>.
+      </p>
+
+      <div class="button-container">
+
+        <button class="btn btn-secondary" onclick="backToActions()" aria-label="Cancel">
+          Cancel
+        </button>
+
+        <button class="btn btn-danger" aria-label="Unlink Service">
+          Unlink
+        </button>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<script>
+  function backToActions() {
+    $('#actions').load("../includes/actions.html");
+  }
+</script>

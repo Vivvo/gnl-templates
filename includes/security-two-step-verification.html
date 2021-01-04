@@ -1,0 +1,94 @@
+<section class="two-step-verification">
+
+  <ul class="list-group list-group-flush">
+
+    <li class="list-group-item" id="mobileForm">
+
+      <!--mobile activation-->
+      <div class="two-step-verification-list-wrapper mobile-activation">
+
+        <div class="two-step-verification-list-content">
+
+          <i class="fas fa-mobile-alt"></i>
+
+          <div class="two-step-verification-list-text">
+            <h6>Text Message (SMS)</h6>
+            <p>
+              Use your phone as an extra layer of security to keep other people from logging into your account. Verification codes are sent by text message to this phone.
+            </p>
+
+          </div>
+
+        </div>
+
+        <div class="button-container">
+
+          <div class="custom-control custom-switch">
+            <input type="checkbox" class="custom-control-input" id="enableTwoStepSMS" checked>
+            <label class="custom-control-label" for="enableTwoStepSMS">Off</label>
+          </div>
+
+        </div>
+
+      </div>
+
+    </li>
+
+
+    <li class="list-group-item" id="authenticatorForm">
+
+      <!--authenticator-app activation-->
+      <div class="two-step-verification-list-wrapper authenticator-app-activation">
+
+        <div class="two-step-verification-list-content">
+
+          <i class="fas fa-qrcode"></i>
+
+          <div class="two-step-verification-list-text">
+
+            <h6>Authenticator App</h6>
+
+            <p>
+              Use your phone as an extra layer of security to keep other people from logging into your account. Verification codes are sent by text message to this phone.
+            </p>
+
+          </div>
+
+        </div>
+
+        <div class="button-container">
+
+          <div class="custom-control custom-switch">
+            <input type="checkbox" class="custom-control-input" id="enableTwoStepApp">
+            <label class="custom-control-label" for="enableTwoStepApp">Off</label>
+          </div>
+
+        </div>
+
+      </div>
+
+    </li>
+
+  </ul>
+
+</section>
+
+<script>
+
+  $('#enableTwoStepSMS').change(function() {
+
+    if ($ (this).is(':checked')) {
+      $("#mobileForm").load("../includes/forms/security-two-step-verification-mobile-form.html");
+    } else {
+      return false;
+    }
+  });
+
+  $('#enableTwoStepApp').change(function() {
+    if ($ (this).is(':checked')) {
+      $("#authenticatorForm").load("../includes/forms/security-two-step-verification-app-form.html");
+    } else {
+      return false;
+    }
+  })
+</script>

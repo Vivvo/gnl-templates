@@ -1,0 +1,95 @@
+<form action="" class="needs-validation form-container" novalidate>
+
+  <fieldset>
+
+    <legend class="h6">
+      Add Address
+    </legend>
+
+    <div class="form-group">
+      <label for="addressType">Address Type</label>
+
+      <select class="custom-select" id="addressType" required>
+        <option value="" hidden></option>
+        <option value="1">Home</option>
+        <option value="2">Business</option>
+        <option value="3">Billing</option>
+        <option value="4">Mailing</option>
+        <option value="5">Other</option>
+      </select>
+      <small class="invalid-feedback">Select an Address Type.</small>
+    </div>
+
+    <div class="form-group">
+      <label for="address1">Address</label>
+      <input type="text" class="form-control" id="address1" required>
+      <small class="invalid-feedback">Enter an Address.</small>
+    </div>
+
+    <div class="form-group">
+      <label for="address2">Apartment, suite, etc.</label>
+      <input type="text" class="form-control" id="address2" placeholder="Optional">
+    </div>
+
+    <div class="form-group">
+      <label for="city">City</label>
+      <input type="text" class="form-control" id="city" required>
+      <small class="invalid-feedback">Enter a City.</small>
+    </div>
+
+    <div class="form-group">
+      <label for="province">Province</label>
+
+      <select class="custom-select" id="province" required>
+        <option value="" hidden></option>
+        <option value="1">Manitoba</option>
+        <option value="2">Ontario</option>
+        <option value="3">Quebec</option>
+        <option value="4">Saskatchawan</option>
+      </select>
+      <small class="invalid-feedback">Select a Province.</small>
+    </div>
+
+    <label for="addressCountry">Country</label>
+
+    <div class="input-group input-group-left">
+      <select class="custom-select" id="addressCountry" required>
+        <option value="" hidden></option>
+        <option value="1">Canada</option>
+        <option value="2">USA</option>
+      </select>
+
+      <div class="input-group-prepend">
+        <div class="input-group-text">
+          <img src="https://www.countryflags.io/ca/flat/24.png" alt="Canada">
+        </div>
+      </div>
+
+      <small class="invalid-feedback">Select a Country.</small>
+
+    </div>
+
+    <div class="form-group">
+      <label for="postalCode">Postal Code</label>
+      <input type="text" class="form-control" id="postalCode" required>
+      <small class="invalid-feedback">Enter a Postal Code.</small>
+    </div>
+
+    <div class="custom-control custom-checkbox">
+      <input type="checkbox" class="custom-control-input" id="isPrimaryAddress">
+      <label class="custom-control-label" for="isPrimaryAddress">Set as Primary</label>
+    </div>
+
+  </fieldset>
+
+  <div class="button-container">
+    <button type="button" class="btn btn-secondary" onclick="addAddress()" aria-label="Cancel">Cancel</button>
+    <button type="submit" class="btn btn-primary" aria-label="Continue">Continue</button>
+  </div>
+
+</form>
+<script>
+  function addAddress() {
+    $('#addAddressForm').toggle();
+  }
+</script>

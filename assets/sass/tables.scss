@@ -1,0 +1,148 @@
+// TABLES
+
+table {
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: separate;
+  border-spacing: 0;
+
+  .btn-sort {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height:auto;
+    min-height: unset;
+    padding: 0;
+    border: none;
+  }
+
+  thead {
+    tr {
+      th {
+        width: 100%;
+        padding: 1em 0.75em;
+        border-top: 0 !important;
+        border-bottom: 1px solid $theme-medium-grey !important;
+        border-right: 1px solid $theme-medium-grey;
+        background: #FAFBFF;
+        color: $body-color;
+        font-size: 1em;
+        font-weight: 500;
+        white-space: normal;
+
+        &:last-child {
+          border-right: 0;
+        }
+      }
+    }
+  }
+
+  tbody {
+
+    tr {
+
+      &:first-child {
+        td {
+          border-top: none;
+        }
+      }
+
+      &:last-child {
+        td {
+          border-bottom: none;
+        }
+      }
+
+      &.notification-state-unread td {
+        font-weight: 600;
+      }
+
+      &.default-empty {
+        border: none !important;
+
+        td {
+          text-align: left !important;
+          width: 100% !important;
+          border-top: none !important;
+          border-bottom: none !important;
+          font-size: 1em;
+          font-weight: 500;
+        }
+      }
+
+      td {
+        padding: 1em 0.75em;
+        width: 100%;
+        font-size: 0.875em;
+        white-space: normal;
+        border-top: none !important;
+        border-right: 1px solid $theme-medium-grey;
+        border-bottom: 1px solid $theme-medium-grey;
+
+        &:last-child {
+          border-right: 0;
+        }
+      }
+    }
+  }
+
+  // CUSTOM RESPONSIVE TABLE
+
+  &.custom-responsive {
+
+    .table-mobile {
+      display: none;
+    }
+
+    @media(max-width: 991.98px) {
+      display: block;
+
+      &.page-wrapper-table {
+        box-shadow: none;
+        background: transparent;
+      }
+
+      thead, tbody, tr, th, td {
+        display: block;
+        width: 100% !important;
+        text-align: left !important;
+      }
+
+      thead {
+
+        tr {
+          position: absolute;
+          top: -9999px;
+          left: -9999px;
+        }
+      }
+
+      tbody {
+
+        tr {
+          margin-bottom: 1.5em;
+          border: 1px solid $theme-light-grey;
+          background: $white;
+          box-shadow: $box-shadow;
+
+          td {
+            display: flex;
+            align-items: baseline;
+            border: none;
+            border-bottom: 1px solid $theme-light-grey;
+            padding: 0.5em;
+          }
+        }
+      }
+
+      .table-mobile {
+        flex: 0 0 25%;
+        display: inline-flex;
+        margin-right: 1em;
+        font-size: 10px;
+        text-transform: uppercase;
+      }
+    }
+  }
+}

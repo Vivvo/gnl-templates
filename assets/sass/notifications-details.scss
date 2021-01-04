@@ -1,0 +1,20 @@
+.section-notification-details {
+
+  .button-container {
+    width: 100%;
+    margin-bottom: 1.5em;
+    text-align: left;
+
+    .btn-link {
+      i {
+        margin-right: 0.5em;
+      }
+    }
+  }
+
+  .notification-details-header {
+    margin-bottom: 1.5em;
+    padding-bottom: 1.5em;
+    border-bottom: 1px solid $theme-medium-grey;
+  }
+}

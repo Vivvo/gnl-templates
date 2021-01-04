@@ -1,0 +1,40 @@
+.section-footer {
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  height: auto;
+  min-height: 11.5em;
+  background: $theme-grey;
+  color: $white;
+
+  .underlined {
+    color: $white;
+  }
+
+  .footer-primary {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2.5em;
+
+    img {
+      margin-right: 1em;
+      max-width: 6em;
+    }
+  }
+
+  .footer-secondary {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .underlined {
+      margin-right: 1em;
+
+      &:last-of-type {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
