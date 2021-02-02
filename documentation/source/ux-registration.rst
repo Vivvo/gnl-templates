@@ -83,7 +83,9 @@ The if the maintenance object is not empty, it will trigger the logic in the vie
 
 
 
-.. note:: Todo: Create images for the collapsable maintence ribbon
+.. image:: ./images/maintance-ribbon.png
+    :width: 100%
+    :alt: maintance notice example
 
 **Error Messaging**
 
@@ -91,7 +93,9 @@ There is an error treatment to inform the user that the incorrect information wa
 template framed to paint errors in a globally common way. This error component is displayed by default just over the username 
 input.  This template can be styled to meet your standards. The default template appears like the following:
 
-.. note:: Todo: Create images for the error states 
+.. image:: ./images/success-message.png
+    :width: 100%
+    :alt: success message example
 
 and the HTML code that renders the error state (is also the success state) is as follows:
 
@@ -138,9 +142,9 @@ For example:
     <a href="/{{ .lang }} /login"> {{ lang .lang }} </a>
     </div>
 
-.. note:: Todo: Create images for the language toggle
-
-
+.. image:: ./images/lang-toggle.png
+    :alt: create account example
+    :width: 100%
 
 *******************
 Create Account
