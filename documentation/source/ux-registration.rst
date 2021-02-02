@@ -82,10 +82,9 @@ The if the maintenance object is not empty, it will trigger the logic in the vie
     </div>
 
 
-
 .. image:: ./images/maintance-ribbon.png
+    :alt: create account example
     :width: 100%
-    :alt: maintance notice example
 
 **Error Messaging**
 
@@ -93,9 +92,13 @@ There is an error treatment to inform the user that the incorrect information wa
 template framed to paint errors in a globally common way. This error component is displayed by default just over the username 
 input.  This template can be styled to meet your standards. The default template appears like the following:
 
-.. image:: ./images/success-message.png
+.. image:: ./images/error-message.png
+    :alt: create account example
     :width: 100%
-    :alt: success message example
+
+.. image:: ./images/success-message.png
+    :alt: create account example
+    :width: 100%
 
 and the HTML code that renders the error state (is also the success state) is as follows:
 
@@ -145,6 +148,8 @@ For example:
 .. image:: ./images/lang-toggle.png
     :alt: create account example
     :width: 100%
+
+
 
 *******************
 Create Account
