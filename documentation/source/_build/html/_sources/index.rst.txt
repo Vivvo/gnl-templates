@@ -20,5 +20,6 @@ This guide is to inform the front end developer of the stucture of the Vivvo tem
    project_structure.rst
    tools.rst
    styles.rst
+   ux-registration
 
 
