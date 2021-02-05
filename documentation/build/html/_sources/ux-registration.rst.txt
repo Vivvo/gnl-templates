@@ -43,7 +43,7 @@ The login form on this page accepts two parameters that are sent to the login pr
 
 This controller will either response with an error object, or direct the user to the dashboard page.
 
-**Maintenance Messaging**
+** Maintenance Messaging**
 
 Also, when this page is rendered, there is a system call to the maintenance service looking for any upcoming alerts with title and collapsed details,
 If there is a response object the following object is available to the template, and the CitizenOne tagging will expose the html component that 
