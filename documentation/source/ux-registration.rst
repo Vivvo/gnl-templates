@@ -82,10 +82,13 @@ The if the maintenance object is not empty, it will trigger the logic in the vie
     </div>
 
 
-.. image:: ./images/maintance-ribbon.png
+.. image:: ./images/maintenance-ribbon.png
     :alt: create account example
     :width: 100%
-
+    
+.. image:: ./images/maintenance-ribbon-open.png
+    :alt: create account example
+    :width: 100%
 **Error Messaging**
 
 There is an error treatment to inform the user that the incorrect information was provided. This template is a re-usable 
