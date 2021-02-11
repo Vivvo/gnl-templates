@@ -1,0 +1,28 @@
+
+<section class="section-maintenance-ribbon">
+    <div id="accordion">
+        <div class="card">
+            <div class="card-header" id="headingOne">
+                <a class="btn btn-link collapsed " id="show-more-icon" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                <h5 class="mb-0">
+                    <i class="fas fa-exclamation-triangle pr-2" ></i> <span class="maintenance-title">Maintenance message title</span>
+                </h5>
+                    <span class="show-more btn btn-link">show more <i class="fas fa-angle-right pl-1" id="arrow"></i></span>
+                </a>
+            </div>
+
+            <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+                <div class="card-body">
+                     Details of the maintenance notice will be here
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<script>
+    document.querySelector('#show-more-icon').addEventListener("click", function () {
+        document.querySelector("#arrow").classList.toggle("fa-angle-down");
+        document.querySelector("#arrow").classList.toggle("fa-angle-right");
+    })
+</script>
+

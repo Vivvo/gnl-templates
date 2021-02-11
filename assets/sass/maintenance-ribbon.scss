@@ -1,0 +1,31 @@
+.section-maintenance-ribbon {
+  .card-header {
+    background: $theme-grey;
+    border-radius: 0;
+    width: 100%;
+
+    a {
+      text-decoration-line: none;
+    }
+  }
+
+  h5 {
+    color: white;
+  }
+
+  .show-more {
+    color: $theme-light-grey;
+    padding: 4px 24px;
+    @media(max-width: 575.98px) {
+      padding-left: 10px;
+    }
+  }
+  .card-body {
+    background: white;
+  }
+
+  @media(max-width: 575.98px) {
+    font-size: 12px;
+    flex-direction: column;
+  }
+}
