@@ -65,7 +65,7 @@ Sample form inputs:
 
 As long as the form has nameattributes on each input, and the form's action is set to
 ``/registration/create``
-, then our back end will populate the csrf_token input, and create an account with the given details on submit.
+, then our back end will populate the ``csrf_token`` input, and create an account with the given details on submit.
 
 
 
