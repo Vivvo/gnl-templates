@@ -15,6 +15,7 @@ This guide is to inform the front end developer of the stucture of the Vivvo tem
    :maxdepth: 2
    :caption: Contents:
 
+   template-design-guide.rst
    system-structure.rst
    using-the-templates.rst
    project_structure.rst
