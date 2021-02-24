@@ -1,0 +1,195 @@
+﻿@import 'variables';
+
+.gnl-header {
+	$block: &;
+	display: block;
+	justify-content: center;
+	align-items: center;
+	background: $gnl-color-gray-11;
+	color: $gnl-color-white;
+	width: 100%;
+	z-index: $gnl-z-index-header;
+
+	&__logo {
+		@extend %gnl-text-hide;
+		display: block;
+		height: $gnl-size-16;
+		margin: 0 auto;
+		background-repeat: no-repeat;
+		background-position-y: center;
+		background-color: transparent;
+		background-size: contain;
+	}
+
+	&__container {
+		display: flex;
+		justify-content: center;
+		position: relative;
+		flex-direction: column;
+		flex-wrap: nowrap;
+		padding: 0 $gnl-size-2;
+		width: 100%;
+		margin: 0;
+
+		@include media-breakpoint-up(md) {
+			flex-direction: row;
+		}
+	}
+
+	&__nav {
+		align-items: center;
+		margin-left: auto;
+		display: flex;
+		margin-left: $gnl-size-3;
+
+		@include media-breakpoint-down(md) {
+			position: absolute;
+			width: 100%;
+			top: $gnl-size-11;
+			left: 0;
+			height: $gnl-size-5;
+			margin-left: 0;
+		}
+	}
+
+	&__nav-list {
+		width: 100%;
+		height: 40px;
+		display: flex;
+		margin-bottom: 0;
+		align-items: center;
+		list-style: none;
+		padding-left: 0;
+		flex-direction: row;
+
+		@include media-breakpoint-up(md) {
+			height: 100%;
+		}
+	}
+
+	&__nav-item {
+		display: flex;
+		justify-content: center;
+		height: 100%;
+		align-items: center;
+
+		@include media-breakpoint-up(md) {
+			display: inline-block;
+		}
+
+		@include media-breakpoint-down(md) {
+			width: 25%;
+		}
+	}
+
+	&__nav-link {
+		font-size: $gnl-font-size-regular;
+		color: $gnl-color-gray-6;
+		display: flex;
+		flex: 1;
+		height: 100%;
+		align-items: center;
+		justify-content: center;
+		position: relative;
+		transition: color .1s cubic-bezier(.4,0,.2,1);
+		text-decoration: none;
+
+		&:visited {
+			color: $gnl-color-gray-6;
+			text-decoration: none;
+		}
+
+		&:hover {
+			color: $gnl-color-gray-4;
+			text-decoration: none;
+		}
+
+		&.active {
+			color: $gnl-color-white;
+			text-decoration: none;
+			font-weight: $gnl-font-weight-bold;
+		}
+
+		@include media-breakpoint-up(md) {
+			padding: 0 $gnl-size-2;
+		}
+	}
+
+	&__text {
+		margin-left: $gnl-size-3;
+	}
+
+	&--tabs {
+		//padding-bottom: $gnl-size-1;
+		@include media-breakpoint-down(md) {
+			padding-bottom: $gnl-size-5;
+		}
+
+		#{$block}__brand {
+		}
+
+		#{$block}__brand-logo {
+			//width: 32px;
+		}
+
+		#{$block}__logo {
+			margin-right: 16px;
+			/*width: 160px;
+            height: $gnl-size-8;
+            margin: $gnl-size-2 $gnl-size-9 0 0;
+            background-image: url(../images/mygovnl-logo.svg);*/
+		}
+	}
+
+	&--print {
+		background: none;
+		color: inherit;
+
+		#{$block}__container {
+			padding: 0;
+			justify-content: unset;
+			display:flex;
+		}
+
+		#{$block}__text {
+			padding-top: $gnl-size-3;
+
+			> * {
+				margin: 0;
+			}
+		}
+	}
+}
+
+.gnl-header--dashboard {
+	flex-wrap: wrap;
+	padding-bottom: $gnl-size-1;
+
+	@include media-breakpoint-up(md) {
+		flex-wrap: nowrap;
+		padding: ($gnl-size-1/2) $gnl-size-3;
+	}
+
+	.gnl-header__logo {
+		width: 160px;
+		height: $gnl-size-8;
+		margin: $gnl-size-2 $gnl-size-9 0 0;
+		background-image: url(../images/mygovnl-logo.svg);
+	}
+}
+
+.gnl-header--mygovnl-external {
+
+	.gnl-header__logo {
+		width: 249px;
+		background-image: url(../images/govnl-mygovnl-logo.png);
+	}
+}
+
+.gnl-header--external {
+
+	.gnl-header__logo {
+		width: 126px;
+		background-image: url(../images/govnl-logo.png);
+	}
+}

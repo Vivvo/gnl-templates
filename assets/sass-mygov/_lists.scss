@@ -1,0 +1,608 @@
+﻿@import 'variables';
+
+.gnl-list {
+    $block: &;
+    //margin: 0 0 $gnl-size-2 $gnl-size-3;
+    margin-right: 0;
+    /*margin-bottom: $gnl-size-2;*/
+    margin-left: $gnl-size-3;
+    padding: 0;
+
+    ol li, ul li, ol, li {
+        margin-bottom: $gnl-size-1;
+    }
+
+    li > ul,
+    li > ol {
+        margin-top: $gnl-size-1;
+    }
+    // because dl can be translated as "defintion list" and "description list"
+    &.gnl-list--definition, &.gnl-list--description {
+        margin: 0;
+
+        dt {
+            color: $gnl-color-gray-11;
+        }
+
+        dd, dt {
+            padding-left: 0;
+        }
+    }
+
+    &--no-bullets {
+        margin-left: 0;
+        list-style-type: none;
+    }
+
+    &.gnl-list--numeric {
+        margin-left: 0;
+        padding: 0;
+        list-style-type: none;
+        counter-reset: listitem;
+
+        &.gnl-list--numeric--align-right {
+            li {
+                &::before {
+                    min-width: $gnl-size-4;
+                }
+            }
+        }
+
+        li {
+            display: table;
+            counter-increment: listitem;
+
+            &::before {
+                display: table-cell;
+                padding-right: $gnl-size-1;
+                color: $gnl-color-gray-11;
+                font-weight: $gnl-font-weight-bold;
+                text-align: right;
+                content: counters(listitem, ".") ". ";
+            }
+        }
+    }
+
+    &--compressed {
+        ol li, ul li, ol, li {
+            margin-bottom: initial;
+        }
+
+        li ol, li ul {
+            margin-bottom: initial;
+        }
+
+        li > ul,
+        li > ol {
+            margin-top: initial;
+        }
+    }
+
+    &--multiple-columns {
+
+        &-2 {
+            column-count: 1;
+
+            @media (min-width: 480px) {
+                column-count: 1;
+            }
+
+            @media (min-width: 840px) {
+                column-count: 2;
+            }
+        }
+
+        &-3 {
+            column-count: 1;
+
+            @media (min-width: 480px) {
+                column-count: 2;
+            }
+
+            @media (min-width: 840px) {
+                column-count: 3;
+            }
+        }
+    }
+}
+
+.gnl-list-group {
+    $block: &;
+    margin: 0;
+    padding: $gnl-size-1 0;
+    list-style-type: none;
+    font-size: $gnl-size-2;
+    -webkit-font-smoothing: antialiased;
+
+    &__item {
+        display: block;
+        position: relative;
+        padding: $gnl-size-1 $gnl-size-2;
+        color: $gnl-color-gray-9;
+        align-items: center;
+        text-align: inherit; // For `<button>`s
+        text-decoration: none;
+        background-color: transparent; // For `<button>`s
+        border: 0; // For `<button>`s
+        width: 100%;
+
+        &.disabled, &:disabled {
+            color: $gnl-color-gray-7;
+            pointer-events: none;
+        }
+        /*@include hover-focus {
+            text-decoration: none;
+            border-color: transparent;
+        }*/
+        //TODO: figure out a way to have one at-root's instead of two. GC
+        @at-root a#{&} {
+            color: $gnl-color-gray-9;
+
+            @include hover-focus {
+                text-decoration: none;
+                color: $gnl-color-gray-11;
+                background-color: $gnl-color-gray-2;
+            }
+
+            &.active {
+                color: $gnl-color-brand-blue;
+                background-color: $gnl-color-blue-light;
+                border-color: $gnl-color-blue-light;
+            }
+        }
+
+        @at-root button#{&} {
+            color: $gnl-color-gray-9;
+
+            @include hover-focus {
+                text-decoration: none;
+                color: $gnl-color-gray-11;
+                background-color: $gnl-color-gray-2;
+            }
+
+            &.active {
+                color: $gnl-color-brand-blue;
+                background-color: $gnl-color-blue-light;
+                border-color: $gnl-color-blue-light;
+            }
+        }
+    }
+
+    &__container {
+        display: flex;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        align-items: center;
+        -webkit-box-align: center;
+    }
+
+    &__body {
+        -webkit-box-align: center;
+        align-items: center;
+        display: block;
+        flex: 1 1 0%;
+    }
+
+    &__label {
+        flex-basis: 148px;
+        margin-right: $gnl-size-3;
+        color: $gnl-color-gray-9;
+
+        &--lg {
+            flex-basis: 208px;
+        }
+
+        &--xs {
+            flex-basis: 74px
+        }
+    }
+
+    &__actions {
+        flex: 0 0 100%;
+        -webkit-box-align: center;
+        align-items: center;
+        pointer-events: auto; // reset pointer
+        > * {
+            margin: $gnl-size-1 0;
+
+            &:not(:last-child) {
+                margin-right: $gnl-size-1;
+            }
+        }
+    }
+
+    &__icon {
+        display: flex;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        align-items: center;
+        -webkit-box-align: center;
+        justify-content: center;
+
+        &--material {
+            @extend .gnl-icon;
+            display: inline-flex;
+        }
+
+        &--custom {
+            @extend %gnl-card__icon-base;
+            align-self: flex-start;
+            width: $gnl-size-7;
+            height: $gnl-size-7;
+
+            &.gnl-icon {
+                &::before {
+                    @extend %gnl-card__icon-base;
+                    width: $gnl-size-7;
+                    height: $gnl-size-7;
+                }
+            }
+        }
+    }
+
+    &__leading {
+        margin-right: $gnl-size-2;
+    }
+
+    &__trailing {
+        align-self: center;
+
+        > * {
+            &:not(.gnl-list-group__icon) {
+                margin: $gnl-size-1 0;
+
+                &:not(:last-child) {
+                    margin-right: $gnl-size-1;
+                }
+            }
+        }
+
+        &--align-top {
+            align-self: flex-start;
+        }
+    }
+
+    &__content {
+        flex: 1 1 544px;
+
+        &--sm {
+            flex-basis: 300px;
+        }
+
+        &--auto {
+            flex-basis: auto;
+        }
+    }
+
+    &__primary-text {
+        @extend %gnl-header-base;
+        font-size: $gnl-font-size-large;
+        padding: 0;
+        white-space: normal;
+        overflow: auto;
+        display: block;
+        margin: 0;
+    }
+
+    &__supporting-text {
+        white-space: normal;
+        overflow: auto;
+        display: block;
+        color: $gnl-color-gray-8;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        & > p:last-child {
+            margin-bottom: 0;
+        }
+
+        & > p:first-child {
+            margin-top: 0;
+        }
+
+        &--strong {
+            @extend .gnl-text-strong;
+        }
+    }
+
+    &__avatar {
+        align-self: flex-start;
+
+        .gnl-avatar--medium {
+            margin: 0;
+        }
+    }
+
+    &__amount {
+        color: $gnl-color-brand-green;
+        vertical-align: middle;
+    }
+
+    &__grouping-header {
+        margin-top: 0;
+    }
+
+    &--card {
+        padding: 0;
+
+        #{ $block }__item {
+            padding: $gnl-size-3;
+
+            & + #{ $block }__item {
+                margin-top: $gnl-size-1;
+            }
+        }
+
+        #{ $block }__leading {
+            align-self: flex-start;
+            margin-right: $gnl-size-3;
+        }
+
+        #{ $block }__content {
+            &:not(:last-child) {
+                margin-bottom: $gnl-size-1;
+            }
+        }
+
+        #{ $block }__actions {
+
+            .gnl-button {
+                margin-bottom: 0;
+                margin-top: $gnl-size-2;
+            }
+
+            .gnl-alert {
+                margin-top: $gnl-size-1;
+                margin-bottom: $gnl-size-1;
+            }
+        }
+    }
+
+    &--selection {
+
+        input[type="radio"] {
+            position: absolute;
+            opacity: 0;
+            margin-left: -7px;
+
+            &.focus, &:focus {
+
+                + .gnl-list-group__item {
+                    // Focus outline simulated for label when tabbing/clicking on radio button
+                    outline: 1px dotted #212121; // IE, Edge, Firefox
+                    outline: 2px auto -webkit-focus-ring-color; // Chrome
+                }
+            }
+        }
+
+        input[type="radio"] + #{ $block }__item {
+            cursor: pointer;
+        }
+
+        input[type="radio"] + #{ $block }__item::before {
+            @extend .gnl-icon;
+            content: "check";
+            color: transparent;
+            vertical-align: middle;
+            margin-right: $gnl-size-1;
+        }
+
+        input[type="radio"]:checked + #{ $block }__item {
+            color: $gnl-color-brand-blue;
+            background-color: $gnl-color-blue-light;
+            border-color: $gnl-color-blue-light;
+        }
+
+        input[type="radio"]:checked + #{ $block }__item::before {
+            color: inherit;
+        }
+
+        #{ $block }__item {
+            display: flex;
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            border: 1px solid $gnl-color-gray-4;
+            padding: $gnl-size-2 $gnl-size-1 $gnl-size-2 $gnl-size-3+$gnl-size-2;
+            color: $gnl-color-gray-11;
+            border-radius: $gnl-border-radius-default;
+            width: 100%;
+
+            & + #{ $block }__item {
+                margin-top: $gnl-size-1;
+            }
+
+            @include media-breakpoint-up(md) {
+                width: 75%;
+            }
+
+            @include hover-focus {
+                color: $gnl-color-gray-11;
+                text-decoration: none;
+                background-color: $gnl-color-gray-2;
+            }
+
+            &.active,
+            &:active {
+                color: $gnl-color-brand-blue;
+                background-color: $gnl-color-blue-light;
+                border-color: $gnl-color-blue-light;
+            }
+        }
+
+        #{ $block }__selection {
+            #{ $block }__item {
+                padding-left: $gnl-size-1;
+            }
+        }
+    }
+
+    &--outline {
+        #{ $block }__item {
+            padding: $gnl-size-2;
+            border: 1px solid $gnl-color-gray-4;
+            border-radius: $gnl-border-radius-default;
+
+            & + #{ $block }__item {
+                margin-top: $gnl-size-1;
+            }
+        }
+    }
+
+    &--avatar-list {
+        #{ $block }__item {
+            padding: $gnl-size-2;
+        }
+
+        #{$block}__leading {
+            align-self: flex-start;
+        }
+    }
+
+    &--divider-between {
+        #{$block}__item {
+            &:not(:first-child) {
+                border: none;
+                border-top: 1px solid $gnl-color-gray-4;
+            }
+        }
+    }
+
+    &--summary {
+        padding: 0;
+        margin: $gnl-size-4 0;
+
+        #{$block}__item {
+            padding: 0;
+            margin: $gnl-size-3 0;
+            border-bottom: 1px solid $gnl-color-gray-4;
+        }
+
+        #{$block}__label {
+            flex-basis: unset;
+            margin-bottom: $gnl-size-1;
+            color: $gnl-color-gray-11;
+            font-weight: $gnl-font-weight-bold;
+        }
+
+        #{$block}__value {
+        }
+
+        #{$block}__body {
+            margin-bottom: $gnl-size-3;
+            flex: 1 1 auto;
+
+            @media (max-width: $gnl-breakpoint-md) {
+                margin-bottom: $gnl-size-2;
+            }
+        }
+
+        #{$block}__trailing {
+            margin-bottom: $gnl-size-3;
+
+            @media (max-width: $gnl-breakpoint-md) {
+                flex-basis: 100%;
+            }
+        }
+    }
+}
+
+.gnl-list-group--selection-yesno {
+    display: flex;
+    flex-direction: row;
+
+    .gnl-list-group__selection {
+        height: $gnl-size-5 + 2;
+        margin-right: $gnl-size-2;
+        border-radius: $gnl-border-radius-default;
+    }
+
+    .gnl-list-group__item {
+        position: absolute;
+        border: 1px solid $gnl-color-gray-5;
+        margin-top: -$gnl-size-6;
+        margin-left: 2px;
+        padding: 0;
+        height: $gnl-size-5;
+        width: $gnl-size-13;
+        color: $gnl-color-gray-10;
+        font-weight: bold;
+        border-radius: $gnl-border-radius-default;
+
+        &::before {
+            @extend .gnl-icon;
+            content: "";
+            vertical-align: middle;
+            margin-right: $gnl-size-1;
+            margin-left: $gnl-size-2;
+        }
+    }
+
+    .gnl-list-group__item--yes {
+        background-color: $gnl-color-green-light;
+        border: 1px solid $gnl-color-green-light-2;
+
+        &:hover,
+        &:focus,
+        &:active {
+            background-color: $gnl-color-green-light-2;
+        }
+
+        &::before {
+            content: "check";
+            color: $gnl-color-green;
+        }
+    }
+
+    .gnl-list-group__item--no {
+        background-color: $gnl-color-red-light;
+        border: 1px solid $gnl-color-red-light-2;
+
+        &:hover,
+        &:focus,
+        &:active {
+            background-color: $gnl-color-red-light-2;
+        }
+
+        &::before {
+            content: "close";
+            color: $gnl-color-red;
+        }
+    }
+
+    input[type="radio"] {
+        width: $gnl-size-13 + 4;
+        height: $gnl-size-5 + 4;
+        opacity: 0;
+
+        &.focus, &:focus {
+
+            + .gnl-list-group__item {
+                // Focus outline simulated for label when tabbing/clicking on radio button
+                outline: 1px dotted #212121; // IE, Edge, Firefox
+                outline: 2px auto -webkit-focus-ring-color; // Chrome
+            }
+        }
+    }
+
+    input[type="radio"] + .gnl-list-group__item {
+        cursor: pointer;
+        display: flex;
+        justify-content: start;
+    }
+
+    input[type="radio"]:checked + .gnl-list-group__item {
+
+        &.gnl-list-group__item--yes {
+            background-color: $gnl-color-green-light-2;
+        }
+
+        &.gnl-list-group__item--no {
+            background-color: $gnl-color-red-light-2;
+        }
+    }
+}

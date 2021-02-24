@@ -1,0 +1,60 @@
+﻿@import 'variables';
+
+$sky-top: #d4d8da;
+$sky-bottom: #d1d5d7;
+$sea: #878f93;
+
+@mixin gnl-icebergs-only($stop) {
+    background-image: url(../images/mygovnl-background-login-icebergs-only.svg), linear-gradient(180deg, $sky-top 0%, $sky-bottom $stop, $sea $stop, $sea 100%);
+}
+
+.gnl-login {
+    background-color: $gnl-color-gray-2;
+
+    &.gnl-login--page {
+        background-image: url(../images/mygovnl-background-login.svg);
+        background-repeat: no-repeat;
+        background-position: center top;
+        background-size: cover;
+
+        @media all and (min-width: 1920px) {
+            @include gnl-icebergs-only(57%);
+            background-size: auto 100%;
+        }
+
+        @media all and (min-height: 1200px) {
+            @include gnl-icebergs-only(57%);
+            background-size: auto 75%;
+            background-color: $sea;
+        }
+
+        // Target IE10+
+        @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+            @include gnl-icebergs-only(52%);
+
+            @include media-breakpoint-up(lg) {
+                @include gnl-icebergs-only(57%);
+            }
+        }
+
+        // Target Firefox due to Bugzilla bug 1262842
+        // https://bugzilla.mozilla.org/show_bug.cgi?id=1262842
+        @supports (-moz-appearance:none) {
+            @include gnl-icebergs-only(52%);
+        }
+    }
+}
+
+.gnl-login-wait {
+    margin-top: 10vh;
+
+    .gnl-login-wait__spinner {
+        margin: $gnl-size-3 auto;
+    }
+
+    .gnl-login-wait__message {
+        display: none;
+        text-align: center;
+        color: $gnl-color-gray-11;
+    }
+}

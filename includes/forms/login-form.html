@@ -1,52 +1,39 @@
 <form action="" class="needs-validation" novalidate>
 
-  <div class="row">
-
-    <div class="col-lg-6">
-
-      <fieldset>
-
-        <legend class="sr-only">Login to your Account</legend>
-
-        <div class="form-group">
-          <label for="userEmail">Email or username<span class="required-field">*</span></label>
-          <input type="text" class="form-control" id="userEmail" required>
-          <small class="form-text invalid-feedback">Enter your Email or Username.</small>
-
+    <div class="gnl-card gnl-card--login gnl-card--info-box gnl-paper gnl-paper--rounded">
+        <div class="gnl-card__header">
+            <h1 class="gnl-header-4 gnl-card__title gnl-card__title--xl">Sign in to MyGovNL</h1>
         </div>
+        <div class="gnl-card__body">
+            <div>
+                <p>Need a MyGovNL account? <a href="./create-account.html" class="gnl-link">Create an account</a></p>
+            </div>
 
-        <label for="userPassword">Password<span class="required-field">*</span></label>
-
-        <div class="input-group input-group-password">
-          <input type="password" class="form-control" id="userPassword" required>
-
-          <div class="input-group-prepend">
-            <button class="btn btn-password show-password" type="button" aria-label="Show or hide password">
-              <span class="sr-only">Show</span>
-              <i class="far fa-eye-slash"></i>
-            </button>
-          </div>
-
-          <small class="form-text invalid-feedback">Enter your Password.</small>
-
+            <div class="form-group gnl-form-group">
+                <label for="email_input" class="gnl-form-label gnl-max-width--md">Email address</label>
+                <div class="gnl-flex-container gnl-max-width">
+                    <input type="email"
+                           id="email_input"
+                           class="form-control gnl-form-control"
+                           autofocus />
+                    <span class="gnl-input-validation-error-icon"></span>
+                </div>
+                <span asp-validation-for="Username" class="form-text gnl-form-validation-message"></span>
+            </div>
+            <div class="form-group gnl-form-group gnl-max-width">
+                <label for="password_input" class="gnl-form-label">Password</label>
+                <div class="gnl-flex-container">
+                    <input type="password"
+                           id="password_input"
+                           class="form-control gnl-form-control"
+                           autocomplete="off" />
+                    <span class="gnl-input-validation-error-icon"></span>
+                </div>
+                <span class="form-text gnl-form-validation-message"></span>
+                <a href="../../pages/reset-password.html" class="gnl-button gnl-button--link">Forgot your password?</a>
+            </div>
+            <button type="submit" class="gnl-card__button gnl-button gnl-button--contained">Sign in</button>
         </div>
-
-      </fieldset>
-
-      <div class="login-forgot-password-link">
-        <a href="../../pages/reset-password.html" class="underlined">Forgot password?</a>
-      </div>
-
-      <div class="button-container login-button-container">
-
-        <button type="submit" class="btn btn-primary btn-block" aria-label="Login">Login</button>
-        <p>Or</p>
-        <a href="./create-account.html" class="btn btn-secondary btn-block">Create Account</a>
-
-      </div>
-
     </div>
-
-  </div>
-
 </form>
+

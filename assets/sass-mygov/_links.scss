@@ -1,0 +1,40 @@
+﻿@import 'variables';
+
+%gnl-nowrap {
+    overflow-wrap: break-word;
+
+    @include media-breakpoint-up(sm) {
+        overflow-wrap: normal;
+        white-space: nowrap;
+    }
+}
+
+a {
+    text-decoration: underline;
+
+    &:hover {
+        color: $gnl-color-brand-blue;
+    }
+}
+
+.gnl-link {
+    color: $gnl-color-brand-blue;
+    text-decoration: underline;
+
+    &:hover {
+        color: $gnl-color-brand-blue;
+        cursor: pointer;
+    }
+
+    &--tel,
+    &--mailto {
+        @extend %gnl-nowrap;
+    }
+
+    @at-root a#{&} {
+        @include hover-focus {
+            background-color: $gnl-color-blue-light;
+            color: $gnl-color-brand-blue;
+        }
+    }
+}

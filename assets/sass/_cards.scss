@@ -1,0 +1,266 @@
+﻿@import 'variables';
+
+%gnl-card__icon-base {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 0 auto;
+	width: $gnl-size-10;
+	height: $gnl-size-10;
+	font-size: $gnl-size-6;
+}
+
+.gnl-card {
+	$block: &;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	max-width: 352px;
+	flex-basis: 352px;
+	height: 100%;
+	border: 0px;
+	@extend .gnl-elevation-1;
+	padding: $gnl-size-2 $gnl-size-4;
+
+	&__title {
+		margin-top: $gnl-size-2;
+		text-align: center;
+	}
+
+	&__header {
+		margin: $gnl-size-2 auto 0;
+		position: relative;
+	}
+
+	&__icon-overlay {
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: $gnl-size-4;
+		height: $gnl-size-4;
+
+		&.gnl-card__icon-overlay--alert {
+			background: url(../images/icon-govnl-alert-circle-border.svg) no-repeat transparent;
+		}
+
+		&.gnl-card__icon-overlay--success {
+			background: url(../images/icon-govnl-checkmark-circle-border.svg) no-repeat transparent;
+		}
+
+		&.gnl-card__icon-overlay--donor {
+			background: url(../images/icon-govnl-heart-border.svg) no-repeat transparent;
+		}
+	}
+
+	&__icon {
+		@extend %gnl-card__icon-base;
+		text-decoration: none;
+
+		&.gnl-icon {
+			&::before {
+				@extend %gnl-card__icon-base;
+			}
+		}
+		/*&.gnl-icon--add {
+            @extend .gnl-color-theme--blue-light;
+        }*/
+		&.gnl-icon--success {
+			background-color: $gnl-color-green;
+			color: $gnl-color-white;
+
+			&::before {
+				content: "done";
+			}
+		}
+	}
+
+	&__button {
+		margin: $gnl-size-1 0;
+		width: 100%;
+		justify-content: center;
+	}
+
+	&__body {
+		.gnl-divider.gnl-divider--line {
+			margin: $gnl-size-2 0;
+		}
+
+		#{$block}__button:last-child {
+			margin-bottom: $gnl-size-2;
+		}
+	}
+
+	&__alert {
+		margin-bottom: $gnl-size-2;
+	}
+	//TODO: remove possibly? Not used anymore because of new alert modifier. GC
+	&--frameless {
+		box-shadow: none;
+	}
+
+	&--center {
+		display: flex;
+		margin: 0 auto;
+	}
+
+	&--info {
+		max-width: 100%;
+		flex-basis: 100%;
+		display: flex;
+		flex-grow: 1;
+		flex-shrink: 1;
+		padding: 0;
+
+		#{$block}__header {
+			margin: 0;
+			padding: $gnl-size-2 $gnl-size-3;
+
+			#{$block}__title {
+				margin-top: 0;
+				text-align: left;
+				font-weight: $gnl-font-weight-bold;
+				font-size: $gnl-font-size-xlarge;
+
+				&:only-child {
+					margin-bottom: 0;
+				}
+			}
+
+			.gnl-subtitle-1 {
+				margin-bottom: 0;
+			}
+		}
+
+		#{$block}__body {
+
+			.gnl-list-group {
+				padding: 0;
+
+				.gnl-list-group__item {
+					padding: $gnl-size-2 $gnl-size-3;
+
+					.gnl-list-group__content {
+						flex: 1 1 300px;
+					}
+				}
+				//TODO: find better way to format constraints GC
+				.gnl-list-group__body {
+					> .gnl-stretch {
+						> :first-child {
+							margin-right: $gnl-size-3;
+						}
+					}
+				}
+			}
+		}
+
+		#{$block}__footer {
+			margin-top: auto;
+			padding: $gnl-size-2 $gnl-size-3;
+
+			> p:last-child {
+				margin-bottom: 0;
+			}
+
+			&--divider {
+				@extend .gnl-divider--line;
+			}
+		}
+		// TODO: make this generic. We are recreating button--link. Use that somehow GC
+		a#{$block}__footer {
+			color: $gnl-color-brand-blue;
+			font-weight: $gnl-font-weight-bold;
+			text-decoration: none;
+			border-top-left-radius: 0px;
+			border-top-right-radius: 0px;
+
+			&:hover,
+			&:focus,
+			.active {
+				text-decoration: none;
+				background-color: #F1F3F4;
+				border-bottom-left-radius: 6px;
+				border-bottom-right-radius: 6px;
+			}
+		}
+
+		button#{$block}__footer {
+			color: $gnl-color-brand-blue;
+			font-weight: $gnl-font-weight-bold;
+			text-decoration: none;
+			border-top-left-radius: 0px;
+			border-top-right-radius: 0px;
+
+			&:hover,
+			&:focus,
+			.active {
+				text-decoration: none;
+				background-color: #F1F3F4;
+				border-top-left-radius: 0px;
+				border-top-right-radius: 0px;
+				border-bottom-left-radius: 6px;
+				border-bottom-right-radius: 6px;
+			}
+		}
+		// TODO: figure out a better way to do this. This fixes a bug where the hover on the last list item does not have rounded bottom corners from the paper class. GC
+		&.gnl-paper--rounded {
+			.gnl-list-group {
+				> .gnl-list-group__item {
+					&:last-child {
+						&:hover,
+						&:focus,
+						&.active {
+							border-bottom-left-radius: 6px;
+							border-bottom-right-radius: 6px;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	&--info-box {
+		@extend .gnl-card--info;
+
+		#{$block}__header {
+			padding: $gnl-size-4 $gnl-size-4 0px;
+			margin-bottom: $gnl-size-1;
+
+			#{$block}__title {
+				font-size: $gnl-font-size-large;
+
+				&--xl {
+					font-size: 34px;
+					font-weight: $gnl-font-weight-black;
+				}
+			}
+		}
+
+		#{$block}__body {
+			padding: 0px $gnl-size-4 $gnl-size-4;
+		}
+
+		#{$block}__footer {
+			padding-left: $gnl-size-4;
+			padding-right: $gnl-size-4;
+		}
+	}
+
+	&--login {
+		display: flex;
+		margin: auto;
+		max-width: 456px;
+		flex-basis: 456px;
+		padding: 0;
+	}
+
+	&--outlined {
+		border: 1px solid $gnl-color-gray-5;
+		box-shadow: none;
+	}
+
+	&--full-width {
+		max-width: 100%;
+		flex-basis: 100%;
+	}
+}

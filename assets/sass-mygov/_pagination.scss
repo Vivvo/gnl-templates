@@ -1,0 +1,21 @@
+﻿@import 'variables';
+
+.gnl-pagination {
+    @extend .gnl-flex-container;
+
+    .gnl-pagination__dot {
+        display: inline-block;
+        margin: $gnl-size-1 / 2;
+        width: $gnl-size-1 * 1.5;
+        height: $gnl-size-1 * 1.5;
+        border-radius: 50%;
+
+        &.gnl-pagination__dot--on {
+            background-color: $gnl-color-brand-blue;
+        }
+
+        &.gnl-pagination__dot--off {
+            background-color: $gnl-color-gray-5;
+        }
+    }
+}

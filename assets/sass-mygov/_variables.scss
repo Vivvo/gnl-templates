@@ -1,0 +1,168 @@
+﻿
+// ********************************************************************
+// SIZES / SPACING / POSITIONING
+// ********************************************************************
+
+$gnl-width-xs: 100%; // default is 100% width for small screens
+$gnl-width-md: 600px; // for medium width (768px) screens and up
+$gnl-width-lg: 75%;
+$gnl-max-width-md: 600px;
+$gnl-max-width-lg: 800px;
+$gnl-max-width-xl: 1088px;
+$gnl-dashboard-width-md: 60%;
+
+$gnl-breakpoint-md: 600px;
+
+$gnl-main-container-margin-left: 15%;
+$gnl-main-container-margin-right: auto;
+$gnl-main-container-margin-left-sm: auto;
+
+$gnl-size-1: 8px;
+$gnl-size-2: 16px;
+$gnl-size-3: 24px;
+$gnl-size-4: 32px;
+$gnl-size-5: 40px;
+$gnl-size-6: 48px;
+$gnl-size-7: 56px;
+$gnl-size-8: 64px;
+$gnl-size-9: 72px;
+$gnl-size-10: 80px;
+$gnl-size-11: 88px;
+$gnl-size-12: 96px;
+$gnl-size-13: 104px;
+$gnl-size-14: 112px;
+$gnl-size-15: 120px;
+$gnl-size-16: 128px;
+
+$gnl-icon-size-xs: 18px;
+$gnl-icon-size-sm: 24px;
+$gnl-icon-size-md: 36px;
+$gnl-icon-size-lg: 48px;
+$gnl-icon-size-xl: 96px;
+
+$gnl-border-radius-default: 6px;
+$gnl-border-radius-rounded: 20px;
+
+$gnl-input-height-default: $gnl-size-5;
+
+// ********************************************************************
+//  Z-INDEX
+// ********************************************************************
+
+$gnl-z-index-normal: 0;
+$gnl-z-index-high: 999;
+$gnl-z-index-top: 10000;
+
+$gnl-z-index-sidenav: 1;
+$gnl-z-index-header: 2;
+$gnl-z-index-stepper-line: 998;
+$gnl-z-index-stepper-container: 999;
+$gnl-z-index-stepper-number: 1000;
+$gnl-z-index-dropdown: 1010;
+$gnl-z-index-datepicker: 1015;
+$gnl-z-index-drawer-backdrop: 1020;
+$gnl-z-index-drawer: 1030;
+$gnl-z-index-modal-backdrop: 1040;
+$gnl-z-index-modal: 1050;
+
+
+// ********************************************************************
+//  COLOUR
+// ********************************************************************
+$gnl-color-white: #fff;
+$gnl-color-black: #000;
+
+$gnl-color-gray-1: #FAFAFA;
+$gnl-color-gray-2: #F1F3F4;
+$gnl-color-gray-3: #EAECED;
+$gnl-color-gray-4: #E0E4E6;
+$gnl-color-gray-5: #D4D8DA;
+$gnl-color-gray-6: #BFC4C8;
+$gnl-color-gray-7: #878F93;
+$gnl-color-gray-8: #737679;
+$gnl-color-gray-9: #5F6368;
+$gnl-color-gray-10: #3B4148;
+$gnl-color-gray-11: #212326;
+
+$gnl-color-blue: #1976D2;
+$gnl-color-blue-light: #E8F0FE;
+$gnl-color-blue-dark: #1a5d93;
+$gnl-color-red: #D32F2F;
+$gnl-color-red-light: #F8E7EA;
+$gnl-color-red-light-2: #EAB6C1;
+$gnl-color-purple: #7B41CE;
+$gnl-color-purple-light: #EEEAF0;
+$gnl-color-green: #3E861F;
+$gnl-color-green-light: #E6F2EC;
+$gnl-color-green-light-2: #B3D7C5;
+$gnl-color-yellow: #FFB300;
+$gnl-color-yellow-light: #F7F7E8;
+$gnl-color-brand-blue: #004B87;
+$gnl-color-brand-red: #BA0C2F;
+$gnl-color-brand-purple: #512D6D;
+$gnl-color-brand-green: #007A33;
+
+
+// ********************************************************************
+//  TYPOGRAPHY
+// ********************************************************************
+$gnl-font-family-sans: Lato, sans-serif;
+
+$gnl-font-size-small: 14px;
+$gnl-font-size-regular: 16px;
+$gnl-font-size-large: 18px;
+$gnl-font-size-xlarge: 20px;
+
+$gnl-font-weight-regular: 400;
+$gnl-font-weight-bold: 700;
+$gnl-font-weight-black: 900;
+
+$gnl-line-height-default: 1.5;
+
+
+// ********************************************************************
+//  THE ALPHABET!
+// ********************************************************************
+$gnl-alphabet: 'a' 'b' 'c' 'd' 'e' 'f' 'g' 'h' 'i' 'j' 'k' 'l' 'm' 'n' 'o' 'p' 'q' 'r' 's' 't' 'u' 'v' 'w' 'x' 'y' 'z';
+
+
+// ********************************************************************
+//  MODALS
+// ********************************************************************
+
+$modal-inner-padding: 1rem !default;
+
+$modal-dialog-margin: .5rem !default;
+$modal-dialog-margin-y-sm-up: 1.75rem !default;
+
+$modal-content-color: null !default;
+$modal-content-bg: $gnl-color-white !default;
+$modal-content-border-color: rgba($gnl-color-black, .2) !default;
+$modal-content-border-width: 1px !default;
+$modal-content-box-shadow-xs: 0 .25rem .5rem rgba($gnl-color-black, .5) !default;
+$modal-content-box-shadow-sm-up: 0 .5rem 1rem rgba($gnl-color-black, .5) !default;
+
+$modal-backdrop-bg: $gnl-color-black !default;
+$modal-backdrop-opacity: .5 !default;
+$modal-header-border-color: $gnl-color-gray-4 !default;
+$modal-footer-border-color: $modal-header-border-color !default;
+$modal-header-border-width: $modal-content-border-width !default;
+$modal-footer-border-width: $modal-header-border-width !default;
+$modal-header-padding-y: 1rem !default;
+$modal-header-padding-x: 1rem !default;
+$modal-header-padding: $modal-header-padding-y $modal-header-padding-x !default;
+
+$modal-xl: 1140px !default;
+$modal-lg: 800px !default;
+$modal-md: 600px !default;
+$modal-sm: 300px !default;
+
+$modal-fade-transform: translate(0, -50px) !default;
+$modal-show-transform: none !default;
+$modal-transition: transform .3s ease-out !default;
+
+// ********************************************************************
+//  NAVS
+// ********************************************************************
+
+$gnl-nav-side-width: 256px;

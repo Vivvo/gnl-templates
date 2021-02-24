@@ -1,0 +1,262 @@
+﻿@import "variables";
+
+// ********************************************************************
+// MATERIAL ICONS
+// ********************************************************************
+// when adding an icon refer to the reference here:
+// https://material.io/resources/icons/?style=round
+
+// support for Google's .material-icons class
+.material-icons {
+    display: inline-block;
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: $gnl-size-3;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    text-decoration: none;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-feature-settings: 'liga';
+    font-feature-settings: 'liga';
+}
+
+.gnl-icon {
+    display: inline-flex;
+    display: -ms-inline-flexbox;
+    align-items: center;
+    text-decoration: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+    &::before,
+    &::after {
+        @extend .material-icons;
+    }
+
+    @at-root a#{&} {
+        text-decoration: none;
+    }
+}
+
+.gnl-icon--round {
+    border-radius: 50%;
+}
+
+.gnl-icon--add {
+    &::before {
+        content: "add";
+    }
+}
+
+.gnl-icon--error {
+    color: $gnl-color-red;
+
+    &::before {
+        content: "error";
+    }
+}
+
+.gnl-icon--help {
+    color: $gnl-color-brand-blue;
+    vertical-align: text-bottom;
+}
+
+.gnl-icon--spinner {
+    width: $gnl-size-8;
+    height: $gnl-size-8;
+    display: block;
+    color: $gnl-color-brand-blue;
+
+    &:before {
+        content: "";
+        width: 100%;
+        height: 100%;
+        display: inline-block;
+        border: 6px solid currentColor;
+        border-bottom-color: transparent;
+        border-radius: 100%;
+        background: transparent;
+        animation: ball-clip-rotate .75s linear infinite;
+    }
+}
+
+.gnl-icon--spinner--small {
+    @extend .gnl-icon--spinner;
+    width: $gnl-size-2;
+    height: $gnl-size-2;
+    margin-right: $gnl-size-1;
+    margin-top: -4px;
+
+    &:before {
+        border-width: 2px;
+    }
+}
+
+.gnl-icon--spinner-button {
+    @extend .gnl-icon--spinner;
+    color: $gnl-color-blue-light;
+    opacity: 0.5;
+    width: $gnl-size-2;
+    height: $gnl-size-2;
+    margin-right: $gnl-size-1;
+    margin-top: -4px;
+
+    &:before {
+        border: 3px solid currentColor;
+        border-bottom-color: transparent;
+        border-radius: 100%;
+    }
+}
+
+.gnl-icon--success {
+    color: $gnl-color-green;
+
+    &::before {
+        content: "check_circle";
+    }
+}
+
+.gnl-icon--toggle {
+    cursor: pointer;
+    transition: background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    border-radius: 50%;
+
+    &::before {
+        content: "expand_more";
+        @include gnl-transition(transform);
+    }
+
+    &.gnl-icon--toggle--collapsed {
+        &::before {
+        }
+    }
+
+    &.gnl-icon--toggle--expanded {
+        &::before {
+            transform: rotate(180deg);
+        }
+    }
+
+    &:hover {
+        background-color: rgba(0, 0, 0, 0.08);
+    }
+}
+
+.gnl-icon--visibility {
+    cursor: pointer;
+    color: $gnl-color-brand-blue;
+    position: relative;
+    width: $gnl-size-9;
+    font-weight: bold;
+
+    &::before {
+        position: static;
+        width: $gnl-size-4;
+    }
+
+    &.gnl-icon--visibility--show {
+        &::before {
+            content: "visibility";
+        }
+    }
+
+    &.gnl-icon--visibility--hide {
+        &::before {
+            content: "visibility_off";
+        }
+    }
+}
+
+.gnl-icon--warning {
+    color: $gnl-color-yellow;
+
+    &::before {
+        content: "warning";
+    }
+}
+
+// ********************************************************************
+// SIZES
+// ********************************************************************
+.gnl-icon--xs {
+    font-size: $gnl-icon-size-xs;
+
+    &::before {
+        font-size: $gnl-icon-size-xs;
+    }
+}
+
+.gnl-icon--sm {
+    font-size: $gnl-icon-size-sm;
+
+    &::before {
+        font-size: $gnl-icon-size-sm;
+    }
+}
+
+.gnl-icon--md {
+    font-size: $gnl-icon-size-md;
+
+    &::before {
+        font-size: $gnl-icon-size-md;
+    }
+}
+
+.gnl-icon--lg {
+    font-size: $gnl-icon-size-lg;
+
+    &::before {
+        font-size: $gnl-icon-size-lg;
+    }
+}
+
+.gnl-icon--xl {
+    font-size: $gnl-icon-size-xl;
+
+    &::before {
+        font-size: $gnl-icon-size-xl;
+    }
+}
+
+// ********************************************************************
+// IMAGE ICONS
+// ********************************************************************
+$image-icons: 'alert-circle', 'alert-circle-border', 'checkmark-circle', 'checkmark-circle-border', 'drivers-license', 'exam', 'keys', 'map-location', 'mcp-card', 'megaphone', 'signature', 'vehicle-car', 'vehicle-motorcycle', 'vehicle-taxi', 'vehicle-trailer', 'woodcutting', 'woodcutting-alert', 'woodcutting-checkmark';
+
+@each $icon in $image-icons {
+    .gnl-icon--#{$icon} {
+        display: inline-block;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        &::before {
+            content: ' ';
+            width: $gnl-size-3;
+            height: $gnl-size-3;
+            background-image: url(../images/icon-govnl-#{$icon}.svg);
+        }
+    }
+}
+
+// ********************************************************************
+// ANIMATION KEYFRAMES
+// ********************************************************************
+@keyframes ball-clip-rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}

@@ -1,0 +1,111 @@
+﻿@import 'variables';
+
+$gnl-avatar-colors: $gnl-color-blue $gnl-color-green $gnl-color-purple;
+
+.gnl-avatar {
+    $block: &;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin: $gnl-size-1;
+    border-radius: 50%;
+    width: $gnl-size-5;
+    height: $gnl-size-5;
+    flex-shrink: 0;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border: 1px solid transparent;
+    background-color: $gnl-color-gray-2;
+    color: $gnl-color-gray-11;
+
+    &--text {
+        padding: 0 3px;
+        background-color: $gnl-color-purple;
+        color: $gnl-color-white;
+        font-size: $gnl-font-size-large;
+        font-weight: $gnl-font-weight-regular;
+
+        @each $letter in $gnl-alphabet {
+            $i: index($gnl-alphabet, $letter);
+            $pos: ($i % length($gnl-avatar-colors)) + 1;
+
+            &--#{$letter} {
+                background-color: nth($gnl-avatar-colors, $pos);
+            }
+        }
+    }
+
+    &--icon {
+        font-size: $gnl-icon-size-sm;
+    }
+
+    &--icon-md {
+        font-size: $gnl-size-4;
+    }
+
+    &--medium {
+        width: $gnl-size-7;
+        height: $gnl-size-7;
+
+        &#{$block}--text {
+            font-size: $gnl-size-3;
+        }
+
+        &#{$block}--icon {
+            font-size: $gnl-icon-size-sm;
+            text-decoration: none;
+        }
+    }
+
+    &--large {
+        width: $gnl-size-10;
+        height: $gnl-size-10;
+
+        &#{$block}--text {
+            font-size: $gnl-size-4;
+        }
+
+        &#{$block}--icon {
+            font-size: $gnl-size-6;
+            text-decoration: none;
+        }
+    }
+}
+
+// Working towards refactoring these out and fully replacing with color-themes. GC
+
+.gnl-avatar--icon--red {
+    background-color: $gnl-color-red-light;
+    color: $gnl-color-brand-red;
+}
+
+.gnl-avatar--icon--green {
+    background-color: $gnl-color-green-light;
+    color: $gnl-color-brand-green;
+}
+
+.gnl-avatar--icon--blue {
+    background-color: $gnl-color-blue-light;
+    color: $gnl-color-brand-blue;
+}
+
+.gnl-avatar--icon--purple {
+    background-color: $gnl-color-purple-light;
+    color: $gnl-color-brand-purple;
+}
+
+.gnl-avatar--icon--yellow {
+    background-color: $gnl-color-yellow-light;
+    color: $gnl-color-yellow;
+}
+
+.gnl-avatar--icon--gray {
+    background-color: $gnl-color-gray-2;
+    color: $gnl-color-gray-11;
+}
+
+.gnl-avatar--color-purple {
+    background-color: $gnl-color-purple;
+}

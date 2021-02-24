@@ -1,0 +1,212 @@
+﻿@import 'variables';
+
+// ********************************************************************
+// Styles made and used specifically for Digital Design System pages.
+// ********************************************************************
+
+//TODO: Figure out what to do with code blocks. ie. Textarea? Background/text color change?
+
+.gnl-design__container {
+    margin: 0;
+    min-height: 400px;
+
+    @include media-breakpoint-up(lg) {
+        margin-left: 250px;
+    }
+}
+
+.gnl-bg-white {
+    background-color: $gnl-color-white;
+    padding-top: inherit;
+    padding-bottom: inherit;
+    padding-right: 12px;
+    padding-left: 12px;
+    width: 100%
+}
+
+.gnl-nav--left {
+    display: none;
+
+    @include media-breakpoint-up(md) {
+        display: block;
+        border-right: 1px solid $gnl-color-gray-4;
+        height: 100%;
+        min-height: $gnl-width-md;
+    }
+}
+
+.gnl-component-main-container {
+    width: $gnl-width-xs;
+    padding: $gnl-size-2 $gnl-size-1;
+
+    @include media-breakpoint-up(lg) {
+        width: calc(100% - 24px);
+        margin: 0 auto;
+    }
+}
+
+%gnl-component-child {
+    max-width: $gnl-width-md;
+    padding: $gnl-size-3;
+    text-align: left;
+
+    @include media-breakpoint-up(md) {
+        width: $gnl-width-xs;
+    }
+}
+
+.gnl-code-background {
+    background-color: $gnl-color-gray-2;
+    border-radius: $gnl-border-radius-default;
+    padding: $gnl-size-2;
+}
+
+.gnl-code-example {
+    @extend .gnl-code-background;
+    align-items: center;
+    justify-content: center;
+}
+
+.gnl-component-example {
+    @extend .gnl-code-example;
+    min-width: $gnl-width-xs;
+
+    &.gnl-component-example--background-gray {
+        background-color: $gnl-color-gray-3;
+    }
+
+    .gnl-button-container--multi {
+        flex-wrap: wrap;
+    }
+}
+
+.gnl-demo-list {
+    background-color: white;
+    max-width: 100%;
+    border: 1px solid rgba(0,0,0,.1);
+}
+
+.gnl-code-figure {
+    margin: $gnl-size-2;
+}
+
+.gnl-pre-code-block {
+    display: grid;
+    tab-size: 4;
+}
+
+.gnl-code-block {
+    font-size: $gnl-font-size-small;
+    font-family: Consolas, Monaco, Andale Mono, monospace;
+    text-align: left;
+}
+
+// should this become our main component for examples? TODO: decide on way to display examples and use it. GC
+.gnl-code-block-example {
+    display: block;
+    margin-bottom: $gnl-size-5;
+
+    &__live {
+        justify-content: center;
+        position: relative;
+        padding: $gnl-size-2;
+        margin: 0;
+        border: solid 3px $gnl-color-gray-3;
+
+        &--gray {
+            background-color: $gnl-color-gray-3;
+        }
+    }
+
+    &__code-bar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        height: 3rem;
+        background: $gnl-color-gray-1;
+        padding-left: 1rem;
+        padding-right: .5rem;
+        border-bottom: 1px solid #393939;
+    }
+
+    &__code {
+        position: relative;
+        max-height: 320px;
+        overflow-y: auto;
+        width: 100%;
+        background-color: $gnl-color-gray-1;
+        @extend .gnl-code-block;
+    }
+}
+
+.gnl-form-control-input--focused {
+    display: block;
+    width: 100%;
+    height: 40px;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: 6px;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    background-color: #fff;
+    border-color: #0891ff;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(0, 75, 135, 0.25);
+}
+// TODO: refactor out once a decision is made on where this should live. GC
+.gnl-dds {
+    thead, tr, th, tbody {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        font-size: 100%;
+        font: inherit;
+        vertical-align: baseline;
+    }
+
+    table {
+        display: inline-block;
+        overflow-x: auto;
+        margin: $gnl-size-1 0 $gnl-size-2;
+        max-width: 100%;
+        border: 1px solid $gnl-color-gray-4;
+    }
+
+    thead {
+        th {
+            font-weight: $gnl-font-weight-bold;
+            color: $gnl-color-gray-11;
+            font-size: $gnl-font-size-regular;
+        }
+    }
+
+    td, th {
+        border: 1px solid $gnl-color-gray-4;
+        padding: $gnl-size-2 $gnl-size-2 $gnl-size-2 $gnl-size-3;
+
+        &:first-child {
+            border-left: none;
+        }
+
+        &:last-child {
+            border-right: none;
+        }
+    }
+
+    & th {
+        border-top: none;
+        text-align: left;
+    }
+
+    & tr {
+        &:last-child > td {
+            border-bottom: none;
+        }
+    }
+}

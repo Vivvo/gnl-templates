@@ -1,0 +1,394 @@
+﻿@import 'variables';
+@import "../../node_modules/bootstrap/scss/forms";
+
+$checkboxRadioMargin: -6px 3px -5px 0 - $gnl-size-4;
+
+%checkboxRadioGroup {
+    position: relative;
+    display: block;
+    padding-left: $gnl-size-4; // padding-left same as $checkboxRadioMargin padding-right
+}
+
+.gnl-form-group {
+    width: 100%;
+    margin-top: $gnl-size-3;
+    margin-bottom: $gnl-size-3;
+
+    &--numbered {
+        counter-reset: radiocounter;
+
+        .gnl-form-radio__counter {
+            counter-increment: radiocounter;
+
+            &::before {
+                content: counters(radiocounter, ".") ") ";
+            }
+        }
+    }
+}
+
+.gnl-form-control {
+    color: $gnl-color-gray-9;
+
+    &.input-validation-error {
+        border-color: $gnl-color-red;
+        padding-right: $gnl-size-5;
+
+        & + .gnl-input-validation-error-icon {
+            display: inline-flex;
+            align-items: center;
+
+            &::before {
+                @extend .gnl-icon;
+                color: $gnl-color-red;
+                font-size: $gnl-icon-size-xs;
+                content: "error";
+                margin-left: -33px;
+            }
+        }
+
+        &:focus {
+            box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.25);
+            -webkit-box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.25);
+        }
+    }
+
+    &:-ms-input-placeholder { // Internet Explorer 10-11
+        color: $gnl-color-gray-6;
+    }
+
+    &input::-ms-input-placeholder { // Internet Explorer 11, Microsoft Edge
+        color: $gnl-color-gray-6;
+    }
+
+    &:-webkit-input-placeholder { // Microsoft Edge
+        color: $gnl-color-gray-6;
+    }
+
+    &::-webkit-input-placeholder { // WebKit, Blink, Edge
+        color: $gnl-color-gray-6;
+    }
+
+    &:-moz-placeholder { // Mozilla Firefox 4 to 18
+        color: $gnl-color-gray-6;
+        opacity: 1;
+    }
+
+    &::-moz-placeholder { // Mozilla Firefox 19+
+        color: $gnl-color-gray-6;
+        opacity: 1;
+    }
+}
+
+.gnl-form-group--leading {
+    .gnl-form-control {
+        padding-left: $gnl-size-5;
+    }
+
+    .gnl-form-control__icon {
+        position: absolute;
+        pointer-events: none;
+        cursor: default;
+        color: $gnl-color-gray-9;
+        padding: $gnl-size-1 $gnl-size-1 0 $gnl-size-1;
+    }
+}
+
+.gnl-form-control--money {
+    &.gnl-form-control {
+        text-align: right;
+    }
+}
+
+.gnl-form-label {
+    font-weight: $gnl-font-weight-regular;
+    color: $gnl-color-gray-11;
+}
+
+.gnl-form-help-text {
+    font-size: $gnl-font-size-small;
+
+    &.gnl-valid {
+        &::after {
+            @extend .gnl-icon;
+            content: "done";
+            font-size: $gnl-font-size-small;
+            color: $gnl-color-green;
+        }
+    }
+}
+
+.gnl-form-optional-text {
+    font-size: $gnl-font-size-small;
+    color: $gnl-color-gray-8;
+    padding-left: 2px;
+}
+
+.gnl-form-validation-message {
+    font-size: $gnl-font-size-small;
+    color: $gnl-color-red;
+
+    &.field-validation-error {
+        & ~ .gnl-form-help-text--hide-on-validate {
+            display: none;
+        }
+    }
+}
+
+.gnl-form-select {
+    @extend .form-control;
+    color: $gnl-color-gray-8;
+}
+
+.gnl-form-check {
+    @extend %checkboxRadioGroup;
+    margin-top: $gnl-size-3;
+    margin-bottom: $gnl-size-3;
+
+    &__input {
+        vertical-align: middle;
+        border: 1px;
+        clip: rect(0 0 0 0);
+        height: 1px;
+        margin: -1px;
+        overflow: hidden;
+        padding-top: $gnl-size-1;
+        position: absolute;
+        width: 1px;
+
+        & + .gnl-form-check__label {
+            padding: 3px 5px 5px 0;
+            user-select: none;
+            cursor: pointer;
+            margin-bottom: 0;
+
+            &::before {
+                @extend .gnl-icon;
+                content: "check_box_outline_blank";
+                font-size: $gnl-icon-size-sm;
+                color: $gnl-color-gray-6;
+                margin: $checkboxRadioMargin;
+                vertical-align: middle;
+            }
+        }
+
+        &.hover, &:hover {
+            + .gnl-form-check__label::before {
+                background-color: $gnl-color-blue-light;
+                border-radius: 50%;
+            }
+        }
+
+        &.focus, &:focus {
+            + .gnl-form-check__label {
+                // Focus outline simulated for label when tabbing/clicking on radio button
+                outline: 1px dotted #212121; // IE, Edge, Firefox
+                outline: 2px auto -webkit-focus-ring-color; // Chrome
+                &::before {
+                    @extend .gnl-icon;
+                    content: "check_box_outline_blank";
+                    color: $gnl-color-gray-7;
+                }
+            }
+        }
+
+        &.checked, &:checked {
+            + .gnl-form-check__label::before {
+                @extend .gnl-icon;
+                content: 'check_box';
+                color: $gnl-color-brand-blue;
+                animation: ripple 0.2s linear forwards;
+            }
+        }
+    }
+}
+
+.gnl-form-radio {
+    @extend %checkboxRadioGroup;
+
+    &__input {
+        border: 1px;
+        clip: rect(0 0 0 0);
+        height: 1px;
+        margin: -1px;
+        overflow: hidden;
+        padding-top: $gnl-size-1;
+        position: absolute;
+        width: 1px;
+
+        & + .gnl-form-radio__label {
+            padding: 3px 5px 5px 0;
+            cursor: pointer;
+
+            &::before {
+                @extend .gnl-icon;
+                content: 'radio_button_unchecked';
+                font-size: $gnl-icon-size-sm;
+                color: $gnl-color-gray-6;
+                margin: $checkboxRadioMargin;
+                border-radius: 50%;
+                vertical-align: middle;
+            }
+        }
+
+        &.focus, &:focus {
+            + .gnl-form-radio__label {
+                // Focus outline simulated for label when tabbing/clicking on radio button
+                outline: 1px dotted #212121; // IE, Edge, Firefox
+                outline: 2px auto -webkit-focus-ring-color; // Chrome
+            }
+        }
+
+        &.hover, &:hover {
+            + .gnl-form-radio__label::before {
+                background-color: $gnl-color-blue-light;
+                vertical-align: middle;
+            }
+        }
+
+        &.checked, &:checked {
+            + .gnl-form-radio__label::before {
+                content: 'radio_button_checked';
+                font-size: $gnl-icon-size-sm;
+                color: $gnl-color-brand-blue;
+                vertical-align: middle;
+                animation: ripple 0.2s linear forwards;
+            }
+        }
+    }
+}
+
+.gnl-file {
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+
+    &--error {
+        .gnl-file__top, .gnl-file__name {
+            border-color: $gnl-color-red;
+            border-style: solid;
+        }
+    }
+
+    &__input {
+        &--masked {
+            border: 1px;
+            clip: rect(0 0 0 0);
+            height: 1px;
+            margin: -1px;
+            overflow: hidden;
+            padding-top: $gnl-size-1;
+            position: absolute;
+            width: 1px;
+
+            &.focus, &:focus {
+
+                + label {
+                    // Focus outline simulated for label when tabbing/clicking on radio button
+                    outline: 1px dotted #212121; // IE, Edge, Firefox
+                    outline: 2px auto -webkit-focus-ring-color; // Chrome
+                    .gnl-file__top {
+                        background-color: darken($gnl-color-white, 2.5%);
+                        color: $gnl-color-blue-dark;
+                    }
+
+                    .gnl-file__name {
+                        background-color: $gnl-color-blue-dark;
+                    }
+                }
+            }
+        }
+    }
+
+    label {
+
+        &:hover,
+        &:active {
+
+            .gnl-file__top {
+                cursor: pointer;
+                background-color: darken($gnl-color-white, 2.5%);
+                color: $gnl-color-blue-dark;
+            }
+
+            .gnl-file__name {
+                cursor: pointer;
+                background-color: $gnl-color-blue-dark;
+            }
+        }
+    }
+
+    &__top {
+        display: flex;
+        flex-direction: column;
+        background-color: $gnl-color-white;
+        color: $gnl-color-brand-blue;
+        border-color: $gnl-color-gray-5;
+        border: 1px dashed $gnl-color-gray-5;
+        border-width: 1px 1px 0 1px;
+        border-radius: $gnl-border-radius-default $gnl-border-radius-default 0 0;
+        font-size: $gnl-font-size-regular;
+        white-space: nowrap;
+        height: auto;
+        padding: $gnl-size-2;
+    }
+
+    &__name {
+        display: block;
+        padding: 12px 0;
+        font-size: $gnl-font-size-regular;
+        color: $gnl-color-white;
+        background-color: $gnl-color-brand-blue;
+        border-radius: 0 0 $gnl-border-radius-default $gnl-border-radius-default;
+        white-space: nowrap;
+        overflow: hidden;
+        text-align: center;
+        text-overflow: ellipsis;
+    }
+
+    &__icon {
+        align-items: center;
+        display: flex;
+        justify-content: center;
+    }
+}
+
+@keyframes ripple {
+    0% {
+        box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.0);
+    }
+
+    50% {
+        box-shadow: 0px 0px 0px $gnl-size-1 rgba(10, 46, 82, 0.1);
+    }
+
+    100% {
+        box-shadow: 0px 0px 0px $gnl-size-1 rgba(10, 46, 82, 0);
+    }
+}
+
+.gnl-fieldset {
+    &__legend {
+        color: $gnl-color-gray-11;
+        font-size: $gnl-font-size-regular;
+        margin-bottom: $gnl-size-1;
+
+        label {
+            margin-bottom: 0;
+        }
+
+        &--lg {
+            font-size: $gnl-font-size-large;
+            font-weight: $gnl-font-weight-bold;
+        }
+    }
+
+    &__hint {
+        margin-bottom: $gnl-size-1;
+
+        &--example {
+            margin-top: -$gnl-size-1;
+            color: $gnl-color-gray-8;
+        }
+    }
+}

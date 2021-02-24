@@ -1,0 +1,17 @@
+﻿@import 'variables';
+
+.gnl-paper {
+    color: inherit;
+    background-color: $gnl-color-white;
+
+    &:not(:disabled):not(.disabled).hover,
+    &:not(:disabled):not(.disabled):hover,
+    &:not(:disabled):not(.disabled).focus,
+    &:not(:disabled):not(.disabled):focus {
+        background-color: $gnl-color-white;
+    }
+}
+
+.gnl-paper--rounded {
+    border-radius: $gnl-border-radius-default;
+}
