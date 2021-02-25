@@ -1,0 +1,96 @@
+﻿@import 'variables';
+
+.gnl-datepicker {
+    display: flex;
+    align-items: center;
+
+    &__group {
+        display: inline-block;
+        margin: 0 $gnl-size-1 $gnl-size-1 0;
+
+        &--xs {
+            max-width: 70px;
+        }
+
+        &--month {
+            max-width: 168px;
+        }
+
+        &--year {
+            max-width: 90px;
+        }
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+
+    &__icon {
+        margin-right: $gnl-size-1 / 2;
+    }
+
+    &__input {
+        &.input-validation-error {
+            padding-right: $gnl-size-3;
+
+            & + .gnl-input-validation-error-icon {
+                &::before {
+                    margin-left: -$gnl-size-3;
+                }
+            }
+        }
+    }
+
+    &__label {
+        display: block;
+        font-size: $gnl-font-size-small;
+    }
+
+    &__select {
+        &.input-validation-error {
+            padding-right: $gnl-size-2;
+
+            & + .gnl-input-validation-error-icon {
+                &::before {
+                    margin-left: -34px;
+                }
+            }
+        }
+    }
+
+    &--with-calendar {
+        .gnl-datepicker__input,
+        .gnl-datepicker__select {
+            z-index: $gnl-z-index-datepicker;
+        }
+
+        .gnl-calendar-launcher__input {
+            z-index: $gnl-z-index-datepicker - 1;
+        }
+    }
+}
+
+.gnl-calendar-launcher {
+    position: relative;
+    display: inline-block;
+
+    &__input {
+        position: absolute;
+        display: block;
+        top: 0;
+        right: -$gnl-size-3;
+        height: $gnl-size-3;
+        opacity: 0;
+    }
+
+    &__icon {
+        position: absolute;
+        top: 0;
+        left: 0;
+        @extend .gnl-icon;
+
+        &::before {
+            content: 'event';
+        }
+    }
+}

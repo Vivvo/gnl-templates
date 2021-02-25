@@ -1,0 +1,225 @@
+﻿@import 'variables';
+
+.gnl-color-theme--blue {
+    background-color: $gnl-color-blue;
+    color: $gnl-color-white;
+
+    @at-root a#{&} {
+        &:hover {
+            color: $gnl-color-white;
+        }
+    }
+}
+
+.gnl-color-theme--brand-blue {
+    background-color: $gnl-color-brand-blue;
+    color: $gnl-color-white;
+
+    @at-root a#{&} {
+        &:hover {
+            color: $gnl-color-white;
+        }
+    }
+}
+
+.gnl-color-theme--blue-light {
+    background-color: $gnl-color-blue-light;
+    color: $gnl-color-blue;
+
+    @at-root a#{&} {
+        &:hover {
+            color: $gnl-color-blue;
+        }
+    }
+}
+
+.gnl-color-theme--blue-light-brand {
+    background-color: $gnl-color-blue-light;
+    color: $gnl-color-brand-blue;
+
+    @at-root a#{&} {
+        &:hover {
+            color: $gnl-color-brand-blue;
+        }
+    }
+}
+
+.gnl-color-theme--green-light {
+    background-color: $gnl-color-green-light;
+    color: $gnl-color-brand-green;
+
+    @at-root a#{&} {
+        &:hover {
+            color: $gnl-color-brand-green;
+        }
+    }
+}
+
+.gnl-color-theme--green {
+    background-color: $gnl-color-green;
+    color: $gnl-color-white;
+
+    @at-root a#{&} {
+        &:hover {
+            color: $gnl-color-white;
+        }
+    }
+}
+
+.gnl-color-theme--red {
+    background-color: $gnl-color-red;
+    color: $gnl-color-white;
+
+    @at-root a#{&} {
+        &:hover {
+            color: $gnl-color-white;
+        }
+    }
+}
+
+.gnl-color-theme--red-light {
+    background-color: $gnl-color-red-light;
+    color: $gnl-color-brand-red;
+
+    @at-root a#{&} {
+        &:hover {
+            color: $gnl-color-brand-red;
+        }
+    }
+}
+
+.gnl-color-theme--purple {
+    background-color: $gnl-color-purple;
+    color: $gnl-color-white;
+
+    @at-root a#{&} {
+        &:hover {
+            color: $gnl-color-white;
+        }
+    }
+}
+
+.gnl-color-theme--purple-light {
+    background-color: $gnl-color-purple-light;
+    color: $gnl-color-brand-purple;
+
+    @at-root a#{&} {
+        &:hover {
+            color: $gnl-color-brand-purple;
+        }
+    }
+}
+
+.gnl-color-theme--brand-purple {
+    background-color: $gnl-color-brand-purple;
+    color: $gnl-color-white;
+
+    @at-root a#{&} {
+        &:hover {
+            color: $gnl-color-white;
+        }
+    }
+}
+
+.gnl-color-theme--yellow-light {
+    background-color: $gnl-color-yellow-light;
+    color: $gnl-color-yellow;
+
+    @at-root a#{&} {
+        &:hover {
+            color: $gnl-color-yellow;
+        }
+    }
+}
+
+.gnl-color-theme--gray-2 {
+    background-color: $gnl-color-gray-2;
+    color: $gnl-color-gray-11;
+
+    @at-root a#{&} {
+        &:hover {
+            color: $gnl-color-gray-11;
+        }
+    }
+}
+
+.gnl-color-theme--fg-blue {
+    color: $gnl-color-brand-blue;
+
+    @at-root a#{&} {
+        &:hover {
+            color: $gnl-color-brand-blue;
+        }
+    }
+}
+
+.gnl-color-theme--fg-red {
+    color: $gnl-color-red;
+
+    @at-root a#{&} {
+        &:hover {
+            color: $gnl-color-red;
+        }
+    }
+}
+
+.gnl-color-theme--success {
+    background-color: $gnl-color-green;
+    color: $gnl-color-white;
+
+    @at-root a#{&} {
+        &:hover {
+            color: $gnl-color-white;
+        }
+    }
+}
+
+.gnl-color-theme--error {
+    background-color: $gnl-color-red;
+    color: $gnl-color-white;
+
+    @at-root a#{&} {
+        &:hover {
+            color: $gnl-color-white;
+        }
+    }
+}
+
+.gnl-color-theme--fg-gray-11 {
+    color: $gnl-color-gray-11;
+}
+
+.gnl-color-theme--fg-gray-10 {
+    color: $gnl-color-gray-10;
+}
+
+.gnl-color-theme--fg-gray-1 {
+    color: $gnl-color-gray-1;
+}
+
+.gnl-color-theme--bg-white {
+    background: white;
+}
+
+.gnl-color-theme--bg-blue {
+    background: $gnl-color-brand-blue;
+}
+
+.gnl-color-theme--fg-white {
+    color: $gnl-color-white;
+}
+
+.gnl-color-theme--blue-on-white {
+    background-color: $gnl-color-white;
+    color: $gnl-color-brand-blue;
+
+    &:not(:disabled):not(.disabled).hover,
+    &:not(:disabled):not(.disabled):hover,
+    &:not(:disabled):not(.disabled).focus,
+    &:not(:disabled):not(.disabled):focus,
+    &.active,
+    &:active {
+        background-color: $gnl-color-gray-1;
+        color: $gnl-color-brand-blue;
+    }
+}

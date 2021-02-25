@@ -1,0 +1,27 @@
+﻿@import 'variables';
+
+.gnl-expansion-panel {
+    $block: &;
+
+    &--collapsed {
+        #{$block}__body {
+            display: none;
+        }
+    }
+
+    &__summary {
+        cursor: pointer;
+    }
+
+    &__body {
+        margin: $gnl-size-2 0;
+
+        > :first-child {
+            margin-top: 0;
+        }
+
+        > :last-child {
+            margin-bottom: 0;
+        }
+    }
+}

@@ -1,0 +1,91 @@
+﻿@import 'variables';
+
+$gnl-intro-image-height: 200px;
+
+.gnl-intro {
+    position: relative;
+
+    .gnl-intro__stage {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: $gnl-intro-image-height;
+        background-color: $gnl-color-gray-2;
+        border-top-left-radius: $gnl-border-radius-default;
+        border-top-right-radius: $gnl-border-radius-default;
+    }
+
+    .gnl-intro__image {
+        position: relative;
+        top: $gnl-intro-image-height / 5;
+        display: block;
+        margin: 0 auto $gnl-intro-image-height / 7 auto;
+        height: $gnl-intro-image-height;
+    }
+
+    .gnl-intro-image__unset {
+        @extend .gnl-intro__image;
+        position: unset;
+    }
+
+    .gnl-intro__title {
+        color: $gnl-color-brand-blue;
+        text-align: center;
+        font-weight: 700;
+    }
+}
+
+.gnl-dashboard-feedback {
+    color: $gnl-color-white;
+    text-align: center;
+
+    .gnl-dashboard-feedback__logo {
+        display: block;
+        width: 232px;
+        height: 72px;
+        margin: 0 auto $gnl-size-1 auto;
+        background: url(../images/mygovnl-logo-white.svg);
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+
+    .gnl-dashboard-feedback__header {
+        margin: $gnl-size-2;
+        font-size: $gnl-size-4;
+        font-weight: $gnl-font-weight-black;
+    }
+
+    .gnl-dashboard-feedback__body {
+        margin: $gnl-size-2;
+
+        * {
+            margin: 0;
+        }
+    }
+
+    .gnl-dashboard-feedback__footer {
+        .gnl-button--contained {
+            background-color: $gnl-color-white;
+            color: $gnl-color-brand-purple;
+
+            &:not(:disabled):not(.disabled).hover,
+            &:not(:disabled):not(.disabled):hover,
+            &:not(:disabled):not(.disabled).focus,
+            &:not(:disabled):not(.disabled):focus,
+            &.active,
+            &:active {
+                background-color: $gnl-color-gray-4;
+                color: $gnl-color-brand-purple;
+            }
+        }
+    }
+}
+
+.gnl-dashboard-feedback + .gnl-footer {
+    margin-top: 0;
+}
+
+.gnl-modal--visible {
+    display: block;
+}

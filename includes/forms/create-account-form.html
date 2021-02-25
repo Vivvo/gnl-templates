@@ -1,164 +1,80 @@
 <form action="" class="needs-validation" novalidate>
 
-  <fieldset>
+	<div class="form-group gnl-form-group">
+		<label class="gnl-form-label gnl-max-width--md" for="FirstName">First name</label>
+		<div class="gnl-flex-container gnl-max-width--md">
+			<input class="form-control gnl-form-control" type="text" data-val="true" data-val-maxlength="First name must be no longer than 30 characters." data-val-maxlength-max="30" data-val-required="Enter your first name." id="FirstName" maxlength="30" name="FirstName" value="">
+			<span class="gnl-input-validation-error-icon"></span>
+		</div>
+		<span class="form-text gnl-form-validation-message field-validation-valid" data-valmsg-for="FirstName" data-valmsg-replace="true"></span>
+	</div>
 
-    <legend>Personal Information</legend>
+	<div class="form-group gnl-form-group">
+		<label class="gnl-form-label gnl-max-width--md" for="LastName">Last name</label>
+		<div class="gnl-flex-container gnl-max-width--md">
+			<input class="form-control gnl-form-control" type="text" data-val="true" data-val-maxlength="Last name must be no longer than 50 characters." data-val-maxlength-max="50" data-val-required="Enter your last name." id="LastName" maxlength="50" name="LastName" value="">
+			<span class="gnl-input-validation-error-icon"></span>
+		</div>
+		<span class="form-text gnl-form-validation-message field-validation-valid" data-valmsg-for="LastName" data-valmsg-replace="true"></span>
+	</div>
 
-    <div class="row">
+	<div class="form-group gnl-form-group">
+		<label class="gnl-form-label gnl-max-width--md" for="EmailAddress">Email address</label>
+		<div class="gnl-flex-container gnl-max-width--md">
+			<input class="form-control gnl-form-control gnl-form-control--md" type="email" data-val="true" data-val-email="Enter a valid email address." data-val-maxlength="Email address must be no longer than 70 characters." data-val-maxlength-max="70" data-val-required="Enter your email address." id="EmailAddress" maxlength="70" name="EmailAddress" value="">
+			<span class="gnl-input-validation-error-icon"></span>
+		</div>
+		<span class="form-text gnl-form-validation-message field-validation-valid" data-valmsg-for="EmailAddress" data-valmsg-replace="true"></span>
+	</div>
 
-      <div class="form-group col-lg-6">
-        <label for="firstName">First Name<span class="required-field">*</span></label>
-        <input type="text" class="form-control" id="firstName" required>
-        <small class="invalid-feedback">Enter your First Name.</small>
-      </div>
+	<div class="form-group gnl-form-group">
+		<label class="gnl-form-label gnl-max-width--md" for="ConfirmEmailAddress">Confirm email address</label>
+		<div class="gnl-flex-container gnl-max-width--md">
+			<input class="form-control gnl-form-control gnl-form-control--md" type="email" data-val="true" data-val-email="Enter a valid email address." data-val-equalto="Email addresses do not match." data-val-equalto-other="*.EmailAddress" data-val-maxlength="Email address must be no longer than 70 characters." data-val-maxlength-max="70" data-val-required="Confirm your email address." id="ConfirmEmailAddress" maxlength="70" name="ConfirmEmailAddress" value="">
+			<span class="gnl-input-validation-error-icon"></span>
+		</div>
+		<span class="form-text gnl-form-validation-message field-validation-valid" data-valmsg-for="ConfirmEmailAddress" data-valmsg-replace="true"></span>
+	</div>
 
-      <div class="form-group col-lg-6">
-        <label for="middleName">Middle Name</label>
-        <input type="text" class="form-control" id="middleName" placeholder="Optional">
-      </div>
+	<div class="form-group gnl-form-group">
+		<label class="gnl-form-label gnl-max-width--md" for="Password" style="display: block;"><div class="gnl-flex-container gnl-flex-container--space-between"><span>Create a password</span><div class="gnl-icon gnl-icon--visibility gnl-icon--visibility--show"> <span>Show</span></div></div></label>
+		<div class="gnl-flex-container gnl-max-width--md">
+			<input class="form-control gnl-form-control" autocomplete="off" type="password" data-val="true" data-val-maxlength="Password must be no longer than 128 characters." data-val-maxlength-max="128" data-val-minlength="Password must be at least 8 characters." data-val-minlength-min="8" data-val-required="Enter your password." id="Password" maxlength="128" name="Password">
+			<span class="gnl-input-validation-error-icon"></span>
+		</div>
+		<span class="form-text gnl-form-validation-message field-validation-valid" data-valmsg-for="Password" data-valmsg-replace="true"></span>
+		<div class="form-text gnl-form-help-text gnl-form-help-text--hide-on-validate">
+			Minimum 8 characters
+		</div>
+	</div>
 
-      <div class="form-group col-lg-6">
-        <label for="lastName">Last Name<span class="required-field">*</span></label>
-        <input type="text" class="form-control" id="lastName" required>
-        <small class="invalid-feedback">Enter your Last Name.</small>
-      </div>
+	<div class="form-group gnl-form-group">
+		<label class="gnl-form-label gnl-max-width--md" for="ConfirmPassword" style="display: block;"><div class="gnl-flex-container gnl-flex-container--space-between"><span>Confirm password</span><div class="gnl-icon gnl-icon--visibility gnl-icon--visibility--show"> <span>Show</span></div></div></label>
+		<div class="gnl-flex-container gnl-max-width--md">
+			<input class="form-control gnl-form-control" autocomplete="off" type="password" data-val="true" data-val-equalto="Passwords do not match." data-val-equalto-other="*.Password" data-val-maxlength="Password must be no longer than 128 characters." data-val-maxlength-max="128" data-val-minlength="Password must be at least 8 characters." data-val-minlength-min="8" data-val-required="Confirm your password." id="ConfirmPassword" maxlength="128" name="ConfirmPassword">
+			<span class="gnl-input-validation-error-icon"></span>
+		</div>
+		<span class="form-text gnl-form-validation-message field-validation-valid" data-valmsg-for="ConfirmPassword" data-valmsg-replace="true"></span>
+		<div class="form-text gnl-form-help-text gnl-form-help-text--hide-on-validate">
+			Minimum 8 characters
+		</div>
+	</div>
 
+	<div class="gnl-form-check">
+			<input class="gnl-form-check__input" type="checkbox" data-val="true" data-val-mustbechecked="To continue, you must agree to the terms and conditions." data-val-required="The AcceptTermsAndConditions field is required." id="AcceptTermsAndConditions" name="AcceptTermsAndConditions" value="true">
+			<label class="gnl-form-check__label gnl-form-help-text" for="AcceptTermsAndConditions">
+				I agree to the
+				<a data-save-to-session-key="createAccount" href="./includes/terms.html">terms and conditions</a>
+				of using MyGovNL. I consent to using this information to create my new MyGovNL account and becoming my profile information.
+			</label>
+			<span class="form-text gnl-form-validation-message field-validation-valid" data-valmsg-for="AcceptTermsAndConditions" data-valmsg-replace="true"></span>
+		</div>
 
-      <div class="form-group col-lg-6">
-        <label for="userName">Username<span class="required-field">*</span></label>
-        <input type="text" class="form-control" id="userName" required>
-        <small class="help-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</small>
-        <small class="invalid-feedback">Enter your Username.</small>
-      </div>
-
-      <div class="form-group col-12">
-        <label for="email">Email Address<span class="required-field">*</span></label>
-        <input type="email" class="form-control" id="email" required>
-        <small class="invalid-feedback">Enter your Email Address.</small>
-      </div>
-
-    </div>
-
-  </fieldset>
-
-  <fieldset>
-
-    <legend>Security Information</legend>
-
-    <div class="row">
-
-      <div class="col-lg-6">
-
-        <label for="password">Password<span class="required-field">*</span></label>
-
-        <div class="input-group input-group-password">
-          <input type="password" class="form-control" id="password" required>
-
-          <div class="input-group-prepend">
-            <button class="btn btn-password show-password" type="button" aria-label="Show or hide password">
-              <span class="sr-only">Show</span>
-              <i class="far fa-eye-slash"></i>
-            </button>
-          </div>
-
-          <small class="invalid-feedback">
-            The password must follow the specified caracteristics.
-          </small>
-
-        </div>
-
-        <label for="confirmPassword">Re-enter Password<span class="required-field">*</span></label>
-
-        <div class="input-group input-group-password">
-          <input type="password" class="form-control" id="confirmPassword" required>
-
-          <div class="input-group-prepend">
-            <button class="btn btn-password show-password" type="button" aria-label="Show or hide password">
-              <span class="sr-only">Show</span>
-              <i class="far fa-eye-slash"></i>
-            </button>
-          </div>
-
-          <small class="invalid-feedback">Re-enter your Password.</small>
-
-        </div>
-
-      </div>
-
-      <div class="col-lg-6">
-
-        <div class="form-helper">
-
-          <div>
-            <h6>
-              Password must contain:
-            </h6>
-
-            <ul class="list-unstyled">
-              <li>At least 8 characters</li>
-              <li>At least 1 number (0-9)</li>
-              <li>At least 1 upper case letter (A-Z)</li>
-              <li>At least 1  special character (such as #$@!* etc.)</li>
-            </ul>
-
-          </div>
-
-        </div>
-
-      </div>
-
-      <div class="col-12">
-
-        <div class="form-group">
-          <label for="supportCode">Support Code<span class="required-field">*</span></label>
-          <input type="text" class="form-control" id="supportCode" required>
-          <small class="help-text">
-            Choose a 4 digit code. Support codes are a helpful way for customer service to locate and verify your account when you contact us.
-          </small>
-          <small class="invalid-feedback">Enter a Support Code.</small>
-        </div>
-
-      </div>
-
-    </div>
-
-  </fieldset>
-
-  <fieldset class="create-account-terms">
-
-    <legend>Terms of Use</legend>
-
-    <div class="focus-block">
-
-      <ul class="list-unstyled mb-0">
-
-        <li>I hereby accept and acknowledge:</li>
-        <li>The Saskatchewan <a href="#" class="underlined">Terms of Use</a> and <a href="#" class="underlined">Privacy Policy</a></li>
-        <li>I am providing my personal information to create a MyGovNL Account</li>
-        <li>I consent to releasing this personal information to other entities if I request to use services offered by those entities.</li>
-        <li>This consent remains valid unless I revoke it through written instruction.</li>
-        <li>If I revoke my consent, I understand that I may not be able to access my City of MyGovNL Account and the connected online services until I provide the required consent.</li>
-        <li>It is my responsibility to keep my MyGovNL Account up to date (e.g. name, address, phone number, email).</li>
-        <li>If I am using a MyGovNL Account assigned to me by an account administrator in the case of a business profile, different or additional terms may apply and the account administrator may access, modify or limit my ability to access that business profile.</li>
-        <li>MyGovNL may send me messages and other information from time to time. I can opt out of some of these communications.</li>
-
-      </ul>
-
-    </div>
-
-    <div class="custom-control custom-checkbox">
-      <input type="checkbox" class="custom-control-input" id="customCheck1" required>
-      <label class="custom-control-label" for="customCheck1">I agree and accept the terms<span class="required-field">*</span></label>
-      <small class="invalid-feedback">You must agree to the Terms of Use.</small>
-    </div>
-
-  </fieldset>
-
-  <div class="button-container">
-
-    <a href="./index.html" class="btn btn-secondary">Back</a>
-    <a class="btn btn-primary" aria-label="Continue" href="./registration-success.html">Continue</a>
-
-  </div>
-
+	<div class="gnl-divider gnl-divider--tall-thin">
+			<div class="gnl-button-container gnl-button-container--multi">
+				<a class="gnl-button gnl-button--back" data-save-to-session-key="createAccount" href="/">Cancel registration</a>
+				<!--<button type="submit" class="gnl-button gnl-button--contained gnl-click-wait">Next</button>-->
+				<a href="/pages/check-your-email.html" class="gnl-button gnl-button--contained gnl-click-wait">Next</a>
+			</div>
+		</div>
 </form>

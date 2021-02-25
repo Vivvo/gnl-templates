@@ -1,0 +1,176 @@
+﻿@import 'variables';
+
+.gnl-stretch {
+    -webkit-box-align: stretch;
+    align-items: stretch;
+    display: flex;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    flex-wrap: wrap;
+
+    &__grow {
+        flex-grow: 1;
+        flex-shrink: 1;
+        flex-basis: 0;
+        }
+
+    &__shrink {
+        flex-grow: 0;
+        flex-shrink: 1;
+        flex-basis: 0;
+
+        &--none {
+            box-flex: 0;
+            flex-grow: 0;
+            flex-shrink: 0;
+        }
+    }
+
+    &__flex-basis-xs {
+        flex-basis: 74px;
+    }
+
+    &__flex-basis-sm {
+        flex-basis: 148px;
+    }
+
+    &__flex-basis-md {
+        flex-basis: 208px;
+    }
+
+    &__flex-basis-lg {
+        flex-basis: 300px;
+    }
+
+    &__flex-basis-xl {
+        flex-basis: 544px;
+    }
+}
+
+.gnl-text-center {
+    text-align: center;
+}
+
+.gnl-max-width--xs {
+    max-width: 72px;
+}
+
+.gnl-max-width--sm {
+    max-width: 144px;
+}
+
+.gnl-max-width--md {
+    max-width: 248px;
+}
+
+.gnl-max-width--lg {
+    max-width: 344px;
+}
+
+.gnl-max-width--xl {
+    max-width: 448px;
+}
+
+.gnl-text-nopagebreak {
+    page-break-inside: avoid;
+}
+
+.gnl-text-breakhere {
+    page-break-after: always;
+}
+
+.gnl-text-breakword {
+    word-break: break-word; 
+}
+
+// for hiding Google Tag Manager noscript
+.gnl-gtm {
+    width: 0;
+    height: 0;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+.gnl-skiplink {
+    height: 1px;
+    left: -10000px;
+    overflow: hidden;
+    position: absolute;
+    transition: top .2s ease-out;
+    width: 1px;
+
+    &:focus, &:active {
+        background: $gnl-color-white;
+        height: auto;
+        left: 0;
+        padding-left: 1rem;
+        width: 100%;
+        z-index: 99999
+    }
+}
+
+code {
+    color: $gnl-color-purple;
+    font-size: 87.5%;
+    //color: $gnl-color-brand-purple;
+    word-break: break-word;
+}
+
+// ********************************************************************
+//  MARGIN
+// ********************************************************************
+
+.gnl-m-top--none {
+    margin-top: 0;
+}
+
+.gnl-m-bottom--none {
+    margin-bottom: 0;
+}
+
+.gnl-m-top--1 {
+    margin-top: $gnl-size-1;
+}
+
+.gnl-m-top--2 {
+    margin-top: $gnl-size-2;
+}
+
+.gnl-m-top--3 {
+    margin-top: $gnl-size-3;
+}
+
+.gnl-p-top--none {
+    padding-top: 0;
+}
+
+.gnl-p-bottom--none {
+    padding-bottom: 0;
+}
+
+.gnl-p-top--4 {
+    padding-top: $gnl-size-4;
+}
+
+.gnl-p-bottom--4 {
+    padding-bottom: $gnl-size-4;
+}
+
+.gnl-m-center {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.gnl-v-align--base {
+    vertical-align: baseline;
+}

@@ -1,0 +1,84 @@
+﻿@import 'variables';
+
+.gnl-divider {
+    margin: $gnl-size-1 0;
+}
+
+.gnl-divider--line {
+    border: none;
+    border-top: 1px solid $gnl-color-gray-4;
+}
+
+.gnl-divider--regular {
+    @extend .gnl-divider--line;
+    margin-top: $gnl-size-3 - 1;
+    padding: $gnl-size-1 0;
+}
+
+.gnl-divider--tall {
+    @extend .gnl-divider--line;
+    margin-top: $gnl-size-5 - 1;
+    padding: $gnl-size-1 0;
+}
+
+.gnl-divider--tall-thin {
+    @extend .gnl-divider--line;
+    margin-top: $gnl-size-6;
+    margin-bottom: 0;
+}
+
+.gnl-divider--regular-thin {
+    @extend .gnl-divider--line;
+    margin-top: $gnl-size-1;
+    margin-bottom: 0;
+}
+
+.gnl-divider--short-l {
+    @extend .gnl-divider--line;
+    margin-left: $gnl-size-3;
+}
+
+.gnl-divider--short-lr {
+    @extend .gnl-divider--line;
+    margin: 0 $gnl-size-3;
+}
+
+.gnl-section-break {
+    margin: 0;
+    border: 0;
+
+    &--none {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    &--xs {
+        margin-top: $gnl-size-1;
+        margin-bottom: $gnl-size-1;
+    }
+
+    &--sm {
+        margin-top: $gnl-size-2;
+        margin-bottom: $gnl-size-2;
+    }
+
+    &--md {
+        margin-top: $gnl-size-3;
+        margin-bottom: $gnl-size-3;
+    }
+
+    &--lg {
+        margin-top: $gnl-size-4;
+        margin-bottom: $gnl-size-4;
+    }
+
+    &--xl {
+        margin-top: $gnl-size-5;
+        margin-bottom: $gnl-size-5;
+    }
+
+    @at-root hr#{&} {
+        border-bottom: 1px solid $gnl-color-gray-4;
+        overflow: hidden;
+    }
+}

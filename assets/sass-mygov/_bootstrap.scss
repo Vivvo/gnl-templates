@@ -1,0 +1,29 @@
+﻿@import 'variables';
+
+// override Bootstrap default variables
+$body-bg: $gnl-color-white;
+$body-color: $gnl-color-gray-9;
+
+$white: $gnl-color-white;
+
+$primary: $gnl-color-brand-blue;
+$secondary: $gnl-color-gray-8;
+$success: $gnl-color-green;
+$info: $gnl-color-blue-light;
+$warning: $gnl-color-yellow;
+$danger: $gnl-color-red;
+$light: $gnl-color-gray-2;
+$dark: $gnl-color-gray-10;
+
+$border-radius: $gnl-border-radius-default;
+
+$input-height: $gnl-input-height-default;
+$grid-gutter-width: 0px;
+
+$input-placeholder-color: $gnl-color-gray-6;
+
+// import required Bootstrap files
+@import "../../node_modules/bootstrap/scss/functions";
+@import "../../node_modules/bootstrap/scss/variables";
+@import "../../node_modules/bootstrap/scss/mixins";
+@import "../../node_modules/bootstrap/scss/reboot";

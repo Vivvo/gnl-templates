@@ -1,0 +1,11 @@
+﻿@import 'variables';
+
+@mixin gnl-transition($property) {
+    transition: $property linear 0.4s;
+}
+
+@keyframes gnl-spin {
+    to {
+        transform: rotate(360deg);
+    }
+}

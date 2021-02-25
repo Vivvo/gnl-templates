@@ -17,15 +17,15 @@
     "html-webpack-plugin": "^4.5.0",
     "mini-css-extract-plugin": "^1.2.1",
     "postcss-loader": "^4.0.4",
-    "resolve-url-loader": "^3.1.2",
     "sass": "^1.29.0",
     "sass-loader": "^10.0.5",
     "script-loader": "^0.7.2",
-    "webpack": "^4.44.2",
+    "webpack": "^4.29.6",
     "webpack-cli": "^3.2.3",
-    "webpack-dev-server": "^3.11.1"
+    "webpack-dev-server": "^3.11.0",
+    "resolve-url-loader": "^3.1.2"
   },
   "dependencies": {
-    "yarn": "^1.22.10"
+    "bootstrap": "^4.6.0"
   }
 }

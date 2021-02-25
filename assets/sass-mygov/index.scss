@@ -1,0 +1,195 @@
+﻿/*!
+ * MyGovNL is Digital by Design!
+ * Government of Newfoundland and Labrador
+ * https://gov.nl.ca/digitalgovernment
+ */
+
+// it's important for these to be imported in order:
+// they define dependencies for the other stylesheets.
+@import 'variables';
+@import 'bootstrap';
+@import 'containers';
+@import 'layouts';
+@import 'links';
+@import 'animations';
+@import 'text';
+@import 'icons';
+@import 'avatars';
+@import 'buttons';
+
+// these don't define dependencies, so can be imported
+// in any order. alphabetical seems nice :)
+@import 'accordions';
+@import 'alerts';
+@import 'badges';
+@import 'elevation';
+@import 'cards';
+@import 'color-themes';
+@import 'dividers';
+@import 'menus';
+@import 'expansion-panels';
+@import 'footer';
+@import 'forms';
+@import 'forms-datepicker';
+@import 'headers';
+@import 'lists';
+@import 'modals';
+@import 'navigation';
+@import 'pagination';
+@import 'paper';
+@import 'steppers';
+@import 'subheader';
+@import 'tables';
+@import 'utilities';
+
+// TODO: feels slightly wrong to have this very specific stuff in the main CSS;
+// is there a better way to do this?
+@import 'authservice';
+@import 'dashboard';
+
+// and the styles just for the design system, which we
+// may be able to refactor out at some point...
+@import 'designsystem';
+
+html, body {
+    height: 100%;
+}
+
+body {
+    background: $gnl-color-white;
+    color: $gnl-color-gray-9;
+    font-family: $gnl-font-family-sans;
+    font-size: $gnl-font-size-regular;
+    font-weight: $gnl-font-weight-regular;
+    line-height: $gnl-line-height-default;
+    display: flex;
+    flex-direction: column;
+
+    &.gnl-dashboard {
+        background: $gnl-color-gray-2;
+    }
+
+    &.left-rail {
+        .gnl-container {
+            padding: 0;
+
+            @include media-breakpoint-down(lg) {
+                padding: $gnl-size-3 $gnl-size-2;
+            }
+
+            @include media-breakpoint-up(lg) {
+                padding: $gnl-size-2 $gnl-size-6 $gnl-size-2 $gnl-size-6+$gnl-nav-side-width;
+            }
+            /*@include media-breakpoint-up(xl) {
+                padding: $gnl-size-2 $gnl-size-2 $gnl-size-2 $gnl-size-2+$gnl-nav-side-width;
+            }*/
+        }
+    }
+    // TODO: can we refactor the following classes into the _containers?
+    .gnl-site-footer {
+        flex-shrink: 0;
+        background: $gnl-color-gray-9;
+        color: $gnl-color-white;
+    }
+
+    .gnl-main-content {
+        width: 100%;
+        flex: 1 0 auto;
+    }
+
+    .gnl-section {
+        overflow: hidden;
+        padding-bottom: $gnl-size-8;
+        padding-top: $gnl-size-3;
+        position: relative;
+
+        &__heading {
+            margin-bottom: 0;
+            margin-top: $gnl-size-2;
+        }
+
+        &__footer {
+            margin-top: $gnl-size-5;
+        }
+
+        &--alt {
+            &:nth-of-type(even) {
+                background-color: $gnl-color-gray-4;
+            }
+        }
+
+        &--divider-bottom {
+            border-bottom: 1px solid $gnl-color-gray-4;
+        }
+
+        &--padding-top {
+            padding-bottom: 0;
+        }
+
+        &--padding-equal {
+            padding-top: $gnl-size-4;
+            padding-bottom: $gnl-size-4;
+        }
+
+        &--error {
+            padding-bottom: 0;
+
+            .gnl-alert {
+                margin: 0;
+            }
+
+            &:last-child {
+                padding-bottom: $gnl-size-3;
+            }
+        }
+    }
+}
+
+.gnl-outline-remove {
+    outline: none !important;
+
+    &.focus,
+    &:focus,
+    &:focus + label {
+        outline: none !important;
+    }
+}
+
+.gnl-brand {
+    &__lockup {
+        -ms-flex-align: center;
+        align-items: center;
+        display: -ms-flexbox;
+        display: flex;
+    }
+
+    &__logo {
+        display: block;
+        width: 200px;
+        height: $gnl-size-11;
+
+        &--center {
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        &--dds {
+            background: no-repeat center/100% url(../images/dds-logo.svg);
+        }
+
+        &--mygovnl-purple {
+            background: no-repeat center/100% url(../images/mygovnl-logo-purple.svg);
+        }
+
+        &--mygovnl-govnl-red {
+            background: no-repeat center/100% url(../images/govnl-mygovnl-logo-red.png);
+            width: 180px;
+            height: 165px;
+        }
+    }
+
+    &--center {
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+}

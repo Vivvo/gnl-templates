@@ -1,0 +1,389 @@
+﻿@import 'variables';
+
+.gnl-button-container {
+    @extend .gnl-flex-container;
+    justify-content: flex-end;
+    padding: $gnl-size-1 0;
+    flex-wrap: wrap-reverse;
+
+    &--left {
+        justify-content: flex-start;
+    }
+
+    &--right {
+        justify-content: flex-end;
+    }
+
+    &--center {
+        justify-content: center;
+    }
+
+    &--multi,
+    &--space-between {
+        justify-content: space-between;
+    }
+}
+
+
+.gnl-button {
+    display: inline-flex;
+    align-items: center;
+    min-height: $gnl-size-5;
+    border: 1px solid transparent;
+    border-radius: $gnl-border-radius-default;
+    background: transparent;
+    padding: 6px 16px;
+    font-family: $gnl-font-family-sans;
+    font-size: $gnl-font-size-regular;
+    line-height: $gnl-line-height-default;
+    text-align: center;
+    vertical-align: middle;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    text-decoration: none;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    // Needed to override the bootstrap default for <a> hover. This was causing problems.
+    // TODO: Figure out why this keeps overriding GC
+    /*@at-root a#{&} {
+        @include hover-focus {
+            text-decoration: none;
+        }
+    }*/
+    @include hover {
+        text-decoration: none;
+    }
+
+    &.gnl-click-wait {
+        > .gnl-icon--spinner-button {
+            color: inherit;
+        }
+    }
+}
+
+// Remove clicks on <a> elements
+a.gnl-button.disabled,
+.gnl-button.disabled {
+    pointer-events: none;
+}
+
+.gnl-button--noscript {
+    display: none;
+}
+
+.gnl-button--link {
+    color: $gnl-color-brand-blue;
+    font-weight: $gnl-font-weight-bold;
+    padding: 6px 0px;
+    text-decoration: none;
+
+    &.disabled,
+    &:disabled {
+        color: $gnl-color-gray-7;
+        pointer-events: none;
+    }
+
+    &:hover {
+        outline: 0;
+        text-decoration: underline;
+    }
+
+    &:focus {
+        text-decoration: underline;
+    }
+
+    &.active,
+    &:active {
+        outline: 0;
+        color: $gnl-color-brand-blue;
+        text-decoration: underline;
+    }
+}
+
+.gnl-button--outlined {
+    border-color: $gnl-color-gray-5;
+    color: $gnl-color-gray-10;
+    padding: 6px 16px;
+
+    &.disabled,
+    &:disabled {
+        background: $gnl-color-white;
+        color: $gnl-color-gray-5;
+    }
+
+    &:not(:disabled):not(.disabled):focus {
+        background: $gnl-color-gray-5;
+        color: $gnl-color-gray-11;
+        border-color: $gnl-color-gray-5;
+    }
+
+    &:not(:disabled):not(.disabled):hover {
+        outline: 0;
+        background: $gnl-color-gray-5;
+        color: $gnl-color-gray-11;
+        border-color: $gnl-color-gray-5;
+    }
+
+    &.active {
+        outline: 0;
+        color: $gnl-color-brand-blue;
+        background-color: $gnl-color-blue-light;
+        border-color: $gnl-color-blue-light;
+    }
+}
+
+%gnl-button--contained-icon {
+    &::before {
+        @extend .gnl-icon;
+        content: "";
+        margin-left: -4px;
+        margin-right: $gnl-size-1;
+        text-decoration: none;
+        color: inherit;
+    }
+}
+
+.gnl-button--contained {
+    padding: 6px 16px;
+    background: $gnl-color-brand-blue;
+    color: $gnl-color-white;
+    font-weight: $gnl-font-weight-bold;
+
+    &.disabled,
+    &:disabled {
+        background: $gnl-color-gray-5;
+        color: $gnl-color-gray-8;
+    }
+
+    &:not(:disabled):not(.disabled).hover,
+    &:not(:disabled):not(.disabled):hover {
+        background: $gnl-color-blue-dark;
+        color: $gnl-color-white;
+        text-decoration: none;
+        outline: 0;
+    }
+
+    &:not(:disabled):not(.disabled).focus,
+    &:not(:disabled):not(.disabled):focus {
+        background: $gnl-color-blue-dark;
+        color: $gnl-color-white;
+        text-decoration: none;
+    }
+
+    &.active,
+    &:active {
+        outline: 0;
+        background: $gnl-color-blue-dark;
+        color: $gnl-color-white;
+        text-decoration: none;
+    }
+
+    &.gnl-button--danger {
+        background: $gnl-color-red;
+
+        &:not(:disabled):not(.disabled).hover,
+        &:not(:disabled):not(.disabled):hover,
+        &:not(:disabled):not(.disabled).focus,
+        &:not(:disabled):not(.disabled):focus,
+        &.active,
+        &:active {
+            background: $gnl-color-brand-red;
+        }
+    }
+
+    &-document {
+        @extend %gnl-button--contained-icon;
+
+        &::before {
+            content: "description";
+        }
+    }
+
+    &-save {
+        @extend %gnl-button--contained-icon;
+
+        &::before {
+            content: "save_alt";
+        }
+    }
+}
+
+.gnl-button--back {
+    @extend .gnl-button--link;
+    text-decoration: none;
+    padding: 6px 16px;
+
+    &::before {
+        @extend .gnl-icon;
+        content: "chevron_left";
+        margin-left: -8px;
+        margin-right: 4px;
+    }
+
+    &.disabled,
+    &:disabled {
+        color: $gnl-color-gray-7;
+        pointer-events: none;
+    }
+
+    &:not(:disabled):not(.disabled).hover,
+    &:not(:disabled):not(.disabled):hover {
+        background-color: $gnl-color-blue-light;
+        border-color: $gnl-color-blue-light;
+        text-decoration: none;
+        outline: 0;
+    }
+
+    &:not(:disabled):not(.disabled).focus,
+    &:not(:disabled):not(.disabled):focus {
+        background-color: $gnl-color-blue-light;
+        border-color: $gnl-color-blue-light;
+        text-decoration: none;
+    }
+
+    &.active,
+    &:active {
+        outline: 0;
+        color: $gnl-color-brand-blue;
+        background-color: $gnl-color-blue-light;
+        border-color: $gnl-color-blue-light;
+        text-decoration: none;
+    }
+}
+
+.gnl-button--next {
+    @extend .gnl-button--link;
+    text-decoration: none;
+    padding: 6px 16px;
+
+    &::after {
+        @extend .gnl-icon;
+        content: "chevron_right";
+        margin-right: -8px;
+        margin-left: 4px;
+    }
+
+    &.disabled,
+    &:disabled {
+        color: $gnl-color-gray-7;
+        pointer-events: none;
+    }
+
+    &:not(:disabled):not(.disabled).hover,
+    &:not(:disabled):not(.disabled):hover {
+        background-color: $gnl-color-blue-light;
+        border-color: $gnl-color-blue-light;
+        text-decoration: none;
+        outline: 0;
+    }
+
+    &:not(:disabled):not(.disabled).focus,
+    &:not(:disabled):not(.disabled):focus {
+        background-color: $gnl-color-blue-light;
+        border-color: $gnl-color-blue-light;
+        text-decoration: none;
+    }
+
+    &.active, &:active {
+        outline: 0;
+        color: $gnl-color-brand-blue;
+        background-color: $gnl-color-blue-light;
+        border-color: $gnl-color-blue-light;
+        text-decoration: none;
+    }
+}
+
+%gnl-button--function-icon {
+    &::before {
+        @extend .gnl-icon;
+        content: "";
+        margin-right: $gnl-size-1;
+        text-decoration: none;
+        color: $gnl-color-brand-blue;
+    }
+}
+
+.gnl-button--function {
+    border-radius: $gnl-border-radius-rounded;
+    margin: 0 $gnl-size-1;
+
+    &.active {
+        font-weight: $gnl-font-weight-bold;
+    }
+
+    &-print {
+        @extend %gnl-button--function-icon;
+
+        &::before {
+            content: "print";
+        }
+    }
+
+    &-receipt {
+        @extend %gnl-button--function-icon;
+
+        &::before {
+            content: "receipt";
+        }
+    }
+
+    &-save {
+        @extend %gnl-button--function-icon;
+
+        &::before {
+            content: "save_alt";
+        }
+    }
+
+    &-document {
+        @extend %gnl-button--function-icon;
+
+        &::before {
+            content: "description";
+        }
+    }
+
+    &-thumb-down {
+        @extend %gnl-button--function-icon;
+
+        &::before {
+            content: "thumb_down_alt";
+        }
+    }
+
+    &-thumb-up {
+        @extend %gnl-button--function-icon;
+
+        &::before {
+            content: "thumb_up_alt";
+        }
+    }
+}
+
+.gnl-button-help-container {
+    position: absolute;
+    margin-top: -8px;
+}
+
+.gnl-button--help {
+    padding: 7px;
+}
+
+.gnl-button-set {
+    @extend .gnl-flex-container;
+    @extend .gnl-flex-container--wrap;
+
+    .gnl-button {
+        margin: $gnl-size-1 $gnl-size-1 0 0;
+        flex-shrink: 0;
+    }
+}
+
+.gnl-button-set--no-wrap {
+    @extend .gnl-flex-container--no-wrap;
+
+    .gnl-button {
+        white-space: nowrap;
+    }
+}

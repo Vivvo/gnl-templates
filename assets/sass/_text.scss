@@ -1,0 +1,189 @@
+﻿@import 'variables';
+
+// ********************************************************************
+//  HEADERS
+// ********************************************************************
+
+%gnl-header-base {
+    color: $gnl-color-gray-11;
+    font-weight: $gnl-font-weight-bold;
+    line-height: $gnl-line-height-default;
+    color: $gnl-color-gray-11;
+    margin: 0;
+}
+
+.gnl-header-1 {
+    @extend %gnl-header-base;
+    margin: $gnl-size-7 0 $gnl-size-3 0;
+    font-size: 60px;
+}
+
+.gnl-header-2 {
+    @extend %gnl-header-base;
+    margin: $gnl-size-6 0 $gnl-size-3 0;
+    font-size: 48px;
+}
+
+.gnl-header-3 {
+    @extend %gnl-header-base;
+    margin: $gnl-size-6 0 $gnl-size-3 0;
+    font-size: 34px;
+    font-weight: $gnl-font-weight-black;
+}
+
+.gnl-header-4 {
+    @extend %gnl-header-base;
+    margin: $gnl-size-5 0 $gnl-size-2 0;
+    font-size: 24px;
+    font-weight: $gnl-font-weight-black;
+}
+
+.gnl-header-5 {
+    @extend %gnl-header-base;
+    margin: $gnl-size-5 0 $gnl-size-2 0;
+    font-size: 20px;
+    font-weight: $gnl-font-weight-bold;
+}
+
+.gnl-header-6 {
+    @extend %gnl-header-base;
+    margin: $gnl-size-4 0 $gnl-size-2 0;
+    font-size: 18px;
+}
+
+
+// ********************************************************************
+//  SUBTITLES AND CAPTIONS
+// ********************************************************************
+.gnl-subtitle-1 {
+    margin: -$gnl-size-1 0 $gnl-size-2 0;
+    font-size: $gnl-font-size-regular;
+    line-height: $gnl-line-height-default;
+    color: $gnl-color-gray-9;
+}
+
+%gnl-caption-base {
+    display: block;
+    font-weight: $gnl-font-weight-regular;
+    color: $gnl-color-gray-9;
+}
+
+.gnl-caption-sm {
+    @extend %gnl-caption-base;
+    font-size: $gnl-font-size-small;
+}
+
+.gnl-caption-md {
+    @extend %gnl-caption-base;
+    font-size: $gnl-font-size-regular;
+}
+
+.gnl-caption-lg {
+    @extend %gnl-caption-base;
+    font-size: $gnl-font-size-large;
+}
+
+.gnl-caption-xl {
+    @extend %gnl-caption-base;
+    font-size: $gnl-font-size-xlarge;
+}
+
+
+// ********************************************************************
+//  BODY TEXT
+// ********************************************************************
+
+p {
+    padding-top: 0;
+    padding-bottom: 0;
+    margin: $gnl-size-2 0;
+    // Added to help with paragraphs leading into lists.
+    & + ul,
+    & + ol {
+        margin-top: -$gnl-size-1;
+    }
+}
+
+p.gnl-text-body-1,
+p.gnl-text-body-2 {
+    margin: 0;
+}
+
+.gnl-text-body-1 {
+    padding: $gnl-size-1 0;
+    font-size: $gnl-font-size-regular;
+    line-height: $gnl-line-height-default;
+    color: inherit; // I think this should inherit the body text default GC
+    // TODO: is this too aggressive?
+    * {
+        margin: 0;
+    }
+}
+
+.gnl-text-body-2 {
+    padding: $gnl-size-1 0;
+    font-size: $gnl-font-size-small;
+    line-height: $gnl-line-height-default;
+    color: inherit; // I think this should inherit the body text default GC
+    // TODO: is this too aggressive?
+    * {
+        margin: 0;
+    }
+}
+
+.gnl-text-emphasis {
+    color: $gnl-color-gray-11 !important;
+}
+
+.gnl-text-strong {
+    font-weight: $gnl-font-weight-bold !important;
+    color: $gnl-color-gray-11 !important;
+}
+
+.gnl-text-regular {
+    font-weight: $gnl-font-weight-regular;
+}
+
+.gnl-text-warning {
+    color: $gnl-color-red;
+}
+
+.gnl-text-success {
+    color: $gnl-color-green;
+}
+
+
+// TODO: should this extend %gnl-nowrap?
+.gnl-text-nowrap {
+    white-space: nowrap;
+}
+
+.gnl-text-separator {
+    display: inline-block;
+    margin: 0 $gnl-size-1;
+
+    &::before {
+        content: "·";
+    }
+}
+
+.gnl-currency,
+.gnl-datetime {
+    @extend %gnl-nowrap;
+}
+
+b, strong {
+    font-weight: $gnl-font-weight-bold;
+}
+
+// ********************************************************************
+//  IMAGE REPLACEMENT
+// ********************************************************************
+// CSS image replacement stolen from Bootstrap
+%gnl-text-hide {
+    font: 0/0 a;
+    color: transparent;
+    text-shadow: none;
+    background-color: transparent;
+    border: 0;
+}
