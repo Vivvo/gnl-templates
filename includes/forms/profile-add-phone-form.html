@@ -50,6 +50,38 @@
 
   </fieldset>
 
+  <!--if number is mobile-->
+
+  <div class="form-group col-12">
+    <p>
+      If you want to receive SMS alerts, you will need to verify your mobile number with a code we send you. Standard message and data rates may apply for any messages sent or received.
+    </p>
+    <button type="button" class="btn btn-primary btn-md" aria-label="Send code">Send code</button>
+  </div>
+
+  <div class="col-12">
+    <p>
+      <span>Enter the verification code sent to the mobile phone number you entered.</span>
+      <button type="button" class="btn btn-link" aria-label="Resend code">Resend code</button>
+    </p>
+  </div>
+
+  <div class="form-group col-sm-6">
+    <label for="verificationCode" hidden>Verification Code</label>
+    <input type="text" id="verificationCode" class="form-control"/>
+    <div class="invalid-feedback">Enter the Verification Code.</div>
+  </div>
+
+  <div class="form-group col-sm-6">
+    <button type="button" class="btn btn-primary btn-md">Verify</button>
+  </div>
+
+  <div class="form-group col-12 flexbox">
+    <i class="fa fa-fw fa-2x fa-check-circle text-success mr-2"></i>
+    Mobile phone number successfully verified. Remember to set this number as your primary organization phone number to receive SMS alerts for your organization.
+  </div>
+
+
   <div class="button-container">
     <button type="button" class="btn btn-secondary" onclick="addAPhoneNumber()" aria-label="Cancel">Cancel</button>
     <button type="submit" class="btn btn-primary" aria-label="Continue">Continue</button>
