@@ -26,7 +26,8 @@
    * notificaiton settings: http://localhost:9000/pages/mcp-link-notifications.html
    * linking successfull: http://localhost:9000/pages/mcp-link-success.html
    * service is locked: http://localhost:9000/pages/mcp-lockout.html
-  
+7. Profile 
+   * profile: http://localhost:9000/pages/profile.html
 
 
 
