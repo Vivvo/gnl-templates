@@ -169,6 +169,14 @@
     &--hero {
         padding-top: $gnl-size-5;
     }
+
+    &--xl {
+        max-width: 1248px;
+    }
+
+    &--full-width {
+        padding: 0;
+    }
 }
 
 .gnl-main-container {

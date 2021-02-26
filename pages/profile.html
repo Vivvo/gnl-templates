@@ -1,82 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link rel="icon" type="image/png" href="../assets/images/favicon-16x16.png"/>
+  <link rel="icon" type="image/png" href="../assets/images/favicon-16x16.png" />
   <title>Profile</title>
 
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+    integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
   <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <link rel="stylesheet" href="/bundle.css">
 
   <script src="https://kit.fontawesome.com/07cd220d56.js" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js" integrity="sha512-WNLxfP/8cVYL9sj8Jnp6et0BkubLP31jhTG9vhL/F5uEZmg5wEzKoXp1kJslzPQWwPT1eyMiSxlKCgzHLOTOTQ==" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"
+    integrity="sha512-WNLxfP/8cVYL9sj8Jnp6et0BkubLP31jhTG9vhL/F5uEZmg5wEzKoXp1kJslzPQWwPT1eyMiSxlKCgzHLOTOTQ=="
+    crossorigin="anonymous"></script>
 
   <script>
-    $(function(){
+    $(function () {
       $("#header").load("../includes/header.html");
       $("#footer").load("../includes/footer.html");
       $("#dashboard-navigation").load("../includes/dashboard-navigation.html");
       $("#profile-sidebar").load("../includes/profile-sidebar.html");
       $("#profile-account").load("../includes/profile-account.html");
-      $("#profile-email").load("../includes/profile-email.html");
       $("#profile-address").load("../includes/profile-address.html");
-      $("#profile-phone").load("../includes/profile-phone.html");
       $("#security").load("../includes/security.html");
       $("#notifications-settings").load("../includes/notifications-settings.html");
-      $("#invoices").load("../includes/invoices.html");
     });
   </script>
 </head>
 
 <body>
 
-<div id="header"></div>
+  <div id="header"></div>
 
-<section id="dashboard-navigation"></section>
+  <section id="dashboard-navigation"></section>
 
-<section class="section-profile">
+  <div class="gnl-main-content">
+    <div class="gnl-container gnl-container--xl">
+      <h1 class="co-title gnl-header-1">
+        Account
+      </h1>
+    </div>
 
-  <aside class="sidenav" id="profile-sidebar"></aside>
+    <div class="gnl-layout">
 
-  <div class="page-container-alt">
+      <div class="gnl-layout__container gnl-container gnl-container--xl gnl-container--full-width">
 
-    <div class="container-fluid">
+        <div class="gnl-layout__wrapper">
 
-      <div class="tab-content" id="v-pills-tabContent">
+          <aside class="gnl-layout__side-col" id="profile-sidebar"></aside>
+          
+          <div class="gnl-layout__main-col">
 
-        <div class="tab-pane fade show active" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
+            <div class="gnl-layout__container gnl-container gnl-container--xl">
 
-          <h3 class="section-title">Profile</h3>
+              <div class="tab-content" id="v-pills-tabContent">
 
-          <div id="profile-account"></div>
-          <div id="profile-email"></div>
-          <div id="profile-address"></div>
-          <div id="profile-phone"></div>
+                <div class="tab-pane fade show active" id="v-pills-profile" role="tabpanel"
+                  aria-labelledby="v-pills-profile-tab">
 
-        </div>
+                  <div class="gnl-card-list">
+                    <div class="gnl-card-list__wrapper">
+                      <div id="profile-account" class="gnl-card-list__item gnl-card-list__item--full"></div>
+                      <div id="profile-address" class="gnl-card-list__item gnl-card-list__item--full"></div>
+                    </div>
+                  </div>
+                </div>
 
-        <div class="tab-pane fade" id="v-pills-security" role="tabpanel" aria-labelledby="v-pills-security-tab">
+                <div class="tab-pane fade" id="v-pills-security" role="tabpanel" aria-labelledby="v-pills-security-tab">
 
-          <h3 class="section-title">Security</h3>
+                  <h3 class="section-title">Security</h3>
 
-          <div id="security"></div>
+                  <div id="security"></div>
 
-        </div>
+                </div>
 
-        <div class="tab-pane fade" id="v-pills-notifications-settings" role="tabpanel" aria-labelledby="v-pills-notifications-settings-tab">
+                <div class="tab-pane fade" id="v-pills-notifications-settings" role="tabpanel"
+                  aria-labelledby="v-pills-notifications-settings-tab">
 
-          <h3 class="section-title">Notifications settings</h3>
+                  <h3 class="section-title">Notifications settings</h3>
 
-          <div id="notifications-settings"></div>
+                  <div id="notifications-settings"></div>
 
-        </div>
+                </div>
+              </div>
 
-        <div class="tab-pane fade" id="v-pills-invoices" role="tabpanel" aria-labelledby="v-pills-invoices-tab">
+            </div>
 
-          <div id="invoices"></div>
+          </div>
 
         </div>
 
@@ -86,12 +103,16 @@
 
   </div>
 
-</section>
 
-<div id="footer"></div>
+  <div id="footer"></div>
 
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
-<script src="../assets/js/global.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js"
+    integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s"
+    crossorigin="anonymous"></script>
+  <script src="../assets/js/global.js"></script>
 </body>
+
 </html>

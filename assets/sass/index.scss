@@ -41,11 +41,13 @@
 @import 'subheader';
 @import 'tables';
 @import 'utilities';
+@import 'tabs';
 
 // TODO: feels slightly wrong to have this very specific stuff in the main CSS;
 // is there a better way to do this?
 @import 'authservice';
 @import 'dashboard';
+@import 'citizenone';
 
 // and the styles just for the design system, which we
 // may be able to refactor out at some point...

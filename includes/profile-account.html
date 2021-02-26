@@ -1,107 +1,48 @@
-<section class="profile profile-account">
-
-  <div class="page-wrapper">
-
-    <div class="profile-header">
-      <h5>Account</h5>
-
-      <button class="btn btn-primary btn-sm" onclick="editName()" aria-label="Edit account name">
-        <i class="far fa-edit"></i>
-        Edit
-      </button>
-
-    </div>
-
-    <div class="profile-add-form" id="editNameForm" style="display: none;"></div>
-
-    <form class="needs-validation form-container" novalidate>
-
-      <fieldset>
-
-        <legend class="sr-only">Profile Information</legend>
-
-        <div class="form-group">
-          <label for="name">Name</label>
-          <input type="text" class="form-control" id="name" value="Sarah Ferguson" readonly>
-        </div>
-
-        <div class="form-group">
-          <label for="username">Username</label>
-          <input type="text" class="form-control" id="username" value="sferguson" readonly>
-        </div>
-
-      </fieldset>
-
-      <fieldset>
-
-        <legend class="sr-only">Set primary language</legend>
-
-        <div class="form-primary flex-between">
-          Language
-          <span class="primary">Primary</span>
-        </div>
-
-        <label for="english" class="sr-only">English</label>
-
-        <div class="input-group input-group-radio">
-
-          <input type="text" class="form-control" id="english" value="English" readonly>
-
-          <div class="input-group-prepend">
-
-            <div class="input-group-text">
-
-              <div class="custom-control custom-radio">
-                <input type="radio" id="languageEN" name="language" class="custom-control-input" required checked>
-                <label class="custom-control-label" for="languageEN">
-                  <span class="sr-only">English</span>
-                </label>
-              </div>
-
-            </div>
-
-          </div>
-
-        </div>
-
-
-        <label for="french" class="sr-only">French</label>
-
-        <div class="input-group input-group-radio">
-
-          <input type="text" class="form-control" id="french" value="Français" readonly>
-
-          <div class="input-group-prepend">
-
-            <div class="input-group-text">
-
-              <div class="custom-control custom-radio">
-                <input type="radio" id="languageFR" name="language" class="custom-control-input" required>
-                <label class="custom-control-label" for="languageFR">
-                  <span class="sr-only">Français</span>
-                </label>
-              </div>
-
-            </div>
-
-          </div>
-
-          <small class="invalid-feedback">Choose a language.</small>
-
-        </div>
-
-      </fieldset>
-
-    </form>
-
+<div class="gnl-card gnl-card--info gnl-card--outlined gnl-paper gnl-paper--rounded">
+  <div class="gnl-card__header">
+    <h3 class="gnl-card__title gnl-header-5">Account details</h3>
+    Used to sign in and for MyGovNL notifications
   </div>
-
-</section>
-
-<script>
-  $("#editNameForm").load("../includes/forms/profile-edit-account-form.html");
-
-  function editName() {
-    $('#editNameForm').toggle();
-  }
-</script>
+  <div class="gnl-card__body">
+    <div class="gnl-list-group gnl-list-group--divider-between">
+      <div class="gnl-list-group__item">
+        <div class="gnl-list-group__container">
+          <div class="gnl-list-group__body">
+            <div class="gnl-stretch">
+              <div class="gnl-list-group__label">
+                Name
+              </div>
+              <div class="gnl-list-group__content">
+                <span class="gnl-list-group__supporting-text gnl-list-group__supporting-text--strong">Firstname
+                  lastname</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a class="gnl-card__list-item gnl-list-group__item" href="#">
+        <div class="gnl-list-group__container">
+          <div class="gnl-list-group__body">
+            <div class="gnl-stretch">
+              <div class="gnl-list-group__label">
+                Email
+              </div>
+              <div class="gnl-list-group__content">
+                <span
+                  class="gnl-list-group__supporting-text gnl-list-group__supporting-text--strong">firstname@example.com</span>
+              </div>
+            </div>
+          </div>
+          <div class="gnl-list-group__trailing">
+            <div class="gnl-list-group__icon">
+              <span class="gnl-list-group__icon--material material-icons">navigate_next</span>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+  <a href="#" class="gnl-card__footer gnl-divider--line">
+    Delete your account
+  </a>
+</div>
