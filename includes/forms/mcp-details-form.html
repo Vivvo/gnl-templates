@@ -1,0 +1,108 @@
+<form method="post" novalidate>
+    <h3 class="gnl-header-5">MCP information</h3>
+
+    <div class="gnl-form-group gnl-max-width--md">
+		<label for="Request_McpNumber" class="gnl-form-label gnl-max-width--md">MCP number</label>
+		<div class="gnl-max-width--md gnl-flex-container">
+			<input data-val="true" data-val-maxlength="MCP card number must be no longer than 15 characters." data-val-maxlength-max="15" data-val-minlength="MCP card number must be 12 characters." data-val-minlength-min="12" data-val-regex="Enter a valid MCP card number in format XXXXXXXXXXXX." data-val-regex-pattern="^(?:\d{3} ?){3}\d{3}$" data-val-required="Enter your MCP card number." id="Request_McpNumber" maxlength="15" name="Request.McpNumber" value="" class="form-control gnl-form-control" placeholder="XXXXXXXXXXXX" type="text" />
+			<span class="gnl-input-validation-error-icon"></span>
+		</div>
+		<span class="field-validation-valid form-text gnl-form-validation-message" data-valmsg-for="Request.McpNumber" data-valmsg-replace="true"></span>
+	</div>
+    <div class="gnl-form-group">
+		<fieldset class="gnl-fieldset">
+			<legend class="gnl-fieldset__legend gnl-legend">Valid date</legend>
+			<div class="gnl-fieldset__hint--example gnl-fieldset__hint">For example, 1979 02 27</div>
+			<div class="gnl-datepicker" data-datepicker-format-value="ymmdd" data-datepicker-mindate-error="Must be no earlier than April 1, 1969." data-datepicker-mindate-value="1969-04-01" data-datepicker-required-error="Enter your valid date." data-datepicker-required-value="true" data-datepicker-valid-error="The value &#x27;{value}&#x27; is not valid for Valid date." data-datepicker-valid-value="true">
+				<div class="gnl-datepicker__group--year gnl-datepicker__group">
+					<label class="gnl-datepicker__label gnl-form-label" for="Request_ValidDate_Year">Year</label>
+					<div class="gnl-flex-container">
+						<input class="gnl-datepicker__input gnl-form-control form-control" id="Request_ValidDate_Year" maxlength="4" name="Request.ValidDate.Year" placeholder="yyyy" type="tel" value="" />
+						<span class="gnl-input-validation-error-icon"></span>
+					</div>
+				</div>
+				<div class="gnl-datepicker__group--xs gnl-datepicker__group">
+					<label class="gnl-datepicker__label gnl-form-label" for="Request_ValidDate_Month">Month</label>
+					<div class="gnl-flex-container">
+						<input class="gnl-datepicker__input gnl-form-control form-control" id="Request_ValidDate_Month" maxlength="2" name="Request.ValidDate.Month" placeholder="mm" type="tel" value="" />
+						<span class="gnl-input-validation-error-icon"></span>
+					</div>
+				</div>
+				<div class="gnl-datepicker__group--xs gnl-datepicker__group">
+					<label class="gnl-datepicker__label gnl-form-label" for="Request_ValidDate_Day">Day</label>
+					<div class="gnl-flex-container">
+						<input class="gnl-datepicker__input gnl-form-control form-control" id="Request_ValidDate_Day" maxlength="2" name="Request.ValidDate.Day" placeholder="dd" type="tel" value="" />
+						<span class="gnl-input-validation-error-icon"></span>
+					</div>
+				</div>
+			</div>
+			<input id="Request_ValidDate_Format" name="Request.ValidDate.Format" type="hidden" value="ymmdd" />
+			<span class="field-validation-valid form-text gnl-form-validation-message" data-valmsg-for="Request.ValidDate" data-valmsg-replace="true"></span>
+		</fieldset>
+	</div>
+    <div class="gnl-form-group">
+		<fieldset class="gnl-fieldset">
+			<legend class="gnl-fieldset__legend gnl-legend">Expiry date</legend>
+			<div class="gnl-fieldset__hint--example gnl-fieldset__hint">For example, 2025 02 27</div>
+			<div class="gnl-datepicker" data-datepicker-format-value="ymmdd" data-datepicker-required-error="Enter your expiry date." data-datepicker-required-value="true" data-datepicker-valid-error="The value &#x27;{value}&#x27; is not valid for Expiry date." data-datepicker-valid-value="true">
+				<div class="gnl-datepicker__group--year gnl-datepicker__group">
+					<label class="gnl-datepicker__label gnl-form-label" for="Request_ExpiryDate_Year">Year</label>
+					<div class="gnl-flex-container">
+						<input class="gnl-datepicker__input gnl-form-control form-control" id="Request_ExpiryDate_Year" maxlength="4" name="Request.ExpiryDate.Year" placeholder="yyyy" type="tel" value="" />
+						<span class="gnl-input-validation-error-icon"></span>
+					</div>
+				</div>
+				<div class="gnl-datepicker__group--xs gnl-datepicker__group">
+					<label class="gnl-datepicker__label gnl-form-label" for="Request_ExpiryDate_Month">Month</label>
+					<div class="gnl-flex-container">
+						<input class="gnl-datepicker__input gnl-form-control form-control" id="Request_ExpiryDate_Month" maxlength="2" name="Request.ExpiryDate.Month" placeholder="mm" type="tel" value="" />
+						<span class="gnl-input-validation-error-icon"></span>
+					</div>
+				</div>
+				<div class="gnl-datepicker__group--xs gnl-datepicker__group">
+					<label class="gnl-datepicker__label gnl-form-label" for="Request_ExpiryDate_Day">Day</label>
+					<div class="gnl-flex-container">
+						<input class="gnl-datepicker__input gnl-form-control form-control" id="Request_ExpiryDate_Day" maxlength="2" name="Request.ExpiryDate.Day" placeholder="dd" type="tel" value="" />
+						<span class="gnl-input-validation-error-icon"></span>
+					</div>
+				</div>
+			</div>
+			<input id="Request_ExpiryDate_Format" name="Request.ExpiryDate.Format" type="hidden" value="ymmdd" />
+			<span class="field-validation-valid form-text gnl-form-validation-message" data-valmsg-for="Request.ExpiryDate" data-valmsg-replace="true"></span>
+		</fieldset>
+	</div>
+    <div class="gnl-form-group gnl-max-width--md">
+		<label for="Request_LastName" class="gnl-form-label gnl-max-width--md">Last name</label>
+		<div class="gnl-max-width--md gnl-flex-container">
+			<input data-val="true" data-val-maxlength="Last name must be no longer than 28 characters." data-val-maxlength-max="28" data-val-required="Enter your last name." id="Request_LastName" maxlength="28" name="Request.LastName" value="" class="form-control gnl-form-control" placeholder="as it appears on card" type="text" />
+			<span class="gnl-input-validation-error-icon"></span>
+		</div>
+		<span class="field-validation-valid form-text gnl-form-validation-message" data-valmsg-for="Request.LastName" data-valmsg-replace="true"></span>
+	</div>
+    <div class="gnl-form-group gnl-max-width--md">
+		<label for="Request_PostalCode" class="gnl-form-label gnl-max-width--md">Postal code</label>
+		<div class="gnl-max-width--md gnl-flex-container">
+			<input data-val="true" data-val-maxlength="Postal code must be no longer than 7 characters." data-val-maxlength-max="7" data-val-minlength="Postal code must be 6 characters." data-val-minlength-min="6" data-val-regex="Postal codes must follow the A1A1A1 or A1A 1A1 format." data-val-regex-pattern="^([A-Za-z]\d[A-Za-z][ ]?\d[A-Za-z]\d)$" data-val-required="Enter your postal code." id="Request_PostalCode" maxlength="7" name="Request.PostalCode" value="" class="form-control gnl-form-control" placeholder="A1A 1A1" type="text" />
+			<span class="gnl-input-validation-error-icon"></span>
+		</div>
+		<span class="field-validation-valid form-text gnl-form-validation-message" data-valmsg-for="Request.PostalCode" data-valmsg-replace="true"></span>
+	</div>
+
+    <div class="gnl-form-check">
+		<input type="checkbox" data-val="true" data-val-mustbechecked="To continue, you must agree to the terms and conditions." data-val-required="The Consent field is required." id="Request_Consent" name="Request.Consent" value="true" class="gnl-form-check__input" />
+		<label for="Request_Consent" class="gnl-form-check__label">
+			<span class="gnl-form-help-text">
+				I consent to Government of Newfoundland and Labrador checking the information that I provide against the MCP system to make sure that I am who I say I am, validate my access to new services as they become available in MyGovNL, and receive personalized notifications regarding my upcoming renewals.
+			</span>
+		</label>
+		<span class="field-validation-valid form-text gnl-form-validation-message" data-valmsg-for="Request.Consent" data-valmsg-replace="true"></span>
+	</div>
+
+    <div class="gnl-divider gnl-divider--tall">
+        <div class="gnl-button-container gnl-button-container--space-between">
+            <a class="gnl-button gnl-button--link gnl-button--back" href="#">Cancel</a>
+            <!-- <button type="submit" class="gnl-button gnl-button--contained gnl-click-wait">Confirm</button> -->
+			<a href="./mcp-link-notifications.html" class="gnl-button gnl-button--contained gnl-click-wait">Confirm</a>
+        </div>
+    </div>
+</form>
