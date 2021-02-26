@@ -97,9 +97,6 @@
     margin: 0 auto;
     max-width: $gnl-width-md + $gnl-size-2*2;
 
-    &__main {
-    }
-
     &__toc {
         display: none;
     }
@@ -168,6 +165,14 @@
 
     &--hero {
         padding-top: $gnl-size-5;
+    }
+
+    &--xl {
+        max-width: 1248px;
+    }
+
+    &--full-width {
+        padding: 0;
     }
 }
 

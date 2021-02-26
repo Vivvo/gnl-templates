@@ -48,6 +48,23 @@
     }
 }
 
+.gnl-flex-column {
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+.gnl-flex-column-desktop {
+    @media (min-width: 840px) {
+        -ms-flex-direction: column;
+        flex-direction: column;
+    }
+}
+
+.gnl-flex-row {
+    -ms-flex-direction: row;
+    flex-direction: row;
+}
+
 .gnl-text-center {
     text-align: center;
 }
