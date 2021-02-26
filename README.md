@@ -16,16 +16,16 @@
    * create new password confirmation: http://localhost:9000/pages/create-new-password-confirmation.html
    * verified link exparied: http://localhost:9000/pages/verified-link-expired.html
 4. Verify device
-  * verify device: http://localhost:9000/pages/verify-device.html
+   * verify device: http://localhost:9000/pages/verify-device.html
 5. Delete account 
-  * delete account: http://localhost:9000/pages/delete-account.html
-  * confirm account deletion: http://localhost:9000/pages/confirm-delete-account.html
+   * delete account: http://localhost:9000/pages/delete-account.html
+   * confirm account deletion: http://localhost:9000/pages/confirm-delete-account.html
 6. MCP
-  * linking overview: http://localhost:9000/pages/mcp-link-overview.html
-  * details: http://localhost:9000/pages/mcp-details.html
-  * notificaiton settings: http://localhost:9000/pages/mcp-link-notifications.html
-  * linking successfull: http://localhost:9000/pages/mcp-link-success.html
-  * service is locked: http://localhost:9000/pages/mcp-lockout.html
+   * linking overview: http://localhost:9000/pages/mcp-link-overview.html
+   * details: http://localhost:9000/pages/mcp-details.html
+   * notificaiton settings: http://localhost:9000/pages/mcp-link-notifications.html
+   * linking successfull: http://localhost:9000/pages/mcp-link-success.html
+   * service is locked: http://localhost:9000/pages/mcp-lockout.html
   
 
 
