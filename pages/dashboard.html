@@ -13,6 +13,7 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
     rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <link rel="stylesheet" href="/bundle.css">
 
   <script src="https://kit.fontawesome.com/07cd220d56.js" crossorigin="anonymous"></script>
@@ -38,7 +39,58 @@
 
     <section id="dashboard-navigation"></section>
 
-    <div class="gnl-layout">
+    <section class="co-header">
+      <div class="gnl-container gnl-container--xl">
+        <div class="dashboard-header">
+          <h1 class="co-title gnl-header-1">
+            Services
+          </h1>
+          <!-- <div class="dashboard-search">
+  
+            <form action="" class="needs-validation" novalidate>
+  
+              <label for="searchService" class="sr-only">Search Services</label>
+  
+              <div class="input-group input-group-search">
+  
+                <input type="search" id="searchService" class="form-control"
+                  placeholder="Type in service that you are looking for" required>
+  
+                <div class="input-group-prepend">
+                  <button type="submit" class="btn btn-search" aria-label="Search service">
+                    <span class="mobile-text"><i class="fas fa-search"></i></span>
+                    <span class="desktop-text">Search</span>
+                  </button>
+                </div>
+  
+                <small class="invalid-feedback">Enter a valid query</small>
+  
+              </div>
+  
+            </form>
+  
+          </div> -->
+        </div>
+      </div>
+    </section>
+
+    <!-- <section class="gnl-section gnl-section--padding-equal gnl-color-bg-gray-2">
+      <div class="gnl-container gnl-container--xl">
+        <h2 class="gnl-header-5 gnl-m-top--none">Popular services</h2>
+        <ul class="gnl-list gnl-list--no-bullets gnl-list--multiple-columns-3">
+          <li><a class="gnl-link" href="#">Vehicle registration renewal</a></li>
+          <li><a class="gnl-link" href="#">Driver’s licence renewal</a></li>
+          <li><a class="gnl-link" href="#">Driving record purchase</a></li>
+          <li><a class="gnl-link" href="#">Learner's permit test</a></li>
+          <li><a class="gnl-link" href="#">MCP card renewal</a></li>
+          <li><a class="gnl-link" href="#">MCP card renewal for your child</a></li>
+          <li><a class="gnl-link" href="#">Domestic wood cutting permit</a>
+          </li>
+        </ul>
+      </div>
+    </section> -->
+
+    <div class="gnl-layout gnl-color-bg-gray-3">
 
       <div class="gnl-layout__container gnl-container gnl-container--xl gnl-container--full-width">
 
@@ -50,48 +102,14 @@
 
               <section class="dashboard">
 
-                <div class="dashboard-header">
-                  <h1 class="co-title gnl-header-1">
-                    Services
-                  </h1>
-                  <div class="dashboard-search">
-
-                    <form action="" class="needs-validation" novalidate>
-
-                      <label for="searchService" class="sr-only">Search Services</label>
-
-                      <div class="input-group input-group-search">
-
-                        <input type="search" id="searchService" class="form-control"
-                          placeholder="Type in service that you are looking for" required>
-
-                        <div class="input-group-prepend">
-                          <button type="submit" class="btn btn-search" aria-label="Search service">
-                            <span class="mobile-text"><i class="fas fa-search"></i></span>
-                            <span class="desktop-text">Search</span>
-                          </button>
-                        </div>
-
-                        <small class="invalid-feedback">Enter a valid query</small>
-
-                      </div>
-
-                    </form>
-
-                  </div>
-
-                </div>
-
                 <section class="dashboard-services">
 
-                  <div class="gnl-card-list">
-                    <div class="gnl-card-list__wrapper">
-                      <div class="serviceCard gnl-card-list__item"></div>
-                      <div class="serviceCard gnl-card-list__item"></div>
-                      <div class="serviceCard gnl-card-list__item"></div>
-                      <div class="serviceCard gnl-card-list__item"></div>
-                      <div class="serviceCard gnl-card-list__item"></div>
-                    </div>
+                  <div class="gnl-grid gnl-grid--columns-3">
+                    <div class="serviceCard gnl-grid__item"></div>
+                    <div class="serviceCard gnl-grid__item"></div>
+                    <div class="serviceCard gnl-grid__item"></div>
+                    <div class="serviceCard gnl-grid__item"></div>
+                    <div class="serviceCard gnl-grid__item"></div>
                   </div>
 
                 </section>

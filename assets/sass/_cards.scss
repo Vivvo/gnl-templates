@@ -234,6 +234,11 @@
 					font-weight: $gnl-font-weight-black;
 				}
 			}
+
+			&--w-icon {
+				display: flex;
+				justify-content: space-between;
+			}
 		}
 
 		#{$block}__body {

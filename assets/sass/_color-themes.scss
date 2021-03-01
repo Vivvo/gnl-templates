@@ -223,3 +223,12 @@
         color: $gnl-color-brand-blue;
     }
 }
+
+// generate colour classes
+.gnl-color-text {
+    @include modifiers($colors, 'color', $separator: '-');
+}
+
+.gnl-color-bg {
+    @include modifiers($colors, 'background-color', $separator: '-');
+}

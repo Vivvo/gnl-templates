@@ -7,6 +7,8 @@
 // it's important for these to be imported in order:
 // they define dependencies for the other stylesheets.
 @import 'variables';
+@import 'mixins';
+@import 'functions';
 @import 'bootstrap';
 @import 'containers';
 @import 'layouts';
@@ -42,6 +44,7 @@
 @import 'tables';
 @import 'utilities';
 @import 'tabs';
+@import 'grid';
 
 // TODO: feels slightly wrong to have this very specific stuff in the main CSS;
 // is there a better way to do this?
