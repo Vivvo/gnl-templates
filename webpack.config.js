@@ -81,6 +81,11 @@ module.exports = {
     }),
 
     new HtmlWebPackPlugin({
+      template: './pages/notifications-main.html',
+      filename: './notifications-main.html',
+    }),
+
+    new HtmlWebPackPlugin({
       template: './pages/profile.html',
       filename: './profile.html',
     }),
