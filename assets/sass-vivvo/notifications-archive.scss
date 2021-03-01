@@ -1,0 +1,19 @@
+.section-notifications-archive {
+
+  .notifications-header {
+    margin-bottom: 1.5em;
+
+    .notifications-actions {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .btn-link {
+        i {
+          margin-left: 0;
+        }
+      }
+    }
+  }
+
+}

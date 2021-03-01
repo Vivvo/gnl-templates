@@ -1,34 +1,24 @@
-<section class="section-notifications" id="notifications-content">
+<section class="section-notifications-archive" id="notifications-archive">
 
   <div class="page-wrapper-alt">
 
     <div class="section-title-alt">
 
       <div class="button-wrapper">
-        <h3>Notifications</h3>
-
-          <a href="/profile.html" class="h3" id="notificationsSettingsLink">
-            <i class="fas fa-cog"></i>
-            <span class="sr-only">Edit Notifications Settings</span>
-          </a>
+        <h3>Archive</h3>
 
       </div>
 
     </div>
 
     <div class="service-card-back-content">
-
       <div class="notifications-header">
 
         <div class="notifications-actions">
 
-          <button type="button" class="btn btn-link" aria-label="Move to Archive">
-            Move to Archive
-          </button>
-
-          <button  onclick="loadArchive()" type="button" class="btn btn-link" aria-label="View Archive">
-            View Archive
-            <i class="fa fa-caret-right"></i>
+          <button type="button" class="btn btn-link" onclick="backToList()" aria-label="Back to notifications">
+            <i class="fas fa-arrow-left"></i>
+            Back to Notifications
           </button>
 
         </div>
@@ -139,11 +129,10 @@
 
   function loadDetails() {
     $('#notifications-content').load("../includes/notification-details.html");
-
   };
 
-  function loadArchive() {
-    $('#notifications-content').load("../includes/notifications-archive.html");
+  function backToList() {
+    $('#notifications').load("../includes/notifications.html");
+  }
 
-  };
 </script>
