@@ -15,5 +15,59 @@
       }
     }
   }
+  .list-group-item {
+    align-items: baseline !important;
 
+    &.state-unread {
+      font-weight: 500;
+      small {
+        font-weight: 500;
+      }
+    }
+  }
+
+  .custom-checkbox {
+    display: inline-block;
+    margin-right: 1em;
+  }
+
+  .notifications-infos {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .notifications-details {
+    flex: 0 0 75%;
+    p {
+      margin-bottom: 0;
+    }
+    .notification-title {
+      margin-bottom: 0.25em;
+      text-transform: uppercase;
+    }
+  }
+
+  .button-container {
+    width: 100%;
+    text-align: right;
+  }
+
+  @media(max-width: 991.98px) {
+
+    .notifications-infos {
+      flex-direction: column;
+      align-items: flex-start !important;
+    }
+
+    .notifications-details {
+      margin-bottom: 1em;
+    }
+  }
+
+  @media(max-width: 767.98px) {
+    .custom-checkbox {
+      margin-right: 0.5em;
+    }
+  }
 }
