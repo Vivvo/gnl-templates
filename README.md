@@ -26,8 +26,11 @@
    * notificaiton settings: http://localhost:9000/pages/mcp-link-notifications.html
    * linking successfull: http://localhost:9000/pages/mcp-link-success.html
    * service is locked: http://localhost:9000/pages/mcp-lockout.html
-7. Profile 
+7. My Account 
    * profile: http://localhost:9000/pages/profile.html
+   * security: http://localhost:9000/profile.html
+      * change your password: http://localhost:9000/pages/change-password.html
+      * password updated: http://localhost:9000/pages/password-updated.html
 
 
 
