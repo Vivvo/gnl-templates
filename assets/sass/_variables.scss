@@ -71,7 +71,6 @@ $gnl-z-index-modal: 1050;
 // ********************************************************************
 $gnl-color-white: #fff;
 $gnl-color-black: #000;
-
 $gnl-color-gray-1: #FAFAFA;
 $gnl-color-gray-2: #F1F3F4;
 $gnl-color-gray-3: #EAECED;
@@ -83,7 +82,6 @@ $gnl-color-gray-8: #737679;
 $gnl-color-gray-9: #5F6368;
 $gnl-color-gray-10: #3B4148;
 $gnl-color-gray-11: #212326;
-
 $gnl-color-blue: #1976D2;
 $gnl-color-blue-light: #E8F0FE;
 $gnl-color-blue-dark: #1a5d93;
@@ -101,6 +99,10 @@ $gnl-color-brand-blue: #004B87;
 $gnl-color-brand-red: #BA0C2F;
 $gnl-color-brand-purple: #512D6D;
 $gnl-color-brand-green: #007A33;
+
+// color map for our mixins
+$colors: ( white: $gnl-color-white, black: $gnl-color-black, gray-1: $gnl-color-gray-1, gray-2: $gnl-color-gray-2, gray-3: $gnl-color-gray-3, gray-4: $gnl-color-gray-4, gray-5: $gnl-color-gray-5, gray-6: $gnl-color-gray-6, gray-7: $gnl-color-gray-7, gray-8: $gnl-color-gray-8, gray-9: $gnl-color-gray-9, gray-10: $gnl-color-gray-10, gray-11: $gnl-color-gray-11, blue: ( base: $gnl-color-blue, light: $gnl-color-blue-light, dark: $gnl-color-blue-dark), red: ( base: $gnl-color-red, light: $gnl-color-red-light, light-2: $gnl-color-red-light-2), purple: ( base: $gnl-color-purple, light: $gnl-color-purple-light), green: ( base: $gnl-color-green, light: $gnl-color-green-light, light-2: $gnl-color-green-light-2), yellow: ( base: $gnl-color-yellow, light: $gnl-color-yellow-light), brand: ( blue: $gnl-color-brand-blue, red: $gnl-color-brand-red, purple: $gnl-color-brand-purple, green: $gnl-color-brand-green) );
+
 
 
 // ********************************************************************

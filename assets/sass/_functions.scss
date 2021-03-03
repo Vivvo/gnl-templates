@@ -1,0 +1,9 @@
+﻿@function gnl-color($color) {
+    $color: quote($color);
+
+    @if not map-has-key($gnl-colors, $color) {
+        @error "Unknown colour `#{$color}`";
+    }
+
+    @return map-get($gnl-colors, $color);
+}

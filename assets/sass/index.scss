@@ -7,6 +7,8 @@
 // it's important for these to be imported in order:
 // they define dependencies for the other stylesheets.
 @import 'variables';
+@import 'mixins';
+@import 'functions';
 @import 'bootstrap';
 @import 'containers';
 @import 'layouts';
