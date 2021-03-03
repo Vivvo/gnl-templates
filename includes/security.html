@@ -1,171 +1,47 @@
-<section class="section-security">
-
-  <div class="page-wrapper-table">
-
-    <div class="accordion" id="securityAccordion">
-
-      <div class="card">
-
-        <div class="card-header" id="securityPassword">
-
-          <button class="btn btn-collapse" type="button" data-toggle="collapse" data-target="#changePassword" aria-expanded="false" aria-controls="changePassword">
-              <span class="btn-collapse-content">
-                <i class="fas fa-lock btn-collapse-icon"></i>
-
-                <span class="btn-collapse-text">
-                  <span class="btn-collapse-title">
-                    Change Password
-                  </span>
-
-                  <span class="btn-collapse-subtitle">
-                     Change your password to protect your account.
-                  </span>
-
-                </span>
-
-              </span>
-
-            <i class="fas fa-angle-right btn-collapse-arrow"></i>
-
-          </button>
-
-        </div>
-
-        <div id="changePassword" class="collapse" aria-labelledby="securityPassword" data-parent="#securityAccordion">
-
-          <div class="card-body">
-
-            <section id="passwordForm" class="section-security-password"></section>
-
-          </div>
-
-        </div>
-
-      </div>
-
-      <div class="card">
-
-        <div class="card-header" id="securitySupportCode">
-
-          <button class="btn btn-collapse collapsed" type="button" data-toggle="collapse" data-target="#supportCode" aria-expanded="false" aria-controls="supportCode">
-              <span class="btn-collapse-content">
-                <i class="fas fa-shield-alt btn-collapse-icon"></i>
-
-                <span class="btn-collapse-text">
-                  <span class="btn-collapse-title">
-                    Support Code
-                  </span>
-
-                  <span class="btn-collapse-subtitle">
-                     A unique code known only to you that helps us verify your account when you contact us.
-                  </span>
-
-                </span>
-
-              </span>
-
-            <i class="fas fa-angle-right btn-collapse-arrow"></i>
-
-          </button>
-
-        </div>
-
-        <div id="supportCode" class="collapse" aria-labelledby="securitySupportCode" data-parent="#securityAccordion">
-
-          <div class="card-body">
-
-            <section id="supportCodeForm" class="section-security-support-code"></section>
-
-          </div>
-
-        </div>
-
-      </div>
-
-      <div class="card">
-
-        <div class="card-header" id="securityTwoStepVerification">
-
-          <button class="btn btn-collapse collapsed" type="button" data-toggle="collapse" data-target="#twoStepVerification" aria-expanded="false" aria-controls="twoStepVerification">
-              <span class="btn-collapse-content">
-                <i class="fas fa-key btn-collapse-icon"></i>
-
-                <span class="btn-collapse-text">
-                  <span class="btn-collapse-title">
-                    Two Step Verification
-                  </span>
-
-                  <span class="btn-collapse-subtitle">
-                     Add an extra layer of security. Each time you sign into your account, you'll need your password and a verification code.
-                  </span>
-
-                </span>
-
-              </span>
-
-            <i class="fas fa-angle-right btn-collapse-arrow"></i>
-
-          </button>
-
-        </div>
-
-        <div id="twoStepVerification" class="collapse" aria-labelledby="securityTwoStepVerification" data-parent="#securityAccordion">
-
-          <div class="card-body">
-
-            <section id="twoStepVerificationForm" class="section-two-step-verification"></section>
-
-          </div>
-
-        </div>
-
-      </div>
-
-      <div class="card">
-
-        <div class="card-header" id="securityConnect">
-
-          <button class="btn btn-collapse collapsed" type="button" data-toggle="collapse" data-target="#connectEeze" aria-expanded="false" aria-controls="connectEeze">
-              <span class="btn-collapse-content">
-                <i class="fas fa-sync-alt btn-collapse-icon"></i>
-
-                <span class="btn-collapse-text">
-                  <span class="btn-collapse-title">
-                    Connect with Eeze
-                  </span>
-
-                  <span class="btn-collapse-subtitle">
-                     Scan the qr code with Eeze to connect your CitizenOne™ account for a secure and seamless login experience.
-                  </span>
-
-                </span>
-
-              </span>
-
-            <i class="fas fa-angle-right btn-collapse-arrow"></i>
-
-          </button>
-
-        </div>
-
-        <div id="connectEeze" class="collapse" aria-labelledby="securityConnect" data-parent="#securityAccordion">
-          <div class="card-body">
-            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-          </div>
-        </div>
-
-      </div>
-
+<div class="gnl-card gnl-card--info gnl-card--outlined gnl-paper gnl-paper--rounded">
+    <div class="gnl-card__header">
+        <h3 class="gnl-card__title gnl-header-5">Security</h3>
     </div>
-
-  </div>
-
-</section>
-
-<script>
-  $(function(){
-    $("#passwordForm").load("../includes/forms/security-password-form.html");
-    $("#supportCodeForm").load("../includes/forms/security-support-code-form.html");
-    $("#twoStepVerificationForm").load("../includes/security-two-step-verification.html");
-  });
-</script>
+    <div class="gnl-card__body">
+        <div class="gnl-list-group gnl-list-group--divider-between">
+            <a class="gnl-card__list-item gnl-list-group__item" href="../pages/change-password.html">
+                <div class="gnl-list-group__container">
+                    <div class="gnl-list-group__body">
+                        <div class="gnl-stretch">
+                            <div class="gnl-list-group__label">
+                                Password
+                            </div>
+                            <div class="gnl-list-group__content">
+                                <span class="gnl-list-group__supporting-text gnl-list-group__supporting-text--strong">Last changed on {Date}</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gnl-list-group__trailing">
+                        <div class="gnl-list-group__icon">
+                            <span class="gnl-list-group__icon--material material-icons">navigate_next</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+			<a class="gnl-card__list-item gnl-list-group__item" href="#">
+                <div class="gnl-list-group__container">
+                    <div class="gnl-list-group__body">
+                        <div class="gnl-stretch">
+                            <div class="gnl-list-group__label">
+                                Two step verification
+                            </div>
+                            <div class="gnl-list-group__content">
+                                <span class="gnl-list-group__supporting-text gnl-list-group__supporting-text--strong">Off</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gnl-list-group__trailing">
+                        <div class="gnl-list-group__icon">
+                            <span class="gnl-list-group__icon--material material-icons">navigate_next</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+</div>
