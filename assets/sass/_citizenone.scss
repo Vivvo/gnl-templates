@@ -1,5 +1,9 @@
 ﻿@import 'variables';
 @import '../sass-vivvo/variables';
+@import '../sass-vivvo/notifications';
+@import '../sass-vivvo/notifications-main';
+@import '../sass-vivvo/notifications-details';
+@import '../sass-vivvo/notifications-settings';
 
 // ********************************************************************
 // Styles made and used specifically for C1 pages.
@@ -159,8 +163,6 @@
 
 .co-card-notification {
     &__icon {
-        text-decoration: none;
+        text-decoration: none!important;
     }
 }
-
-// account page
