@@ -32,5 +32,21 @@
       * change your password: http://localhost:9000/pages/change-password.html
       * password updated: http://localhost:9000/pages/password-updated.html
 
+# Email Templates 
+
+Template #  | Subject Line
+------------- | -------------
+002  | Activate your MyGovNL account
+200  | Reset your password
+201  | Your MyGovNL password has been changed
+202  | Your MyGovNL login email has been changed
+203  | Your MyGovNL account has been temporarily locked for 24 hours
+204  | Verify your MyGovNL account email address
+205  | Your MyGovNL account has been deleted
+207  | Your MyGovNL email address has been changed
+1020  | {{FirstName}}, your MyGovNL driver and vehicle services have been locked
+2001  | {{FirstName}}, your MyGovNL MCP services have been locked
+
+
 
 
