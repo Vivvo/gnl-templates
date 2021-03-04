@@ -1,0 +1,271 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Template design guide &#8212; Templates 0.1 documentation</title>
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/nature.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/graphviz.css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="System Structure" href="system-structure.html" />
+    <link rel="prev" title="Vivvo Templates Documentation" href="index.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="system-structure.html" title="System Structure"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="index.html" title="Vivvo Templates Documentation"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Templates 0.1 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Template design guide</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="template-design-guide">
+<h1>Template design guide<a class="headerlink" href="#template-design-guide" title="Permalink to this headline">¶</a></h1>
+<div class="line-block">
+<div class="line">Feel free to include any style sheets or javascript for user experience purposes.</div>
+<div class="line">They will be included in your application’s front end.</div>
+</div>
+<div class="section" id="login">
+<h2>Login<a class="headerlink" href="#login" title="Permalink to this headline">¶</a></h2>
+<p>This page must contain a form with the following inputs</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Email or Username</p></li>
+<li><p>Password</p></li>
+</ul>
+</div></blockquote>
+<p>Sample POST Body Object:</p>
+<div class="highlight-JSON notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span> <span class="p">{</span>
+     <span class="nt">&quot;csrf_token&quot;</span><span class="p">:</span> <span class="s2">&quot;8c1807936b8753970dceb15a38850b35b4a909585bbdfa7181d4a6a9bda91b10&quot;</span><span class="p">,</span>
+     <span class="nt">&quot;UserNameOrEmail&quot;</span><span class="p">:</span> <span class="s2">&quot;sherlock@holmes.com&quot;</span><span class="p">,</span>
+     <span class="nt">&quot;Password&quot;</span><span class="p">:</span> <span class="s2">&quot;Elementary25!&quot;</span>
+ <span class="p">}</span>
+</pre></div>
+</td></tr></table></div>
+<div class="line-block">
+<div class="line">This page often acts as the home/landing page.</div>
+<div class="line">When the user hits <code class="docutils literal notranslate"><span class="pre">Submit</span></code> the form will POST to <code class="docutils literal notranslate"><span class="pre">/registration/create</span></code>.</div>
+<div class="line">It usually also contains links to the <code class="docutils literal notranslate"><span class="pre">Create</span> <span class="pre">Account</span></code> and <code class="docutils literal notranslate"><span class="pre">Forgot</span> <span class="pre">Password</span></code> pages.</div>
+</div>
+</div>
+<div class="section" id="create-account">
+<h2>Create account<a class="headerlink" href="#create-account" title="Permalink to this headline">¶</a></h2>
+<p>This page must contain a form with the following inputs</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>First name</p></li>
+<li><p>Last name</p></li>
+<li><p>Username</p></li>
+<li><p>Email</p></li>
+<li><p>Password</p></li>
+<li><p>Accepted Terms of use (checkbox)</p></li>
+<li><p>csrf_token (hidden)</p></li>
+</ul>
+</div></blockquote>
+<p>Sample POST Body Object:</p>
+<div class="highlight-JSON notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span> <span class="p">{</span>
+     <span class="nt">&quot;csrf_token&quot;</span><span class="p">:</span> <span class="s2">&quot;8c1807936b8753970dceb15a38850b35b4a909585bbdfa7181d4a6a9bda91b10&quot;</span><span class="p">,</span>
+     <span class="nt">&quot;FirstName&quot;</span><span class="p">:</span> <span class="s2">&quot;Sherlock&quot;</span><span class="p">,</span>
+     <span class="nt">&quot;LastName&quot;</span><span class="p">:</span> <span class="s2">&quot;Holmes&quot;</span><span class="p">,</span>
+     <span class="nt">&quot;UserName&quot;</span><span class="p">:</span> <span class="s2">&quot;SherlockH&quot;</span><span class="p">,</span>
+     <span class="nt">&quot;EmailAddress&quot;</span><span class="p">:</span> <span class="s2">&quot;sherlock@holmes.com&quot;</span><span class="p">,</span>
+     <span class="nt">&quot;ConfirmEmailAddress&quot;</span><span class="p">:</span> <span class="s2">&quot;sherlock@holmes.com&quot;</span><span class="p">,</span>
+     <span class="nt">&quot;Password&quot;</span><span class="p">:</span> <span class="s2">&quot;Elementary25!&quot;</span><span class="p">,</span>
+     <span class="nt">&quot;ConfirmPassword&quot;</span><span class="p">:</span> <span class="s2">&quot;Elementary25!&quot;</span><span class="p">,</span>
+     <span class="nt">&quot;AcceptTermsAndConditions&quot;</span><span class="p">:</span> <span class="s2">&quot;true&quot;</span>
+ <span class="p">}</span>
+</pre></div>
+</td></tr></table></div>
+<p>Sample form inputs:</p>
+<div class="highlight-HTML notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span> Form Input Fields:
+     <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text&quot;</span> <span class="na">maxlength</span><span class="o">=</span><span class="s">&quot;30&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;FirstName&quot;</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;&quot;</span> <span class="na">aria-label</span><span class="o">=</span><span class="s">&quot;First name&quot;</span><span class="p">&gt;</span>
+     <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text&quot;</span> <span class="na">maxlength</span><span class="o">=</span><span class="s">&quot;50&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;LastName&quot;</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;&quot;</span> <span class="na">aria-label</span><span class="o">=</span><span class="s">&quot;Last name&quot;</span><span class="p">&gt;</span>
+     <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text&quot;</span> <span class="na">maxlength</span><span class="o">=</span><span class="s">&quot;70&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;UserName&quot;</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;&quot;</span> <span class="na">aria-label</span><span class="o">=</span><span class="s">&quot;User name&quot;</span><span class="p">&gt;</span>
+     <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;email&quot;</span> <span class="na">maxlength</span><span class="o">=</span><span class="s">&quot;70&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;EmailAddress&quot;</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;&quot;</span> <span class="na">aria-label</span><span class="o">=</span><span class="s">&quot;Email Address&quot;</span><span class="p">&gt;</span>
+     <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;email&quot;</span> <span class="na">maxlength</span><span class="o">=</span><span class="s">&quot;70&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;ConfirmEmailAddress&quot;</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;&quot;</span> <span class="na">aria-label</span><span class="o">=</span><span class="s">&quot;Confirm Email Address&quot;</span><span class="p">&gt;</span>
+     <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;password&quot;</span> <span class="na">minlength</span><span class="o">=</span><span class="s">&quot;8&quot;</span> <span class="na">maxlength</span><span class="o">=</span><span class="s">&quot;128&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;Password&quot;</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;&quot;</span> <span class="na">aria-label</span><span class="o">=</span><span class="s">&quot;Password&quot;</span><span class="p">&gt;</span>
+     <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;password&quot;</span> <span class="na">minlength</span><span class="o">=</span><span class="s">&quot;8&quot;</span> <span class="na">maxlength</span><span class="o">=</span><span class="s">&quot;128&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;ConfirmPassword&quot;</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;&quot;</span> <span class="na">aria-label</span><span class="o">=</span><span class="s">&quot;Confirm Password&quot;</span><span class="p">&gt;</span>
+     <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;checkbox&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;AcceptTermsAndConditions&quot;</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;Y&quot;</span> <span class="na">aria-label</span><span class="o">=</span><span class="s">&quot;Accept terms and conditions&quot;</span><span class="p">&gt;</span>
+
+ Hidden csrf token:
+     <span class="p">&lt;</span><span class="nt">input</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;csrfToken&quot;</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;hidden&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;csrf_token&quot;</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;{{ $token }}&quot;</span><span class="p">/&gt;</span>
+</pre></div>
+</td></tr></table></div>
+<p>As long as the form has name attributes on each input, and the form’s action is set to
+<code class="docutils literal notranslate"><span class="pre">/registration/create</span></code>
+, then we will populate the <code class="docutils literal notranslate"><span class="pre">csrf_token</span></code> input, and create an account with the given details on submit.</p>
+<div class="line-block">
+<div class="line"><strong>Note</strong> that in order to protect against <a class="reference external" href="https://portswigger.net/web-security/csrf">cross-site request forgery</a>, we require a <code class="docutils literal notranslate"><span class="pre">csrf_token</span></code>.</div>
+<div class="line">This token is generated by our application, attached to user sessions, and must accompany relevant requests in order to avoid a csrf error.</div>
+</div>
+</div>
+<div class="section" id="email-template">
+<h2>Email Template<a class="headerlink" href="#email-template" title="Permalink to this headline">¶</a></h2>
+<div class="line-block">
+<div class="line">After submitting the <code class="docutils literal notranslate"><span class="pre">Create</span> <span class="pre">Account</span></code> form, the user will receive an invitation to activate their account.</div>
+<div class="line">The invitation is html driven, and highly customizable.</div>
+</div>
+<p>Sample template:</p>
+<div class="highlight-HTML notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700&quot;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&quot;stylesheet&quot;</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">style</span><span class="p">&gt;</span><span class="nt">main</span> <span class="p">{</span><span class="k">font-family</span><span class="p">:</span> <span class="s1">&#39;Source Sans Pro&#39;</span><span class="p">,</span> <span class="kc">sans-serif</span><span class="p">;}&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">header</span> <span class="na">style</span><span class="o">=</span><span class="s">&quot;clear: both;&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">img</span> <span class="na">style</span><span class="o">=</span><span class="s">&quot;float:right;&quot;</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;&quot;</span><span class="p">/&gt;</span>
+<span class="p">&lt;/</span><span class="nt">header</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">main</span> <span class="na">style</span><span class="o">=</span><span class="s">&quot;clear: both;&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">style</span><span class="o">=</span><span class="s">&quot;margin-top:35px;display: inline-block;&quot;</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Hi $firstName,<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>You recently created an account.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;$activationLink&quot;</span><span class="p">&gt;</span>Click this link to sign in and activate your account.<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>If the above link is not clickable, copy and paste this link into your web browser&#39;s address bar:<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>$activationLink<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">main</span><span class="p">&gt;</span>
+</pre></div>
+</td></tr></table></div>
+<img alt="Email sample" class="align-center" src="_images/email-sample.png" />
+</div>
+<div class="section" id="email-sent">
+<h2>Email sent<a class="headerlink" href="#email-sent" title="Permalink to this headline">¶</a></h2>
+<p>This page generally directs users to check their emails for an invitation to the website.</p>
+<p>This page can optionally display the email address that the invitation has been sent to, as well as other account details.</p>
+</div>
+<div class="section" id="email-verified-optional">
+<h2>Email verified (optional)<a class="headerlink" href="#email-verified-optional" title="Permalink to this headline">¶</a></h2>
+<div class="line-block">
+<div class="line">In the invitation in the email, you have the option of supplying a <code class="docutils literal notranslate"><span class="pre">goto</span></code> link.</div>
+<div class="line">The user will be redirected to the <code class="docutils literal notranslate"><span class="pre">goto</span></code> link after verifying their account.</div>
+</div>
+<div class="line-block">
+<div class="line">This <code class="docutils literal notranslate"><span class="pre">Email</span> <span class="pre">Verified</span></code> page generally tells the user that their account has been verified successfully, and offers a link to the login page.</div>
+<div class="line">You can also omit the <code class="docutils literal notranslate"><span class="pre">Email</span> <span class="pre">Verified</span></code> page, leave the <code class="docutils literal notranslate"><span class="pre">goto</span></code> link blank, and the user will land on <code class="docutils literal notranslate"><span class="pre">Login</span></code> instead.</div>
+</div>
+</div>
+</div>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Template design guide</a><ul>
+<li><a class="reference internal" href="#login">Login</a></li>
+<li><a class="reference internal" href="#create-account">Create account</a></li>
+<li><a class="reference internal" href="#email-template">Email Template</a></li>
+<li><a class="reference internal" href="#email-sent">Email sent</a></li>
+<li><a class="reference internal" href="#email-verified-optional">Email verified (optional)</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="index.html"
+                        title="previous chapter">Vivvo Templates Documentation</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="system-structure.html"
+                        title="next chapter">System Structure</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/template-design-guide.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="system-structure.html" title="System Structure"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="index.html" title="Vivvo Templates Documentation"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Templates 0.1 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Template design guide</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2021, Vivvo.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.5.1.
+    </div>
+  </body>
+</html>
