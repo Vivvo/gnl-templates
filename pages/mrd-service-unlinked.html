@@ -20,8 +20,9 @@
             $("#header").load("../includes/header.html");
             $("#footer").load("../includes/footer.html");
             $("#dashboard-navigation").load("../includes/dashboard-navigation.html");
-            $("#services-sidebar").load("../includes/services-sidebar.html");
+            $("#mrd-service-sidebar").load("../includes/mrd-service-sidebar.html");
             $("#mrd-actions").load("../includes/mrd-actions.html");
+            $("#mrd-unlinked").load("../includes/mrd-unlinked.html");
             $("#notifications").load("../includes/notifications.html");
             $("#terms").load("../includes/terms.html");
         });
@@ -47,7 +48,7 @@
 
                 <div class="gnl-layout__wrapper">
 
-                    <aside class="gnl-layout__side-col" id="services-sidebar"></aside>
+                    <aside class="gnl-layout__side-col" id="mrd-service-sidebar"></aside>
 
                     <div class="gnl-layout__main-col">
 
@@ -60,6 +61,8 @@
                                     <div class="gnl-card-list">
                                         <div class="gnl-card-list__wrapper">
                                             <div id="mrd-actions" class="gnl-card-list__item gnl-card-list__item--full"></div>
+                                            <h4 class="gnl-header-4">Your linked items</h4>
+                                            <div id="mrd-unlinked" class="gnl-card-list__item gnl-card-list__item--full"></div>
                                         </div>
                                     </div>
 									
