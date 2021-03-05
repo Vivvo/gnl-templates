@@ -1,0 +1,30 @@
+<form method="post" id="change-email-primary" autocomplete="off" action="">
+    <fieldset class="gnl-fieldset" aria-describedby="verified-email-hint">
+        <legend class="gnl-fieldset__legend gnl-fieldset__legend--sm">
+            <h1 class="gnl-header-3">Primary email address</h1>
+        </legend>
+        <div class="gnl-fieldset__hint" id="verified-email-hint">
+            Change your primary email address. You can only have one primary email address.
+        </div>
+        <div class="gnl-form-group">
+            <div class="gnl-form-radio">
+                <input type="radio" id="radio1" name="verified-email" value="primary-email" class="gnl-form-radio__input gnl-outline-remove" />
+                <label for="radio1" class="gnl-form-radio__label">primary@example.com</label>
+            </div>
+            <div class="gnl-form-radio">
+                <input type="radio" id="radio2" name="verified-email" value="alternate-email" class="gnl-form-radio__input gnl-outline-remove" />
+                <label for="radio2" class="gnl-form-radio__label">verified@example.com</label>
+            </div>
+        </div>
+        <span class="gnl-form-validation-message"></span>
+    </fieldset>
+
+    <section>
+        <div class="gnl-divider gnl-divider--tall">
+            <div class="gnl-button-container gnl-button-container--multi">
+                <a class="gnl-button gnl-button--back" href="./change-email.html">Cancel</a>
+				<a href="./change-email-primary-updated.html" class="gnl-button gnl-button--contained gnl-click-wait">Update</a>
+            </div>
+        </div>
+	</section>
+</form>
