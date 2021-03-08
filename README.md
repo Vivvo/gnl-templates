@@ -17,9 +17,6 @@
    * verified link exparied: http://localhost:9000/pages/verified-link-expired.html
 4. Verify device
    * verify device: http://localhost:9000/pages/verify-device.html
-5. Delete account 
-   * delete account: http://localhost:9000/pages/delete-account.html
-   * confirm account deletion: http://localhost:9000/pages/confirm-delete-account.html
 6. MCP
    * linking overview: http://localhost:9000/pages/mcp-link-overview.html
    * details: http://localhost:9000/pages/mcp-details.html
@@ -30,7 +27,11 @@
    * profile: http://localhost:9000/pages/profile.html
    * security: http://localhost:9000/profile.html
       * change your password: http://localhost:9000/pages/change-password.html
+      * We've emailed you a verification link: http://localhost:9000/pages/change-email-verify.html
       * password updated: http://localhost:9000/pages/password-updated.html
+      * add another email: http://localhost:9000/pages/change-email-add.html
+      * Delete account : http://localhost:9000/pages/delete-account.html
+      * confirm account deletion: http://localhost:9000/pages/confirm-delete-account.html
 
 # Email Templates 
 
