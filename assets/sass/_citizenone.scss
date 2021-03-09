@@ -162,3 +162,15 @@
         text-decoration: none!important;
     }
 }
+
+.co-service-heading {
+    margin-top: $gnl-size-2;
+}
+
+.co-service-header {
+    border-bottom: 1px solid $gnl-color-gray-4;
+
+    &__tabs {
+        margin-top: $gnl-size-3;
+    }
+}

@@ -104,6 +104,16 @@ module.exports = {
       template: './pages/service-card-back.html',
       filename: './service-card-back.html',
     }),
+
+    new HtmlWebPackPlugin({
+      template: './pages/mrd-service-linked.html',
+      filename: './mrd-service-linked.html',
+    }),
+
+    new HtmlWebPackPlugin({
+      template: './pages/mrd-service-unlinked.html',
+      filename: './mrd-service-unlinked.html',
+    }),
   ],
   resolve: {
     extensions: ['.js', '.jsx', '.scss']

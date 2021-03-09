@@ -3,11 +3,7 @@
 .gnl-tabs {
 
     &.nav-pills {
-        border-bottom: 1px solid $gnl-color-gray-4;
-
-        @media (min-width: 840px) {
-            border-bottom: 0;
-        }
+        //border-bottom: 1px solid $gnl-color-gray-4;
 
         .nav-link {
             border-bottom: 0;
@@ -15,26 +11,44 @@
             border-radius: 0;
             text-decoration: none;
             color: $gnl-color-gray-11;
-
-            @media (min-width: 840px) {
-                border-left: 4px solid transparent;
-            }
+            border-bottom: 4px solid transparent;
 
             &.active {
                 background-color: $gnl-color-blue-light;
                 font-weight: $gnl-font-weight-bold;
                 color: $gnl-color-brand-blue;
-                border-bottom: 4px solid $gnl-color-brand-blue;
-
-                @media (min-width: 840px) {
-                    border-bottom: 0;
-                    margin-left: 0;
-                    border-left: 4px solid $gnl-color-brand-blue;
-                }
+                border-bottom-color: $gnl-color-brand-blue;
             }
 
             &:hover {
                 background-color: $gnl-color-gray-2;
+            }
+        }
+    }
+
+    &--responsive {
+        &.nav-pills {
+            border-bottom: 1px solid $gnl-color-gray-4;
+    
+            @media (min-width: 840px) {
+                border-bottom: 0;
+            }
+    
+            .nav-link {
+                
+                @media (min-width: 840px) {
+                    border-left: 4px solid transparent;
+                    border-bottom: 0;
+                }
+    
+                &.active {
+    
+                    @media (min-width: 840px) {
+                        border-bottom: 0;
+                        margin-left: 0;
+                        border-left: 4px solid $gnl-color-brand-blue;
+                    }
+                }
             }
         }
     }
