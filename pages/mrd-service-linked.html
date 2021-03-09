@@ -27,6 +27,9 @@
             $("#mrd-service-sidebar").load("../includes/mrd-service-sidebar.html");
             $("#mrd-actions").load("../includes/mrd-service-actions.html");
             $("#mrd-unlinked").load("../includes/mrd-service-unlinked.html");
+            $("#reminders").load("../includes/mrd-service-reminders.html");
+            $("#recently-updated").load("../includes/mrd-service-recent.html");
+            $("#linked-items").load("../includes/mrd-service-linked-items.html");
             $("#notifications").load("../includes/notifications.html");
             $("#terms").load("../includes/terms.html");
         });
@@ -79,18 +82,28 @@
                                     <section>
                                         <div class="gnl-container gnl-container--xl">
                                             <h4 class="gnl-header-4 co-service-heading">Your linked items</h4>
-                                            <div class="gnl-card-grid">
-                                                <div class="serviceCard gnl-card-grid__item">
-                                                    <div class="gnl-list-group gnl-list-group--card gnl-list-group--outline"
-                                                        id="mrd-unlinked"></div>
-                                                </div>
-                                            </div>
+                                            <div id="linked-items"></div>
                                         </div>
                                     </section>
 
                                 </div>
+
                             </div>
+
+                            <aside class="gnl-layout__side-col">
+                                <div class="gnl-layout__container">
+                                    <div class="gnl-container gnl-container--xl">
+                                        <h4 class="gnl-header-4 co-service-heading">Reminders</h4>
+                                        <div id="reminders"></div>
+
+                                        <h4 class="gnl-header-4 co-service-heading">Recently updated</h4>
+                                        <div id="recently-updated"></div>
+                                    </div>
+                                </div>
+                            </aside>
+
                         </div>
+
                     </div>
 
                     <div class="tab-pane fade" id="v-pills-notifications" role="tabpanel"
