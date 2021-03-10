@@ -51,13 +51,13 @@
 |                |Are you sure you want to delete (transaction in queue)|                                                            | |
 |                |Your MyGovNL account has been deleted|                                                                             | |
 |                |Your MyGovNL account has been deleted (email -  205)|assets/email-templates/0205-AccountDeleted.html               | |
-|Linking         |Link MCP                                        |                                                                  | |
-|                |Your MyGovNL MCP services have been temp locked |                                                                  | |
-|                |Your MCP services have been locked (email - 2001)|                                                                 | |
-|                |Successfully linked MCP                         |                                                                  | |
+|Linking         |Link MCP                                        |http://localhost:9000/pages/mcp-link-overview.html                | |
+|                |Your MyGovNL MCP services have been temp locked |http://localhost:9000/pages/mcp-lockout.html                      | |
+|                |Your MCP services have been locked (email - 2001)|assets/email-templates/2001-MCPOnboardingLockout.html            | |
+|                |Successfully linked MCP                         |http://localhost:9000/pages/mcp-link-success.html                 | |
 |                |Link MRD                                        |                                                                  | |
 |                |Your MyGovNL MRD services have been temp locked |                                                                  | |
-|                |Your MRD services have been locked (email - 1020)|                                                                 | |
+|                |Your MRD services have been locked (email - 1020)|assets/email-templates/1020-OnboardingLockout.html               | |
 |                |Successfully linked MRD                         |                                                                  | |
 |                |Link wood cutting                               |                                                                  | |
 |                |You do not have a domestic wood cutting permit  |                                                                  | |
