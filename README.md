@@ -2,26 +2,26 @@
 
 |Module | Screen | Link |  | 
 |----------------|---------------|---------------|------------------------|
-|    Login       |Login Screen                                    |     http://localhost:9000/          |                        |
-|                |Your MyGovNL account has been locked (email 203)|               |                        | 
+|    Login       |Login Screen                                    |http://localhost:9000/          |                        |
+|                |Your MyGovNL account has been locked (email 203)|assets/email-templates/0203-AccountLockoutNotification.html           |                        | 
 |Account Creation|Intro Screen                                    |                  |                        | 
-|                |Create Account                                  |               |                        | 
-|                |Teerms and Conditions                           |               |                        | 
-|                |Cancel Registration                             |               |                        | 
-|                |Check Your Email                                |               |                        | 
+|                |Create Account                                  |http://localhost:9000/create-account.html               |                        | 
+|                |Teerms and Conditions                           |http://localhost:9000/includes/terms.html               |                        | 
+|                |Cancel Registration                             |       |                        | 
+|                |Check Your Email                                |http://localhost:9000/pages/check-your-email.html               |                        | 
 |                |Check your email (email server is down)         |               |                        | 
-|                |Account Activation email (204)                  |               |                        | 
-|                |Account verification link expired               |               |                        | 
-|                |You're done success screen                      |               |                        | 
-|Forgot Password |Forgot Password                                 |               |                        | 
-|                |An email has been sent                          |               |                        | 
-|                |Reset your password (email- 200)                |               |                        | 
-|                |Create new password                             |               |                        | 
-|                |Password updated screen                         |               |                        | 
-|                |Link Expired screen                             |               |                        | 
-|                |Password has been updated (email - 201)         |               |                        | 
-|Contact Us      |Contact Us Screen                               |               |                        | 
-|Landing Page    |Lanfing Page                                    |               |                        | 
+|                |Account Activation email (204)                  |assets/email-templates/0204-VerifyEmailAddress.html|                        | 
+|                |Account verification link expired               |http://localhost:9000/pages/verified-link-expired.html|                        | 
+|                |You're done success screen                      |http://localhost:9000/pages/registration-verified.html|                        | 
+|Forgot Password |Forgot Password                                 |http://localhost:9000/pages/reset-password.html       |                        | 
+|                |An email has been sent                          |http://localhost:9000/pages/reset-password-confirmation.html|                        | 
+|                |Reset your password (email- 200)                |assets/email-templates/0200-ResetPasswordRequest.html|                        | 
+|                |Create new password                             |http://localhost:9000/pages/create-new-password.html |                        | 
+|                |Password updated screen                         |http://localhost:9000/pages/create-new-password-confirmation.html|                        | 
+|                |Link Expired screen                             |http://localhost:9000/pages/verified-link-expired.html|                        | 
+|                |Password has been updated (email - 201)         |assets/email-templates/0201-ResetPasswordConfirmation.html|                        | 
+|Contact Us      |Contact Us Screen                               |http://localhost:9000/includes/terms.html              |                        | 
+|Landing Page    |Landing Page                                    |http://localhost:9000/pages/dashboard.html|                        | 
 |Service Pages   |Service Page - Actions - Unlinked               |               |                        | 
 |                |Service Page - Actions - Linked                 |               |                        |
 |                |Service Page - Notifications                    |               |                        |
