@@ -3,13 +3,13 @@
 |Module | Screen | Link |  | 
 |----------------|---------------|---------------|------------------------|
 |    Login       |Login Screen                                    |http://localhost:9000/                                            | |
-|`email`         | Your MyGovNL account has been locked (email 203)|assets/email-templates/0203-AccountLockoutNotification.html       | | 
-|Account Creation|Intro Screen                                    |                                                                  | | 
+|`email`         | Your MyGovNL account has been locked (email 203)|assets/email-templates/0203-AccountLockoutNotification.html      | | 
+|Account Creation|Intro Screen                                    |N/A                                                               | | 
 |                |Create Account                                  |http://localhost:9000/create-account.html                         | | 
 |                |Teerms and Conditions                           |http://localhost:9000/includes/terms.html                         | | 
-|                |Cancel Registration                             |                                                                  | | 
+|                |Cancel Registration                             |N/A                                                               | | 
 |                |Check Your Email                                |http://localhost:9000/pages/check-your-email.html                 | | 
-|                |Check your email (email server is down)         |               |                        | 
+|                |Check your email (email server is down)         |     ?                                                            | | 
 |`email`         |Account Activation email (204)                  |assets/email-templates/0204-VerifyEmailAddress.html               | | 
 |                |Account verification link expired               |http://localhost:9000/pages/verified-link-expired.html            | | 
 |                |You're done success screen                      |http://localhost:9000/pages/registration-verified.html            | | 
@@ -22,15 +22,15 @@
 |`email`         |Password has been updated (email - 201)         |assets/email-templates/0201-ResetPasswordConfirmation.html        | | 
 |Contact Us      |Contact Us Screen                               |http://localhost:9000/includes/terms.html                         | | 
 |Landing Page    |Landing Page                                    |http://localhost:9000/pages/dashboard.html                        | | 
-|Service Pages   |Service Page - Actions - Unlinked               |               |                        | 
-|                |Service Page - Actions - Linked                 |               |                        |
-|                |Service Page - Notifications                    |               |                        |
-|                |Service Page - Terms of Use                     |               |                        |
-|Notifications   |Notifications (history)                         |               |                        |
+|Service Pages   |Service Page - Actions - Unlinked               |  ?             |                        | 
+|                |Service Page - Actions - Linked                 |  ?             |                        |
+|                |Service Page - Notifications                    |                |                        |
+|                |Service Page - Terms of Use                     |  ?             |                        |
+|Notifications   |Notifications (history)                         |                |                        |
 |Account         |Account - Profile                               |http://localhost:9000/pages/profile.html                          | |
 |                |Account - Security                              |http://localhost:9000/pages/profile.html                          | |
 |                |Account - Notification Settings                 |N/A|                        |
-|Maintenance     |Maintenance message                             |                                                                  | |
+|Maintenance     |Maintenance message                             |   ?                                                              | |
 |Change Password |Change your password                            |http://localhost:9000/pages/change-password.html                  | |
 |                |Your Password has been updated                  |http://localhost:9000/pages/password-updated.html                 | |
 |`email`         |Your Primary password has been updated (201)    |assets/email-templates/0201-ResetPasswordConfirmation.html        | |
@@ -44,25 +44,25 @@
 |                |Are you sure you want to remove email address   |http://localhost:9000/pages/change-email-remove.html|        
 |`email`         |Verify your MyGovNL account email address (email - 204) |assets/email-templates/0204-VerifyEmailAddress.html       | |        
 |`email`         |Your primary email address has changed (email - 207-1) |assets/email-templates/0207-EmailAddressChangeRequestSendToOriginalAccount.html|     
-|`email`         |Your email address has been removed (email - 207-2) |                                                      | |      
+|`email`         |Your email address has been removed (email - 207-2) |    ?                                                  | |      
 |`email`         |An email address has been added to your MyGovNL account (email - 207-3)k|                                   | |        
 |Delete Account  |Delete account - first we need to verify it's you |http://localhost:9000/pages/delete-account.html                 | |      
-|                |Are you sure you want to delete your MyGovNL account?|                                                             | |
-|                |Are you sure you want to delete (transaction in queue)|                                                            | |
-|                |Your MyGovNL account has been deleted|                                                                             | |
+|                |Are you sure you want to delete your MyGovNL account?|     ?                                                       | |
+|                |Are you sure you want to delete (transaction in queue)|     ?                                                      | |
+|                |Your MyGovNL account has been deleted|                      ?                                                      | |
 |`email`         |Your MyGovNL account has been deleted (email -  205)|assets/email-templates/0205-AccountDeleted.html               | |
 |Linking         |Link MCP                                        |http://localhost:9000/pages/mcp-link-overview.html                | |
 |                |Your MyGovNL MCP services have been temp locked |http://localhost:9000/pages/mcp-lockout.html                      | |
-|`email`         | Your MCP services have been locked (email - 2001)|assets/email-templates/2001-MCPOnboardingLockout.html            | |
+|`email`         | Your MCP services have been locked (email - 2001)|assets/email-templates/2001-MCPOnboardingLockout.html           | |
 |                |Successfully linked MCP                         |http://localhost:9000/pages/mcp-link-success.html                 | |
-|                |Link MRD                                        |                                                                  | |
-|                |Your MyGovNL MRD services have been temp locked |                                                                  | |
+|                |Link MRD                                        |     -                                                            | |
+|                |Your MyGovNL MRD services have been temp locked |      -                                                           | |
 |`email`         |Your MRD services have been locked (email - 1020)|assets/email-templates/1020-OnboardingLockout.html               | |
-|                |Successfully linked MRD                         |                                                                  | |
-|                |Link wood cutting                               |                                                                  | |
-|                |You do not have a domestic wood cutting permit  |                                                                  | |
-|                |Successful linking                              |                                                                  | |
-|                |Linking for driver's permit                     |                                                                  | |
+|                |Successfully linked MRD                         |     -                                                            | |
+|                |Link wood cutting                               |      -                                                           | |
+|                |You do not have a domestic wood cutting permit  |       -                                                          | |
+|                |Successful linking                              |        -                                                         | |
+|                |Linking for driver's permit                     |         -                                                        | |
 
 
 ```yarn start```
