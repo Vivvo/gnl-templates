@@ -1,4 +1,71 @@
 # # MyGovNL - templates
+
+|Module | Screen | Link |  | 
+|----------------|---------------|---------------|------------------------|
+|    Login       |Login Screen                                    |     http://localhost:9000/          |                        |
+|                |Your MyGovNL account has been locked (email 203)|               |                        | 
+|Account Creation|Intro Screen                                    |                  |                        | 
+|                |Create Account                                  |               |                        | 
+|                |Teerms and Conditions                           |               |                        | 
+|                |Cancel Registration                             |               |                        | 
+|                |Check Your Email                                |               |                        | 
+|                |Check your email (email server is down)         |               |                        | 
+|                |Account Activation email (204)                  |               |                        | 
+|                |Account verification link expired               |               |                        | 
+|                |You're done success screen                      |               |                        | 
+|Forgot Password |Forgot Password                                 |               |                        | 
+|                |An email has been sent                          |               |                        | 
+|                |Reset your password (email- 200)                |               |                        | 
+|                |Create new password                             |               |                        | 
+|                |Password updated screen                         |               |                        | 
+|                |Link Expired screen                             |               |                        | 
+|                |Password has been updated (email - 201)         |               |                        | 
+|Contact Us      |Contact Us Screen                               |               |                        | 
+|Landing Page    |Lanfing Page                                    |               |                        | 
+|Service Pages   |Service Page - Actions - Unlinked               |               |                        | 
+|                |Service Page - Actions - Linked                 |               |                        |
+|                |Service Page - Notifications                    |               |                        |
+|                |Service Page - Terms of Use                     |               |                        |
+|Notifications   |Notifications (history)                         |               |                        |
+|Account         |Account - Profile                               |               |                        |
+|                |Account - Security                              |               |                        |
+|                |Account - Notification Settings                 |               |                        |
+|Maintenance     |Maintenance message                             |               |                        |
+|Change Password |Change your password                            |               |                        |
+|                |Your Password has been updated                  |               |                        |
+|                |Your Primary address has been updated           |               |                        |
+|Change Email    |Your email addresses                            |               |                        |
+|                |Primary email address                 |               |                        |
+|                |Your primary email address has been updated|               |                        |
+|                |Your email address has been verified and updated|               |                        |
+|                Add another email address|               |                        |
+|                |We've emailed you a verification link|               |                        |
+|                |Expired link |               |    
+|                |Your email address has been verified and updated |               |        
+|                |Are you sure you want to remove email address |               |        
+|                |Verify your MyGovNL account email address (email - 204) |               |        
+|                |Your primary email address has changed (email - 207-1) |               |        
+|                |Your email address has been removed (email - 207-2) |               |        
+|                |An email address has been added to your MyGovNL account (email - 207-3)k |               |        
+|Delete Account  |Delete account - first we need to verify it's you |               |        
+|                |Are you sure you want to delete your MyGovNL account?|               |        |
+|                |Are you sure you want to delete (transaction in queue)|               |        |
+|                |Your MyGovNL account has been deleted|               |        |
+|                |Your MyGovNL account has been deleted (email -  205)|               |        |
+|Linking         |Link MCP     |               |        |
+|                |Your MyGovNL MCP services have been temp locked |               |        |
+|                |Your MCP services have been locked (email - 2001)|               |        |
+|                |Successfully linked MCP|               |        |
+|                |Link MRD |               |        |
+|                |Your MyGovNL MRD services have been temp locked |               |        |
+|                |Your MRD services have been locked (email - 1020)|               |        |
+|                |Successfully linked MRD |               |        |
+|                |Link wood cutting|               |        |
+|                |You do not have a domestic wood cutting permit|               |        |
+|                |Successful linking|               |        |
+|                |Linking for driver's permit|               |        |
+
+
 ```yarn start```
 1. Login
    * login page: http://localhost:9000/
