@@ -8,6 +8,7 @@
    * terms and conditions: http://localhost:9000/includes/terms.html 
    * email sent: https://nldev.vivvocloud.com/en/email_sent
    * registration verified: http://localhost:9000/pages/registration-verified.html
+   * verified link exparied: http://localhost:9000/pages/verified-link-expired.html
 
 3. Forgot password
    * forgot password: http://localhost:9000/pages/reset-password.html
