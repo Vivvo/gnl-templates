@@ -27,24 +27,23 @@
 |                |Service Page - Notifications                    |               |                        |
 |                |Service Page - Terms of Use                     |               |                        |
 |Notifications   |Notifications (history)                         |               |                        |
-|Account         |Account - Profile                               |               |                        |
-|                |Account - Security                              |               |                        |
-|                |Account - Notification Settings                 |               |                        |
+|Account         |Account - Profile                               |http://localhost:9000/pages/profile.html|                        |
+|                |Account - Security                              |http://localhost:9000/pages/profile.html|                        |
+|                |Account - Notification Settings                 |N/A|                        |
 |Maintenance     |Maintenance message                             |               |                        |
-|Change Password |Change your password                            |               |                        |
-|                |Your Password has been updated                  |               |                        |
-|                |Your Primary address has been updated           |               |                        |
-|Change Email    |Your email addresses                            |               |                        |
-|                |Primary email address                 |               |                        |
-|                |Your primary email address has been updated|               |                        |
-|                |Your email address has been verified and updated|               |                        |
-|                Add another email address|               |                        |
-|                |We've emailed you a verification link|               |                        |
-|                |Expired link |               |    
-|                |Your email address has been verified and updated |               |        
-|                |Are you sure you want to remove email address |               |        
-|                |Verify your MyGovNL account email address (email - 204) |               |        
-|                |Your primary email address has changed (email - 207-1) |               |        
+|Change Password |Change your password                            |http://localhost:9000/pages/change-password.html|                        |
+|                |Your Password has been updated                  |http://localhost:9000/pages/password-updated.html|                        |
+|                |Your Primary password has been updated (201)    |assets/email-templates/0201-ResetPasswordConfirmation.html|                        |
+|Change Email    |Your email addresses                            |http://localhost:9000/pages/change-email.html|                        |
+|                |Primary email address                           |http://localhost:9000/pages/change-email-primary.html|                        |
+|                |Your primary email address has been updated     |http://localhost:9000/pages/change-email-primary-updated.html|                        |
+|                |Your email address has been verified and updated|http://localhost:9000/pages/change-email-verified.html|                        |
+|                |Add another email address                       |http://localhost:9000/pages/change-email-add.html|                        |
+|                |We've emailed you a verification link           |http://localhost:9000/pages/change-email-verify.html|                        |
+|                |Expired link                                    |http://localhost:9000/pages/change-email-expired.html|    
+|                |Are you sure you want to remove email address   |http://localhost:9000/pages/change-email-remove.html|        
+|                |Verify your MyGovNL account email address (email - 204) |assets/email-templates/0204-VerifyEmailAddress.html|        
+|                |Your primary email address has changed (email - 207-1) |assets/email-templates/0207-EmailAddressChangeRequestSendToOriginalAccount.html|     
 |                |Your email address has been removed (email - 207-2) |               |        
 |                |An email address has been added to your MyGovNL account (email - 207-3)k |               |        
 |Delete Account  |Delete account - first we need to verify it's you |               |        
