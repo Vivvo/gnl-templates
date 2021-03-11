@@ -1,27 +1,26 @@
 <div class="gnl-stretch">
   <div class="gnl-stretch__grow">
-    <a class="gnl-link">Move to Archive</a>
+    <a class="gnl-button gnl-button--link">Move to Archive</a>
   </div>
   <div>
-    <a onclick="loadArchive()" class="gnl-link">
+    <a onclick="loadArchive()" class="gnl-button gnl-button--link gnl-button--next">
       View Archive
-      <i class="fa fa-arrow-right"></i>
     </a>
   </div>
 </div>
 
 <div class="btn-group-toggle" data-toggle="buttons">
-  <label class="btn btn-link gnl-link">
+  <label class="btn btn-link gnl-button gnl-button--link">
     <input type="checkbox" class="checkAll">
     <span>Select All</span>
   </label>
 </div>
 
-
-  <div class="gnl-list-group gnl-list-group--outline">
-    <div class="gnl-list-group__item gnl-paper gnl-paper--rounded">
+<section class="gnl-section gnl-section--padding-top">
+  <div class="gnl-list-group gnl-list-group--card">
+    <div class="gnl-list-group__item gnl-list-group__item--outline gnl-paper gnl-paper--rounded">
       <div class="gnl-list-group__container">
-        <div class="gnl-list-group__leading">
+        <div class="gnl-list-group__leading gnl-list-group__leading--align-center">
           <div class="custom-control custom-checkbox">
             <input type="checkbox" class="custom-control-input" id="notificationID-1">
             <label class="custom-control-label" for="notificationID-1">
@@ -42,9 +41,9 @@
         </div>
       </div>
     </div>
-    <div class="gnl-list-group__item gnl-paper gnl-paper--rounded">
+    <div class="gnl-list-group__item gnl-list-group__item--outline gnl-paper gnl-paper--rounded">
       <div class="gnl-list-group__container">
-        <div class="gnl-list-group__leading">
+        <div class="gnl-list-group__leading gnl-list-group__leading--align-center">
           <div class="custom-control custom-checkbox">
             <input type="checkbox" class="custom-control-input" id="notificationID-2">
             <label class="custom-control-label" for="notificationID-2">
@@ -65,9 +64,9 @@
         </div>
       </div>
     </div>
-    <div class="gnl-list-group__item gnl-paper gnl-paper--rounded">
+    <div class="gnl-list-group__item gnl-list-group__item--outline gnl-paper gnl-paper--rounded">
       <div class="gnl-list-group__container">
-        <div class="gnl-list-group__leading">
+        <div class="gnl-list-group__leading gnl-list-group__leading--align-center">
           <div class="custom-control custom-checkbox">
             <input type="checkbox" class="custom-control-input" id="notificationID-3">
             <label class="custom-control-label" for="notificationID-3">
@@ -78,7 +77,8 @@
         <div class="gnl-list-group__body">
           <div class="gnl-stretch">
             <div class="gnl-list-group__content">
-              <span class="gnl-list-group__primary-text">{firstName}, your organ and tissue donation status has been updated</span>
+              <span class="gnl-list-group__primary-text">{firstName}, your organ and tissue donation status has been
+                updated</span>
               <span class="gnl-list-group__supporting-text">
                 <span class="gnl-datetime" data-datetime-local="2020-05-14T09:50:00"
                   data-datetime-utc="2020-05-14T13:20:00Z">May 14, 2020 &#xB7; 9:50am</span>
@@ -90,7 +90,8 @@
     </div>
 
   </div>
-  
+</section>
+
 <div id="pagination" class="co-pagination-container"></div>
 
 <script>
