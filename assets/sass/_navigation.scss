@@ -29,12 +29,6 @@
             @include media-breakpoint-up(md) {
                 flex-direction: row;
             }
-
-            &--sub-list {
-                .gnl-navigation__nav-link {
-                    padding-left: $gnl-size-4;
-                }
-            }
         }
 
         .gnl-navigation__nav-item {
