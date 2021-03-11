@@ -31,6 +31,10 @@ a {
         @extend %gnl-nowrap;
     }
 
+    &--right {
+        float: right;
+    }
+
     @at-root a#{&} {
         @include hover-focus {
             background-color: $gnl-color-blue-light;
