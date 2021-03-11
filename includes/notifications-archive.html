@@ -24,7 +24,7 @@
       <div class="gnl-list-group__body">
         <div class="gnl-stretch">
           <div class="gnl-list-group__content">
-            <span class="gnl-list-group__primary-text">automated, your MyGovNL MCP services have been locked </span>
+            <span class="gnl-list-group__primary-text">{firstName}, your MyGovNL MCP services have been locked </span>
             <span class="gnl-list-group__supporting-text">
               <span class="gnl-datetime" data-datetime-local="2021-02-24T14:33:43"
                 data-datetime-utc="2021-02-24T18:03:43Z">February 24, 2021 &#xB7; 2:33pm</span>
@@ -60,7 +60,7 @@
 
 </div>
 
-<div id="pagination" class="pagination-container"></div>
+<div id="pagination" class="co-pagination-container"></div>
 
 <script>
   $('#pagination').load("../includes/pagination.html");
@@ -80,16 +80,6 @@
     $('#notifications-content').load("../includes/notifications-archive.html");
 
   };
-</script>
-
-<script>
-  $('#pagination').load("../includes/pagination.html");
-
-  $('.checkAll').change(function () {
-    var state = this.checked;
-    state ? $(':checkbox').prop('checked', true) : $(':checkbox').prop('checked', false);
-    state ? $(this).next('span').text('Unselect All') : $(this).next('span').text('Select All')
-  });
 
   function backToList() {
     $('#notifications-content').load("../includes/notifications.html");
