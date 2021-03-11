@@ -214,3 +214,50 @@
         border-radius: 0;
     }
 }
+
+// Pagination
+.co-pagination-container {
+    margin-top: 1em;
+    margin-bottom: 1em;
+    text-align: center;
+}
+  
+.co-pagination {
+    display: inline-block;
+    padding-left: 0;
+    margin: 25px 0;
+    border-radius: 2px;
+  
+    .co-page-item {
+        display: inline;
+  
+        .co-page-link {
+            position: relative;
+            margin-left: -1px;
+            padding: .5em 1em;
+            background-color: $white;
+            border: 1px solid $theme-medium-grey;
+            color: $theme-primary;
+            float: left;
+            line-height: 1.6;
+
+            &:hover {
+                color: $white;
+                background-color: $theme-primary-dark;
+                border-color: $theme-primary-dark;
+            }
+
+            &.co-page-link--active {
+                background: $gnl-color-brand-blue;
+                color: $gnl-color-white;
+            }
+
+            &.co-page-link--disabled {
+                background-color: $white;
+                color: $theme-grey;
+                pointer-events: none;
+            }
+        }
+    }
+}
+  
