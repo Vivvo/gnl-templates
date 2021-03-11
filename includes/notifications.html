@@ -1,9 +1,14 @@
-<a class="gnl-link">Move to Archive</a>
-
-<a onclick="loadArchive()" class="gnl-link gnl-link--right">
-  View Archive
-  <i class="fa fa-arrow-right"></i>
-</a>
+<div class="gnl-stretch">
+  <div class="gnl-stretch__grow">
+    <a class="gnl-link">Move to Archive</a>
+  </div>
+  <div>
+    <a onclick="loadArchive()" class="gnl-link">
+      View Archive
+      <i class="fa fa-arrow-right"></i>
+    </a>
+  </div>
+</div>
 
 <div class="btn-group-toggle" data-toggle="buttons">
   <label class="btn btn-link gnl-link">
@@ -13,15 +18,13 @@
 </div>
 
 
-  <!-- <div class="gnl-list-group gnl-list-group--outline">
-
-
+  <div class="gnl-list-group gnl-list-group--outline">
     <div class="gnl-list-group__item gnl-paper gnl-paper--rounded">
       <div class="gnl-list-group__container">
         <div class="gnl-list-group__leading">
           <div class="custom-control custom-checkbox">
-            <input type="checkbox" class="custom-control-input" id="notificationID-2">
-            <label class="custom-control-label" for="notificationID-2">
+            <input type="checkbox" class="custom-control-input" id="notificationID-1">
+            <label class="custom-control-label" for="notificationID-1">
               <span class="sr-only">Select this notification</span>
             </label>
           </div>
@@ -39,9 +42,6 @@
         </div>
       </div>
     </div>
-
-
-
     <div class="gnl-list-group__item gnl-paper gnl-paper--rounded">
       <div class="gnl-list-group__container">
         <div class="gnl-list-group__leading">
@@ -66,52 +66,8 @@
       </div>
     </div>
 
-  </div> -->
-
-<!-- 
-            <li class="list-group-item state-unread">
-
-              <div class="custom-control custom-checkbox">
-                <input type="checkbox" class="custom-control-input" id="notificationID-2">
-                <label class="custom-control-label" for="notificationID-2">
-                  <span class="sr-only">Select this notification</span>
-                </label>
-              </div>
-
-              <div class="notifications-infos">
-
-                <div class="notifications-details">
-                  <small>Oct 13, 2020 3:40:23 PM</small>
-
-                  <p class="notification-title">
-                    Another Service Name with a very long title because it happens even more often and it does happen
-                    all the
-                    time
-                  </p>
-
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis culpa, dignissimos distinctio
-                    doloremque eum facilis id ipsam iste iusto laborum libero maiores necessitatibus numquam, officiis
-                    quibusdam
-                    quod repellat velit, vero!
-                  </p>
-
-                  <small>REF. #PM735462</small>
-
-                </div>
-
-                <div class="button-container">
-                  <button onclick="loadDetails()" class="btn btn-primary" aria-label="View notification">
-                    View
-                  </button>
-                </div>
-
-              </div>
-
-            </li>
-
-            </ul> -->
-
+  </div>
+  
 <div id="pagination" class="pagination-container"></div>
 
 <script>

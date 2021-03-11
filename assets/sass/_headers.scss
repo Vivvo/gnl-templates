@@ -23,7 +23,6 @@
 
 	&__container {
 		display: flex;
-		justify-content: center;
 		position: relative;
 		flex-direction: column;
 		flex-wrap: nowrap;
@@ -176,6 +175,7 @@
 		margin: $gnl-size-2 $gnl-size-9 0 0;
 		background-image: url(../images/mygovnl-logo.svg);
 	}
+	
 }
 
 .gnl-header--mygovnl-external {
