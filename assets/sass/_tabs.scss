@@ -3,7 +3,6 @@
 .gnl-tabs {
 
     &.nav-pills {
-        //border-bottom: 1px solid $gnl-color-gray-4;
 
         .nav-link {
             border-bottom: 0;
@@ -12,6 +11,8 @@
             text-decoration: none;
             color: $gnl-color-gray-11;
             border-bottom: 4px solid transparent;
+            padding-top: $gnl-size-2;
+            padding-bottom: $gnl-size-2;
 
             &.active {
                 background-color: $gnl-color-blue-light;
