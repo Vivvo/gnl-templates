@@ -23,7 +23,6 @@
 
 	&__container {
 		display: flex;
-		justify-content: center;
 		position: relative;
 		flex-direction: column;
 		flex-wrap: nowrap;
@@ -175,6 +174,14 @@
 		height: $gnl-size-8;
 		margin: $gnl-size-2 $gnl-size-9 0 0;
 		background-image: url(../images/mygovnl-logo.svg);
+	}
+
+	.gnl-header__profile {
+		display: none;
+
+		@include media-breakpoint-up(lg) {
+			display: flex;
+		}
 	}
 }
 

@@ -55,11 +55,6 @@
         var navClassParent = $('.gnl-navigation__nav').parent();
         var navID = "#";
 
-        if (navClassParent.hasClass('gnl-navigation--header')) {
-
-            $('.gnl-navigation__nav .gnl-navigation__nav-item:last-child').hide();
-        }
-
         $('.gnl-header__container').css("flex-direction", "row");
         $('.gnl-navigation-drawer__scrim').attr('onclick', '');
         displayDrawerMenuButton(navClassParent);
