@@ -10,8 +10,8 @@
             text-decoration: none;
             color: $gnl-color-gray-11;
             border-bottom: 4px solid transparent;
-            padding-bottom: $gnl-size-2;
-            padding-top: $gnl-size-2;
+            padding-bottom: 12px;
+            padding-top: 12px;
 
             &.active {
                 background-color: transparent;
@@ -35,8 +35,6 @@
             }
 
             .nav-link {
-                padding-bottom: 12px;
-                padding-top: 12px;
 
                 @media (min-width: 840px) {
                     border-left: 4px solid transparent;
@@ -44,12 +42,13 @@
                 }
 
                 &.active {
-                    background-color: $gnl-color-blue-light;
+                    background-color: transparent;
                     font-weight: $gnl-font-weight-bold;
                     color: $gnl-color-brand-blue;
                     border-bottom-color: $gnl-color-brand-blue;
 
                     @media (min-width: 840px) {
+                        background-color: $gnl-color-blue-light;
                         border-bottom: 0;
                         margin-left: 0;
                         border-left: 4px solid $gnl-color-brand-blue;
