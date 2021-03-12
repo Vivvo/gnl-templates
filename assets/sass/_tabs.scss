@@ -20,8 +20,10 @@
                 border-bottom-color: $gnl-color-brand-blue;
             }
 
-            &:hover {
+            &:hover:not(.active) {
                 background-color: transparent;
+                border-bottom-color: $gnl-color-gray-4;
+                border-bottom-width: 4px;
             }
         }
     }
