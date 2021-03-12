@@ -2,8 +2,9 @@
 Template design guide
 #####################
 
-| Feel free to include any style sheets or javascript for user experience purposes.
-| They will be included in your application's front end.
+| This page acts as a guide to any front-end designers that intend to edit the pages below.
+| Each section (or page) explains exactly what the back end is expecting the page to contain/send back in order for it to work.
+| Anything else on the page is under your creative control, and can be changed without issue.
 
 Login
 *****
@@ -138,3 +139,95 @@ Email verified (optional)
 
 | This ``Email Verified`` page generally tells the user that their account has been verified successfully, and offers a link to the login page.
 | You can also omit the ``Email Verified`` page, leave the ``goto`` link blank, and the user will land on ``Login`` instead.
+
+Dashboard
+*********
+This page has no primary action, but it does display a number of important values to the user.
+Those values are:
+- `maintenanceMessage`
+   - A maintenance message that can be enabled or disabled to notify users of planned maintenance downtime.
+   - Structure:
+      .. code-block:: JSON
+
+         {
+            "maintenanceId",
+            "title",
+            "details",
+            "startDate",
+            "endDate"
+         }
+
+- `ServiceCards`
+   - A list of service card the user is subscribed to.
+   - Structure:
+      .. code-block:: JSON
+
+      {
+         "identityServiceCardId",
+         "identityId",
+         "serviceCardId",
+         "sortOrder",
+         "serviceCard",
+         "lightServiceCard",
+         "notificationCount"
+      }
+
+- `notificationCount`
+   - The amount of unread notifications for the user
+- `initials`
+   - The first and last initials of the user. For example, a user named Sherlock Holmes would receive S.H.
+- `primaryEmail`
+   - The primary email of the user.
+
+Forgot Password
+***************
+This page must contain a form with the following inputs
+
+    - Email
+    - csrf_token (hidden)
+
+
+Sample POST Body Object:
+
+.. code-block:: JSON
+   :linenos:
+
+    {
+        "csrf_token": "8c1807936b8753970dceb15a38850b35b4a909585bbdfa7181d4a6a9bda91b10",
+        "EmailAddress": "sherlock@holmes.com",
+    }
+
+
+Sample form inputs:
+
+.. code-block:: HTML
+   :linenos:
+
+    Form Input Fields:
+        <input type="email" maxlength="70" name="EmailAddress" value="" aria-label="Email Address">
+
+    Hidden csrf token:
+        <input id="csrfToken" type="hidden" name="csrf_token" value="{{ $token }}"/>
+
+
+
+As long as the form has inputs with name attributes that match the samples above, and the form's action is set to
+``/en/recovery/``
+, the ``csrf_token`` input will be populated, and the user will be sent a password recovery email.
+
+
+
+Terms and Conditions
+********************
+
+| This page displays the most up to date version of the Terms and Conditions connected to the application's policy in Citizen One.
+| To update the terms displayed, new markup or plain text can be entered into the Management application
+
+
+Profile page
+************
+
+
+Change password
+***************
+
