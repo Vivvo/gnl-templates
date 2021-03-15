@@ -37,26 +37,36 @@
 	</div>
 
 	<div class="form-group gnl-form-group">
-		<label class="gnl-form-label gnl-max-width--md" for="Password" style="display: block;"><div class="gnl-flex-container gnl-flex-container--space-between"><span>Create a password</span><div class="gnl-icon gnl-icon--visibility gnl-icon--visibility--show"> <span>Show</span></div></div></label>
-		<div class="gnl-flex-container gnl-max-width--md">
-			<input class="form-control gnl-form-control" autocomplete="off" type="password" data-val="true" data-val-maxlength="Password must be no longer than 128 characters." data-val-maxlength-max="128" data-val-minlength="Password must be at least 8 characters." data-val-minlength-min="8" data-val-required="Enter your password." id="Password" maxlength="128" name="Password">
-			<span class="gnl-input-validation-error-icon"></span>
-		</div>
-		<span class="form-text gnl-form-validation-message field-validation-valid" data-valmsg-for="Password" data-valmsg-replace="true"></span>
-		<div class="form-text gnl-form-help-text gnl-form-help-text--hide-on-validate">
-			Minimum 8 characters
+		<label for="Password">Create a password</label>
+		<div class="input-group input-group-password">
+			<input class="form-control gnl-form-control gnl-flex-container gnl-max-width--md" autocomplete="off" type="password" data-val="true" data-val-maxlength="Password must be no longer than 128 characters." data-val-maxlength-max="128" data-val-minlength="Password must be at least 8 characters." data-val-minlength-min="8" data-val-required="Enter your password." id="Password" maxlength="128" name="Password">
+
+			<div class="input-group-prepend">
+				<button class="btn btn-password show-password" type="button" aria-label="Show or hide password">
+					<i class="far fa-eye-slash"></i>
+					<span class="sr-only">Show</span>
+				</button>
+			</div>
+
+			<small class="form-text invalid-feedback">Minimum 8 characters</small>
+
 		</div>
 	</div>
 
 	<div class="form-group gnl-form-group">
-		<label class="gnl-form-label gnl-max-width--md" for="ConfirmPassword" style="display: block;"><div class="gnl-flex-container gnl-flex-container--space-between"><span>Confirm password</span><div class="gnl-icon gnl-icon--visibility gnl-icon--visibility--show"> <span>Show</span></div></div></label>
-		<div class="gnl-flex-container gnl-max-width--md">
-			<input class="form-control gnl-form-control" autocomplete="off" type="password" data-val="true" data-val-equalto="Passwords do not match." data-val-equalto-other="*.Password" data-val-maxlength="Password must be no longer than 128 characters." data-val-maxlength-max="128" data-val-minlength="Password must be at least 8 characters." data-val-minlength-min="8" data-val-required="Confirm your password." id="ConfirmPassword" maxlength="128" name="ConfirmPassword">
-			<span class="gnl-input-validation-error-icon"></span>
-		</div>
-		<span class="form-text gnl-form-validation-message field-validation-valid" data-valmsg-for="ConfirmPassword" data-valmsg-replace="true"></span>
-		<div class="form-text gnl-form-help-text gnl-form-help-text--hide-on-validate">
-			Minimum 8 characters
+		<label for="ConfirmPassword">Confirm password</label>
+		<div class="input-group input-group-password">
+			<input class="form-control gnl-form-control gnl-flex-container gnl-max-width--md" autocomplete="off" type="password" data-val="true" data-val-equalto="Passwords do not match." data-val-equalto-other="*.Password" data-val-maxlength="Password must be no longer than 128 characters." data-val-maxlength-max="128" data-val-minlength="Password must be at least 8 characters." data-val-minlength-min="8" data-val-required="Confirm your password." id="ConfirmPassword" maxlength="128" name="ConfirmPassword">
+
+			<div class="input-group-prepend">
+				<button class="btn btn-password show-password" type="button" aria-label="Show or hide password">
+					<i class="far fa-eye-slash"></i>
+					<span class="sr-only">Show</span>
+				</button>
+			</div>
+
+			<small class="form-text invalid-feedback">Minimum 8 characters</small>
+
 		</div>
 	</div>
 
