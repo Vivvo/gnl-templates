@@ -9,7 +9,7 @@ Template design guide
 Login
 *****
 
-This page must contain a form with the following inputs
+The Login page must contain a form with the following inputs
 
     - Email or Username
     - Password
@@ -25,15 +25,15 @@ Sample POST Body Object:
         "Password": "Elementary25!"
     }
 
-| This page often acts as the home/landing page.
+| The Login page often acts as the home/landing page.
 | When the user hits ``Submit`` the form will POST to ``/registration/create``.
 | It usually also contains links to the ``Create Account`` and ``Forgot Password`` pages.
 
 
-Create account
+Create Account
 **************
 
-This page must contain a form with the following inputs
+The Create Account page must contain a form with the following inputs
 
     - First name
     - Last name
@@ -123,15 +123,15 @@ Sample template:
 
 
 
-Email sent
+Email Sent
 **********
 
-This page generally directs users to check their emails for an invitation to the website.
+The Email Sent page generally directs users to check their emails for an invitation to the website.
 
 This page can optionally display the email address that the invitation has been sent to, as well as other account details.
 
 
-Email verified (optional)
+Email Verified (optional)
 *************************
 
 | In the invitation in the email, you have the option of supplying a ``goto`` link.
@@ -142,7 +142,7 @@ Email verified (optional)
 
 Dashboard
 *********
-This page has no primary action, but it does display a number of important values to the user.
+The Dashboard page has no primary action, but it does display a number of important values to the user.
 Those values are:
 - `maintenanceMessage`
    - A maintenance message that can be enabled or disabled to notify users of planned maintenance downtime.
@@ -181,7 +181,7 @@ Those values are:
 
 Forgot Password
 ***************
-This page must contain a form with the following inputs
+The Forgot password page must contain a form with the following inputs
 
     - Email
     - csrf_token (hidden)
@@ -220,14 +220,57 @@ As long as the form has inputs with name attributes that match the samples above
 Terms and Conditions
 ********************
 
-| This page displays the most up to date version of the Terms and Conditions connected to the application's policy in Citizen One.
+| The Terms and Conditions page displays the most up to date version of the Terms and Conditions connected to the application's policy in Citizen One.
 | To update the terms displayed, new markup or plain text can be entered into the Management application
 
 
 Profile page
 ************
 
+| The Profile page has no primary action of its own, but it leads to several sub-pages that allow the user to take actions on their account.
+| These sub-pages are listed below:
 
-Change password
-***************
 
+Change Password
+---------------
+
+| The Change Password page must contain a form with the following inputs:
+
+- CurrentPassword
+- Password
+- VerifyPassword
+- csrf_token (hidden)
+
+Sample POST Body Object:
+
+.. code-block:: JSON
+   :linenos:
+
+    {
+        "csrf_token": "8c1807936b8753970dceb15a38850b35b4a909585bbdfa7181d4a6a9bda91b10",
+        "CurrentPassword": "Elementary25!",
+        "Password": "Watson44!",
+        "VerifyPassword": "Watson44!",
+    }
+
+
+Sample form inputs:
+
+.. code-block:: HTML
+   :linenos:
+
+    Form Input Fields:
+        <input type="password" minlength="8" maxlength="128" name="CurrentPassword" value="" aria-label="Current password">
+        <input type="password" minlength="8" maxlength="128" name="Password" value="" aria-label="New password">
+        <input type="password" minlength="8" maxlength="128" name="VerifyPassword" value="" aria-label="Verify new password">
+
+    Hidden csrf token:
+        <input id="csrfToken" type="hidden" name="csrf_token" value="{{ $token }}"/>
+
+
+
+As long as the form has name attributes on each input, and the form's action is set to
+``/c1/en/dashboard/profile/updatePassword``
+, then we will populate the ``csrf_token`` input, and reset the user's password with the new one supplied.
+
+Afterwards, the user is redirected to a Success screen at `/dashboard/profile/updatePassword`, where after a few seconds, they will be signed out.
