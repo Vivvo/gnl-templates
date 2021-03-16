@@ -13,7 +13,7 @@ Prototype: https://wzrk3d.axshare.com/#id=bfgm1l&p=services&g=1
 |                |Check Your Email                                |http://localhost:9000/pages/check-your-email.html                 | | 
 |                |Check your email (email server is down)         |     ?                                                            | | 
 |`email`         |Account Activation email (204)                  |assets/email-templates/0204-VerifyEmailAddress.html               | | 
-|                |Account verification link expired               |http://localhost:9000/pages/verified-link-expired.html            | | 
+|                |Account verification link expired               |http://localhost:9000/pages/account-creation-link-expired.html    | | 
 |                |You're done success screen                      |http://localhost:9000/pages/registration-verified.html            | | 
 |Forgot Password |Forgot Password                                 |http://localhost:9000/pages/reset-password.html                   | | 
 |                |An email has been sent                          |http://localhost:9000/pages/reset-password-confirmation.html      | | 
