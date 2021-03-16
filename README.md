@@ -24,15 +24,15 @@ Prototype: https://wzrk3d.axshare.com/#id=bfgm1l&p=services&g=1
 |`email`         |Password has been updated (email - 201)         |assets/email-templates/0201-ResetPasswordConfirmation.html        | | 
 |Contact Us      |Contact Us Screen                               |http://localhost:9000/includes/terms.html                         | | 
 |Landing Page    |Landing Page                                    |http://localhost:9000/pages/dashboard.html                        | | 
-|Service Pages   |Service Page - Actions - Unlinked               |  ?             |                        | 
-|                |Service Page - Actions - Linked                 |  ?             |                        |
-|                |Service Page - Notifications                    |                |                        |
-|                |Service Page - Terms of Use                     |  ?             |                        |
-|Notifications   |Notifications (history)                         |                |                        |
+|Service Pages   |Service Page - Actions - Unlinked               |http://localhost:9000/mrd-service-unlinked.html#  => include      | | 
+|                |Service Page - Actions - Linked                 |http://localhost:9000/mrd-service-linked.html                     | |
+|                |Service Page - Notifications                    |http://localhost:9000/mrd-service-linked.html#  => include        | |
+|                |Service Page - Terms of Use                     |http://localhost:9000/mrd-service-unlinked.html# => include       | |
+|Notifications   |Notifications (history)                         |  -                                                               | |
 |Account         |Account - Profile                               |http://localhost:9000/pages/profile.html                          | |
 |                |Account - Security                              |http://localhost:9000/pages/profile.html                          | |
-|                |Account - Notification Settings                 |N/A|                        |
-|Maintenance     |Maintenance message                             |   ?                                                              | |
+|                |Account - Notification Settings                 |N/A                                                               | |
+|Maintenance     |Maintenance message                             |http://localhost:9000/                                            | |
 |Change Password |Change your password                            |http://localhost:9000/pages/change-password.html                  | |
 |                |Your Password has been updated                  |http://localhost:9000/pages/password-updated.html                 | |
 |`email`         |Your Primary password has been updated (201)    |assets/email-templates/0201-ResetPasswordConfirmation.html        | |
@@ -46,12 +46,12 @@ Prototype: https://wzrk3d.axshare.com/#id=bfgm1l&p=services&g=1
 |                |Are you sure you want to remove email address   |http://localhost:9000/pages/change-email-remove.html|        
 |`email`         |Verify your MyGovNL account email address (email - 204) |assets/email-templates/0204-VerifyEmailAddress.html       | |        
 |`email`         |Your primary email address has changed (email - 207-1) |assets/email-templates/0207-EmailAddressChangeRequestSendToOriginalAccount.html|     
-|`email`         |Your email address has been removed (email - 207-2) |    ?                                                  | |      
-|`email`         |An email address has been added to your MyGovNL account (email - 207-3)k|                                   | |        
+|`email`         |Your email address has been removed (email - 207-2) |    ?                                                         | |      
+|`email`         |An email address has been added to your MyGovNL account (email - 207-3)k|                                          | |        
 |Delete Account  |Delete account - first we need to verify it's you |http://localhost:9000/pages/delete-account.html                 | |      
 |                |Are you sure you want to delete your MyGovNL account?|     ?                                                       | |
 |                |Are you sure you want to delete (transaction in queue)|     ?                                                      | |
-|                |Your MyGovNL account has been deleted|                      ?                                                      | |
+|                |Your MyGovNL account has been deleted           |                      ?                                           | |
 |`email`         |Your MyGovNL account has been deleted (email -  205)|assets/email-templates/0205-AccountDeleted.html               | |
 |Linking         |Link MCP                                        |http://localhost:9000/pages/mcp-link-overview.html                | |
 |                |Your MyGovNL MCP services have been temp locked |http://localhost:9000/pages/mcp-lockout.html                      | |
