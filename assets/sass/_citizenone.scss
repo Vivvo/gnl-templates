@@ -145,16 +145,10 @@
             border-radius: 0;
             color: $gnl-color-gray-5;
             text-decoration: none;
-            border-bottom: 3px solid transparent;
 
             &:hover {
                 background: transparent;
                 color: white;
-                border-bottom: 3px solid transparent;
-            }
-
-            &:focus {
-                border-bottom: 3px solid transparent;
             }
 
             &.active {
@@ -162,6 +156,7 @@
                 color: white;
                 font-weight: 700;
                 border-bottom: 3px solid white;
+                padding-bottom: 5px;
                 margin-bottom: 0;
             }
 
