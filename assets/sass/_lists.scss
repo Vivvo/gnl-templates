@@ -344,6 +344,10 @@
         #{ $block }__leading {
             align-self: flex-start;
             margin-right: $gnl-size-3;
+
+            &--align-center {
+                align-self: center;
+            }
         }
 
         #{ $block }__content {

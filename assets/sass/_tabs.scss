@@ -1,27 +1,29 @@
-﻿@import 'variables';
+﻿@import "variables";
 
 .gnl-tabs {
-
     &.nav-pills {
-        //border-bottom: 1px solid $gnl-color-gray-4;
-
         .nav-link {
+            align-items: center;
             border-bottom: 0;
             background-color: transparent;
             border-radius: 0;
             text-decoration: none;
             color: $gnl-color-gray-11;
             border-bottom: 4px solid transparent;
+            padding-bottom: 12px;
+            padding-top: 12px;
 
             &.active {
-                background-color: $gnl-color-blue-light;
+                background-color: transparent;
                 font-weight: $gnl-font-weight-bold;
                 color: $gnl-color-brand-blue;
                 border-bottom-color: $gnl-color-brand-blue;
             }
 
-            &:hover {
-                background-color: $gnl-color-gray-2;
+            &:hover:not(.active) {
+                background-color: transparent;
+                border-bottom-color: $gnl-color-gray-4;
+                border-bottom-width: 4px;
             }
         }
     }
@@ -29,21 +31,26 @@
     &--responsive {
         &.nav-pills {
             border-bottom: 1px solid $gnl-color-gray-4;
-    
+
             @media (min-width: 840px) {
                 border-bottom: 0;
             }
-    
+
             .nav-link {
-                
+
                 @media (min-width: 840px) {
                     border-left: 4px solid transparent;
                     border-bottom: 0;
                 }
-    
+
                 &.active {
-    
+                    background-color: transparent;
+                    font-weight: $gnl-font-weight-bold;
+                    color: $gnl-color-brand-blue;
+                    border-bottom-color: $gnl-color-brand-blue;
+
                     @media (min-width: 840px) {
+                        background-color: $gnl-color-blue-light;
                         border-bottom: 0;
                         margin-left: 0;
                         border-left: 4px solid $gnl-color-brand-blue;

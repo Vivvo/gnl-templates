@@ -3,62 +3,63 @@
     <h2 class="gnl-header-5 gnl-m-top--none">Archive</h2>
   </div>
   <div>
-    <button type="button" class="btn btn-link gnl-link" onclick="backToList()" aria-label="Back to notifications">
-      <i class="fas fa-arrow-left"></i>
+    <button type="button" class="btn btn-link gnl-button gnl-button--link gnl-button--back" onclick="backToList()" aria-label="Back to notifications">
       Back to Notifications
     </button>
   </div>
 </div>
 
-<div class="gnl-list-group gnl-list-group--outline">
-  <div class="gnl-list-group__item gnl-paper gnl-paper--rounded">
-    <div class="gnl-list-group__container">
-      <div class="gnl-list-group__leading">
-        <div class="custom-control custom-checkbox">
-          <input type="checkbox" class="custom-control-input" id="notificationID-1">
-          <label class="custom-control-label" for="notificationID-1">
-            <span class="sr-only">Select this notification</span>
-          </label>
+<section class="gnl-section gnl-section--padding-top">
+  <div class="gnl-list-group gnl-list-group--card">
+    <div class="gnl-list-group__item gnl-list-group__item--outline gnl-paper gnl-paper--rounded">
+      <div class="gnl-list-group__container">
+        <div class="gnl-list-group__leading gnl-list-group__leading--align-center">
+          <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="notificationID-1">
+            <label class="custom-control-label" for="notificationID-1">
+              <span class="sr-only">Select this notification</span>
+            </label>
+          </div>
         </div>
-      </div>
-      <div class="gnl-list-group__body">
-        <div class="gnl-stretch">
-          <div class="gnl-list-group__content">
-            <span class="gnl-list-group__primary-text">{firstName}, your MyGovNL MCP services have been locked </span>
-            <span class="gnl-list-group__supporting-text">
-              <span class="gnl-datetime" data-datetime-local="2021-02-24T14:33:43"
-                data-datetime-utc="2021-02-24T18:03:43Z">February 24, 2021 &#xB7; 2:33pm</span>
-            </span>
+        <div class="gnl-list-group__body">
+          <div class="gnl-stretch">
+            <div class="gnl-list-group__content">
+              <span class="gnl-list-group__primary-text">{firstName}, your MyGovNL MCP services have been locked </span>
+              <span class="gnl-list-group__supporting-text">
+                <span class="gnl-datetime" data-datetime-local="2021-02-24T14:33:43"
+                  data-datetime-utc="2021-02-24T18:03:43Z">February 24, 2021 &#xB7; 2:33pm</span>
+              </span>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-  <div class="gnl-list-group__item gnl-paper gnl-paper--rounded">
-    <div class="gnl-list-group__container">
-      <div class="gnl-list-group__leading">
-        <div class="custom-control custom-checkbox">
-          <input type="checkbox" class="custom-control-input" id="notificationID-2">
-          <label class="custom-control-label" for="notificationID-2">
-            <span class="sr-only">Select this notification</span>
-          </label>
+    <div class="gnl-list-group__item gnl-list-group__item--outline gnl-paper gnl-paper--rounded">
+      <div class="gnl-list-group__container">
+        <div class="gnl-list-group__leading gnl-list-group__leading--align-center">
+          <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="notificationID-2">
+            <label class="custom-control-label" for="notificationID-2">
+              <span class="sr-only">Select this notification</span>
+            </label>
+          </div>
         </div>
-      </div>
-      <div class="gnl-list-group__body">
-        <div class="gnl-stretch">
-          <div class="gnl-list-group__content">
-            <span class="gnl-list-group__primary-text">Activate your MyGovNL account</span>
-            <span class="gnl-list-group__supporting-text">
-              <span class="gnl-datetime" data-datetime-local="2021-02-24T11:35:18"
-                data-datetime-utc="2021-02-24T15:05:18Z">February 24, 2021 &#xB7; 11:35am</span>
-            </span>
+        <div class="gnl-list-group__body">
+          <div class="gnl-stretch">
+            <div class="gnl-list-group__content">
+              <span class="gnl-list-group__primary-text">Activate your MyGovNL account</span>
+              <span class="gnl-list-group__supporting-text">
+                <span class="gnl-datetime" data-datetime-local="2021-02-24T11:35:18"
+                  data-datetime-utc="2021-02-24T15:05:18Z">February 24, 2021 &#xB7; 11:35am</span>
+              </span>
+            </div>
           </div>
         </div>
       </div>
     </div>
+  
   </div>
-
-</div>
+</section>
 
 <div id="pagination" class="co-pagination-container"></div>
 

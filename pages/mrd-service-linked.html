@@ -21,9 +21,8 @@
 
     <script>
         $(function () {
-            $("#header").load("../includes/header.html");
+            $("#header").load("../includes/header-verified.html");
             $("#footer").load("../includes/footer.html");
-            $("#dashboard-navigation").load("../includes/dashboard-navigation.html");
             $("#mrd-service-sidebar").load("../includes/mrd-service-sidebar.html");
             $("#mrd-actions").load("../includes/mrd-service-actions.html");
             $("#mrd-unlinked").load("../includes/mrd-service-unlinked.html");
@@ -39,122 +38,107 @@
 <body>
     <div id="header"></div>
 
-    <section id="dashboard-navigation"></section>
-
     <div class="gnl-main-content">
 
         <div class="co-service-header">
             <div class="gnl-container gnl-container--xl">
-                <h1 class="co-title gnl-header-2">
-                    Driver and vehicle services
+                <h1 class="co-title gnl-header-2 gnl-m-bottom--none">
+                    Driver and vehicle
                 </h1>
-                <p>View and manage your driver and vehicle services.</p>
-
+                View and manage your driver and vehicle services.
             </div>
 
             <div class="co-service-header__tabs" id="mrd-service-sidebar"></div>
 
         </div>
 
-        <div class="gnl-layout">
+        <section class="gnl-section">
+            <div class="gnl-layout">
 
-            <div class="gnl-layout__container gnl-container gnl-container--xl gnl-container--full-width">
-
-                <div class="tab-content" id="v-pills-tabContent">
-
-                    <div class="tab-pane fade show active" id="v-pills-actions" role="tabpanel"
-                        aria-labelledby="v-pills-actions-tab">
-
-                        <div class="gnl-layout__wrapper">
-
-                            <div class="gnl-layout__main-col">
-
-                                <div class="gnl-layout__container">
-
-                                    <section class="co-service-section">
+                <div class="gnl-layout__container gnl-container gnl-container--xl gnl-container--full-width">
+    
+                    <div class="tab-content" id="v-pills-tabContent">
+    
+                        <div class="tab-pane fade show active" id="v-pills-actions" role="tabpanel"
+                            aria-labelledby="v-pills-actions-tab">
+    
+                            <div class="gnl-layout__wrapper">
+    
+                                <div class="gnl-layout__main-col">
+    
+                                    <section>
                                         <div class="gnl-container gnl-container--xl">
                                             <h2 class="gnl-header-4 co-service-heading">Actions
                                             </h2>
                                             <div id="mrd-actions"></div>
                                         </div>
                                     </section>
-
-                                    <section class="co-service-section">
+    
+                                    <section>
                                         <div class="gnl-container gnl-container--xl">
                                             <h2 class="gnl-header-4 co-service-heading">Your linked items</h2>
                                             <div id="linked-items"></div>
                                         </div>
                                     </section>
-
+    
                                 </div>
-
+    
+                                <aside class="gnl-layout__side-col">
+                                    <div class="gnl-container gnl-container--xl">
+                                        <h2 class="gnl-header-4 co-service-heading">Reminders</h2>
+                                        <div id="reminders"></div>
+    
+                                        <h2 class="gnl-header-4 co-service-heading">Recently updated</h2>
+                                        <div id="recently-updated"></div>
+                                    </div>
+                                </aside>
+    
                             </div>
-
-                            <aside class="gnl-layout__side-col">
-                                <div class="gnl-layout__container">
-                                    <section>
-                                        <div class="gnl-container gnl-container--xl">
-                                            <h2 class="gnl-header-4 co-service-heading">Reminders</h2>
-                                            <div id="reminders"></div>
-                                        </div>
-                                    </section>
-                                    <section>
-                                        <div class="gnl-container gnl-container--xl">
-                                            <h2 class="gnl-header-4 co-service-heading">Recently updated</h2>
-                                            <div id="recently-updated"></div>
-                                        </div>
-                                    </section>
-                            </aside>
-
+    
                         </div>
-
-                    </div>
-
-                    <div class="tab-pane fade" id="v-pills-notifications" role="tabpanel"
-                        aria-labelledby="v-pills-notifications-tab">
-
-                        <div class="gnl-layout__wrapper">
-
-                            <div class="gnl-layout__main-col">
-
-                                <div class="gnl-layout__container">
-                                    <section>
-                                        <div class="gnl-container gnl-container--xl">
-                                            <section id="notifications-content"></section>
-                                        </div>
-                                    </section>
+    
+                        <div class="tab-pane fade" id="v-pills-notifications" role="tabpanel"
+                            aria-labelledby="v-pills-notifications-tab">
+    
+                            <div class="gnl-layout__wrapper">
+    
+                                <div class="gnl-layout__main-col">
+    
+                                    <div class="gnl-container gnl-container--xl">
+                                        <section id="notifications-content"></section>
+                                    </div>
+    
                                 </div>
-
+    
                             </div>
-
+    
                         </div>
-
-                    </div>
-
-                    <div class="tab-pane fade" id="v-pills-terms-of-use" role="tabpanel"
-                        aria-labelledby="v-pills-terms-of-use-tab">
-
-                        <div class="gnl-layout__wrapper">
-
-                            <div class="gnl-layout__main-col">
-
-                                <div class="gnl-layout__container">
-
-                                    <section id="terms"></section>
-
+    
+                        <div class="tab-pane fade" id="v-pills-terms-of-use" role="tabpanel"
+                            aria-labelledby="v-pills-terms-of-use-tab">
+    
+                            <div class="gnl-layout__wrapper">
+    
+                                <div class="gnl-layout__main-col">
+    
+                                    <div class="gnl-layout__container">
+    
+                                        <section id="terms"></section>
+    
+                                    </div>
+    
                                 </div>
-
+    
                             </div>
-
+    
                         </div>
-
+    
                     </div>
-
+    
                 </div>
-
+    
             </div>
-
-        </div>
+        </section>
 
     </div>
 

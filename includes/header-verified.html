@@ -1,97 +1,51 @@
-<header class="gnl-header gnl-header--dashboard">
+<header class="gnl-header gnl-header--dashboard co-dashboard-header">
     <div class="gnl-header__container">
-        <a href="#">
+        <a href="#" class="co-dashboard-header__logo">
             <div class="gnl-header__logo">Government of Newfoundland and Labrador: MyGovNL</div>
         </a>
-        <nav class="gnl-navigation gnl-navigation--header">
-            <ul class="gnl-navigation__nav">
-                <li class="gnl-navigation__nav-item">
-                    <a class="gnl-navigation__link" href="#">
+        <nav>
+            <ul class="nav nav-tabs co-dashboard-header__nav">
+                <li class="nav-item co-dashboard-header__nav-item">
+                    <a class="nav-link co-dashboard-header__nav-link" href="/dashboard.html">
+                        <span class="co-dashboard-header__nav-icon gnl-icon material-icons">
+                            miscellaneous_services
+                        </span>
                         Services
                     </a>
                 </li>
-                <li class="gnl-navigation__nav-item">
-                    <a class="gnl-navigation__link" href="#">
+
+                <li class="nav-item co-dashboard-header__nav-item">
+                    <a class="nav-link co-dashboard-header__nav-link" href="/profile.html">
+                        <span class="co-dashboard-header__nav-icon gnl-icon material-icons">
+                            person
+                        </span>
                         Account
                     </a>
                 </li>
-                <li class="gnl-navigation__nav-item">
-                    <span class="gnl-flex-container">
-                        <a class="gnl-navigation__link" href="#">Notifications</a>
-                        <span class="gnl-navigation__badge" title="1 Unread Notification">1</span>
-                    </span>
+
+                <li class="nav-item co-dashboard-header__nav-item">
+                    <a class="nav-link co-dashboard-header__nav-link" href="/pages/notifications-main.html">
+                        <span class="co-dashboard-header__nav-icon gnl-icon material-icons">
+                            notifications
+                        </span>
+                        Notifications
+                    </a>
                 </li>
+
             </ul>
-            <div class="gnl-navigation-drawer__button-container">
-                <div tabindex="0" role="button" class="gnl-navigation-drawer__button">
-                    <div class="gnl-icon material-icons">menu</div>
-                    <div class="gnl-navigation-drawer__button-text">Menu</div>
-                </div>
-            </div>
+
         </nav>
-        <div class="gnl-header__profile">
-            <div class="dropleft gnl-flex-container">
-                <button type="button" class="dropdown-toggle gnl-avatar gnl-avatar--text gnl-avatar--text--u"
-                    id="avatarDropdownMenu" data-toggle="dropdown" aria-haspopup="true"
-                    aria-expanded="false">UN</button>
-                <div class="dropdown-menu gnl-list-group gnl-paper gnl-paper--rounded gnl-paper--elevation-2"
-                    aria-labelledby="avatarDropdownMenu">
-                    <form>
-                        <button class="gnl-list-group__item dropdown-menu__link">Sign out</button>
-                    </form>
-                </div>
-            </div>
+
+        <div class="co-header-sign-out">
+            <button class="co-header-sign-out__button gnl-button gnl-button--outlined">Sign out</button>
         </div>
-        <noscript>
-            <form method="post">
-                <button class="gnl-navigation__link gnl-navigation__link--logout">Sign out</button>
-            </form>
-        </noscript>
+
     </div>
 
-    <aside id="drawerNavigationHeader" hidden class="gnl-navigation gnl-navigation--side gnl-navigation-drawer">
-        <div class="gnl-navigation-drawer__content">
-            <ul class="gnl-navigation-drawer__info">
-                <li>
-                    <div class="gnl-avatar gnl-avatar--text gnl-avatar--text--u">UN</div>
-                </li>
-                <li>
-                    <h6 class="gnl-header-5 gnl-navigation-drawer__name">User Name</h6>
-                </li>
-            </ul>
-            <ul class="gnl-navigation-drawer__nav gnl-list-group">
-                <li>
-                    <a class="gnl-list-group__item gnl-navigation-drawer__nav-item" href="#">
-                        <div class="gnl-list-group__container">
-                            Services
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a class="gnl-list-group__item gnl-navigation-drawer__nav-item" href="#">
-                        <div class="gnl-list-group__container">
-                            Account
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a class="gnl-list-group__item gnl-navigation-drawer__nav-item" href="#">
-                        <div class="gnl-list-group__container">
-                            Notifications
-                            <span class="gnl-navigation__badge" title="1 Unread Notification">1</span>
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <div class="gnl-divider--line gnl-divider" role="separator"></div>
-                </li>
-                <li>
-                    <form>
-                        <button class="gnl-list-group__item gnl-navigation-drawer__nav-item">Sign out</button>
-                    </form>
-                </li>
-            </ul>
-        </div>
-        <div class="gnl-navigation-drawer__scrim"></div>
-    </aside>
 </header>
+
+<script>
+    $(function () {
+        $('.co-dashboard-header .nav-tabs a[href="' + location.pathname + '"]').addClass('active');
+    });
+</script>
