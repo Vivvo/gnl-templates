@@ -26,8 +26,7 @@
             $("#mcp-service-sidebar").load("../includes/mrd-service-sidebar.html");
             $("#mcp-actions").load("../includes/mcp-service-actions.html");
             $("#mcp-unlinked").load("../includes/mcp-service-unlinked.html");
-            $("#reminders").load("../includes/mcp-service-reminders.html");
-            $("#recently-updated").load("../includes/mcp-service-recent.html");
+            $("#reminders").load("../includes/service-reminders-none.html");
             $("#linked-items").load("../includes/mcp-service-linked-items.html");
             $("#notifications-content").load("../includes/notifications.html");
             $("#terms").load("../includes/service-terms.html");
@@ -54,7 +53,7 @@
 
         </div>
 
-        <section>
+        <section class="gnl-section">
             <div class="gnl-layout">
 
                 <div class="gnl-layout__container gnl-container gnl-container--xl gnl-container--full-width">
@@ -90,11 +89,6 @@
                                         <div class="co-service-section co-service-section--side-col">
                                             <h2 class="gnl-header-4 co-service-heading">Reminders</h2>
                                             <div id="reminders"></div>
-                                        </div>
-
-                                        <div class="co-service-section co-service-section--side-col">
-                                            <h2 class="gnl-header-4 co-service-heading">Recently updated</h2>
-                                            <div id="recently-updated"></div>
                                         </div>
                                     </div>
                                 </aside>
