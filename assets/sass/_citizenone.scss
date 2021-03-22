@@ -23,7 +23,7 @@
 .co-service-header {
     &__tabs {
         margin-top: $gnl-size-3;
-        border-bottom: 1px solid $gnl-color-gray-4;
+        border-bottom: 1px solid $gnl-color-gray-5;
     }
 }
 
@@ -204,9 +204,26 @@
 
     &__link {
         color: $gnl-color-gray-11;
-        
+
         &:hover {
             color: initial;
+        }
+    }
+}
+
+.co-service-accordion {
+    &__heading-text {
+        font-weight: $gnl-font-weight-bold;
+    }
+
+    &__secondary-text {
+        font-weight: $gnl-font-weight-regular;
+    }
+
+    &__icon {
+        &::before {
+            width: 40px;
+            height: 40px;
         }
     }
 }

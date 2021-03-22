@@ -452,7 +452,7 @@
     &--outline {
         #{ $block }__item {
             padding: $gnl-size-2;
-            border: 1px solid $gnl-color-gray-4;
+            border: 1px solid $gnl-color-gray-5;
             border-radius: $gnl-border-radius-default;
 
             & + #{ $block }__item {
