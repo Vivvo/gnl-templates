@@ -136,9 +136,10 @@ module.exports = {
     }),
 
     new HtmlWebPackPlugin({
-      template: './pages/wcp-service-linked-no-reminders.html',
-      filename: './wcp-service-linked-no-reminders.html',
+      template: './pages/wcp-service-linked.html',
+      filename: './wcp-service-linked.html',
     }),
+
   ],
   resolve: {
     extensions: ['.js', '.jsx', '.scss']
