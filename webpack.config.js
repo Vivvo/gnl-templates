@@ -129,6 +129,16 @@ module.exports = {
       template: './pages/mcp-service-linked-no-reminders.html',
       filename: './mcp-service-linked-no-reminders.html',
     }),
+
+    new HtmlWebPackPlugin({
+      template: './pages/wcp-service-unlinked.html',
+      filename: './wcp-service-unlinked.html',
+    }),
+
+    new HtmlWebPackPlugin({
+      template: './pages/wcp-service-linked-no-reminders.html',
+      filename: './wcp-service-linked-no-reminders.html',
+    }),
   ],
   resolve: {
     extensions: ['.js', '.jsx', '.scss']
