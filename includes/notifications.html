@@ -1,19 +1,16 @@
-<div class="gnl-stretch">
-  <div class="gnl-stretch__grow">
-    <a class="gnl-button gnl-button--link">Move to Archive</a>
+<div class="gnl-flex-container gnl-flex-container--space-between">
+  <div class="gnl-button-set" role="group" aria-label="Button set">
+    <div class="btn-group-toggle" data-toggle="buttons">
+      <label class="btn btn-link gnl-button gnl-button--outlined">
+        <input type="checkbox" class="checkAll">
+        <span>Select All</span>
+      </label>
+    </div>
+    <button class="gnl-button gnl-button--outlined">Move to Archive</button>
   </div>
-  <div>
-    <a onclick="loadArchive()" class="gnl-button gnl-button--link gnl-button--next">
-      View Archive
-    </a>
-  </div>
-</div>
-
-<div class="btn-group-toggle" data-toggle="buttons">
-  <label class="btn btn-link gnl-button gnl-button--link">
-    <input type="checkbox" class="checkAll">
-    <span>Select All</span>
-  </label>
+  <button onclick="loadArchive()" class="gnl-button gnl-button--contained gnl-m-top--1">
+    View Archive
+  </button>
 </div>
 
 <section class="gnl-section gnl-section--padding-top">
