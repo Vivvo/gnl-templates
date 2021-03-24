@@ -177,6 +177,26 @@ b, strong {
 }
 
 // ********************************************************************
+//  TEXT SIZE
+// ********************************************************************
+
+.gnl-text-size-xs {
+    font-size: $gnl-font-size-small;
+}
+
+.gnl-text-size-reg {
+    font-size: $gnl-font-size-regular;
+}
+
+.gnl-text-size-lg {
+    font-size: $gnl-font-size-large;
+}
+
+.gnl-text-size-xl {
+    font-size: $gnl-font-size-xlarge;
+}
+
+// ********************************************************************
 //  IMAGE REPLACEMENT
 // ********************************************************************
 // CSS image replacement stolen from Bootstrap
