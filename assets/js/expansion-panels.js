@@ -30,17 +30,17 @@
         var body = $('.gnl-expansion-panel__body', panel);
 
         if (isCollapsed(panel)) {
-            $('.gnl-icon--toggle', summary).removeClass('gnl-icon--toggle--collapsed').addClass('gnl-icon--toggle--expanded');
+            $('.gnl-icon--toggle', summary).removeClass('gnl-icon--toggle--collapsed').addClass('gnl-icon--toggle--expanded').attr("aria-expanded", "true");
 
             $(body).slideDown(function () {
-                $(panel).removeClass('gnl-expansion-panel--collapsed').addClass('gnl-expansion-panel--expanded');
+                $(panel).removeClass('gnl-expansion-panel--collapsed').addClass('gnl-expansion-panel--expanded').attr("aria-expanded", "true");
             });
         }
         else {
-            $('.gnl-icon--toggle', summary).removeClass('gnl-icon--toggle--expanded').addClass('gnl-icon--toggle--collapsed');
+            $('.gnl-icon--toggle', summary).removeClass('gnl-icon--toggle--expanded').addClass('gnl-icon--toggle--collapsed').attr("aria-expanded", "false");
 
             $(body).slideUp(function () {
-                $(panel).removeClass('gnl-expansion-panel--expanded').addClass('gnl-expansion-panel--collapsed');
+                $(panel).removeClass('gnl-expansion-panel--expanded').addClass('gnl-expansion-panel--collapsed').attr("aria-expanded", "false");
             });
         }
     });
