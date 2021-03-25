@@ -1,52 +1,64 @@
-<div class="gnl-accordion gnl-accordion--outlined co-service-accordion">
-    <div class="gnl-accordion__container">
-        <div class="gnl-accordion__heading">
-            <div class="gnl-accordion__leading-icon">
-                <div class="co-service-accordion__icon gnl-icon gnl-icon--map-location">
-                    <div class="gnl-icon__overlay gnl-icon__overlay--success"></div>
+<div class="gnl-card gnl-card--info gnl-card--outlined gnl-paper gnl-paper--rounded">
+    <div class="gnl-card__body">
+        <div class="gnl-list-group co-service-notifications">
+            <div class="gnl-list-group__item">
+                <div class="gnl-list-group__container">
+                    <div class="gnl-list-group__leading gnl-self-start">
+                        <div class="co-service-actions-icon gnl-icon gnl-icon--map-location">
+                            <div class="gnl-icon__overlay gnl-icon__overlay--success"></div>
+                        </div>
+                    </div>
+                    <div class="gnl-list-group__body">
+                        <div class="gnl-list-group__content">
+                            <h3 class="gnl-list-group__primary-text">Your MCP address has been updated</h3>
+                            <span class="gnl-list-group__supporting-text">You can continue to use your card.</span>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="co-service-accordion__heading-text gnl-accordion__heading-text">
-                Your MCP address has been updated
-                <div class="co-service-accordion__secondary-text gnl-accordion__secondary-text">
-                    You can continue to use your card. 
+            <div class="gnl-divider--line" role="separator"></div>
+            <div class="gnl-list-group__item">
+                <div class="gnl-list-group__container">
+                    <div class="gnl-list-group__leading gnl-self-start">
+                        <div class="co-service-actions-icon gnl-icon gnl-icon--mcp-card">
+                            <div class="gnl-icon__overlay gnl-icon__overlay--success"></div>
+                        </div>
+                    </div>
+                    <div class="gnl-list-group__body">
+                        <div class="gnl-list-group__content">
+                            <h3 class="gnl-list-group__primary-text">MCP card for {ChildFirstName} has been
+                                renewed</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="gnl-expansion-panel">
+                    <button class="gnl-expansion-panel__summary gnl-button" aria-expanded="false"
+                        aria-controls="recent-details-1"></button>
+
+                    <div class="gnl-expansion-panel__body" id="recent-details-1">
+                        <p class="gnl-text-strong">What’s next?</p>
+                        <ol class="gnl-list gnl-list--numeric">
+                            <li>
+                                A new card should arrive in 10-14 days.
+                            </li>
+                            <li>
+                                Contact us at <a href="#" class="gnl-link">1-800-563-1557</a> or <a href="#"
+                                    class="gnl-link">mcpregistration@gov.nl.ca</a> if you don't receive a new card in 30
+                                days.
+                            </li>
+                        </ol>
+                        <div class="gnl-divider gnl-divider--line" role="separator"></div>
+                        <ul class="gnl-list gnl-list--no-bullets">
+                            <li><a href="https://www.gov.nl.ca/snl/vehicleregistration/renewal/" target="_blank"
+                                    rel="noopener">More
+                                    info</a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-            <div class="gnl-icon gnl-icon--toggle gnl-icon--toggle--collapsed"></div>
         </div>
     </div>
-
-    <div class="gnl-accordion__container">
-        <div class="gnl-accordion__heading" role="button">
-            <div class="gnl-accordion__leading-icon">
-                <div class="co-service-accordion__icon gnl-icon gnl-icon--mcp-card">
-                    <div class="gnl-icon__overlay gnl-icon__overlay--success"></div>
-                </div>
-            </div>
-            <div class="co-service-accordion__heading-text gnl-accordion__heading-text">
-                <div>MCP card for {ChildFirstName} has been renewed</div>
-            </div>
-            <div class="gnl-icon gnl-icon--toggle gnl-icon--toggle--collapsed"></div>
-        </div>
-        <div class="gnl-accordion__body">
-            <p class="gnl-text-strong">What’s next?</p>
-            <ol class="gnl-list gnl-list--numeric">
-                <li>
-                    A new card should arrive in 10-14 days.
-                </li>
-                <li>
-                    Contact us at <a href="#" class="gnl-link">1-800-563-1557</a> or <a href="#" class="gnl-link">mcpregistration@gov.nl.ca</a> if you don't receive a new card in 30 days.
-                </li>
-            </ol>
-            <div class="gnl-divider gnl-divider--line" role="separator"></div>
-            <ul class="gnl-list gnl-list--no-bullets">
-                <li><a href="https://www.gov.nl.ca/snl/vehicleregistration/renewal/" target="_blank" rel="noopener">More
-                        info</a>
-                </li>
-            </ul>
-        </div>
-    </div>
-
 </div>
 
-<script src="../assets/js/accordions.js"></script>
+<script src="../assets/js/expansion-panels.js"></script>
