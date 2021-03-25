@@ -41,12 +41,6 @@
         color: $gnl-color-gray-11;
     }
 
-    &__secondary-text {
-        font-size: $gnl-font-size-regular;
-        color: $gnl-color-gray-8;
-        margin-top: 4px;
-    }
-
     &__body {
         padding: $gnl-size-2;
         background-color: $gnl-color-white;
@@ -58,16 +52,11 @@
         }
     }
 
-    &__leading-icon {
-        margin-right: $gnl-size-2;
-    }
-
     .gnl-icon--toggle {
         display: none;
         height: $gnl-size-3;
         pointer-events: none;
         margin-left: auto;
-        padding-left: $gnl-size-1;
     }
 
     &--blue {
@@ -84,7 +73,7 @@
 
     &--outlined {
         #{$block}__container {
-            border: 1px solid $gnl-color-gray-5;
+            border: 1px solid $gnl-color-gray-4;
 
             &:not(:last-child) {
                 border-bottom: 0;
