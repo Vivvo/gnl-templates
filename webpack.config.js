@@ -114,6 +114,32 @@ module.exports = {
       template: './pages/mrd-service-unlinked.html',
       filename: './mrd-service-unlinked.html',
     }),
+
+    new HtmlWebPackPlugin({
+      template: './pages/mcp-service-linked.html',
+      filename: './mcp-service-linked.html',
+    }),
+
+    new HtmlWebPackPlugin({
+      template: './pages/mcp-service-unlinked.html',
+      filename: './mcp-service-unlinked.html',
+    }),
+
+    new HtmlWebPackPlugin({
+      template: './pages/mcp-service-linked-no-reminders.html',
+      filename: './mcp-service-linked-no-reminders.html',
+    }),
+
+    new HtmlWebPackPlugin({
+      template: './pages/wcp-service-unlinked.html',
+      filename: './wcp-service-unlinked.html',
+    }),
+
+    new HtmlWebPackPlugin({
+      template: './pages/wcp-service-linked.html',
+      filename: './wcp-service-linked.html',
+    }),
+
   ],
   resolve: {
     extensions: ['.js', '.jsx', '.scss']

@@ -10,7 +10,10 @@
     }
 
     &__summary {
-        cursor: pointer;
+        width: 100%;
+        padding: 0;
+        margin-top: $gnl-size-1;
+        margin-bottom: 0;
     }
 
     &__body {
@@ -23,5 +26,9 @@
         > :last-child {
             margin-bottom: 0;
         }
+    }
+
+    &__icon {
+        color: $gnl-color-gray-9;
     }
 }

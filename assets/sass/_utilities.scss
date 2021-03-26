@@ -1,4 +1,4 @@
-﻿@import 'variables';
+﻿@import "variables";
 
 .gnl-stretch {
     -webkit-box-align: stretch;
@@ -13,7 +13,7 @@
         flex-grow: 1;
         flex-shrink: 1;
         flex-basis: 0;
-        }
+    }
 
     &__shrink {
         flex-grow: 0;
@@ -98,7 +98,7 @@
 }
 
 .gnl-text-breakword {
-    word-break: break-word; 
+    word-break: break-word;
 }
 
 // for hiding Google Tag Manager noscript
@@ -123,16 +123,17 @@
     left: -10000px;
     overflow: hidden;
     position: absolute;
-    transition: top .2s ease-out;
+    transition: top 0.2s ease-out;
     width: 1px;
 
-    &:focus, &:active {
+    &:focus,
+    &:active {
         background: $gnl-color-white;
         height: auto;
         left: 0;
         padding-left: 1rem;
         width: 100%;
-        z-index: 99999
+        z-index: 99999;
     }
 }
 
@@ -153,6 +154,22 @@ code {
 
 .gnl-m-bottom--none {
     margin-bottom: 0;
+}
+
+.gnl-m-bottom--7 {
+    margin-bottom: $gnl-size-8;
+}
+
+.gnl-m-bottom--8 {
+    margin-bottom: $gnl-size-8;
+}
+
+.gnl-m-bottom--10 {
+    margin-bottom: $gnl-size-10;
+}
+
+.gnl-m-top--0\.5 {
+    margin-top: 4px;
 }
 
 .gnl-m-top--1 {
@@ -190,4 +207,32 @@ code {
 
 .gnl-v-align--base {
     vertical-align: baseline;
+}
+
+// ********************************************************************
+//  Align items
+// ********************************************************************
+
+.gnl-items-start {
+    align-items: flex-start;
+}
+
+.gnl-items-center {
+    align-items: center;
+}
+
+.gnl-self-start {
+    align-self: flex-start;
+}
+
+.gnl-self-center {
+    align-self: center;
+}
+
+.gnl-flex-grow-0 {
+    flex-grow: 0;
+}
+
+.gnl-flex-grow {
+    flex-grow: 1;
 }

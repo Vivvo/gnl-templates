@@ -31,6 +31,7 @@
     display: inline-flex;
     display: -ms-inline-flexbox;
     align-items: center;
+    position: relative;
     text-decoration: none;
     -moz-user-select: none;
     -webkit-user-select: none;
@@ -44,6 +45,22 @@
 
     @at-root a#{&} {
         text-decoration: none;
+    }
+
+    &__overlay {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: $gnl-size-3;
+        height: $gnl-size-3;
+    
+        &--alert {
+            background: url(../images/icon-govnl-alert-circle-border.svg) no-repeat transparent;
+        }
+
+        &--success {
+            background: url(../images/icon-govnl-checkmark-circle-border.svg) no-repeat transparent;
+        }
     }
 }
 

@@ -17,9 +17,9 @@
         var toggleClass = isCollapsed(panel) ? 'gnl-icon--toggle--collapsed' : 'gnl-icon--toggle--expanded';
 
         $(summary).html(
-            '<div class="gnl-flex-container gnl-flex-container--space-between">' +
-                '<span class="gnl-button gnl-button--link">' + linkText + '</span>' +
-                '<div class="gnl-icon gnl-icon--toggle ' + toggleClass + '"></div>' +
+            '<div class="gnl-flex-container gnl-flex-container--space-between gnl-flex-grow">' +
+                '<span class="gnl-expansion-panel__button-text gnl-button gnl-button--link">' + linkText + '</span>' +
+                '<div class="gnl-expansion-panel__icon gnl-icon gnl-icon--toggle ' + toggleClass + '"></div>' +
             '</div>'
         );
     });
@@ -31,16 +31,22 @@
 
         if (isCollapsed(panel)) {
             $('.gnl-icon--toggle', summary).removeClass('gnl-icon--toggle--collapsed').addClass('gnl-icon--toggle--expanded');
+            $(summary).attr("aria-expanded", "true");
+            $('.gnl-button', summary).html('Hide details');
 
             $(body).slideDown(function () {
                 $(panel).removeClass('gnl-expansion-panel--collapsed').addClass('gnl-expansion-panel--expanded');
+                $(summary).attr("aria-expanded", "true");
             });
         }
         else {
             $('.gnl-icon--toggle', summary).removeClass('gnl-icon--toggle--expanded').addClass('gnl-icon--toggle--collapsed');
+            $(summary).attr("aria-expanded", "false");
+            $('.gnl-button', summary).html('View details');
 
             $(body).slideUp(function () {
                 $(panel).removeClass('gnl-expansion-panel--expanded').addClass('gnl-expansion-panel--collapsed');
+                $(summary).attr("aria-expanded", "false");
             });
         }
     });
