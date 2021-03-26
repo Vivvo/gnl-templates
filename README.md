@@ -57,56 +57,20 @@ Prototype: https://wzrk3d.axshare.com/#id=bfgm1l&p=services&g=1
                  |Link MCP                                        |http://localhost:9000/pages/mcp-link-overview.html                | |
 |                |Your MyGovNL MCP services have been temp locked |http://localhost:9000/pages/mcp-lockout.html                      | |
 |`email`         | Your MCP services have been locked (email - 2001)|assets/email-templates/2001-MCPOnboardingLockout.html           | |
-|                |Successfully linked MCP                         |http://localhost:9000/pages/mcp-link-success.html  
-                                                                   http://localhost:9000/mcp-service-linked.html#
-                                                                   http://localhost:9000/mcp-service-linked-no-reminders.html#       | |
+|                |Successfully linked MCP                         |http://localhost:9000/pages/mcp-link-success.html                 | |
+                 |                                                | http://localhost:9000/mcp-service-linked.html#                   | |
+                 |                                                | http://localhost:9000/mcp-service-linked-no-reminders.html#      | |
 |                |Link MRD                                        |     -                                                            | |
 |                |Your MyGovNL MRD services have been temp locked |      -                                                           | |
 |`email`         |Your MRD services have been locked (email - 1020)|assets/email-templates/1020-OnboardingLockout.html               | |
 |                |Successfully linked MRD                         |     -                                                            | |
-|                |Link wood cutting                               |http://localhost:9000/wcp-service-unlinked.html      
-                                                                   http://localhost:9000/wcp-service-linked.html                     | |
+|                |Link wood cutting                               |http://localhost:9000/wcp-service-unlinked.html                   | |
+|                |                                                |   http://localhost:9000/wcp-service-linked.html                  | |
 |                |You do not have a domestic wood cutting permit  |       -                                                          | |
 |                |Successful linking                              |        -                                                         | |
 |                |Linking for driver's permit                     |         -                                                        | |
 
 
-```yarn start```
-1. Login
-   * login page: http://localhost:9000/
-
-2. Account create
-   * account create: http://localhost:9000/create-account.html
-   * terms and conditions: http://localhost:9000/includes/terms.html 
-   * email sent: https://nldev.vivvocloud.com/en/email_sent
-   * registration verified: http://localhost:9000/pages/registration-verified.html
-   * verified link exparied: http://localhost:9000/pages/verified-link-expired.html
-
-3. Forgot password
-   * forgot password: http://localhost:9000/pages/reset-password.html
-   * reset password confirmation:http://localhost:9000/pages/reset-password-confirmation.html
-   * create new password: http://localhost:9000/pages/create-new-password.html
-   * create new password confirmation: http://localhost:9000/pages/create-new-password-confirmation.html
-   * verified link exparied: http://localhost:9000/pages/verified-link-expired.html
-4. Verify device
-   * verify device: http://localhost:9000/pages/verify-device.html
-6. MCP
-   * linking overview: http://localhost:9000/pages/mcp-link-overview.html
-   * details: http://localhost:9000/pages/mcp-details.html
-   * notificaiton settings: http://localhost:9000/pages/mcp-link-notifications.html
-   * linking successfull: http://localhost:9000/pages/mcp-link-success.html
-   * service is locked: http://localhost:9000/pages/mcp-lockout.html
-7. Learner's Permit:
-   * linking: http://localhost:9000/pages/learners-permit-linking.html
-9. My Account 
-   * profile: http://localhost:9000/pages/profile.html
-   * security: http://localhost:9000/profile.html
-      * change your password: http://localhost:9000/pages/change-password.html
-      * We've emailed you a verification link: http://localhost:9000/pages/change-email-verify.html
-      * password updated: http://localhost:9000/pages/password-updated.html
-      * add another email: http://localhost:9000/pages/change-email-add.html
-      * Delete account : http://localhost:9000/pages/delete-account.html
-      * confirm account deletion: http://localhost:9000/pages/confirm-delete-account.html
 
 # Email Templates 
 
