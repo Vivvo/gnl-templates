@@ -19,7 +19,7 @@ Prototype: https://wzrk3d.axshare.com/#id=bfgm1l&p=services&g=1
 |                |An email has been sent                          |http://localhost:9000/pages/reset-password-confirmation.html      | | 
 |`email`         |Reset your password (email- 200)                |assets/email-templates/0200-ResetPasswordRequest.html             | | 
 |                |Create new password                             |http://localhost:9000/pages/create-new-password.html              | | 
-|                |Password updated screen                         |http://localhost:9000/pages/create-new-password-confirmation.html | | 
+|                |Password updated screen                         |http://localhost:9000/pages/create-new-password-confirmation.html http://localhost:9000/pages/password-updated.html | | 
 |                |Link Expired screen                             |http://localhost:9000/pages/verified-link-expired.html            | | 
 |`email`         |Password has been updated (email - 201)         |assets/email-templates/0201-ResetPasswordConfirmation.html        | | 
 |Contact Us      |Contact Us Screen                               |http://localhost:9000/includes/terms.html                         | | 
