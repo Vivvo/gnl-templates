@@ -39,7 +39,7 @@ Prototype: https://wzrk3d.axshare.com/#id=bfgm1l&p=services&g=1
 |Change Email    |Your email addresses                            |http://localhost:9000/pages/change-email.html                     | |
 |                |Primary email address                           |http://localhost:9000/pages/change-email-primary.html             | |
 |                |Your primary email address has been updated     |http://localhost:9000/pages/change-email-primary-updated.html     | |
-|                |Your email address has been verified and updated|http://localhost:9000/pages/change-email-verified.html            | |
+|                |Your email address has been verified and updated|http://localhost:9000/pages/change-email-verified.html            | | 
 |                |Add another email address                       |http://localhost:9000/pages/change-email-add.html                 | |
 |                |We've emailed you a verification link           |http://localhost:9000/pages/change-email-verify.html              | |
 |                |Expired link                                    |http://localhost:9000/pages/change-email-expired.html             | |              
