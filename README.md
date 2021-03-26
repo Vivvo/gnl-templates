@@ -54,12 +54,12 @@ Prototype: https://wzrk3d.axshare.com/#id=bfgm1l&p=services&g=1
 |                |Your MyGovNL account has been deleted           |                      ?                                           | |
 |`email`         |Your MyGovNL account has been deleted (email -  205)|assets/email-templates/0205-AccountDeleted.html               | |
 |Linking         |MCP Service unlinked                            |http://localhost:9000/mcp-service-unlinked.html#                  | |  
-                 |Link MCP                                        |http://localhost:9000/pages/mcp-link-overview.html                | |
+|                 |Link MCP                                        |http://localhost:9000/pages/mcp-link-overview.html                | |
 |                |Your MyGovNL MCP services have been temp locked |http://localhost:9000/pages/mcp-lockout.html                      | |
 |`email`         | Your MCP services have been locked (email - 2001)|assets/email-templates/2001-MCPOnboardingLockout.html           | |
 |                |Successfully linked MCP                         |http://localhost:9000/pages/mcp-link-success.html                 | |
-                 |                                                | http://localhost:9000/mcp-service-linked.html#                   | |
-                 |                                                | http://localhost:9000/mcp-service-linked-no-reminders.html#      | |
+|                |                                                | http://localhost:9000/mcp-service-linked.html#                   | |
+|                |                                                | http://localhost:9000/mcp-service-linked-no-reminders.html#      | |
 |                |Link MRD                                        |     -                                                            | |
 |                |Your MyGovNL MRD services have been temp locked |      -                                                           | |
 |`email`         |Your MRD services have been locked (email - 1020)|assets/email-templates/1020-OnboardingLockout.html               | |
