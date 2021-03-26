@@ -61,7 +61,7 @@ Prototype: https://wzrk3d.axshare.com/#id=bfgm1l&p=services&g=1
 |                |Your MyGovNL MRD services have been temp locked |      -                                                           | |
 |`email`         |Your MRD services have been locked (email - 1020)|assets/email-templates/1020-OnboardingLockout.html               | |
 |                |Successfully linked MRD                         |     -                                                            | |
-|                |Link wood cutting                               |      -                                                           | |
+|                |Link wood cutting                               |http://localhost:9000/wcp-service-unlinked.html                   | |
 |                |You do not have a domestic wood cutting permit  |       -                                                          | |
 |                |Successful linking                              |        -                                                         | |
 |                |Linking for driver's permit                     |         -                                                        | |
