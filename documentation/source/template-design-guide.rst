@@ -147,6 +147,7 @@ Dashboard
 
 The Dashboard page has no primary action, but it does display a number of important values to the user.
 Those values are:
+
 - `maintenanceMessage`
    - A maintenance message that can be enabled or disabled to notify users of planned maintenance downtime.
    - Structure:
@@ -184,6 +185,53 @@ Those values are:
    - The first and last initials of the user. For example, a user named Sherlock Holmes would receive S.H.
 - `primaryEmail`
    - The primary email of the user.
+
+*************
+Notifications
+*************
+
+The primary action of the Notification is to display the list of notifications in the users INBOX and the list of notifications in the users notification ARCHIVE.
+Additionally, the user may be able to move notifications from their inbox to their archived notifications.
+
+The `DataTables <https://datatables.net/>`_ plugin is used to display the users notifications and archived notifications.
+Both templates must follow this format.
+
+The Notifications requires the following hidden input to move notifications from the users INBOX to ARCHIVE:
+
+    - csrf_token (hidden)
+
+Sample POST URL:
+
+``/c1/en/dashboard/services/notification/12345/move?csrf_token=8c1807936b8753970dceb15a38850b35b4a909585bbdfa7181d4a6a9bda91b10&folderType=ARCHIVE``
+
+Sample form inputs:
+
+.. code-block:: HTML
+   :linenos:
+
+    Hidden csrf token:
+        <input id="csrfToken" type="hidden" name="csrf_token" value="{{ $token }}"/>
+
+- `Notifications and Archived Notifications`
+   - A list of notifications that have been sent to the user.
+   - Structure:
+      .. code-block:: JSON
+          :linenos:
+
+          {
+              "notificationId",
+              "applicationName",
+              "organizationName",
+              "subject",
+              "body",
+              "notificationDate",
+              "status",
+              "folderType",
+              "referenceNumber",
+              "recipient"
+          }
+
+
 
 ***************
 Forgot Password
