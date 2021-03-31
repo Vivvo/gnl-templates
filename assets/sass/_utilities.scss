@@ -60,9 +60,37 @@
     }
 }
 
+.md\:gnl-flex-column {
+    @media (min-width: 840px) {
+        -ms-flex-direction: column;
+        flex-direction: column;
+    }
+}
+
+.gnl-flex-column-reverse {
+    -ms-flex-direction: column-reverse;
+    flex-direction: column-reverse;
+}
+
 .gnl-flex-row {
     -ms-flex-direction: row;
     flex-direction: row;
+}
+
+.md\:gnl-flex-row {
+    @media (min-width: 840px) {
+        -ms-flex-direction: row;
+        flex-direction: row;
+    }
+}
+
+.gnl-flex-row-reverse {
+    -ms-flex-direction: row-reverse;
+    flex-direction: row-reverse;
+}
+
+.gnl-flex-auto {
+    flex: 1 1 auto;
 }
 
 .gnl-text-center {
@@ -147,13 +175,37 @@ code {
 // ********************************************************************
 //  MARGIN
 // ********************************************************************
+// For responsive sizing, the following will be used
+// Use '{screen}:' to prefix existing margin. Will apply starting at the prefixed screen.
+// sm = 480px
+// md = 840px
 
-.gnl-m-top--none {
+.gnl-m-xy--none {
+    margin: 0;
+}
+
+.gnl-m-y--none {
     margin-top: 0;
+    margin-bottom: 0;
+}
+
+.gnl-m-x--none {
+    margin-left: 0;
+    margin-right: 0;
 }
 
 .gnl-m-bottom--none {
     margin-bottom: 0;
+}
+
+.md\:gnl-m-bottom--none {
+    @media (min-width: 840px) {
+        margin-bottom: 0;
+    }
+}
+
+.gnl-m-bottom--1 {
+    margin-bottom: $gnl-size-1;
 }
 
 .gnl-m-bottom--7 {
@@ -166,6 +218,24 @@ code {
 
 .gnl-m-bottom--10 {
     margin-bottom: $gnl-size-10;
+}
+
+.md\:gnl-m-bottom--10 {
+    @media (min-width: 840px) {
+        margin-bottom: $gnl-size-10;
+    }
+}
+
+.gnl-m-left--2 {
+    margin-left: $gnl-size-2;
+}
+
+.gnl-m-right--none {
+    margin-right: 0;
+}
+
+.gnl-m-top--none {
+    margin-top: 0;
 }
 
 .gnl-m-top--0\.5 {
@@ -182,6 +252,20 @@ code {
 
 .gnl-m-top--3 {
     margin-top: $gnl-size-3;
+}
+
+.gnl-m-top--5 {
+    margin-top: $gnl-size-5;
+}
+
+.md\:gnl-m-top--5 {
+    @media (min-width: 840px) {
+        margin-top: $gnl-size-5;
+    }
+}
+
+.gnl-m-top--6 {
+    margin-top: $gnl-size-6;
 }
 
 .gnl-p-top--none {
@@ -235,4 +319,21 @@ code {
 
 .gnl-flex-grow {
     flex-grow: 1;
+}
+
+
+// ********************************************************************
+//  Grid
+// ********************************************************************
+
+.gnl-grid-gap--1 {
+    grid-gap: $gnl-size-1;
+}
+
+.gnl-grid-gap--2 {
+    grid-gap: $gnl-size-2;
+}
+
+.gnl-grid-gap--3 {
+    grid-gap: $gnl-size-3;
 }
