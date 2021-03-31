@@ -247,6 +247,7 @@ The pages in this section all have access to the following variables:
 me
 
 .. code-block:: JSON
+   :linenos:
 
     {
         Identity           Identity
@@ -260,6 +261,7 @@ me
 Identity
 
 .. code-block:: JSON
+   :linenos:
 
    {
         IdentityId               string
@@ -352,7 +354,6 @@ The Your Email addresses page has no primary action, but it has access to and ma
 
 It also leads to the following sub pages:
     - Primary Email Address
-    - Alternate Emails
     - Add Email Address
     - Remove Email
 
@@ -361,7 +362,9 @@ Primary Email Address
 
 The Primary email address page's primary action is to allow the user to change their primary email address.
 
-To do this, the page must contain a form with the following inputs
+To do this, the page requires a form with action="/c1/en/dashboard/profile/updateEmailPrimary"
+
+as well as the following inputs:
 
 
 .. code-block:: HTML
@@ -394,31 +397,38 @@ Here is an example of that duplication markup:
     {{ end }}
 
 
-Alternate Emails
-^^^^^^^^^^^^^^^^
 
-The Alternate Emails page's primary action is to allow the user to add a new alternate email to their account.
+Add Email Address
+^^^^^^^^^^^^^^^^^
 
-To do this, the page must contain a form with the following inputs:
+The Add Email Address page's primary action is to allow the user to add a new alternate email to their profile.
 
+To do this, the page requires a form with action="/c1/en/dashboard/profile/updateEmailAdd"
+
+as well as the following inputs:
 
 .. code-block:: HTML
    :linenos:
 
     Form Input Fields:
-            <input type="email" name="EmailAddress" aria-label="New email address">
-            <input type="email" name="ConfirmEmailAddress" aria-label="Confirm new email address">
+            <input type="email" id="EmailAddress" name="EmailAddress" value="{{.EmailValue}}" aria-label="New email address">
+            <input type="email" id="ConfirmEmailAddress" name="ConfirmEmailAddress" value="" aria-label="Confirm new email address">
 
-     Hidden csrf token:
+    Hidden csrf token:
             <input id="csrfToken" type="hidden" name="csrf_token" value="{{ $token }}"/>
-
-Add Email Address
-^^^^^^^^^^^^^^^^^
-
-Add email facts
-
 
 Remove Email
 ^^^^^^^^^^^^^^^^^
 
-Remove email facts
+The Remove Email Address page's primary action is to allow the user to remove an alternate email from their account.
+
+To do this, the page requires a form with action="/c1/en/dashboard/profile/removeEmailAddress/{{ .emailId }}"
+
+as well as the following inputs:
+
+.. code-block:: HTML
+   :linenos:
+
+    Hidden csrf token:
+            <input id="csrfToken" type="hidden" name="csrf_token" value="{{ $token }}"/>
+
