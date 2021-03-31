@@ -312,9 +312,9 @@ Sample form inputs:
    :linenos:
 
     Form Input Fields:
-        <input type="password" minlength="8" maxlength="128" name="CurrentPassword" value="" aria-label="Current password">
-        <input type="password" minlength="8" maxlength="128" name="Password" value="" aria-label="New password">
-        <input type="password" minlength="8" maxlength="128" name="VerifyPassword" value="" aria-label="Verify new password">
+        <input type="password" name="CurrentPassword" value="" aria-label="Current password">
+        <input type="password" name="Password" value="" aria-label="New password">
+        <input type="password" name="VerifyPassword" value="" aria-label="Verify new password">
 
     Hidden csrf token:
         <input id="csrfToken" type="hidden" name="csrf_token" value="{{ $token }}"/>
@@ -368,7 +368,7 @@ To do this, the page must contain a form with the following inputs
    :linenos:
 
     Form Input Fields:
-        <input type="radio" id="{{ $email.EmailId }}" name="primaryEmail" value="{{ $email.EmailId }}" class="gnl-form-radio__input gnl-outline-remove" />
+        <input type="radio" name="primaryEmail" value="{{ $email.EmailId }}" aria-label="New primary email"/>
         <input id="primaryEmailValue" type="hidden" name="primaryEmailValue" value="" />
 
     Hidden csrf token:
@@ -386,9 +386,9 @@ Here is an example of that duplication markup:
 
     {{ range $email := .me.Identity.Emails }}
         {{ if $email.IsVerified }}
-        <div class="gnl-form-radio">
-            <input type="radio" id="{{ $email.EmailId }}" name="primaryEmail" value="{{ $email.EmailId }}" class="gnl-form-radio__input gnl-outline-remove" />
-            <label for="{{ $email.EmailId }}" class="gnl-form-radio__label">{{ $email.EmailAddress }}</label>
+        <div>
+            <input type="radio" id="{{ $email.EmailId }}" name="primaryEmail" value="{{ $email.EmailId }}" />
+            <label for="{{ $email.EmailId }}">{{ $email.EmailAddress }}</label>
         </div>
         {{ end }}
     {{ end }}
@@ -406,8 +406,8 @@ To do this, the page must contain a form with the following inputs:
    :linenos:
 
     Form Input Fields:
-            <input onblur="validateField('addEmail', this)" class="form-control gnl-form-control gnl-form-control--md" type="email" data-val="true" data-val-email="Enter a valid email address." data-val-maxlength="Email address must be no longer than 70 characters." data-val-maxlength-max="70" data-val-required="Enter your email address." id="EmailAddress" maxlength="70" name="EmailAddress" value="{{.EmailValue}}">
-            <input onblur="validateField('addEmail', this); fieldMatches(this, '#EmailAddress', EMAILS_DONT_MATCH)" class="form-control gnl-form-control gnl-form-control--md" type="email" data-val="true" data-val-email="Enter a valid email address." data-val-equalto="Email addresses do not match." data-val-equalto-other="*.EmailAddress" data-val-maxlength="Email address must be no longer than 70 characters." data-val-maxlength-max="70" data-val-required="Confirm your email address." id="ConfirmEmailAddress" maxlength="70" name="ConfirmEmailAddress" value="" required>
+            <input type="email" name="EmailAddress" aria-label="New email address">
+            <input type="email" name="ConfirmEmailAddress" aria-label="Confirm new email address">
 
      Hidden csrf token:
             <input id="csrfToken" type="hidden" name="csrf_token" value="{{ $token }}"/>
