@@ -10,10 +10,18 @@
     }
 
     &__summary {
+        position: relative;
         width: 100%;
         padding: 0;
-        margin-top: $gnl-size-1;
+        margin-top: $gnl-size-2;
         margin-bottom: 0;
+
+        &:hover {
+            #{$block}__button-text {
+                background-color: $gnl-color-blue-light;
+                text-decoration: underline;
+            }
+        }
     }
 
     &__body {
@@ -29,6 +37,17 @@
     }
 
     &__icon {
+        position: absolute;
+        right: 0;
         color: $gnl-color-gray-9;
+    }
+
+    &__button-text {
+        color: $gnl-color-brand-blue;
+
+        &:hover {
+            background-color: $gnl-color-blue-light;
+            text-decoration: underline;
+        }
     }
 }
