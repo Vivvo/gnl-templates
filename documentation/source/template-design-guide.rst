@@ -6,6 +6,7 @@ Template design guide
 | Each section (or page) explains exactly what the back end is expecting the page to contain/send back in order for it to work.
 | Anything else on the page is under your creative control, and can be changed without issue.
 
+*****
 Login
 *****
 
@@ -29,7 +30,7 @@ Sample POST Body Object:
 | When the user hits ``Submit`` the form will POST to ``/registration/create``.
 | It usually also contains links to the ``Create Account`` and ``Forgot Password`` pages.
 
-
+**************
 Create Account
 **************
 
@@ -92,7 +93,7 @@ As long as the form has name attributes on each input, and the form's action is 
 
 
 Email Template
-**************
+==============
 
 | After submitting the ``Create Account`` form, the user will receive an invitation to activate their account.
 | The invitation is html driven, and highly customizable.
@@ -124,7 +125,7 @@ Sample template:
 
 
 Email Sent
-**********
+==========
 
 The Email Sent page generally directs users to check their emails for an invitation to the website.
 
@@ -132,7 +133,7 @@ This page can optionally display the email address that the invitation has been 
 
 
 Email Verified (optional)
-*************************
+=========================
 
 | In the invitation in the email, you have the option of supplying a ``goto`` link.
 | The user will be redirected to the ``goto`` link after verifying their account.
@@ -140,14 +141,18 @@ Email Verified (optional)
 | This ``Email Verified`` page generally tells the user that their account has been verified successfully, and offers a link to the login page.
 | You can also omit the ``Email Verified`` page, leave the ``goto`` link blank, and the user will land on ``Login`` instead.
 
+*********
 Dashboard
 *********
+
 The Dashboard page has no primary action, but it does display a number of important values to the user.
 Those values are:
 - `maintenanceMessage`
    - A maintenance message that can be enabled or disabled to notify users of planned maintenance downtime.
    - Structure:
       .. code-block:: JSON
+         :linenos:
+
 
          {
             "maintenanceId",
@@ -161,16 +166,17 @@ Those values are:
    - A list of service card the user is subscribed to.
    - Structure:
       .. code-block:: JSON
+          :linenos:
 
-      {
-         "identityServiceCardId",
-         "identityId",
-         "serviceCardId",
-         "sortOrder",
-         "serviceCard",
-         "lightServiceCard",
-         "notificationCount"
-      }
+          {
+             "identityServiceCardId",
+             "identityId",
+             "serviceCardId",
+             "sortOrder",
+             "serviceCard",
+             "lightServiceCard",
+             "notificationCount"
+          }
 
 - `notificationCount`
    - The amount of unread notifications for the user
@@ -179,8 +185,10 @@ Those values are:
 - `primaryEmail`
    - The primary email of the user.
 
+***************
 Forgot Password
 ***************
+
 The Forgot password page must contain a form with the following inputs
 
     - Email
@@ -216,23 +224,67 @@ As long as the form has inputs with name attributes that match the samples above
 , the ``csrf_token`` input will be populated, and the user will be sent a password recovery email.
 
 
-
+********************
 Terms and Conditions
 ********************
 
 | The Terms and Conditions page displays the most up to date version of the Terms and Conditions connected to the application's policy in Citizen One.
 | To update the terms displayed, new markup or plain text can be entered into the Management application
 
+*******
+Account
+*******
 
-Profile page
-************
+The pages in this section all have access to the following variables:
 
-| The Profile page has no primary action of its own, but it leads to several sub-pages that allow the user to take actions on their account.
-| These sub-pages are listed below:
+.. code-block::
+    :linenos:
+
+    primaryEmail
+    me
+    pageName
+
+me
+
+.. code-block:: JSON
+
+    {
+        Identity           Identity
+        Business           string
+        HasBusinessConnect bool
+        RedirectUrls       Link[]
+    }
 
 
+
+Identity
+
+.. code-block:: JSON
+
+   {
+        IdentityId               string
+        FirstName                string
+        LastName                 string
+        MiddleName               string
+        UserName                 string
+        Salutation               string
+        DateOfBirth              string
+        SupportCode              string
+        AssuranceLevel           AssuranceLevel
+        Emails                   Email[]
+        Phones                   Phone[]
+        Addresses                Address[]
+        SecondaryAuthentications SecondaryAuthentication[]
+        ExternalIdentifiers      ExternalIdentifiers[]
+   }
+
+
+Security
+========
+
+===============
 Change Password
----------------
+===============
 
 | The Change Password page must contain a form with the following inputs:
 
@@ -274,3 +326,99 @@ As long as the form has name attributes on each input, and the form's action is 
 , then we will populate the ``csrf_token`` input, and reset the user's password with the new one supplied.
 
 Afterwards, the user is redirected to a Success screen at `/dashboard/profile/updatePassword`, where after a few seconds, they will be signed out.
+
+
+
+Profile
+=======
+.. _profile:
+| The Profile page has no primary action of its own, but it is supplied with the following additional variables:
+
+.. code-block::
+    :linenos:
+
+    parentPage
+    passwordChangeDate
+    maintenanceMessage
+
+| It also leads to several sub-pages that allow the user to take actions on their account, which are listed below.
+
+
+====================
+Your email addresses
+====================
+
+The Your Email addresses page has no primary action, but it has access to and makes use of the variables listed above.
+
+It also leads to the following sub pages:
+    - Primary Email Address
+    - Alternate Emails
+    - Add Email Address
+    - Remove Email
+
+Primary Email Address
+^^^^^^^^^^^^^^^^^^^^^
+
+The Primary email address page's primary action is to allow the user to change their primary email address.
+
+To do this, the page must contain a form with the following inputs
+
+
+.. code-block:: HTML
+   :linenos:
+
+    Form Input Fields:
+        <input type="radio" id="{{ $email.EmailId }}" name="primaryEmail" value="{{ $email.EmailId }}" class="gnl-form-radio__input gnl-outline-remove" />
+        <input id="primaryEmailValue" type="hidden" name="primaryEmailValue" value="" />
+
+    Hidden csrf token:
+        <input id="csrfToken" type="hidden" name="csrf_token" value="{{ $token }}"/>
+
+
+Additionally, the radio button input will be duplicated once for each verified email that is present on the account.
+
+The variables used to determine this are listed :ref:`above <profile>`.
+
+Here is an example of that duplication markup:
+
+.. code-block:: HTML
+   :linenos:
+
+    {{ range $email := .me.Identity.Emails }}
+        {{ if $email.IsVerified }}
+        <div class="gnl-form-radio">
+            <input type="radio" id="{{ $email.EmailId }}" name="primaryEmail" value="{{ $email.EmailId }}" class="gnl-form-radio__input gnl-outline-remove" />
+            <label for="{{ $email.EmailId }}" class="gnl-form-radio__label">{{ $email.EmailAddress }}</label>
+        </div>
+        {{ end }}
+    {{ end }}
+
+
+Alternate Emails
+^^^^^^^^^^^^^^^^
+
+The Alternate Emails page's primary action is to allow the user to add a new alternate email to their account.
+
+To do this, the page must contain a form with the following inputs:
+
+
+.. code-block:: HTML
+   :linenos:
+
+    Form Input Fields:
+            <input onblur="validateField('addEmail', this)" class="form-control gnl-form-control gnl-form-control--md" type="email" data-val="true" data-val-email="Enter a valid email address." data-val-maxlength="Email address must be no longer than 70 characters." data-val-maxlength-max="70" data-val-required="Enter your email address." id="EmailAddress" maxlength="70" name="EmailAddress" value="{{.EmailValue}}">
+            <input onblur="validateField('addEmail', this); fieldMatches(this, '#EmailAddress', EMAILS_DONT_MATCH)" class="form-control gnl-form-control gnl-form-control--md" type="email" data-val="true" data-val-email="Enter a valid email address." data-val-equalto="Email addresses do not match." data-val-equalto-other="*.EmailAddress" data-val-maxlength="Email address must be no longer than 70 characters." data-val-maxlength-max="70" data-val-required="Confirm your email address." id="ConfirmEmailAddress" maxlength="70" name="ConfirmEmailAddress" value="" required>
+
+     Hidden csrf token:
+            <input id="csrfToken" type="hidden" name="csrf_token" value="{{ $token }}"/>
+
+Add Email Address
+^^^^^^^^^^^^^^^^^
+
+Add email facts
+
+
+Remove Email
+^^^^^^^^^^^^^^^^^
+
+Remove email facts
