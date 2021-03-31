@@ -1,6 +1,24 @@
 # # MyGovNL - templates
 
 Prototype: https://wzrk3d.axshare.com/#id=bfgm1l&p=services&g=1 
+Notifications: https://wzrk3d.axshare.com/#id=yalax7&p=main-notifications&g=1
+Linking: https://wzrk3d.axshare.com/#id=bfgm1l&p=services&g=1
+https://wzrk3d.axshare.com/#id=lyzyxj&p=link_overview_4&g=1
+Your emails
+
+Account profile - https://wzrk3d.axshare.com/#id=979jn8&p=account-profile--w-multiple-emails&g=1
+Your email addresses - https://wzrk3d.axshare.com/#id=nzygly&p=your_email_addresses&g=1
+Remove email - https://wzrk3d.axshare.com/#id=n2nr90&p=remove-email&g=1
+Add alternate email
+
+Add another - https://wzrk3d.axshare.com/#id=gn734b&p=add_another_email&g=1
+Verification sent - https://wzrk3d.axshare.com/#id=rqukdr&p=verification-sent&g=1
+Verified - https://wzrk3d.axshare.com/#id=ijrcev&p=verified&g=1
+Expired - https://wzrk3d.axshare.com/#id=rh51g1&p=expired-verification-link&g=1
+Primary
+
+Change primary - https://wzrk3d.axshare.com/#id=ij8cjq&p=change_primary&g=1
+Primary email changed - https://wzrk3d.axshare.com/#id=zycp18&p=primary_changed&g=1
 
 |Module | Screen | Link |  | 
 |----------------|---------------|---------------|------------------------|
