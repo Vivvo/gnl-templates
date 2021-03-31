@@ -45,9 +45,9 @@ Prototype: https://wzrk3d.axshare.com/#id=bfgm1l&p=services&g=1
 |                |Expired link                                    |http://localhost:9000/pages/change-email-expired.html             | |              
 |                |Are you sure you want to remove email address   |http://localhost:9000/pages/change-email-remove.html|        
 |`email`         |Verify your MyGovNL account email address (email - 204) |assets/email-templates/0204-VerifyEmailAddress.html       | |        
-|`email`         |Your primary email address has changed (email - 207-1) |assets/email-templates/0207-EmailAddressChangeRequestSendToOriginalAccount.html|     
-|`email`         |Your email address has been removed (email - 207-2) |    ?                                                         | |      
-|`email`         |An email address has been added to your MyGovNL account (email - 207-3)k|                                          | |        
+|`email`         |Your primary email address has changed (email - 207-1) |assets/email-templates/0207-1-PrimaryEmailAddressChangeRequestSendToOriginalAccount.html|     
+|`email`         |Your email address has been removed (email - 207-2) |assets/email-templates/0207-2-EmailAddressDeleteRequestSendToOriginalAccount.html| |     
+|`email`         |An email address has been added to your MyGovNL account (email - 207-3)k|assets/email-templates/0207-3-NewEmailAddressAddRequestSendToOriginalAccount.html                                                                                  | |        
 |Delete Account  |Delete account - first we need to verify it's you |http://localhost:9000/pages/delete-account.html                 | |      
 |                |Are you sure you want to delete your MyGovNL account?|     ?                                                       | |
 |                |Are you sure you want to delete (transaction in queue)|     ?                                                      | |
