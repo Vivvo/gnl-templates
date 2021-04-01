@@ -17,9 +17,9 @@
         var toggleClass = isCollapsed(panel) ? 'gnl-icon--toggle--collapsed' : 'gnl-icon--toggle--expanded';
 
         $(summary).html(
-            '<div class="gnl-flex-container gnl-flex-container--space-between gnl-flex-grow">' +
+            '<div class="gnl-flex-container">' +
                 '<span class="gnl-expansion-panel__button-text">' + linkText + '</span>' +
-                '<div class="gnl-expansion-panel__icon gnl-icon gnl-icon--toggle ' + toggleClass + '"></div>' +
+                '<div class="gnl-expansion-panel__icon gnl-icon gnl-icon--toggle ' + toggleClass + '" aria-hidden="true"></div>' +
             '</div>'
         );
     });

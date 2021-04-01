@@ -297,43 +297,100 @@ code {
 //  Align items
 // ********************************************************************
 
-.gnl-items-start {
+.gnl-u-items-start {
     align-items: flex-start;
 }
 
-.gnl-items-center {
+.gnl-u-items-center {
     align-items: center;
 }
 
-.gnl-self-start {
+.gnl-u-self-start {
     align-self: flex-start;
 }
 
-.gnl-self-center {
+.gnl-u-self-center {
     align-self: center;
 }
 
-.gnl-flex-grow-0 {
+.gnl-u-flex-grow-0 {
     flex-grow: 0;
 }
 
-.gnl-flex-grow {
+.gnl-u-flex-grow {
     flex-grow: 1;
 }
-
 
 // ********************************************************************
 //  Grid
 // ********************************************************************
 
-.gnl-grid-gap--1 {
+.gnl-u-grid-gap-1 {
     grid-gap: $gnl-size-1;
 }
 
-.gnl-grid-gap--2 {
+.gnl-u-grid-gap-2 {
     grid-gap: $gnl-size-2;
 }
 
-.gnl-grid-gap--3 {
+.gnl-u-grid-gap-3 {
     grid-gap: $gnl-size-3;
+}
+
+// ********************************************************************
+//  Text
+// ********************************************************************
+
+.gnl-u-text-sm {
+    font-size: $gnl-font-size-small;
+}
+
+.gnl-u-text-base {
+    font-size: $gnl-font-size-regular;
+}
+
+.gnl-u-text-lg {
+    font-size: $gnl-font-size-large;
+}
+
+// ********************************************************************
+//  Text decoration
+// ********************************************************************
+
+.gnl-u-underline {
+    text-decoration: underline;
+}
+
+.hover\:gnl-u-underline {
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+.gnl-u-no-underline {
+    text-decoration: none;
+}
+
+.hover\:gnl-u-no-underline {
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+// ********************************************************************
+//  Display
+// ********************************************************************
+
+.gnl-u-block {
+    display: block;
+}
+
+.gnl-u-inline-block {
+    display: inline-block;
+}
+
+.md\:gnl-u-inline-block {
+    @media (min-width: 480px) {
+        display: inline-block;
+    }
 }

@@ -13,7 +13,7 @@
         position: relative;
         width: 100%;
         padding: 0;
-        margin-top: $gnl-size-2;
+        margin-top: $gnl-size-1;
         margin-bottom: 0;
 
         &:hover {
@@ -37,9 +37,9 @@
     }
 
     &__icon {
-        position: absolute;
-        right: 0;
-        color: $gnl-color-gray-9;
+        // position: absolute;
+        // right: 0;
+        color: $gnl-color-brand-blue;
     }
 
     &__button-text {
