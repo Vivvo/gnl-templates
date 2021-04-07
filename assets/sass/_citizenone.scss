@@ -115,7 +115,7 @@
     box-shadow: 0 2px 4px -1px rgb(0 0 0 / 20%), 0 4px 5px 0 rgb(0 0 0 / 14%), 0 1px 10px 0 rgb(0 0 0 / 12%);
     position: relative;
 
-    &__logo {
+    &__logo-lock-up {
         @media (min-width: 840px) {
             padding-bottom: 4px;
         }
@@ -129,7 +129,10 @@
     }
 
     &__nav-link {
+        background: transparent;
+        
         &.nav-link {
+            position: relative;
             display: flex;
             align-items: center;
             height: 100%;
@@ -137,9 +140,10 @@
             border-radius: 0;
             color: $gnl-color-gray-5;
             text-decoration: none;
+            padding-bottom: $gnl-size-1;
+            background: transparent;
 
             &:hover {
-                background: transparent;
                 color: white;
             }
 
@@ -147,9 +151,17 @@
                 background: transparent;
                 color: white;
                 font-weight: 700;
-                border-bottom: 4px solid white;
-                padding-bottom: 4px;
                 margin-bottom: 0;
+
+                &::after {
+                    border-bottom: 4px solid white;
+                    bottom: 0;
+                    content: "";
+                    height: 1px;
+                    left: 0;
+                    position: absolute;
+                    width: 100%;
+                }
             }
 
             @media (max-width: 840px) {
@@ -161,9 +173,11 @@
 
     &__nav-icon {
         margin-right: $gnl-size-1;
+        margin-left: -4px;
 
         @media (max-width: 840px) {
             margin-right: 0;
+            margin-left: 0;
         }
     }
 
@@ -182,6 +196,7 @@
 .co-header-sign-out {
     position: absolute;
     right: 0;
+    top: 0;
     margin-right: $gnl-size-2;
     color: white;
     margin-top: 20px;
@@ -219,32 +234,13 @@
     }
 }
 
-// .co-linked-actions {
-//     margin-top: $gnl-size-2;
-//     margin-bottom: 0;
-
-//     &__item {
-//         display: block;
-//         margin: 0 $gnl-size-2 $gnl-size-1 0;
-//         padding: 0;
-
-//         @media (min-width: 840px) {
-//             display: inline-block;
-//         }
-//     }
-
-//     &__action {
-//         font-weight: $gnl-font-weight-bold;
-//     }
-// }
-
 .co-linked-actions {
     margin-bottom: 8px;
 
     &__item {
         display: block;
 
-        @media (min-width: 840px) {
+        @media (min-width: 480px) {
             display: inline-flex;
             vertical-align: middle;
         }
@@ -253,7 +249,7 @@
             margin-left: 0;
             font-weight: $gnl-font-weight-bold;
             
-            @media (min-width: 840px) {
+            @media (min-width: 480px) {
                 margin-left: $gnl-size-1;
 
                 &:first-child {
