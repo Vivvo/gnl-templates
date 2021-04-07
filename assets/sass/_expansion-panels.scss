@@ -1,4 +1,4 @@
-﻿@import 'variables';
+﻿@import "variables";
 
 .gnl-expansion-panel {
     $block: &;
@@ -16,7 +16,9 @@
         margin-top: $gnl-size-1;
         margin-bottom: 0;
 
-        &:hover {
+        &:hover,
+        &:active,
+        &:focus {
             #{$block}__button-text {
                 background-color: $gnl-color-blue-light;
                 text-decoration: underline;
@@ -37,17 +39,10 @@
     }
 
     &__icon {
-        // position: absolute;
-        // right: 0;
         color: $gnl-color-brand-blue;
     }
 
     &__button-text {
         color: $gnl-color-brand-blue;
-
-        &:hover {
-            background-color: $gnl-color-blue-light;
-            text-decoration: underline;
-        }
     }
 }
