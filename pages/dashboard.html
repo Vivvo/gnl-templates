@@ -25,6 +25,7 @@
     $(function () {
       $("#header").load("../includes/header-verified.html");
       $("#footer").load("../includes/footer.html");
+      $("#skip").load("../includes/skip-to-content.html");
       $(".serviceCard").load("../includes/service-card.html");
       $(".serviceCardMCP").load("../includes/service-card-mcp.html");
       $(".serviceCardWCP").load("../includes/service-card-wcp.html");
@@ -33,17 +34,16 @@
 </head>
 
 <body>
-
+  <div id="skip"></div>
   <div id="header"></div>
 
-  <main class="gnl-main-content">
-
-    <div class="gnl-container gnl-container--xl">
-      <div class="dashboard-header">
-        <h1 class="co-title gnl-header-1 gnl-m-bottom--none">
-          Services
+  <main class="gnl-main-content" id="content">
+    <div class="co-service-header gnl-m-top--6">
+      <div class="gnl-container gnl-container--xl">
+        <h1 class="co-title md:gnl-u-header-1 gnl-header-2 gnl-m-bottom--none">
+          Services <span class="sr-only">overview</span>
         </h1>
-        Access a range of government online services.
+        <div class="gnl-u-text-lg">Access a range of government online services.</div>
       </div>
     </div>
 
