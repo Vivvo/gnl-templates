@@ -23,9 +23,8 @@
         $(function () {
             $("#header").load("../includes/header-verified.html");
             $("#footer").load("../includes/footer.html");
-            $("#mcp-service-sidebar").load("../includes/mrd-service-sidebar.html");
-            $("#mcp-actions").load("../includes/mcp-service-actions.html");
-            $("#mcp-unlinked").load("../includes/mcp-service-unlinked.html");
+            $("#service-sidebar").load("../includes/mrd-service-sidebar.html");
+            $("#actions").load("../includes/mcp-service-actions.html");
             $("#reminders").load("../includes/mcp-service-reminders.html");
             $("#recently-updated").load("../includes/mcp-service-recent.html");
             $("#linked-items").load("../includes/mcp-service-linked-items.html");
@@ -38,98 +37,93 @@
 <body>
     <div id="header"></div>
 
-    <div class="gnl-main-content">
-
-        <div class="co-service-header">
+    <main class="gnl-main-content" id="content">
+        <div class="co-service-header gnl-m-top--6">
             <div class="gnl-container gnl-container--xl">
-                <h1 class="co-title gnl-header-2 gnl-m-bottom--none">
-                    MCP
+                <h1 class="co-title md:gnl-u-header-2 gnl-header-3 gnl-m-bottom--none">
+                    MCP <span class="sr-only">services</span>
                 </h1>
-                View and manage your health services.
+                <div class="gnl-u-text-lg">View and manage your health services.</div>
             </div>
 
-            <div class="co-service-header__tabs" id="mcp-service-sidebar"></div>
-
+            <div class="co-service-header__tabs" id="service-sidebar"></div>
         </div>
 
-        <section class="gnl-section">
-            <div class="gnl-layout">
+        <div class="gnl-layout">
 
-                <div class="gnl-layout__container gnl-container gnl-container--xl gnl-container--full-width">
+            <div class="gnl-layout__container gnl-container gnl-container--xl gnl-container--full-width">
 
-                    <div class="tab-content" id="v-pills-tabContent">
+                <div class="tab-content" id="v-pills-tabContent">
 
-                        <div class="tab-pane fade show active" id="v-pills-actions" role="tabpanel"
-                            aria-labelledby="v-pills-actions-tab">
+                    <div class="tab-pane fade show active" id="v-pills-actions" role="tabpanel"
+                        aria-labelledby="v-pills-actions-tab">
 
-                            <div class="gnl-layout__wrapper">
+                        <div class="gnl-layout__wrapper">
 
-                                <div class="gnl-layout__main-col">
+                            <div class="gnl-layout__main-col">
 
-                                    <section class="gnl-m-bottom--10 gnl-m-top--5">
-                                        <div class="gnl-container gnl-container--xl">
-                                            <h2 class="gnl-header-3 gnl-m-top--none">Actions
-                                            </h2>
-                                            <div id="mcp-actions"></div>
-                                        </div>
-                                    </section>
-
-                                    <section class="gnl-m-bottom--10">
-                                        <div class="gnl-container gnl-container--xl">
-                                            <h3 class="gnl-header-4 gnl-m-top--none">Your linked items</h3>
-                                            <div id="linked-items"></div>
-                                        </div>
-                                    </section>
-
-                                </div>
-
-                                <aside class="gnl-layout__side-col">
-                                    <div class="gnl-container gnl-container--xl gnl-m-top-none md:gnl-m-top--5">
-                                        <div class="gnl-m-bottom--7">
-                                            <h3 class="gnl-header-4 gnl-m-top--none">Reminders</h3>
-                                            <div id="reminders"></div>
-                                        </div>
-
-                                        <div class="gnl-m-bottom--7">
-                                            <h3 class="gnl-header-4 gnl-m-top--none">Recently updated</h3>
-                                            <div id="recently-updated"></div>
-                                        </div>
-                                    </div>
-                                </aside>
-
-                            </div>
-
-                        </div>
-
-                        <div class="tab-pane fade" id="v-pills-notifications" role="tabpanel"
-                            aria-labelledby="v-pills-notifications-tab">
-
-                            <div class="gnl-layout__wrapper">
-
-                                <div class="gnl-layout__main-col">
-
+                                <section class="gnl-m-bottom--6 gnl-m-top--5">
                                     <div class="gnl-container gnl-container--xl">
-                                        <section id="notifications-content"></section>
+                                        <h2 class="gnl-header-4 gnl-m-top--none">Actions
+                                        </h2>
+                                        <div id="actions"></div>
+                                    </div>
+                                </section>
+
+                                <section class="gnl-m-bottom--6">
+                                    <div class="gnl-container gnl-container--xl">
+                                        <h2 class="gnl-header-4 gnl-m-top--none">Your linked items</h2>
+                                        <div id="linked-items"></div>
+                                    </div>
+                                </section>
+
+                            </div>
+
+                            <div class="gnl-layout__side-col">
+                                <div class="gnl-container gnl-container--xl gnl-m-top-none md:gnl-m-top--5">
+                                    <div class="gnl-m-bottom--6">
+                                        <h2 class="gnl-header-4 gnl-m-top--none">Reminders</h2>
+                                        <div id="reminders"></div>
                                     </div>
 
+                                    <div class="gnl-m-bottom--6">
+                                        <h2 class="gnl-header-4 gnl-m-top--none">Recently updated</h2>
+                                        <div id="recently-updated"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="tab-pane fade" id="v-pills-notifications" role="tabpanel"
+                        aria-labelledby="v-pills-notifications-tab">
+
+                        <div class="gnl-layout__wrapper">
+
+                            <div class="gnl-layout__main-col">
+
+                                <div class="gnl-container gnl-container--xl">
+                                    <section class="gnl-section" id="notifications-content"></section>
                                 </div>
 
                             </div>
 
                         </div>
 
-                        <div class="tab-pane fade" id="v-pills-terms-of-use" role="tabpanel"
-                            aria-labelledby="v-pills-terms-of-use-tab">
+                    </div>
 
-                            <div class="gnl-layout__wrapper">
+                    <div class="tab-pane fade" id="v-pills-terms-of-use" role="tabpanel"
+                        aria-labelledby="v-pills-terms-of-use-tab">
 
-                                <div class="gnl-layout__main-col">
+                        <div class="gnl-layout__wrapper">
 
-                                    <div class="gnl-layout__container">
+                            <div class="gnl-layout__main-col">
 
-                                        <section id="terms"></section>
+                                <div class="gnl-layout__container">
 
-                                    </div>
+                                    <section id="terms"></section>
 
                                 </div>
 
@@ -142,12 +136,10 @@
                 </div>
 
             </div>
-        </section>
 
-    </div>
+        </div>
 
-    </div>
-
+    </main>
 
     <div id="footer"></div>
 
