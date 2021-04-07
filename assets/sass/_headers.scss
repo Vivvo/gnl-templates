@@ -30,9 +30,9 @@
 		width: 100%;
 		margin: 0;
 
-		@include media-breakpoint-up(md) {
-			flex-direction: row;
-		}
+		@media (min-width: 840px) {
+            flex-direction: row;
+        }
 	}
 
 	&__nav {
