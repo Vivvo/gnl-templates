@@ -234,32 +234,6 @@
     }
 }
 
-.co-linked-actions {
-    margin-bottom: 8px;
-
-    &__item {
-        display: block;
-
-        @media (min-width: 480px) {
-            display: inline-flex;
-            vertical-align: middle;
-        }
-
-        &.gnl-link {
-            margin-left: 0;
-            font-weight: $gnl-font-weight-bold;
-            
-            @media (min-width: 480px) {
-                margin-left: $gnl-size-1;
-
-                &:first-child {
-                    margin-left: 0;
-                }
-            }
-        }
-    }
-}
-
 .co-linked-item-list {
     margin: 0;
 
