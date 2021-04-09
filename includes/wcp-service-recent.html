@@ -1,66 +1,56 @@
-<div class="gnl-card-grid gnl-u-grid-gap-2">
-    <div class="gnl-card-grid__item">
-        <div class="gnl-card gnl-card--info gnl-card--outlined gnl-paper gnl-paper--rounded">
-            <div class="gnl-card__body">
-                <div class="gnl-list-group">
-                    <div class="gnl-list-group__item">
-                        <div class="gnl-list-group__container">
-                            <div class="gnl-list-group__leading gnl-u-self-start">
-                                <div class="co-service-actions-icon gnl-icon gnl-icon--woodcutting">
-                                    <div class="gnl-icon__overlay gnl-icon__overlay--success"></div>
-                                </div>
-                            </div>
-                            <div class="gnl-list-group__body">
-                                <div class="gnl-list-group__content">
-                                    <h3 class="gnl-list-group__primary-text">You purchased a domestic wood cutting
-                                        permit</h3>
-                                </div>
-                                <div class="gnl-expansion-panel">
-                                    <button class="gnl-expansion-panel__summary gnl-button" aria-expanded="false"
-                                        aria-controls="recent-details-1"></button>
-                
-                                    <div class="gnl-expansion-panel__body" id="recent-details-1">
-                                        <a href="#" class="gnl-button gnl-button--contained">View permit</a>
-                                        <div class="gnl-divider gnl-divider--line" role="separator"></div>
-                                        <p class="gnl-text-strong">What’s next?</p>
-                                        <ol class="gnl-list gnl-list--numeric">
-                                            <li>
-                                                View/print maps for
-                                                <a class="gnl-link" href="#" target="_blank" rel="noreferrer">@Model.area1Name</a>
-                                                and
-                                                <a class="gnl-link" href="#" target="_blank" rel="noreferrer">@Model.area2Name</a>.
-                                            </li>
-                                            <li>Update your helpers or print a gifting note from the <a class="gnl-link"
-                                                    asp-action="Index" asp-controller="DocsIds">Manage</a> page.</li>
-                                            <li>We've automatically included an operating permit.</li>
-                                            <li>Review the <a class="gnl-link"
-                                                    href="https://www.gov.nl.ca/ffa/files/forestry-permits-pdf-ems-domestic-wood-cutting-info-sheet.pdf"
-                                                    target="_blank" rel="noreferrer">EMS guide to wood cutting</a> and <a
-                                                    class="gnl-link"
-                                                    href="https://www.newfoundlandpower.com/en/Safety/Electrical-Safety/Wood-Cutting-Safety"
-                                                    target="_blank" rel="noreferrer">NL Power safety info</a>.</li>
-                                        </ol>
-                                        <ul class="gnl-list gnl-list--no-bullets">
-                                            <li>
-                                                <a asp-action="Receipt" href="#"
-                                                   class="gnl-button gnl-button--outlined gnl-button--function gnl-button--function-receipt">Receipt</a>
-                                            </li>
-                                        </ul>
-                                        <div class="gnl-divider gnl-divider--line" role="separator"></div>
-                                        <ul class="gnl-list gnl-list--no-bullets">
-                                            <li>
-                                                <a href="https://www.gov.nl.ca/ffa/licenses-permits-and-fees/cutting-transporting-burning/#domestic"
-                                                   target="_blank" rel="noopener">More info</a>
-                                            </li>
-                                            <li>
-                                                <a href="https://www.gov.nl.ca/ffa/department/contact-forestry/#Satellite"
-                                                   target="_blank" rel="noopener">Contact us</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+<div class="gnl-list-group gnl-list-group--summary">
+    <div class="gnl-list-group__item">
+        <div class="gnl-list-group__container">
+            <div class="gnl-list-group__leading gnl-u-self-start">
+                <div class="co-service-actions-icon gnl-icon gnl-icon--woodcutting">
+                    <div class="gnl-icon__overlay gnl-icon__overlay--success"></div>
+                </div>
+            </div>
+            <div class="gnl-list-group__body">
+                <h3 class="gnl-list-group__primary-text gnl-header-6">
+                    You purchased a domestic wood cutting permit
+                </h3>
+                <div class="gnl-expansion-panel">
+                    <button class="gnl-expansion-panel__summary gnl-button" aria-expanded="false"
+                        aria-controls="recent-details-1"></button>
+
+                    <div class="gnl-expansion-panel__body" id="recent-details-1">
+                        <a href="#" class="gnl-button gnl-button--contained">View permit</a>
+                        <div class="gnl-divider gnl-divider--line" role="separator"></div>
+                        <p class="gnl-text-strong">What’s next?</p>
+                        <ol class="gnl-list gnl-list--numeric">
+                            <li>
+                                View/print maps for
+                                <a class="gnl-link" href="#" target="_blank" rel="noreferrer">@Model.area1Name</a>
+                                and
+                                <a class="gnl-link" href="#" target="_blank" rel="noreferrer">@Model.area2Name</a>.
+                            </li>
+                            <li>Update your helpers or print a gifting note from the <a class="gnl-link"
+                                    asp-action="Index" asp-controller="DocsIds">Manage</a> page.</li>
+                            <li>We've automatically included an operating permit.</li>
+                            <li>Review the <a class="gnl-link"
+                                    href="https://www.gov.nl.ca/ffa/files/forestry-permits-pdf-ems-domestic-wood-cutting-info-sheet.pdf"
+                                    target="_blank" rel="noreferrer">EMS guide to wood cutting</a> and <a
+                                    class="gnl-link"
+                                    href="https://www.newfoundlandpower.com/en/Safety/Electrical-Safety/Wood-Cutting-Safety"
+                                    target="_blank" rel="noreferrer">NL Power safety info</a>.</li>
+                        </ol>
+                        <ul class="gnl-list gnl-list--no-bullets">
+                            <li>
+                                <a href="#" class="gnl-button gnl-button--outlined gnl-button--function gnl-button--function-receipt">Receipt</a>
+                            </li>
+                        </ul>
+                        <div class="gnl-divider gnl-divider--line" role="separator"></div>
+                        <ul class="gnl-list gnl-list--no-bullets">
+                            <li>
+                                <a href="https://www.gov.nl.ca/ffa/licenses-permits-and-fees/cutting-transporting-burning/#domestic"
+                                   target="_blank" rel="noopener">More info</a>
+                            </li>
+                            <li>
+                                <a href="https://www.gov.nl.ca/ffa/department/contact-forestry/#Satellite"
+                                   target="_blank" rel="noopener">Contact us</a>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
