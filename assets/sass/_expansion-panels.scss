@@ -1,4 +1,4 @@
-﻿@import 'variables';
+﻿@import "variables";
 
 .gnl-expansion-panel {
     $block: &;
@@ -10,10 +10,20 @@
     }
 
     &__summary {
+        position: relative;
         width: 100%;
         padding: 0;
-        margin-top: $gnl-size-1;
+        margin-top: 0;
         margin-bottom: 0;
+
+        &:hover,
+        &:active,
+        &:focus {
+            #{$block}__button-text {
+                background-color: $gnl-color-blue-light;
+                text-decoration: underline;
+            }
+        }
     }
 
     &__body {
@@ -29,6 +39,10 @@
     }
 
     &__icon {
-        color: $gnl-color-gray-9;
+        color: $gnl-color-brand-blue;
+    }
+
+    &__button-text {
+        color: $gnl-color-brand-blue;
     }
 }

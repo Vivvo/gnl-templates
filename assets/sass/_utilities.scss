@@ -48,6 +48,10 @@
     }
 }
 
+.gnl-u-flex {
+    display: flex;
+}
+
 .gnl-flex-column {
     -ms-flex-direction: column;
     flex-direction: column;
@@ -60,9 +64,37 @@
     }
 }
 
+.md\:gnl-flex-column {
+    @media (min-width: 840px) {
+        -ms-flex-direction: column;
+        flex-direction: column;
+    }
+}
+
+.gnl-flex-column-reverse {
+    -ms-flex-direction: column-reverse;
+    flex-direction: column-reverse;
+}
+
 .gnl-flex-row {
     -ms-flex-direction: row;
     flex-direction: row;
+}
+
+.md\:gnl-flex-row {
+    @media (min-width: 840px) {
+        -ms-flex-direction: row;
+        flex-direction: row;
+    }
+}
+
+.gnl-flex-row-reverse {
+    -ms-flex-direction: row-reverse;
+    flex-direction: row-reverse;
+}
+
+.gnl-flex-auto {
+    flex: 1 1 auto;
 }
 
 .gnl-text-center {
@@ -147,17 +179,70 @@ code {
 // ********************************************************************
 //  MARGIN
 // ********************************************************************
+// For responsive sizing, the following will be used
+// Use '{screen}:' to prefix existing margin. Will apply starting at the prefixed screen.
+// sm = 480px
+// md = 840px
 
-.gnl-m-top--none {
+.gnl-m-xy--none {
+    margin: 0;
+}
+
+.gnl-m-y--none {
     margin-top: 0;
+    margin-bottom: 0;
+}
+
+.gnl-m-x--auto {
+    margin: 0 auto;
+}
+
+.gnl-m-y-2 {
+    margin-top: $gnl-size-2;
+    margin-bottom: $gnl-size-2;
+}
+
+.gnl-m-x--none {
+    margin-left: 0;
+    margin-right: 0;
 }
 
 .gnl-m-bottom--none {
     margin-bottom: 0;
 }
 
+.md\:gnl-m-bottom--none {
+    @media (min-width: 840px) {
+        margin-bottom: 0;
+    }
+}
+
+.gnl-m-bottom--1 {
+    margin-bottom: $gnl-size-1;
+}
+
+.gnl-m-bottom--2 {
+    margin-bottom: $gnl-size-2;
+}
+
+.gnl-m-bottom--3 {
+    margin-bottom: $gnl-size-3;
+}
+
+.gnl-m-bottom--4 {
+    margin-bottom: $gnl-size-4;
+}
+
+.gnl-m-bottom--5 {
+    margin-bottom: $gnl-size-5;
+}
+
+.gnl-m-bottom--6 {
+    margin-bottom: $gnl-size-6;
+}
+
 .gnl-m-bottom--7 {
-    margin-bottom: $gnl-size-8;
+    margin-bottom: $gnl-size-7;
 }
 
 .gnl-m-bottom--8 {
@@ -166,6 +251,24 @@ code {
 
 .gnl-m-bottom--10 {
     margin-bottom: $gnl-size-10;
+}
+
+.md\:gnl-m-bottom--10 {
+    @media (min-width: 840px) {
+        margin-bottom: $gnl-size-10;
+    }
+}
+
+.gnl-m-left--2 {
+    margin-left: $gnl-size-2;
+}
+
+.gnl-m-right--none {
+    margin-right: 0;
+}
+
+.gnl-m-top--none {
+    margin-top: 0;
 }
 
 .gnl-m-top--0\.5 {
@@ -182,6 +285,20 @@ code {
 
 .gnl-m-top--3 {
     margin-top: $gnl-size-3;
+}
+
+.gnl-m-top--5 {
+    margin-top: $gnl-size-5;
+}
+
+.md\:gnl-m-top--5 {
+    @media (min-width: 840px) {
+        margin-top: $gnl-size-5;
+    }
+}
+
+.gnl-m-top--6 {
+    margin-top: $gnl-size-6;
 }
 
 .gnl-p-top--none {
@@ -213,26 +330,124 @@ code {
 //  Align items
 // ********************************************************************
 
-.gnl-items-start {
+.gnl-u-items-start {
     align-items: flex-start;
 }
 
-.gnl-items-center {
+.gnl-u-items-center {
     align-items: center;
 }
 
-.gnl-self-start {
+.gnl-u-self-start {
     align-self: flex-start;
 }
 
-.gnl-self-center {
+.gnl-u-self-center {
     align-self: center;
 }
 
-.gnl-flex-grow-0 {
+.gnl-u-flex-grow-0 {
     flex-grow: 0;
 }
 
-.gnl-flex-grow {
+.gnl-u-flex-grow {
     flex-grow: 1;
+}
+
+// ********************************************************************
+//  Grid
+// ********************************************************************
+
+.gnl-u-grid-gap-1 {
+    grid-gap: $gnl-size-1;
+}
+
+.gnl-u-grid-gap-2 {
+    grid-gap: $gnl-size-2;
+}
+
+.gnl-u-grid-gap-3 {
+    grid-gap: $gnl-size-3;
+}
+
+// ********************************************************************
+//  Text
+// ********************************************************************
+
+.gnl-u-text-sm {
+    font-size: $gnl-font-size-small;
+}
+
+.gnl-u-text-base {
+    font-size: $gnl-font-size-regular;
+}
+
+.gnl-u-text-lg {
+    font-size: $gnl-font-size-large;
+}
+
+// ********************************************************************
+//  Text decoration
+// ********************************************************************
+
+.gnl-u-underline {
+    text-decoration: underline;
+}
+
+.hover\:gnl-u-underline {
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+.gnl-u-no-underline {
+    text-decoration: none;
+}
+
+.hover\:gnl-u-no-underline {
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+// ********************************************************************
+//  Display
+// ********************************************************************
+
+.gnl-u-block {
+    display: block;
+}
+
+.gnl-u-inline-block {
+    display: inline-block;
+}
+
+.md\:gnl-u-inline-block {
+    @media (min-width: 480px) {
+        display: inline-block;
+    }
+}
+
+// ********************************************************************
+//  Height
+// ********************************************************************
+
+.gnl-u-h-auto {
+    height: auto;
+}
+
+// ********************************************************************
+//  Text
+// ********************************************************************
+
+.md\:gnl-u-header-2 {
+    @media (min-width: 840px) {
+        font-size: 48px;
+    }
+}
+
+.md\:gnl-u-header-1 {
+    @media (min-width: 840px) {
+        font-size: 60px;
+    }
 }

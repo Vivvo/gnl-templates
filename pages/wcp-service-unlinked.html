@@ -23,9 +23,9 @@
         $(function () {
             $("#header").load("../includes/header-verified.html");
             $("#footer").load("../includes/footer.html");
-            $("#wcp-service-sidebar").load("../includes/wcp-service-sidebar.html");
-            $("#wcp-actions").load("../includes/wcp-service-actions.html");
-            $("#wcp-unlinked").load("../includes/wcp-service-unlinked.html");
+            $("#service-sidebar").load("../includes/wcp-service-sidebar.html");
+            $("#actions").load("../includes/wcp-service-actions.html");
+            $("#unlinked").load("../includes/wcp-service-unlinked.html");
             $("#notifications-content").load("../includes/notifications.html");
             $("#terms").load("../includes/service-terms.html");
         });
@@ -37,105 +37,98 @@
 
     <main class="gnl-main-content">
 
-        <div class="co-service-header">
+        <div class="co-service-header gnl-m-top--6">
             <div class="gnl-container gnl-container--xl">
-                <h1 class="co-title gnl-header-2 gnl-m-bottom--none">
-                    Wood cutting
+                <h1 class="co-title md:gnl-u-header-2 gnl-header-3 gnl-m-bottom--none">
+                    Wood cutting <span class="sr-only">services</span>
                 </h1>
-                View and manage your wood cutting services.
+                <div class="gnl-u-text-lg">View and manage your wood cutting services.</div>
             </div>
 
-            <div class="co-service-header__tabs" id="wcp-service-sidebar"></div>
+            <div class="co-service-header__tabs" id="service-sidebar"></div>
+        </div>
+
+        <div class="gnl-layout">
+
+            <div class="gnl-layout__container gnl-container gnl-container--xl gnl-container--full-width">
+
+                <div class="tab-content" id="v-pills-tabContent">
+
+                    <div class="tab-pane fade show active" id="v-pills-actions" role="tabpanel"
+                        aria-labelledby="v-pills-actions-tab">
+
+                        <div class="gnl-layout__wrapper">
+
+                            <div class="gnl-layout__main-col">
+
+                                <section class="gnl-m-bottom--6 gnl-m-top--5">
+                                    <div class="gnl-container gnl-container--xl">
+                                        <h2 class="gnl-header-4 gnl-m-top--none">Actions
+                                        </h2>
+                                        <div id="actions"></div>
+                                    </div>
+                                </section>
+
+                                <section class="gnl-m-bottom--6">
+                                    <div class="gnl-container gnl-container--xl">
+                                        <h2 class="gnl-header-4 gnl-m-top--none">Your linked items</h2>
+                                        <div id="unlinked"></div>
+                                    </div>
+                                </section>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tab-pane fade" id="v-pills-notifications" role="tabpanel"
+                        aria-labelledby="v-pills-notifications-tab">
+
+                        <div class="gnl-layout__wrapper">
+
+                            <div class="gnl-layout__main-col">
+
+                                <div class="gnl-layout__container">
+
+                                    <section>
+                                        <div class="gnl-container gnl-container--xl">
+                                            <section id="notifications-content"></section>
+                                        </div>
+                                    </section>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="tab-pane fade" id="v-pills-terms-of-use" role="tabpanel"
+                        aria-labelledby="v-pills-terms-of-use-tab">
+
+                        <div class="gnl-layout__wrapper">
+
+                            <div class="gnl-layout__main-col">
+
+                                <div class="gnl-layout__container">
+
+                                    <section id="terms"></section>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
 
         </div>
 
-        <section class="gnl-section">
-
-            <div class="gnl-layout">
-
-                <div class="gnl-layout__container gnl-container gnl-container--xl gnl-container--full-width">
-    
-                    <div class="tab-content" id="v-pills-tabContent">
-    
-                        <div class="tab-pane fade show active" id="v-pills-actions" role="tabpanel"
-                            aria-labelledby="v-pills-actions-tab">
-    
-                            <div class="gnl-layout__wrapper">
-    
-                                <div class="gnl-layout__main-col">
-    
-                                    <section class="gnl-m-bottom--10">
-                                        <div class="gnl-container gnl-container--xl">
-                                            <h4 class="gnl-header-4 co-service-heading">Actions
-                                            </h4>
-                                            <div id="wcp-actions"></div>
-                                        </div>
-                                    </section>
-
-                                    <section class="gnl-m-bottom--10">
-                                        <div class="gnl-container gnl-container--xl">
-                                            <h4 class="gnl-header-4 co-service-heading">Your linked items</h4>
-                                            <div id="wcp-unlinked"></div>
-                                        </div>
-                                    </section>
-                                    
-                                </div>
-                            </div>
-                        </div>
-    
-                        <div class="tab-pane fade" id="v-pills-notifications" role="tabpanel"
-                            aria-labelledby="v-pills-notifications-tab">
-    
-                            <div class="gnl-layout__wrapper">
-    
-                                <div class="gnl-layout__main-col">
-    
-                                    <div class="gnl-layout__container">
-    
-                                        <section>
-                                            <div class="gnl-container gnl-container--xl">
-                                                <section id="notifications-content"></section>
-                                            </div>
-                                        </section>
-    
-                                    </div>
-    
-                                </div>
-    
-                            </div>
-    
-                        </div>
-    
-                        <div class="tab-pane fade" id="v-pills-terms-of-use" role="tabpanel"
-                            aria-labelledby="v-pills-terms-of-use-tab">
-    
-                            <div class="gnl-layout__wrapper">
-    
-                                <div class="gnl-layout__main-col">
-    
-                                    <div class="gnl-layout__container">
-    
-                                        <section id="terms"></section>
-    
-                                    </div>
-    
-                                </div>
-    
-                            </div>
-    
-                        </div>
-    
-                    </div>
-    
-                </div>
-    
-            </div>
-        </section>
-
     </main>
-
-    </div>
-
 
     <div id="footer"></div>
 
