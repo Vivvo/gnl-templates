@@ -1,52 +1,21 @@
 # # MyGovNL - templates
 
-Prototype: https://wzrk3d.axshare.com/#id=bfgm1l&p=services&g=1 
-
-Notifications: https://wzrk3d.axshare.com/#id=yalax7&p=main-notifications&g=1
-
-Linking: https://wzrk3d.axshare.com/#id=bfgm1l&p=services&g=1
-
-https://wzrk3d.axshare.com/#id=lyzyxj&p=link_overview_4&g=1
-
-Your emails
-
-Account profile - https://wzrk3d.axshare.com/#id=979jn8&p=account-profile--w-multiple-emails&g=1
-
-Your email addresses - https://wzrk3d.axshare.com/#id=nzygly&p=your_email_addresses&g=1
-
-Remove email - https://wzrk3d.axshare.com/#id=n2nr90&p=remove-email&g=1
-
-Add alternate email
-
-Add another - https://wzrk3d.axshare.com/#id=gn734b&p=add_another_email&g=1
-
-Verification sent - https://wzrk3d.axshare.com/#id=rqukdr&p=verification-sent&g=1
-
-Verified - https://wzrk3d.axshare.com/#id=ijrcev&p=verified&g=1
-
-Expired - https://wzrk3d.axshare.com/#id=rh51g1&p=expired-verification-link&g=1
-
-Primary
-
-Change primary - https://wzrk3d.axshare.com/#id=ij8cjq&p=change_primary&g=1
-
-Primary email changed - https://wzrk3d.axshare.com/#id=zycp18&p=primary_changed&g=1
 
 
-|Module | Screen | Link |  | 
+|Module | Screen | Link |QA  | 
 |----------------|---------------|---------------|------------------------|
-|    Login       |Login Screen                                    |http://localhost:9000/                                            | |
+|    Login       |Login Screen                                    |http://localhost:9000/                                            |:heavy_check_mark: |
 |`email`         | Your MyGovNL account has been locked (email 203)|assets/email-templates/0203-AccountLockoutNotification.html      | | 
 |Account Creation|Intro Screen                                    |N/A                                                               | | 
-|                |Create Account                                  |http://localhost:9000/create-account.html                         | | 
-|                |Teerms and Conditions                           |http://localhost:9000/includes/terms.html                         | | 
+|                |Create Account                                  |http://localhost:9000/create-account.html                         |:heavy_check_mark: | 
+|                |Teerms and Conditions                           |http://localhost:9000/includes/terms.html                         |:heavy_check_mark: | 
 |                |Cancel Registration                             |N/A                                                               | | 
 |                |Check Your Email                                |http://localhost:9000/pages/check-your-email.html                 | | 
 |                |Check your email (email server is down)         |     ?                                                            | | 
 |`email`         |Account Activation email (204)                  |assets/email-templates/0204-VerifyEmailAddress.html               | | 
 |                |Account verification link expired               |http://localhost:9000/pages/account-verification-link-expired.html| | 
 |                |You're done success screen                      |http://localhost:9000/pages/registration-verified.html            | | 
-|Forgot Password |Forgot Password                                 |http://localhost:9000/pages/reset-password.html                   | | 
+|Forgot Password |Forgot Password                                 |http://localhost:9000/pages/reset-password.html                   |:heavy_check_mark: | 
 |                |An email has been sent                          |http://localhost:9000/pages/reset-password-confirmation.html      | | 
 |`email`         |Reset your password (email- 200)                |assets/email-templates/0200-ResetPasswordRequest.html             | | 
 |                |Create new password                             |http://localhost:9000/pages/create-new-password.html              | | 
@@ -120,4 +89,35 @@ Template #  | Subject Line
 
 
 
+Prototype: https://wzrk3d.axshare.com/#id=bfgm1l&p=services&g=1 
+
+Notifications: https://wzrk3d.axshare.com/#id=yalax7&p=main-notifications&g=1
+
+Linking: https://wzrk3d.axshare.com/#id=bfgm1l&p=services&g=1
+
+https://wzrk3d.axshare.com/#id=lyzyxj&p=link_overview_4&g=1
+
+Your emails
+
+Account profile - https://wzrk3d.axshare.com/#id=979jn8&p=account-profile--w-multiple-emails&g=1
+
+Your email addresses - https://wzrk3d.axshare.com/#id=nzygly&p=your_email_addresses&g=1
+
+Remove email - https://wzrk3d.axshare.com/#id=n2nr90&p=remove-email&g=1
+
+Add alternate email
+
+Add another - https://wzrk3d.axshare.com/#id=gn734b&p=add_another_email&g=1
+
+Verification sent - https://wzrk3d.axshare.com/#id=rqukdr&p=verification-sent&g=1
+
+Verified - https://wzrk3d.axshare.com/#id=ijrcev&p=verified&g=1
+
+Expired - https://wzrk3d.axshare.com/#id=rh51g1&p=expired-verification-link&g=1
+
+Primary
+
+Change primary - https://wzrk3d.axshare.com/#id=ij8cjq&p=change_primary&g=1
+
+Primary email changed - https://wzrk3d.axshare.com/#id=zycp18&p=primary_changed&g=1
 
