@@ -22,8 +22,8 @@
 |                |Password updated screen                         |http://localhost:9000/pages/create-new-password-confirmation.html http://localhost:9000/pages/password-updated.html | | 
 |                |Link Expired screen                             |http://localhost:9000/pages/verified-link-expired.html            | | 
 |`email`         |Password has been updated (email - 201)         |assets/email-templates/0201-ResetPasswordConfirmation.html        | | 
-|Contact Us      |Contact Us Screen                               |http://localhost:9000/includes/terms.html                         | | 
-|Landing Page    |Landing Page                                    |http://localhost:9000/pages/dashboard.html                        | | 
+|Contact Us      |Contact Us Screen                               |http://localhost:9000/includes/terms.html                         |:heavy_check_mark: | 
+|Landing Page    |Landing Page                                    |http://localhost:9000/pages/dashboard.html                        |:heavy_check_mark: | 
 |Service Pages   |Service Page - Actions - Unlinked               |http://localhost:9000/mrd-service-unlinked.html#  => include      | | 
 |                |Service Page - Actions - Linked                 |http://localhost:9000/mrd-service-linked.html                     | |
 |                |Service Page - Notifications                    |http://localhost:9000/mrd-service-linked.html#  => include        | |
