@@ -36,14 +36,14 @@
 |Change Password |Change your password                            |http://localhost:9000/pages/change-password.html                  | |
 |                |Your Password has been updated                  |http://localhost:9000/pages/password-updated.html                 | |
 |`email`         |Your Primary password has been updated (201)    |assets/email-templates/0201-ResetPasswordConfirmation.html        | |
-|Change Email    |Your email addresses                            |http://localhost:9000/pages/change-email.html                     | |
-|                |Primary email address                           |http://localhost:9000/pages/change-email-primary.html             | |
-|                |Your primary email address has been updated     |http://localhost:9000/pages/change-email-primary-updated.html     | |
-|                |Your email address has been verified and updated|http://localhost:9000/pages/change-email-verified.html            | | 
-|                |Add another email address                       |http://localhost:9000/pages/change-email-add.html                 | |
-|                |We've emailed you a verification link           |http://localhost:9000/pages/change-email-verify.html              | |
+|Change Email    |Your email addresses                            |http://localhost:9000/pages/change-email.html                     |:heavy_check_mark: |
+|                |Primary email address                           |http://localhost:9000/pages/change-email-primary.html             |:heavy_check_mark: |
+|                |Your primary email address has been updated     |http://localhost:9000/pages/change-email-primary-updated.html     |:heavy_check_mark: |
+|                |Your email address has been verified and updated|http://localhost:9000/pages/change-email-verified.html            |:heavy_check_mark: | 
+|                |Add another email address                       |http://localhost:9000/pages/change-email-add.html                 |:heavy_check_mark: |
+|                |We've emailed you a verification link           |http://localhost:9000/pages/change-email-verify.html              |:heavy_check_mark: |
 |                |Expired link                                    |http://localhost:9000/pages/change-email-expired.html             | |              
-|                |Are you sure you want to remove email address   |http://localhost:9000/pages/change-email-remove.html|        
+|                |Are you sure you want to remove email address   |http://localhost:9000/pages/change-email-remove.html| :heavy_check_mark:       
 |`email`         |Verify your MyGovNL account email address (email - 204) |assets/email-templates/0204-VerifyEmailAddress.html       | |        
 |`email`         |Your primary email address has changed (email - 207-1) |assets/email-templates/0207-1-PrimaryEmailAddressChangeRequestSendToOriginalAccount.html|     
 |`email`         |Your email address has been removed (email - 207-2) |assets/email-templates/0207-2-EmailAddressDeleteRequestSendToOriginalAccount.html| |     
