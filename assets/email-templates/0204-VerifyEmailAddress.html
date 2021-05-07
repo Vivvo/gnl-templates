@@ -74,7 +74,7 @@ color: #3b4148;">
 							<!-- ==================== -->
 							<!-- --- BODY START ----- -->
 
-							<table width="100%" role="presentation">
+							<table width="100%" role="presentation" style="padding-bottom: 20px;">
 								<tr bgcolor="#FFFFFF">
 									<td align=center>
 
@@ -85,7 +85,8 @@ color: #3b4148;">
 											</tr>
 											<tr>
 												<td width="10"></td>
-												<td bgcolor="#FFFFFF" class=zero-pad>
+												<td bgcolor="#FFFFFF" class=zero-pad
+													style="padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px;">
 													<table
 														style="border-collapse: collapse; max-width: 598px; text-align: center;">
 														<tr>
@@ -100,7 +101,7 @@ color: #3b4148;">
 																	<tr>
 																		<td style="color: #5F6368;"> <span
 																				style="color: #5F6368; font-size: 16px;">Hi
-																				{{FirstName}},<br><br></span> </td>
+																				${FirstName},<br><br></span> </td>
 																	</tr>
 																	<tr>
 																		<td style="color: #5F6368;"> <span
@@ -108,7 +109,7 @@ color: #3b4148;">
 																				below to verify your account so you can
 																				access your full MyGovNL
 																				services.<br><br> The link will expire
-																				in {{LinkExpiryDaysDisplay}}. After this
+																				in ${LinkExpiryDaysDisplay}. After this
 																				time, you can resend this email by
 																				signing in at <a
 																					href="https://my.gov.nl.ca/"
@@ -130,7 +131,8 @@ color: #3b4148;">
 											</tr>
 											<tr>
 												<td width="10"></td>
-												<td bgcolor="#FFFFFF" class=zero-pad>
+												<td bgcolor="#FFFFFF" class=zero-pad
+													style="padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px;">
 													<table cellpadding="0" cellspacing="0">
 														<tr>
 															<td colspan=3 style="padding-top: 30px; "></td>
@@ -143,18 +145,18 @@ color: #3b4148;">
 																	<tr>
 																		<td bgcolor="#004B87" align="center"
 																			class=solo-button
-																			style="border-collapse: collapse; padding-top: 0px; padding-left: 16px; padding-right: 16px; padding-bottom: 0px; background-color: #004B87; border-bottom-left-radius: 6px; border-bottom-right-radius: 6px; border-top-right-radius: 6px; border-top-left-radius: 6px; text-align: center;"
+																			style="border-collapse: collapse; padding-top: 0; padding-left: 0; padding-right: 0; padding-bottom: 0; background-color: #004B87; border-bottom-left-radius: 6px; border-bottom-right-radius: 6px; border-top-right-radius: 6px; border-top-left-radius: 6px; text-align: center;"
 																			align=center>
 																			<table align=center>
 																				<tr>
 																					<td
 																						style=" padding-bottom: 2px; padding-top: 2px; ">
-																						<a href="{{VerificationLinkUrl}}?utm_source=verify-email&utm_medium=email&utm_campaign=mygovnl-launch"
+																						<a href="${VerificationLinkUrl}?utm_source=verify-email&utm_medium=email&utm_campaign=mygovnl-launch"
 																							target="_blank"
 																							class=solo-button-text
-																							style="display: block; font-family: 'Lato', Arial; padding-left: 16px; padding-right: 16px; padding-top: 6px; padding-bottom: 6px; font-size: 21px; font-weight: bold; text-align: center; -webkit-text-size-adjust: none; color: #ffffff; text-decoration: none; line-height: 1.7;">Verify
+																							style="display: block; font-family: 'Lato', Arial; padding-left: 32px; padding-right: 32px; padding-top: 12px; padding-bottom: 12px; font-size: 16px; font-weight: bold; text-align: center; -webkit-text-size-adjust: none; color: #ffffff; text-decoration: none; line-height: 1.7;">Verify
 																							my account</a> </td>
-																					<td> <a href="{{VerificationLinkUrl}}?utm_source=verify-email&utm_medium=email&utm_campaign=mygovnl-launch"
+																					<td> <a href="${VerificationLinkUrl}?utm_source=verify-email&utm_medium=email&utm_campaign=mygovnl-launch"
 																							target="_blank"
 																							class=solo-button-url
 																							style="text-decoration: none; line-height: 1.7;"></a>
@@ -174,7 +176,7 @@ color: #3b4148;">
 																	style="font-family: 'Lato', Arial; font-size: 13px; color:#5f6368;line-height: 18px;">
 																	<span style="color:#5f6368;">Or copy the following
 																		URL into your browser: </span><br> <a href="#"
-																		style="text-decoration: none; color: #5f6368; cursor: default">{{VerificationLinkUrl}}</a>
+																		style="text-decoration: none; color: #5f6368;">${VerificationLinkUrl}</a>
 																</span> </td>
 														</tr>
 													</table>
